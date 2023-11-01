@@ -38,3 +38,14 @@ void Plate::removeMeal(Meal* item) {
 std::vector<Meal*>& Plate::getMeals() {
     return m_Meals;
 }
+/**
+ * @brief 
+ * 
+ */
+Plate::~Plate() {
+    if(m_Meals.size() != 0){
+        for (int i = 0; i < m_Meals.size(); i++) {
+            delete m_Meals[i];
+        }
+    }
+}
