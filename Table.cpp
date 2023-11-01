@@ -17,3 +17,8 @@ void Table::placeOrder(Order* o,Waiter* w)
     std::cout << w->getName() <<" is the waiter taking the order from "<<o->getCustomerName() << " at table "<<tableNumber;
     w->receiveOrder(o);
 }
+
+int Table::getTableNumber()
+{
+    return tableNumber;
+}

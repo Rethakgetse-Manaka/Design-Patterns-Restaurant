@@ -17,6 +17,7 @@ public:
     FoodItem(std::string n, double val);
     FoodItem(std::string n, bool gar, bool sauce, double val, bool well);
     double getPrice();
+    std::string getMealName();
 
     ~FoodItem();
 };

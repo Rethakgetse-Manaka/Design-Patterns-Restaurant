@@ -1,5 +1,6 @@
 #ifndef Waiter_H
 #define Waiter_H
+#include <iomanip>
 #include "Colleague.h"
 class Plate;
 class Waiter:public Colleague
@@ -10,8 +11,10 @@ class Waiter:public Colleague
     public:
         virtual void receiveOrder(Order* o);
         void addTable(Table* t);
-        void presentFoodToTable(Table* t,Plate* p);
+        void presentFoodToTable(Plate* p);
         void presentBill(Table* t);
+        bool managesTable(int tbn);
+        Table* getTable(int tbn);
         std::string getName();
 
 

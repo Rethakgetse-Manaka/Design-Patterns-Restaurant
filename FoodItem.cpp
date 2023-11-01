@@ -39,3 +39,8 @@ double FoodItem::getPrice()
 FoodItem::~FoodItem()
 {
 }
+
+std::string FoodItem::getMealName()
+{
+    return mealName;
+}
