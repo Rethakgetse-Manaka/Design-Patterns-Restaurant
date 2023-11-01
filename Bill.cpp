@@ -6,6 +6,18 @@ Bill::Bill()
 {
 }
 
+void Bill::printBill()
+{
+}
+
+void Bill::addPerson(Bill *Bill)
+{
+}
+
+void Bill::removePerson(Bill *Bill)
+{
+}
+
 Bill::~Bill()
 {
 }

@@ -8,17 +8,13 @@ class CompositeBill: public Bill
 {
 private:
     std::vector<Bill*> tableBills;
+    Order* order;
 public:
-    CompositeBill(/* args */);
+    CompositeBill(Order* ord);
+    void printBill();
+    void addPerson(Bill* Bill);
+    void removePerson(Bill* Bill);
     ~CompositeBill();
 };
-
-CompositeBill::CompositeBill(/* args */)
-{
-}
-
-CompositeBill::~CompositeBill()
-{
-}
 
 #endif

@@ -2,22 +2,16 @@
 #define LEAFBILL_H
 
 #include "Bill.h"
+#include "Order.h"
 
 class LeafBill: public Bill
 {
 private:
-    /* data */
+    Order* order;
 public:
-    LeafBill(/* args */);
+    LeafBill(Order* ord);
+    void printBill();
     ~LeafBill();
 };
-
-LeafBill::LeafBill(/* args */)
-{
-}
-
-LeafBill::~LeafBill()
-{
-}
 
 #endif

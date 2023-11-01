@@ -58,6 +58,7 @@ void Customer::setState(CustomerState *s)
 
 void Customer::placeOrder()
 {
+    this->order = menu();
 }
 
 Order *Customer::menu()
@@ -112,15 +113,69 @@ Order *Customer::menu()
     switch (mainVal)
     {
     case 1:
-        cout<<"Would you like your patty well-done or medium-rare" << endl;
-        cout<<"1. Well-done" << endl;
-        cout<<"2. Medium-rare" << endl;
-        cout<<"Would you like to remove garnish?" << endl;
-        cout<<"1. Yes" << endl;
-        cout<<"2. No" << endl;
-        cout<<"Would you like to remove the sauce?" << endl;
-        cout<<"1. Yes" << endl;
-        cout<<"2. No" << endl;
+        int welldone, garnish, sauce;
+        cout << "Would you like your patty well-done or medium-rare" << endl;
+        cout << "1. Well-done" << endl;
+        cout << "2. Medium-rare" << endl;
+        cin >> welldone;
+        bool w = false;
+        cout << "Would you like to remove garnish?" << endl;
+        cout << "1. Yes" << endl;
+        cout << "2. No" << endl;
+        cin >> garnish;
+        cout << "Would you like to remove the sauce?" << endl;
+        cout << "1. Yes" << endl;
+        cout << "2. No" << endl;
+        cin >> sauce;
+        customerOrder->addItem("Beef Burger", garnish == 1, sauce == 1, 89.0, welldone == 1);
+        break;
+    case 2:
+        customerOrder->addItem("Stirfry", false, false, 72.0, false);
+        break;
+    case 3:
+        customerOrder->addItem("Alfredo", false, false, 90.0, false);
+        break;
+    case 4:
+        int welldone, garnish, sauce;
+        cout << "Would you like your patty well-done or medium-rare" << endl;
+        cout << "1. Well-done" << endl;
+        cout << "2. Medium-rare" << endl;
+        cin >> welldone;
+        bool w = false;
+        cout << "Would you like to remove garnish?" << endl;
+        cout << "1. Yes" << endl;
+        cout << "2. No" << endl;
+        cin >> garnish;
+        cout << "Would you like to remove the sauce?" << endl;
+        cout << "1. Yes" << endl;
+        cout << "2. No" << endl;
+        cin >> sauce;
+        customerOrder->addItem("Chicken Burger", garnish == 1, sauce == 1, 65.0, welldone == 1);
+        break;
+    case 5:
+        customerOrder->addItem("Fried Meal", false, false, 85.0, false);
+        break;
+
+    default:
+        break;
+    }
+
+    int drinkVal = -1;
+    while (drinkVal != 1 && drinkVal != 2 && drinkVal != 3 && drinkVal != 4 && drinkVal != 5)
+    {
+        cout << "What would you like as a base for your  drink? (Pick an option below)" << endl;
+        cout << "1. Sprite - R15" << endl;
+        cout << "2. Coca-Cola - R17" << endl;
+        cout << "3. Fanta Orange - R20" << endl;
+        cout << "4. Jagermeister - R25" << endl;
+        cout << "5. Melktertjies - R15" << endl;
+        cin >> mainVal;
+    }
+
+    switch (drinkVal)
+    {
+    case 1:
+        /* code */
         break;
     case 2:
         /* code */
@@ -134,10 +189,12 @@ Order *Customer::menu()
     case 5:
         /* code */
         break;
-    
+
     default:
         break;
     }
+
+    return customerOrder;
 }
 
 void Customer::increaseTip()
