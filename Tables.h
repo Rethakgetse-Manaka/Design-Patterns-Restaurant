@@ -9,21 +9,20 @@ class Tables
 {
 private:
     Bill *bill;
+    //TableState *state;
     std::vector<Customer *> customers;
 public:
     Tables();
     ~Tables();
     void requestBill();
+    void requestWaiter();
+    void requestToOrder();
+    void receiveFood();
+    //void setState(TableState* s);
     void addCustomer(Customer *customer); 
     void removeCustomer(Customer *customer);
 };
 
-Tables::Tables(/* args */)
-{
-}
 
-Tables::~Tables()
-{
-}
 
 #endif
