@@ -11,7 +11,7 @@ Meal* RotisseurChef::createMain()
 }
 
 void RotisseurChef::addMeal(Meal* meal){
-    plate->addMeal(meal);
+    this->plate->addMeal(meal);
 }
 void RotisseurChef::setPlate(Plate* plate){
     this->plate = plate;

@@ -4,4 +4,5 @@
 void Wings::create()
 {
     cout << "Creating Wings..." << endl;
+    this->name = "Wings";
 }

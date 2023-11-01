@@ -4,4 +4,5 @@
 void FriedMeal::create()
 {
     cout << "Creating FriedMeal..." << endl;
+    this->name = "FriedMeal";
 }

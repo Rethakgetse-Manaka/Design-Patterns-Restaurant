@@ -4,4 +4,5 @@
 void BeefBurger::create()
 {
     cout << "Creating BeefBurger..." << endl;
+    this->name = "BeefBurger";
 }

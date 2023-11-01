@@ -4,4 +4,5 @@
 void GreenSalad::create()
 {
     cout << "Creating GreenSalad..." << endl;
+    this->name = "GreenSalad";
 }

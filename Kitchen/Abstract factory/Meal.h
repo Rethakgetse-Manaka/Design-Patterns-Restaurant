@@ -10,6 +10,8 @@ class Meal {
         // Meal();
         virtual void create() = 0;
         bool operator==(Meal& other);
+        virtual ~Meal(){};
+        virtual std::string getName();
     protected:
         string name;
         bool garnish;

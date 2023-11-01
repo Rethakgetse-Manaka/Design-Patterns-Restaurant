@@ -4,4 +4,5 @@
 void StirFry::create()
 {
     cout << "Creating StirFry..." << endl;
+    this->name = "StirFry";
 }

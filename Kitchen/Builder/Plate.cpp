@@ -1,11 +1,12 @@
 #include "Plate.h"
+#include <iostream>
 /**
  * @brief Construct a Plate object with an initial capacity for food items.
  *
  * @param NoOfFoods The initial capacity for food items in the plate.
  */
-Plate::Plate(int NoOfFoods) {
-    m_Meals = std::vector<Meal*>(NoOfFoods);
+Plate::Plate() {
+    m_Meals = std::vector<Meal*>();
 }
 
 /**
@@ -38,12 +39,18 @@ void Plate::removeMeal(Meal* item) {
 std::vector<Meal*>& Plate::getMeals() {
     return m_Meals;
 }
+void Plate::showMeals(){
+    for (int i = 0; i < m_Meals.size(); i++) {
+        std::cout << m_Meals[i]->getName() << " "; 
+    }
+    std::cout << std::endl;
+}
 /**
  * @brief 
  * 
  */
 Plate::~Plate() {
-    if(m_Meals.size() != 0){
+    if(!m_Meals.empty()){
         for (int i = 0; i < m_Meals.size(); i++) {
             delete m_Meals[i];
         }

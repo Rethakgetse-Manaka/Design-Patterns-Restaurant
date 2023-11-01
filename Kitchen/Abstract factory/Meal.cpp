@@ -1,5 +1,5 @@
 #include "Meal.h"
-
+#include <iostream>
 /**
  * @brief Equality comparison operator for Meal objects.
  *
@@ -10,4 +10,7 @@
  */
 bool Meal::operator==(Meal& other) {
     return (this->name == other.name);
+}
+std::string Meal::getName(){
+    return name;
 }

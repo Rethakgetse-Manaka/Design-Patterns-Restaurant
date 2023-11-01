@@ -4,4 +4,5 @@
 void Alfredo::create()
 {
     cout << "Creating Alfredo..." << endl;
+    this->name = "Alfredo";
 }

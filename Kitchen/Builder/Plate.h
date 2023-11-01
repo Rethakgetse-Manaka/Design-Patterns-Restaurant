@@ -15,7 +15,7 @@ class Plate {
         /**
          * @brief Default constructor for the Plate class.
          */
-        Plate(int NoOfFoods);
+        Plate();
 
         /**
          * @brief Add a food item to the plate.
@@ -38,6 +38,7 @@ class Plate {
         /**
          * @brief Destructor for the Plate class.
          */
+        void showMeals();
         ~Plate();
 };
 
