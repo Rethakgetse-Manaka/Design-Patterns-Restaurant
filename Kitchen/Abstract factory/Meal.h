@@ -9,9 +9,11 @@ class Meal {
     public:
         // Meal();
         virtual void create() = 0;
+        bool operator==(Meal& other);
     protected:
         string name;
         bool garnish;
         bool sauce;
+        
 };
 #endif
