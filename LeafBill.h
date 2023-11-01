@@ -2,12 +2,12 @@
 #define LEAFBILL_H
 
 #include "Bill.h"
-#include "Order.h"
 
 class LeafBill: public Bill
 {
 private:
     Order* order;
+    int billId;
 public:
     LeafBill(Order* ord);
     void printBill();

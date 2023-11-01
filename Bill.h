@@ -7,7 +7,7 @@
 class Bill
 {
 private:
-    /* data */
+
 public:
     Bill();
     virtual void printBill() ;

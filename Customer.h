@@ -26,6 +26,7 @@ public:
     ~Customer();
     int getCustomerID();
     std::string getCustomerName();
+    int getTableID();
     CustomerState *getState();
     OrderHandler *requestWaiter();
     void setState(CustomerState *s);

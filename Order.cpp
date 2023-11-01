@@ -25,9 +25,23 @@ std::vector<FoodItem *> Order::getItems()
     return items;
 }
 
+int Order::getTableID()
+{
+    return this->tableID;
+}
+
+void Order::setTableID(int id)
+{
+    this->tableID = id;
+}
+
 std::vector<SpecificCocktail *> Order::getDrinks()
 {
     return drinks;
+}
+
+void Order::addDrink()
+{
 }
 
 int Order::getCustomerID()

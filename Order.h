@@ -10,6 +10,7 @@ class Order
 {
 private:
     int customerID;
+    int tableID;
     std::string customerName;
     std::vector<FoodItem*> items;
     std::vector<SpecificCocktail*> drinks;
@@ -18,6 +19,8 @@ public:
     void addStarter(std::string, double val);
     void addItem(std::string item, bool g, bool s, double val, bool well);
     std::vector<FoodItem*> getItems();
+    int getTableID();
+    void setTableID(int id);
     std::vector<SpecificCocktail*> getDrinks();
     void addDrink();
     int getCustomerID();
