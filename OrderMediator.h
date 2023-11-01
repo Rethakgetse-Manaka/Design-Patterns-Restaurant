@@ -4,8 +4,8 @@
 class OrderMediator
 {
     public:
-        virtual void notifyOrderReady(Order* o) = 0;
-        virtual void notifyOrder(Order* o) = 0;
+        // virtual void notifyOrderReady(Order* o) = 0;
+        virtual void notifyOrderPlaced(Order* o) = 0;
 
 };
 #endif

@@ -1,6 +1,7 @@
 #ifndef Waiter_H
 #define Waiter_H
 #include "Colleague.h"
+class Plate;
 class Waiter:public Colleague
 {
     private:
@@ -8,9 +9,10 @@ class Waiter:public Colleague
         std::vector<Table*> tables;
     public:
         virtual void receiveOrder(Order* o);
-        virtual void sendOrder(Order* o);
-        void presentFoodToTable(Table* t);
+        void addTable(Table* t);
+        void presentFoodToTable(Table* t,Plate* p);
         void presentBill(Table* t);
+        std::string getName();
 
 
 

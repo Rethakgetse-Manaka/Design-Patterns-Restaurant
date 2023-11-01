@@ -1,18 +1,24 @@
-#ifndef ITEM_H
-#define ITEM_H
+#ifndef FOODITEMS_H
+#define FOODITEMS_H
+#include <iostream>
 #include <string>
 
 class FoodItem
 {
-    private:
-        double price;
-        std::string name;
-    public:
-        FoodItem(double p,std::string n);
-       
-        std::string getItemName();
-        
-        double getPrice();
+private:
+    std::string mealName;
+    std::string type;
+    double price;
+    bool garnish;
+    bool sauce;
+    bool welldone;
+public:
+    FoodItem();
+    FoodItem(std::string n, double val);
+    FoodItem(std::string n, bool gar, bool sauce, double val, bool well);
+    double getPrice();
 
+    ~FoodItem();
 };
+
 #endif

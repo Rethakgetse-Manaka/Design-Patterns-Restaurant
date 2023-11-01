@@ -1,9 +1,34 @@
 #include "FoodItem.h"
 
-FoodItem::FoodItem(double p,std::string n)
+using namespace std;
+
+FoodItem::FoodItem()
 {
-    this->price = p;
-    this->name = n;
+    this->mealName = "Meal";
+    this->garnish = false;
+    this->sauce = false;
+    this->type = "Main";
+    this->welldone = false;
+}
+
+FoodItem::FoodItem(std::string n, double v)
+{
+    this->mealName = n;
+    this->type = "Starter";
+    this->garnish = false;
+    this->sauce = false;
+    this->price = v;
+    this->welldone = false;
+}
+
+FoodItem::FoodItem(std::string n, bool gar, bool sauce, double v, bool well)
+{
+    this->mealName = n;
+    this->type = "Main";
+    this->garnish = gar;
+    this->sauce = sauce;
+    this->price = v;
+    this->welldone = well;
 }
 
 double FoodItem::getPrice()
@@ -11,7 +36,6 @@ double FoodItem::getPrice()
     return price;
 }
 
-std::string FoodItem::getItemName()
+FoodItem::~FoodItem()
 {
-    return name;
 }

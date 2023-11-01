@@ -7,11 +7,11 @@ class Chef:public Colleague
     private:
         std::vector<Order*> orders;
         std::vector<Plate*> plates;
-        bool available;
         std::string name;
     public:
-        virtual void sendOrder(Order* o);
+        
         virtual void receiveOrder(Order* o);
+        
 
 };
 #endif

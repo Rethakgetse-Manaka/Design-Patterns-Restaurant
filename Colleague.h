@@ -3,11 +3,11 @@
 #include "OrderMediator.h"
 class Colleague
 {
-    private:
+    protected:
         OrderMediator* mediator;
     public:
         virtual void receiveOrder(Order* o) = 0;
-        virtual void sendOrder(Order* o) = 0;
+
 
 };
 #endif

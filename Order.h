@@ -5,14 +5,19 @@
 class Waiter;
 class Order
 {
-    public:
+    private:
         int tableNumber;
-        Waiter* waiter;
+        int customerID;
+        std::string customerName;
         std::vector<FoodItem*> items;
-        std::string custId;
-        Order();
-        void addItem(FoodItem* i);
-        void removeItem(FoodItem* i);
+    public:
+        Order(int cID, std::string cName);
+        void addStarter(std::string, double val);
+        void addItem(std::string item, bool g, bool s, double val,bool well);
+        std::vector<FoodItem*> getFoodItems();
+        std::string getCustomerName();
+        
+        ~Order();
     
 
 
