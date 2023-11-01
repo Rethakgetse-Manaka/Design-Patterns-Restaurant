@@ -14,7 +14,10 @@ using namespace std;
 
 class FryCook : public Chef {
     public:
+        FryCook();
         Meal* createStarter();
         Meal* createMain();
+        void addMeal(Meal* meal);
+        void setPlate(Plate* plate);
 };
 #endif

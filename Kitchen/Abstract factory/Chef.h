@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include "Meal.h"
+#include "Builder/Plate.h"
 // #include "Order.h"
 
 using namespace std;
@@ -12,13 +13,15 @@ using namespace std;
 //the plates vector will be updated at the index of the order's orderID.
 
 class Chef {
-    private: 
+    protected: 
         // vector<Order*> orders; // orders is a vector of Order pointers
-        // static vector<Plate*> plates;
+        Plate* plate;
     public:
         // void addOrder(Order* order) = 0;
         virtual Meal* createStarter() = 0;
         virtual Meal* createMain() = 0;
+        virtual void addMeal(Meal* meal) = 0;
+        virtual void setPlate(Plate* plate) = 0;
 
         virtual ~Chef() {};
 };
