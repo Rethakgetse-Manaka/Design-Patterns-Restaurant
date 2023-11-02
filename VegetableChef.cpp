@@ -22,7 +22,7 @@ void VegetableChef::receiveOrder(std::string meal, int tableNumber, int custID, 
     }
     else if(meal == "Stir Fry")
     {
-        plate->addMeal(createStarter());
+        plate->addMeal(createMain());
     }
     if(plate->getMeals().size() == numOfItems)
     {

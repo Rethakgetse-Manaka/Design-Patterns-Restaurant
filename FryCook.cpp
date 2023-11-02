@@ -24,7 +24,7 @@ void FryCook::receiveOrder(std::string meal, int tableNumber, int custID, int nu
     }
     else if(meal == "Fried Meal")
     {
-        plate->addMeal(createStarter());
+        plate->addMeal(createMain());
     }
     if(plate->getMeals().size() == numOfItems)
     {

@@ -23,7 +23,7 @@ void RotisseurChef::receiveOrder(std::string meal, int tableNumber, int custID, 
     }
     else if(meal == "Chicken Burger")
     {
-        plate->addMeal(createStarter());
+        plate->addMeal(createMain());
     }
     if(plate->getMeals().size() == numOfItems)
     {
