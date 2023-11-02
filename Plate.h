@@ -1,3 +1,4 @@
+
 #ifndef Plate_H
 #define Plate_H
 class Meal;
@@ -26,6 +27,7 @@ class Plate
         
         void showMeals();
         int getTableNumber();
-        ~Plate();
+        virtual ~Plate();
 };
+
 #endif

@@ -8,6 +8,10 @@
  * @param other The Meal object to compare with.
  * @return true if the 'name' of both Meal objects is equal, false otherwise.
  */
-bool Meal::operator==(Meal& other) {
+Meal::~Meal()
+{
+}
+bool Meal::operator==(Meal &other)
+{
     return (this->name == other.name);
 }

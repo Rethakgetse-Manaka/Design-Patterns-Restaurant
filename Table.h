@@ -4,6 +4,7 @@
 #include <algorithm>
 class Customer;
 class Bill;
+class TableState;
 class Table
 {
     private:
@@ -11,6 +12,7 @@ class Table
         Bill* bill;
         std::vector<Customer*> customers;
         int tableNumber;
+        
 
     public:
         int getTableNumber();

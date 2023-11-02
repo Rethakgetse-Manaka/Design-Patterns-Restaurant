@@ -13,7 +13,7 @@ void Plate::addMeal(Meal* item) {
 
 
 void Plate::removeMeal(Meal* item) {
-    for (int i = 0; i < m_Meals.size(); i++) {
+    for (size_t i = 0; i < m_Meals.size(); i++) {
         if (m_Meals[i] == item) {
             m_Meals.erase(m_Meals.begin() + i);
         }
@@ -25,10 +25,15 @@ std::vector<Meal*>& Plate::getMeals() {
     return m_Meals;
 }
 void Plate::showMeals(){
-    for (int i = 0; i < m_Meals.size(); i++) {
+    for (size_t i = 0; i < m_Meals.size(); i++) {
         std::cout << m_Meals[i]->getName() << " "; 
     }
     std::cout << std::endl;
+}
+
+int Plate::getTableNumber()
+{
+    return tableNumber;
 }
 
 Plate::~Plate() {

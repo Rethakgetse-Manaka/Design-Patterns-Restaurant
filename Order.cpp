@@ -25,7 +25,15 @@ std::vector<FoodItem*> Order::getFoodItems()
     return items;
 }
 
+int Order::getTableNumber()
+{
+    return tableNumber;
+}
 
+int Order::getCustomerID()
+{
+    return customerID;
+}
 
 std::string Order::getCustomerName()
 {

@@ -7,7 +7,7 @@ using namespace std;
 
 class Meal {
     public:
-        // Meal();
+        virtual ~Meal();
         std::string getName();
         virtual void create() = 0;
         bool operator==(Meal& other);

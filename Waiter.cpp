@@ -61,7 +61,6 @@ void Waiter::presentFoodToTable(Plate* p)
 void Waiter::presentBill(Table* t)
 {
     CompositeBill* cb = new CompositeBill();
-    //Still need to add extra stuff for the bill
     t->setBill(cb);
     std::vector<Order*> o = t->getOrders();
     LeafBill* lb;
