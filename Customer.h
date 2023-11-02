@@ -1,0 +1,47 @@
+#ifndef CUSTOMER_H
+#define CUSTOMER_H
+
+// #include "CustomerState.h"
+#include "Order.h"
+// #include "OrderHandler.h"
+#include <string>
+#include <vector>
+#include <iostream>
+#include "Bill.h"
+// #include "Neutral.h"
+
+class Customer
+{
+private:
+    int customerID;
+    int valletID;
+    int tableID;
+    std::string customerName;
+    // CustomerState *state;
+    Order *order;
+    double tip;
+public:
+    Customer();
+    Customer(int id, std::string name);
+    ~Customer();
+    int getCustomerID();
+    std::string getCustomerName();
+    int getTableID();
+    // CustomerState *getState();
+    Order* getOrder();
+    int getTabID();
+    void setTableID(int id);
+    void setValletID(int id);
+    // OrderHandler *requestWaiter();
+    // void setState(CustomerState *s);
+    void payBill(Bill* bill);
+    void placeOrder();
+    Order* menu();
+    void complain();
+    void resolveComplaint();
+    void increaseTip();
+    void decreaseTip();
+    void eat();
+};
+
+#endif
