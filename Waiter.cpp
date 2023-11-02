@@ -7,6 +7,11 @@ void Waiter::receiveOrder(Order* o)
     mediator->notifyOrderPlaced(o);
 }
 
+void Waiter::addTable(Table* t)
+{
+    tables.push_back(t);
+}
+
 std::string Waiter::getName()
 {
     return name;
@@ -46,8 +51,10 @@ void Waiter::presentBill(Table* t)
 {
     
     Bill* b = new Bill();
+    
     //Still need to add extra stuff for the bill
     t->setBill(b);
+
     
     std::cout << "Table No: " <<t->getTableNumber()<< std::endl;
     std::cout << "--------------------------" << std::endl;

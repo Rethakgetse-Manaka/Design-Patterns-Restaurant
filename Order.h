@@ -14,8 +14,9 @@ class Order
         Order(int cID, std::string cName);
         void addStarter(std::string, double val);
         void addItem(std::string item, bool g, bool s, double val,bool well);
-        void removeItem(std::string item);
         std::vector<FoodItem*> getFoodItems();
+        int getTableNumber();
+        int getCustomerID();
         std::string getCustomerName();
         
         ~Order();

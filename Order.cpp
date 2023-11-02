@@ -25,11 +25,8 @@ std::vector<FoodItem*> Order::getFoodItems()
     return items;
 }
 
-void Order::removeItem(std::string item)
-{
-    items.erase(std::remove_if(items.begin(), items.end(), 
-    [&](FoodItem* itemPtr) { return itemPtr->getMealName() == item; }), items.end());
-}
+
+
 std::string Order::getCustomerName()
 {
     return customerName;

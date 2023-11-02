@@ -16,8 +16,5 @@ class Waiter:public Colleague
         bool managesTable(int tbn);
         Table* getTable(int tbn);
         std::string getName();
-
-
-
 };
 #endif

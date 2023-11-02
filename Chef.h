@@ -5,12 +5,12 @@ class Plate;
 class Chef:public Colleague
 {
     private:
-        std::vector<Order*> orders;
+        
         std::vector<Plate*> plates;
         std::string name;
     public:
         
-        virtual void receiveOrder(Order* o);
+        virtual void receiveOrder(std::string meal,int tableNumber,int custID,int numOfItems);
         
 
 };

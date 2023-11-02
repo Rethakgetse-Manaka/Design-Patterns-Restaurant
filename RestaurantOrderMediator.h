@@ -10,7 +10,7 @@ class RestaurantOrderMediator: public OrderMediator
         std::string name;
 
     public:
-        
+        RestaurantOrderMediator();
         virtual void notifyOrderPlaced(Order* o) = 0;
         virtual void notifyPlateReady(Plate* p);
 
