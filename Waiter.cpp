@@ -1,6 +1,7 @@
 #include "Waiter.h"
 #include "Plate.h"
-#include "Bill.h"
+#include "CompositeBill.h"
+#include "LeafBill.h"
 
 void Waiter::receiveOrder(Order* o)
 {
@@ -10,6 +11,11 @@ void Waiter::receiveOrder(Order* o)
 void Waiter::addTable(Table* t)
 {
     tables.push_back(t);
+}
+
+void Waiter::removeTable(Table * t)
+{
+    tables.erase(std::remove(tables.begin(), tables.end(), t), tables.end());
 }
 
 std::string Waiter::getName()
@@ -32,51 +38,38 @@ Table* Waiter::getTable(int tbn)
 {
     for(Table* t: tables)
     {
-        if(t != NULL && t->getTableNumber() == tbn)
+        if(t != nullptr && t->getTableNumber() == tbn)
             return t;
     }
-    return NULL;
+    return nullptr;
 
 }
 
 void Waiter::presentFoodToTable(Plate* p)
 {
-    std::cout << "Here is your meal, we hope you have a wonderful dining experience with us." <<std::endl;
-    std::cout << "Meals: ";
-    p->showMeals();
+    if(p != nullptr)
+    {
+        std::cout << "Here is your meal, we hope you have a wonderful dining experience with us." <<std::endl;
+        std::cout << "Meals: ";
+        p->showMeals();
+
+    }
+    
 
 
 }
 void Waiter::presentBill(Table* t)
 {
-    
-    Bill* b = new Bill();
-    
+    CompositeBill* cb = new CompositeBill();
     //Still need to add extra stuff for the bill
-    t->setBill(b);
-
-    
-    std::cout << "Table No: " <<t->getTableNumber()<< std::endl;
-    std::cout << "--------------------------" << std::endl;
-    std::cout << std::left << std::setw(25) << "Item" << "Price" << std::endl;
-    std::cout << "--------------------------" << std::endl;
-
+    t->setBill(cb);
     std::vector<Order*> o = t->getOrders();
     double total = 0;
+    LeafBill* lb;
     for(size_t i = 0;i < o.size();i++)
     {
-        
-        std::vector<FoodItem*> f = o[i]->getFoodItems();
-        for(size_t j = 0; j < f.size();j++)
-        {
-            total += f[j]->getPrice();
-            std::cout << std::left << std::setw(25) << f[j]->getMealName() <<f[j]->getPrice() <<std::endl;
-        }
-        
+        lb = new LeafBill(o[i]);
+        cb->addPerson(lb);
     }
-    
-    std::cout << std::left << std::setw(25) << "Total:" << total << std::endl;
-    std::cout << "Thank you for dining with us!" << std::endl;
-    
-
+    cb->printBill();
 }

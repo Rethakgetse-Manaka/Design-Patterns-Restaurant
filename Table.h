@@ -14,9 +14,13 @@ class Table
     public:
         int getTableNumber();
         std::vector<Order*> getOrders();
+        void addCustomer(Customer* c);
+        void removeCustomer(Customer* c);
         void readyForBill(Waiter* w);
         void placeOrder(Order* o,Waiter* w);
         void setBill(Bill * b);
+        Bill* getBill();
+        void setTableNumber(int tb);
 
 
     

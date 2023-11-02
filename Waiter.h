@@ -11,6 +11,7 @@ class Waiter:public Colleague
     public:
         virtual void receiveOrder(Order* o);
         void addTable(Table* t);
+        void removeTable(Table* t);
         void presentFoodToTable(Plate* p);
         void presentBill(Table* t);
         bool managesTable(int tbn);
