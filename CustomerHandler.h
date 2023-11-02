@@ -1,6 +1,8 @@
 #ifndef CUSTOMERHANDLER_H
 #define CUSTOMERHANDLER_H
 
+#include <iostream>
+
 class CustomerHandler
 {
 private:
@@ -8,7 +10,7 @@ private:
 public:
     CustomerHandler();
     void add(CustomerHandler* n);
-    ~CustomerHandler();
+    virtual ~CustomerHandler();
     virtual void handleRequest();
 };
 

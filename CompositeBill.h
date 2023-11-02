@@ -8,13 +8,13 @@ class CompositeBill: public Bill
 {
 private:
     std::vector<Bill*> tableBills;
-    Order* order;
-    int billId;
 public:
-    CompositeBill(Order* ord);
+    CompositeBill();
     void printBill();
     void addPerson(Bill* Bill);
     void removePerson(Bill* Bill);
+    double getBillTotal();
+    Order* getOrder();
     ~CompositeBill();
 };
 

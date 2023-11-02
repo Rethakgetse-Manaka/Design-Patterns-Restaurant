@@ -10,6 +10,8 @@ private:
     int billId;
 public:
     LeafBill(Order* ord);
+    Order* getOrder();
+    double getBillTotal();
     void printBill();
     ~LeafBill();
 };

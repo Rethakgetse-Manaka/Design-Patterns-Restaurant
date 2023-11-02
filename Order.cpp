@@ -51,6 +51,20 @@ int Order::getCustomerID()
     return this->customerID;
 }
 
+double Order::getTotal()
+{
+    double tot = 0;
+    for (int i = 0; i < (int)items.size(); i++)
+    {
+        tot += items[i]->getPrice();
+    }
+    // for(int i = 0; i < (int)drinks.size(); i++)
+    // {
+    //     tot += drinks[i]->getPrice();
+    // }
+    return tot;
+}
+
 std::string Order::getCustomerName()
 {
     return this->customerName;

@@ -24,6 +24,7 @@ public:
     std::vector<SpecificCocktail*> getDrinks();
     void addDrink(std::string baseName, bool alch, double cost, std::vector<std::string> mixes);
     int getCustomerID();
+    double getTotal();
     std::string getCustomerName();
     std::string printOrder();
     ~Order();

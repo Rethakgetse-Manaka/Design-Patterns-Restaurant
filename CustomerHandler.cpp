@@ -25,4 +25,9 @@ CustomerHandler::~CustomerHandler()
 
 void CustomerHandler::handleRequest()
 {
+    if(next != nullptr){
+        next->handleRequest();
+    }else{
+        cout<<"No handler available to handle your request." << endl;
+    }
 }

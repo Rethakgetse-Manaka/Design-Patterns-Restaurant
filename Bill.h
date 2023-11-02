@@ -13,6 +13,8 @@ public:
     virtual void printBill() ;
     virtual void addPerson(Bill* Bill) ;
     virtual void removePerson(Bill* Bill) ;
+    virtual Order* getOrder() =0;
+    virtual double getBillTotal() =0;
     ~Bill();
 };
 

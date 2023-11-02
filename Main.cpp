@@ -24,9 +24,11 @@ int main()
     cout<<endl;
     cout<<"Testing the Bill for a customer: "<<endl << endl;
     
-    Bill* b = new CompositeBill(c->getOrder());
+    Bill* b = new CompositeBill();
     Bill* b1 = new LeafBill(c2->getOrder());
+    Bill* b2 = new LeafBill(c->getOrder());
     b->addPerson(b1);
+    b->addPerson(b2);
     b->printBill();
     return 0;
 }

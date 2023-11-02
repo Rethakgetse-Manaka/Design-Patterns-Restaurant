@@ -7,6 +7,16 @@ LeafBill::LeafBill(Order* ord)
     this->order = ord;
 }
 
+Order *LeafBill::getOrder()
+{
+    return this->order;
+}
+
+double LeafBill::getBillTotal()
+{
+    return this->order->getTotal();
+}
+
 void LeafBill::printBill()
 {
     double foodTotal = 0, drinkTot = 0, total = 0;
