@@ -12,10 +12,10 @@ public:
     CompositeBill();
     void printBill();
     void addPerson(Bill* Bill);
-    void removePerson(Bill* Bill);
+    void removePerson(int customer);
     double getBillTotal();
     Order* getOrder();
-    ~CompositeBill();
+    virtual ~CompositeBill();
 };
 
 #endif

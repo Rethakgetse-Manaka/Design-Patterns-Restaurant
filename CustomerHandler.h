@@ -2,7 +2,7 @@
 #define CUSTOMERHANDLER_H
 
 #include <iostream>
-
+#include "Customer.h"
 class CustomerHandler
 {
 private:
@@ -11,7 +11,7 @@ public:
     CustomerHandler();
     void add(CustomerHandler* n);
     virtual ~CustomerHandler();
-    virtual void handleRequest();
+    virtual void handleRequest(Customer* customer);
 };
 
 

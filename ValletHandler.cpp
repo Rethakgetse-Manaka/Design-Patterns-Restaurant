@@ -6,7 +6,7 @@ ValletHandler::ValletHandler(/* args */)
 {
 }
 
-void ValletHandler::valletRequest()
+void ValletHandler::valletRequest(Customer* customer)
 {
     std::cout << "Welcome to Patterning The Patterns Cuisine!" << std::endl;
 
@@ -29,9 +29,9 @@ void ValletHandler::valletRequest()
     }
 }
 
-void ValletHandler::handleRequest()
+void ValletHandler::handleRequest(Customer* customer)
 {
-    valletRequest();
+    valletRequest(customer);
 }
 
 ValletHandler::~ValletHandler()

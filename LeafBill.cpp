@@ -2,9 +2,20 @@
 
 using namespace std;
 
-LeafBill::LeafBill(Order* ord)
+LeafBill::LeafBill(Order* ord, double tip)
 {
     this->order = ord;
+    this->tip = tip;
+}
+
+void LeafBill::setTip(double tip)
+{
+    this->tip = tip;
+}
+
+double LeafBill::getTip()
+{
+    return this->tip;
 }
 
 Order *LeafBill::getOrder()
@@ -14,7 +25,7 @@ Order *LeafBill::getOrder()
 
 double LeafBill::getBillTotal()
 {
-    return this->order->getTotal();
+    return this->order->getTotal()+tip;
 }
 
 void LeafBill::printBill()
@@ -38,6 +49,9 @@ void LeafBill::printBill()
     // }
     cout<<"----------------------------------------------"<<endl;
     total = foodTotal + drinkTot;
+    cout<<"Tip: "<<endl;
+    cout<<"R"<<tip<<endl;
+    cout<<"----------------------------------------------"<<endl;
     cout<<"Total: R"<<total<<endl;
 
 }

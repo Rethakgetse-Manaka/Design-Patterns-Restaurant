@@ -10,8 +10,8 @@ private:
     /* data */
 public:
     ValletHandler(/* args */);
-    void valletRequest();
-    void handleRequest();
+    void valletRequest(Customer* customer);
+    void handleRequest(Customer* customer);
     virtual ~ValletHandler();
 };
 

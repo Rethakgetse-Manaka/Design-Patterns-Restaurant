@@ -1,6 +1,7 @@
 #ifndef CUSTOMER_H
 #define CUSTOMER_H
 
+class TableVisitor;
 #include "CustomerState.h"
 #include "Order.h"
 #include "OrderHandler.h"
@@ -9,6 +10,9 @@
 #include <iostream>
 #include "Bill.h"
 #include "Neutral.h"
+#include "ComplaintsManager.h"
+#include "AdminManager.h"
+
 
 class Customer
 {
@@ -31,6 +35,7 @@ public:
     CustomerState *getState();
     Order* getOrder();
     int getTabID();
+    double getTip();
     void setTableID(int id);
     void setValletID(int id);
     OrderHandler *requestWaiter();
@@ -40,9 +45,13 @@ public:
     Order* menu();
     void complain();
     void resolveComplaint();
+    void resolveService();
     void increaseTip();
     void decreaseTip();
+    void respondWithSatifaction();
+    void respondWithDissatifaction();
     void eat();
+    void accept(TableVisitor *v);
 };
 
 #endif

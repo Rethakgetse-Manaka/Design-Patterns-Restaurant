@@ -23,10 +23,10 @@ CustomerHandler::~CustomerHandler()
 {
 }
 
-void CustomerHandler::handleRequest()
+void CustomerHandler::handleRequest(Customer* customer)
 {
     if(next != nullptr){
-        next->handleRequest();
+        next->handleRequest(customer);
     }else{
         cout<<"No handler available to handle your request." << endl;
     }

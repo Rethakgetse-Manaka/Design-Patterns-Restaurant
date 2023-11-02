@@ -102,4 +102,14 @@ std::string Order::printOrder()
 
 Order::~Order()
 {
+    for(int i = 0; i < (int)items.size(); i++)
+    {
+        delete items[i];
+    }
+    items.clear();
+
+    for(int i = 0; i < (int)drinks.size(); i++){
+        delete drinks[i];
+    }
+    drinks.clear();
 }

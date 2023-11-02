@@ -5,8 +5,26 @@
 #include "LeafBill.h"
 using namespace std;
 
-int main()
-{
+void testBill(){
+    Customer *c = new Customer(1, "John");
+    Customer *c2 = new Customer(2, "Jane");
+    cout<<"Testing the Bill for a customer: "<<endl << endl;
+    c->placeOrder();
+    c2->placeOrder();
+    Bill* b = new CompositeBill();
+    Bill* b1 = new LeafBill(c2->getOrder(), c2->getTip());
+    Bill* b2 = new LeafBill(c->getOrder(), c->getTip());
+    b->addPerson(b1);
+    b->addPerson(b2);
+    b->printBill();
+    b->removePerson(1);
+    b->printBill();
+    delete c;
+    delete c2;
+    delete b;
+}
+
+void testOrderPlacing(){
     Customer *c = new Customer(1, "John");
     Customer *c2 = new Customer(2, "Jane");
     cout<<"Testing the Menu for a customer: "<<endl;
@@ -16,19 +34,24 @@ int main()
     c2->placeOrder();
     cout<<endl;
     cout<<endl;
+    delete c;
+    delete c2;
+}
+
+void testCustomerState(){
+    Customer *c = new Customer(1, "John");
     cout<< "Testing out the state of the customer" << endl;
     c->eat();
     c->complain();
     c->resolveComplaint();
     cout<<endl;
     cout<<endl;
-    cout<<"Testing the Bill for a customer: "<<endl << endl;
-    
-    Bill* b = new CompositeBill();
-    Bill* b1 = new LeafBill(c2->getOrder());
-    Bill* b2 = new LeafBill(c->getOrder());
-    b->addPerson(b1);
-    b->addPerson(b2);
-    b->printBill();
+    delete c;
+}
+int main()
+{
+    testOrderPlacing();
+    // testBill();
+    // testCustomerState();
     return 0;
 }

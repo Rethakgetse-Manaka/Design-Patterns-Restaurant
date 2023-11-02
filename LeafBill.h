@@ -8,12 +8,15 @@ class LeafBill: public Bill
 private:
     Order* order;
     int billId;
+    double tip;
 public:
-    LeafBill(Order* ord);
+    LeafBill(Order* ord, double tip);
+    void setTip(double tip);
+    double getTip();
     Order* getOrder();
     double getBillTotal();
     void printBill();
-    ~LeafBill();
+    virtual ~LeafBill();
 };
 
 #endif

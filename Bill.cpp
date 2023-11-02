@@ -14,8 +14,9 @@ void Bill::addPerson(Bill *Bill)
 {
 }
 
-void Bill::removePerson(Bill *Bill)
+void Bill::removePerson(int customerID)
 {
+    
 }
 
 Bill::~Bill()

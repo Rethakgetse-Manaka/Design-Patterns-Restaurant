@@ -14,8 +14,10 @@ void CompositeBill::printBill()
     cout<<"Total: R"<<total<<endl << "[";
 
 	vector<Bill*>:: iterator it;
-	for (it = tableBills.begin(); it != tableBills.end(); ++it)
-		(*it)->printBill();
+	for (it = tableBills.begin(); it != tableBills.end(); ++it){
+        (*it)->printBill();
+    }
+		
 	cout << "]" << endl;
 }
 
@@ -24,15 +26,22 @@ void CompositeBill::addPerson(Bill *bill)
     this->tableBills.push_back(bill);
 }
 
-void CompositeBill::removePerson(Bill *bill)
+void CompositeBill::removePerson(int customer)
 {
-    //tableBills.erase(remove(tableBills.begin(), tableBills.end(), bill), tableBills.end());
+    for (vector<Bill*>::iterator it = tableBills.begin(); it != tableBills.end(); ++it) {
+        if ((*it)->getOrder()->getCustomerID() == customer) {
+            // Match found, erase the bill from the vector
+            delete *it; // If Bill object owns any resources, delete them first
+            tableBills.erase(it);
+            break; // Exit the loop once the first match is removed
+        }
+    }
 }
 
 double CompositeBill::getBillTotal()
 {
     double total = 0;
-    vector<Bill*>:: iterator it;
+    vector<Bill*>::iterator it;
 	for (it = tableBills.begin(); it != tableBills.end(); ++it){
         total += (*it)->getBillTotal();
     }
@@ -46,4 +55,9 @@ Order *CompositeBill::getOrder()
 
 CompositeBill::~CompositeBill()
 {
+    vector<Bill*>:: iterator it;
+  
+  for (it = tableBills.begin(); it != tableBills.end(); ++it){
+    delete *it;
+  }
 }
