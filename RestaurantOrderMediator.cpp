@@ -8,6 +8,7 @@ RestaurantOrderMediator::RestaurantOrderMediator()
 }
 void RestaurantOrderMediator::notifyOrderPlaced(Order* o)
 {
+    Chef::setPlate(new Plate());
     std::cout << "Order handler received the order from the waiter and is passing it to an available chef.."<<std::endl;
 
     //Need to handle passing the order  to chefs

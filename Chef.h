@@ -6,12 +6,14 @@ class Chef:public Colleague
 {
     private:
         
-        std::vector<Plate*> plates;
+        static Plate* plate;
         std::string name;
     public:
         
         virtual void receiveOrder(std::string meal,int tableNumber,int custID,int numOfItems);
+        static void setPlate(Plate* p);
         
 
 };
+
 #endif
