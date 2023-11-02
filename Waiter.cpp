@@ -64,7 +64,6 @@ void Waiter::presentBill(Table* t)
     //Still need to add extra stuff for the bill
     t->setBill(cb);
     std::vector<Order*> o = t->getOrders();
-    double total = 0;
     LeafBill* lb;
     for(size_t i = 0;i < o.size();i++)
     {

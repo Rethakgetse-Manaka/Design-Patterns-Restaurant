@@ -1,17 +1,20 @@
 #ifndef Chef_H
 #define Chef_H
 #include "Colleague.h"
-class Plate;
+#include "Plate.h"
 class Chef:public Colleague
 {
-    private:
-        
-        static Plate* plate;
+    protected:
         std::string name;
+        static Plate* plate;
     public:
         
-        virtual void receiveOrder(std::string meal,int tableNumber,int custID,int numOfItems);
-        static void setPlate(Plate* p);
+        virtual Meal* createStarter() = 0;
+        virtual Meal* createMain() = 0;
+        virtual void addMeal(Meal* meal) = 0;
+        static void setPlate(Plate* plate);
+        virtual void receiveOrder(std::string meal,int tableNumber,int custID,int numOfItems) = 0;
+        
         
 
 };

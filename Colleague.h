@@ -5,8 +5,7 @@ class Colleague
 {
     protected:
         OrderMediator* mediator;
-    public:
-        virtual void receiveOrder(Order* o) = 0;
+    
 
 
 };
