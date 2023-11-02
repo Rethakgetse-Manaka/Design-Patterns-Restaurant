@@ -23,7 +23,7 @@ void PastaChef::receiveOrder(std::string meal, int tableNumber, int custID, int 
     }
     else if(meal == "Alfredo")
     {
-        plate->addMeal(createStarter());
+        plate->addMeal(createMain());
     }
     if(plate->getMeals().size() == numOfItems)
     {
