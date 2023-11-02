@@ -10,12 +10,14 @@
 class Plate {
     private:
         std::vector<Meal*> m_Meals; /**< A vector to store food items. */
+        int customerID;
+        int plateID;
 
     public:
         /**
          * @brief Default constructor for the Plate class.
          */
-        Plate();
+        // Plate(int c, int p);
 
         /**
          * @brief Add a food item to the plate.
@@ -39,6 +41,10 @@ class Plate {
          * @brief Destructor for the Plate class.
          */
         void showMeals();
+
+        int getCustomerID();
+        int getPlateID();
+
         ~Plate();
 };
 

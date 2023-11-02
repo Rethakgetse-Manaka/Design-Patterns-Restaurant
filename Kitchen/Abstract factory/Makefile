@@ -10,7 +10,7 @@ all: $(OBJS)
 	$(CXX) $(CFLAGS) -c $< -o $@
     
 clean:
-	del /q $(TARGET) *.o ..\Builder\*.o
+	rm -f $(TARGET) $(OBJS)
 
 run:
 	./main

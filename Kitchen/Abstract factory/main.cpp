@@ -24,7 +24,8 @@ int main() {
 
         std::cout << "Chef " << i + 1 << " created and added meals to the plate:" << std::endl;
         std::cout << "Starter: " << starter->getName() << std::endl;
-        std::cout << "Main Course: " << mainCourse->getName() << std::endl;
+        std::cout << "Main Course
+        : " << mainCourse->getName() << std::endl;
     }
 
     std::cout << "Meals on the plate:" << std::endl;
