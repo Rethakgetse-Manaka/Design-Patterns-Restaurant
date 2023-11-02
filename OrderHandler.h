@@ -10,12 +10,4 @@ public:
     ~OrderHandler();
 };
 
-OrderHandler::OrderHandler(/* args */)
-{
-}
-
-OrderHandler::~OrderHandler()
-{
-}
-
 #endif

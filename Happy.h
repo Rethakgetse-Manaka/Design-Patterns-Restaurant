@@ -2,6 +2,7 @@
 #define HAPPY_H
 
 #include "CustomerState.h"
+#include "Customer.h"
 #include "Neutral.h"
 #include "UnHappy.h"
 class Happy: public CustomerState
@@ -13,7 +14,7 @@ public:
     void handle(Customer* c);
     void showHapiness(Customer* c);
     void showUnhapiness(Customer* c);   
-    ~Happy();
+    virtual ~Happy();
 };
 
 #endif

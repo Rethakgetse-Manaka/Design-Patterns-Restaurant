@@ -2,6 +2,7 @@
 #define NEUTRAL_H
 
 #include "CustomerState.h"
+#include "Customer.h"
 #include "Happy.h"
 #include "UnHappy.h"
 
@@ -14,7 +15,7 @@ public:
     void handle(Customer* c);
     void showHapiness(Customer* c);
     void showUnhapiness(Customer* c);
-    ~Neutral();
+    virtual ~Neutral();
 };
 
 #endif

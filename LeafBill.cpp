@@ -14,7 +14,7 @@ void LeafBill::printBill()
     cout<<"Your bill is as follows:"<<endl;
     cout<<"----------------------------------------------"<<endl;
     cout<<"Food Items:"<<endl;
-    for(int i = 0; i < order->getItems().size(); i++)
+    for(int i = 0; i < (int)order->getItems().size(); i++)
     {
         cout<<order->getItems()[i]->toString() << endl;
         foodTotal += order->getItems()[i]->getPrice();

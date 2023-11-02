@@ -14,7 +14,7 @@ void CompositeBill::printBill()
     cout<<"Your bill is as follows:"<<endl;
     cout<<"----------------------------------------------"<<endl;
     cout<<"Food Items:"<<endl;
-    for(int i = 0; i < order->getItems().size(); i++)
+    for(int i = 0; i < (int)order->getItems().size(); i++)
     {
         cout<<order->getItems()[i]->toString() << endl;
         foodTotal += order->getItems()[i]->getPrice();
@@ -43,7 +43,7 @@ void CompositeBill::addPerson(Bill *bill)
 
 void CompositeBill::removePerson(Bill *bill)
 {
-    tableBills.erase(remove(tableBills.begin(), tableBills.end(), bill), tableBills.end());
+    //tableBills.erase(remove(tableBills.begin(), tableBills.end(), bill), tableBills.end());
 }
 
 CompositeBill::~CompositeBill()

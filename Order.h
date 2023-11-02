@@ -22,9 +22,10 @@ public:
     int getTableID();
     void setTableID(int id);
     std::vector<SpecificCocktail*> getDrinks();
-    void addDrink();
+    void addDrink(std::string baseName, bool alch, double cost, std::vector<std::string> mixes);
     int getCustomerID();
     std::string getCustomerName();
+    std::string printOrder();
     ~Order();
 };
 

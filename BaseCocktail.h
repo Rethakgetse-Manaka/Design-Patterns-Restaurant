@@ -10,12 +10,4 @@ public:
     ~BaseCocktail();
 };
 
-BaseCocktail::BaseCocktail(/* args */)
-{
-}
-
-BaseCocktail::~BaseCocktail()
-{
-}
-
 #endif

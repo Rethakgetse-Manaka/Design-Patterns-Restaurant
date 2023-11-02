@@ -10,12 +10,4 @@ public:
     ~SpecificCocktail();
 };
 
-SpecificCocktail::SpecificCocktail(/* args */)
-{
-}
-
-SpecificCocktail::~SpecificCocktail()
-{
-}
-
 #endif
