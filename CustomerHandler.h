@@ -6,7 +6,8 @@ class CustomerHandler
 private:
     CustomerHandler* next;
 public:
-    CustomerHandler(/* args */);
+    CustomerHandler();
+    void add(CustomerHandler* n);
     ~CustomerHandler();
     virtual void handleRequest();
 };

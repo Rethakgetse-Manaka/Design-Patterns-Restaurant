@@ -50,7 +50,7 @@ std::string FoodItem::toString()
 {
     stringstream ss;
     ss << this->price;
-    return this->type + ": " + this->mealName + "R" + ss.str() + "\n";
+    return this->type + ": " + this->mealName + " R" + ss.str() + "\n";
 }
 
 FoodItem::~FoodItem()
