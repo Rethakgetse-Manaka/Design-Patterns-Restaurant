@@ -3,6 +3,10 @@
 #include "Bill.h"
 #include "CompositeBill.h"
 #include "LeafBill.h"
+#include "TableVisitor.h"
+#include "ComplaintsManager.h"
+#include "AdminManager.h"
+#include <vector>
 using namespace std;
 
 void testBill(){
@@ -48,10 +52,36 @@ void testCustomerState(){
     cout<<endl;
     delete c;
 }
+
+void testManagerVisitor(){
+    TableVisitor *cManager = new ComplaintsManager();
+    TableVisitor *aManager = new AdminManager();
+    cout<< "Testing out the visitor pattern for the managers" << endl;
+    vector<Customer*> customers;
+    customers.push_back(new Customer(1, "John"));
+    customers.push_back(new Customer(2, "Jane"));
+    customers.push_back(new Customer(3, "Jack"));
+    customers.push_back(new Customer(4, "Jill"));
+
+    for(int i = 0; i < (int)customers.size(); i++){
+        customers[i]->accept(cManager);
+    }
+
+    for(int i = 0; i < (int)customers.size(); i++){
+        customers[i]->accept(aManager);
+    }
+    delete cManager;
+    delete aManager;
+    for(int i = 0; i < (int)customers.size(); i++){
+        delete customers[i];
+    }
+    customers.clear();
+}
 int main()
 {
-    testOrderPlacing();
+    //testOrderPlacing();
     // testBill();
     // testCustomerState();
+    testManagerVisitor();
     return 0;
 }

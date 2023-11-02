@@ -18,7 +18,7 @@ private:
 public:
     Restaurant(/* args */);
     void initialCustomerHandling(Customer *customer);
-
+    void visitTable(TableVisitor *tableVisitor);
     ~Restaurant();
 };
 

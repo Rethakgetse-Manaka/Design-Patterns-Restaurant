@@ -17,7 +17,7 @@ void Table::addCustomer(Customer *c)
 void Table::removeCustomer(Customer *c)
 {
 
-    customers.erase(std::remove(customers.begin(), customers.end(), c), customers.end());
+    // customers.erase(std::remove(customers.begin(), customers.end(), c), customers.end());
 
 
 

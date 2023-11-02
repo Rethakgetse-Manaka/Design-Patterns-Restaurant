@@ -5,6 +5,7 @@ Customer::Customer()
 {
     this->state = new Neutral();
     this->order = NULL;
+    this->tip = 0.0;
 }
 
 Customer::Customer(int id, std::string name)
@@ -13,6 +14,7 @@ Customer::Customer(int id, std::string name)
     this->customerName = name;
     this->state = new Neutral();
     this->order = NULL;
+    this->tip = 0.0;
 }
 
 Customer::~Customer()
