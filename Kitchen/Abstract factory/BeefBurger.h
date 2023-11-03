@@ -9,5 +9,6 @@ using namespace std;
 class BeefBurger : public MainMeal {
     public:
         void create();
+        virtual void add(BeefBurger* base);
 };
 #endif
