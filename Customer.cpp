@@ -153,6 +153,7 @@ Order *Customer::menu()
         cout << "2. No" << endl;
         cin >> multStarter;
     }
+    cout << customerOrder->printOrder() << endl;
 
     int mainVal = -1, multMain = 0;
     cout << "Would you like to order a main?" << endl;
@@ -221,12 +222,14 @@ Order *Customer::menu()
 
         
         mainVal = -1;
+        cout << customerOrder->printOrder() << endl;
         cout << "Would you like to order another main?" << endl;
         cout << "1. Yes" << endl;
         cout << "2. No" << endl;
         cin >> multMain;
-        cout << customerOrder->printOrder() << endl;
+        
     }
+    cout << customerOrder->printOrder() << endl;
 
     int drinkVal = -1, multDrink = 0;
     cout << "Would you like to order a drink?" << endl;
@@ -250,7 +253,7 @@ Order *Customer::menu()
         cout << "1. Yes" << endl;
         cout << "2. No" << endl;
         cin >> alVal;
-        std::vector<std::string> mixes;
+        std::string mixes = "";
         double alcoholCost = 0.0;
         if (alVal == 1)
         {
@@ -268,23 +271,23 @@ Order *Customer::menu()
                 switch (alcoholVal)
                 {
                 case 1:
-                    mixes.push_back("Vodka");
+                    mixes += " Vodka";
                     alcoholCost += 15.0;
                     break;
                 case 2:
-                    mixes.push_back("Whiskey");
+                    mixes += " Whiskey";
                     alcoholCost += 17.0;
                     break;
                 case 3:
-                    mixes.push_back("Rum");
+                    mixes += " Rum";
                     alcoholCost += 20.0;
                     break;
                 case 4:
-                    mixes.push_back("Tequila");
+                    mixes += " Tequila";
                     alcoholCost += 25.0;
                     break;
                 case 5:
-                    mixes.push_back("Gin");
+                    mixes += " Gin";
                     alcoholCost += 15.0;
                     break;
                 default:
@@ -331,20 +334,21 @@ Order *Customer::menu()
         cout << "2. No" << endl;
         cin >> multDrink;
     }
-
+    cout << customerOrder->printOrder() << endl;
+    cout << "Your order has been placed." << endl;
     return customerOrder;
 }
 
 void Customer::complain()
 {
     state->showUnhapiness(this);
-    cout << this->customerName << " is complaining about their food" << endl; // this->order->getItems()[0]->getName() << endl;
+    cout << this->customerName << " is complaining about their food."<< endl;
 }
 
 void Customer::resolveComplaint()
 {
     state->handle(this);
-    cout << this->customerName << " is now fine with their food" << endl; // this->order->getItems()[0]->getName() << " and will try taste it" << endl;
+    cout << this->customerName << " is now fine with their food and will try taste it" << endl;
     eat();
 }
 

@@ -9,11 +9,13 @@ AssignTable::AssignTable(std::vector<Table*> tables)
 
 void AssignTable::handleRequest(Customer *customer)
 {
+    cout << "Assigning table to " << customer->getCustomerName() << "..." <<endl << endl;
     // for (int i = 0; i < tables.size(); i++)
     // {
-    //     if (tables[i]->isAvailable())
+    //     if (tables[i]->isFree())
     //     {
-    //         tables[i]->setCustomer(customer);
+    //         tables[i]->addCustomer(customer);
+    //         customer->setTableID(tables[i]->getTableNumber());
     //         cout << customer->getCustomerName() <<  "was assigned to Table " << tables[i]->getTableNumber() << endl;
     //         return;
     //     }

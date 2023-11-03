@@ -5,7 +5,7 @@
 #include "Customer.h"
 class CustomerHandler
 {
-private:
+protected:
     CustomerHandler* next;
 public:
     CustomerHandler();

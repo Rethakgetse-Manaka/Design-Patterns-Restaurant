@@ -81,34 +81,51 @@
 //     customers.clear();
 // }
 
-// void testBillPayment(){
+void testBillPayment(){
+    cout<<"Unit testing eat function." << endl;
+    Customer* newCustomer = new Customer(1, "John");
+    Bill* b1 = new LeafBill(newCustomer->getOrder(), newCustomer->getTip());
+    newCustomer->payBill(b1);
+}
 
-// }
+void testEat(){
+    cout<<"Unit testing eat function." << endl;
+    Customer* newCustomer = new Customer(1, "John");
+    newCustomer->eat();
+    delete newCustomer;
+}
 
-// void testEat(){
-
-// }
-
-// void testComplain(){
-    
-// }
+void testComplain(){
+    cout<<"Unit testing complain function." << endl;
+    Customer* newCustomer = new Customer(1, "John");
+    newCustomer->complain();
+    delete newCustomer;
+}
 
 // void testInitialCustomerHandling(){
 //     Customer* customer = new Customer(1, "John");
 //     vector<Table*> tables;
 //     tables.push_back(new Table());
     
-//     CustomerHandler *customerHandler = new CustomerHandler();
-//     customerHandler->add(new ValletHandler());
-//     customerHandler->add(new AssignTable(tables));
-//     customerHandler->handleRequest(customer);
-// }
-// int main()
-// {
-//     //testOrderPlacing();
-//     // testBill();
-//     // testCustomerState();
-//     //testManagerVisitor();
-//     testInitialCustomerHandling();
-//     return 0;
-// }
+    CustomerHandler *customerHandler = new CustomerHandler();
+    customerHandler->add(new ValletHandler());
+    customerHandler->add(new AssignTable(tables));
+    customerHandler->handleRequest(customer);
+    delete customer;
+    delete customerHandler;
+    for(int i = 0; i < (int)tables.size(); i++){
+        delete tables[i];
+    }
+    tables.clear();
+}
+int main()
+{
+    //testOrderPlacing();
+    testBill();
+    // testCustomerState();
+    //testManagerVisitor();
+    //testInitialCustomerHandling();
+    testEat();
+    testComplain();
+    return 0;
+}
