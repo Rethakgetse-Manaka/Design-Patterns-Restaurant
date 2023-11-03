@@ -1,13 +1,17 @@
 #ifndef BASECOCKTAIL_H
 #define BASECOCKTAIL_H
+#include "Cocktail.h"
 
-class BaseCocktail
-{
+class BaseCocktail : public Cocktail {
 private:
-    /* data */
+    std::string cocktailType;
+    double cocktailCost;
+
 public:
-    BaseCocktail(/* args */);
-    ~BaseCocktail();
+    BaseCocktail(std::string type, double cost);
+    std::string getDescription() const override;
+    double cost() const override;
+    virtual ~BaseCocktail();
 };
 
 #endif

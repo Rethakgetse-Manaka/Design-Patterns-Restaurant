@@ -1,11 +1,17 @@
 #include "BaseCocktail.h"
 
-using namespace std;
+BaseCocktail::BaseCocktail(std::string type, double cost)
+    : cocktailType(type), cocktailCost(cost) {}
 
-BaseCocktail::BaseCocktail(/* args */)
-{
+std::string BaseCocktail::getDescription() const {
+    return cocktailType;
+}
+
+double BaseCocktail::cost() const {
+    return cocktailCost;
 }
 
 BaseCocktail::~BaseCocktail()
 {
+    
 }

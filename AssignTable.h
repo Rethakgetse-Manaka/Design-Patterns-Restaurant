@@ -12,7 +12,7 @@ private:
 public:
     AssignTable(std::vector<Table*> tables);
     void handleRequest(Customer* customer);
-    ~AssignTable();
+    virtual ~AssignTable();
 };
 
 

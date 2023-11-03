@@ -5,6 +5,7 @@
 #include <vector>
 #include "FoodItem.h"
 #include "SpecificCocktail.h"
+#include "BaseCocktail.h"
 
 class Order
 {
@@ -22,7 +23,7 @@ public:
     int getTableNumber();
     void setTableID(int id);
     std::vector<SpecificCocktail*> getDrinks();
-    void addDrink(std::string baseName, bool alch, double cost, std::vector<std::string> mixes);
+    void addDrink(std::string baseName, bool alch, double cost, std::string mixes);
     int getCustomerID();
     double getTotal();
     std::string getCustomerName();
