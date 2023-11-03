@@ -1,6 +1,6 @@
 #ifndef TABLESTATE_H
 #define TABLESTATE_H
-
+#include <string>
 class Table;
 
 class TableState {
