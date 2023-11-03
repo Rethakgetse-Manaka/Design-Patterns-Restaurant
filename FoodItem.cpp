@@ -33,7 +33,28 @@ FoodItem::FoodItem(std::string n, bool gar, bool sauce, double v, bool well)
 
 double FoodItem::getPrice()
 {
-    return price;
+    return this->price;
+}
+
+std::string FoodItem::getName()
+{
+    return this->mealName;
+}
+
+std::string FoodItem::getType()
+{
+    return this->type;
+}
+
+std::string FoodItem::toString()
+{
+    stringstream ss;
+    ss << this->price;
+    return this->type + ": " + this->mealName + " R" + ss.str() + "\n";
+}
+
+std::string FoodItem::getMealName() {
+    return this->mealName;
 }
 
 FoodItem::~FoodItem()

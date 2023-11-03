@@ -12,7 +12,6 @@ class Table
         Bill* bill;
         std::vector<Customer*> customers;
         int tableNumber;
-        
 
     public:
         int getTableNumber();

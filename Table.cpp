@@ -10,7 +10,8 @@ std::vector<Order*> Table::getOrders()
 void Table::addCustomer(Customer *c)
 {
     customers.push_back(c);
-    // c->setTableID(tableNumber);  
+    c->setTableID(tableNumber);
+    
 }
 
 void Table::removeCustomer(Customer *c)

@@ -2,17 +2,16 @@
 #define CUSTOMER_H
 
 class TableVisitor;
-// #include "CustomerState.h"
+#include "CustomerState.h"
 #include "Order.h"
-// #include "OrderHandler.h"
+#include "OrderHandler.h"
 #include <string>
 #include <vector>
 #include <iostream>
-#include "Waiter.h"
-// #include "Bill.h"
-// #include "Neutral.h"
-// #include "ComplaintsManager.h"
-// #include "AdminManager.h"
+#include "Bill.h"
+#include "Neutral.h"
+#include "ComplaintsManager.h"
+#include "AdminManager.h"
 
 
 class Customer
@@ -52,7 +51,7 @@ public:
     void respondWithSatifaction();
     void respondWithDissatifaction();
     void eat();
-    // void leave();
+    void leave();
     void accept(TableVisitor *v);
 };
 
