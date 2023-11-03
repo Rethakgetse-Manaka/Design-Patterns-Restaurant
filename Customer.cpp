@@ -96,6 +96,12 @@ void Customer::payBill(Bill *bill)
 void Customer::placeOrder()
 {
     this->order = menu();
+    std::cout << this->order->printOrder();
+    Waiter* waiter = new Waiter();
+    RestaurantOrderMediator* r = new RestaurantOrderMediator();
+    r->addWaiter(waiter);
+    waiter->setMediator(r);
+    waiter->receiveOrder(this->order);
 }
 
 Order *Customer::menu()
@@ -187,7 +193,7 @@ Order *Customer::menu()
             customerOrder->addItem("Beef Burger", garnish == 1, sauce == 1, 89.0, welldone == 1);
             break;
         case 2:
-            customerOrder->addItem("Stirfry", false, false, 72.0, false);
+            customerOrder->addItem("Stir Fry", false, false, 72.0, false);
             break;
         case 3:
             customerOrder->addItem("Alfredo", false, false, 90.0, false);

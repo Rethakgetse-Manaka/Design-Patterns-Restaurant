@@ -53,6 +53,10 @@ std::string FoodItem::toString()
     return this->type + ": " + this->mealName + " R" + ss.str() + "\n";
 }
 
+std::string FoodItem::getMealName() {
+    return this->mealName;
+}
+
 FoodItem::~FoodItem()
 {
 }

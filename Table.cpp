@@ -1,9 +1,8 @@
 #include "Table.h"
-// #include "Waiter.h"
+#include "Waiter.h"
 #include "Customer.h"
 #include "TableState.h"
-using namespace std;
-std::vector<Order *> Table::getOrders()
+std::vector<Order*> Table::getOrders()
 {
     return orders;
 }
@@ -12,6 +11,11 @@ void Table::addCustomer(Customer *c)
 {
     customers.push_back(c);
     c->setTableID(tableNumber);
+}
+
+std::vector<Customer *> Table::getCustomers()
+{
+    return customers;
 }
 
 std::vector<Customer *> Table::getCustomers()
@@ -59,11 +63,11 @@ void Table::readyForBill(Waiter *w)
     }
 }
 
-// void Table::placeOrder(Order* o,Waiter* w)
-// {
-//     std::cout << w->getName() <<" is the waiter taking the order from "<<o->getCustomerName() << " at table "<<tableNumber;
-//     w->receiveOrder(o);
-// }
+void Table::placeOrder(Order* o,Waiter* w)
+{
+    std::cout << w->getName() <<" is the waiter taking the order from "<<o->getCustomerName() << " at table "<<tableNumber;
+    w->receiveOrder(o);
+}
 
 void Table::setBill(Bill *b)
 {
@@ -82,25 +86,22 @@ void Table::setTableNumber(int tb)
 
 Table::Table(int tableNumber) : tableNumber(tableNumber), state(new Free()) {}
 
-void Table::setState(TableState *newState)
-{
-    if (state)
-    {
+void Table::setState(TableState* newState) {
+    if (state) {
         delete state;
     }
     state = newState;
 }
 
-TableState *Table::getState() const
-{
+TableState* Table::getState() const {
     return state;
 }
 
 Customer *Table::getCustomer(int custID)
 {
-    for (size_t i = 0; i < customers.size(); i++)
+    for(size_t i = 0;i < customers.size();i++)
     {
-        if (customers[i]->getCustomerID() == custID)
+        if(customers[i]->getCustomerID() == custID)
         {
             return customers[i];
         }
@@ -108,58 +109,42 @@ Customer *Table::getCustomer(int custID)
     return nullptr;
 }
 
-Table::~Table()
-{
-    if (state != NULL)
-    {
+Table::~Table() {
+    if(state != NULL){
         delete state;
     }
+    
 }
 
-void Table::occupyTable()
-{
-    if (state)
-    {
+
+void Table::occupyTable() {
+    if (state) {
         state->occupy(this);
-    }
-    else
-    {
+    } else {
         std::cout << "Table " << tableNumber << " is already occupied." << std::endl;
     }
 }
 
-void Table::freeTable()
-{
-    if (state)
-    {
+void Table::freeTable() {
+    if (state) {
         state->free(this);
-    }
-    else
-    {
+    } else {
         std::cout << "Table " << tableNumber << " is already free." << std::endl;
     }
 }
 
-void Table::combineTable()
-{
-    if (state)
-    {
+void Table::combineTable() {
+    if (state) {
         state->combine(this);
-    }
-    else
-    {
+    } else {
         std::cout << "Table " << tableNumber << " is not assigned any state." << std::endl;
     }
 }
 
-void Table::splitTable()
-{
-    if (state)
-    {
+void Table::splitTable() {
+    if (state) {
         state->split(this);
-    }
-    else
-    {
+    } else {
         std::cout << "Table " << tableNumber << " is not assigned any state." << std::endl;
     }
 }
@@ -169,16 +154,15 @@ int Table::getTableNumber() const
     return tableNumber;
 }
 
-void Table::printTableStatus() const
-{
+void Table::printTableStatus() const {
     state->getTableStatus();
 }
 
 bool Table::isFree()
 {
-    if (state != nullptr)
+    if(state != nullptr)
     {
-        if (state->getTableStatus() == "Free")
+        if(state->getTableStatus() == "Free")
             return true;
     }
     return false;

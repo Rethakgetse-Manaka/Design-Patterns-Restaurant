@@ -72,6 +72,8 @@ public:
      */
     std::string toString();
 
+    std::string getMealName();
+
     /**
      * @brief Destroy the Food Item object.
      * 

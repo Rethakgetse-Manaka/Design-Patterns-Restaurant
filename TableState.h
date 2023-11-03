@@ -1,8 +1,10 @@
 #ifndef TABLESTATE_H
 #define TABLESTATE_H
 
-class Table;
 #include <string>
+
+class Table;
+
 class TableState {
 public:
     virtual void occupy(Table* table) = 0;

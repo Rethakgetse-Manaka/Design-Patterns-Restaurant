@@ -5,6 +5,7 @@ class TableVisitor;
 #include "CustomerState.h"
 #include "Order.h"
 #include "OrderHandler.h"
+#include "RestaurantOrderMediator.h"
 #include <string>
 #include <vector>
 #include <iostream>
@@ -12,6 +13,8 @@ class TableVisitor;
 #include "Neutral.h"
 #include "ComplaintsManager.h"
 #include "AdminManager.h"
+#include "Waiter.h"
+
 
 
 class Customer
