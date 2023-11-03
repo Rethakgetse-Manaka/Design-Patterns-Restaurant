@@ -12,6 +12,23 @@
 #include <vector>
 using namespace std;
 
+void testFindBill(){
+    Customer *c = new Customer(1, "John");
+    Customer *c2 = new Customer(2, "Jane");
+    cout<<"Testing the Bill for a customer: "<<endl << endl;
+    c->placeOrder();
+    c2->placeOrder();
+    Bill* b = new CompositeBill();
+    Bill* b1 = new LeafBill(c2->getOrder(), c2->getTip());
+    Bill* b2 = new LeafBill(c->getOrder(), c->getTip());
+    b->addPerson(b1);
+    b->addPerson(b2);
+    Bill* found = b->findBill(2);
+    found->printBill();
+    delete c;
+    delete c2;
+    delete b;
+}
 void testBill(){
     Customer *c = new Customer(1, "John");
     Customer *c2 = new Customer(2, "Jane");
@@ -121,10 +138,11 @@ void testInitialCustomerHandling(){
 int main()
 {
     //testOrderPlacing();
-    testBill();
+    //testBill();
     // testCustomerState();
     //testManagerVisitor();
     //testInitialCustomerHandling();
+    testFindBill();
     testEat();
     testComplain();
     return 0;
