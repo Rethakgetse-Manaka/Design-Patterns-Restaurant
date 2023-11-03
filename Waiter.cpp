@@ -2,6 +2,7 @@
 #include "Plate.h"
 #include "CompositeBill.h"
 #include "LeafBill.h"
+#include "Customer.h"
 
 void Waiter::receiveOrder(Order* o)
 {
@@ -61,14 +62,19 @@ void Waiter::presentFoodToTable(Plate* p)
 }
 void Waiter::presentBill(Table* t)
 {
-    // CompositeBill* cb = new CompositeBill();
-    // t->setBill(cb);
-    // std::vector<Order*> o = t->getOrders();
-    // LeafBill* lb;
-    // for(size_t i = 0;i < o.size();i++)
-    // {
-    //     lb = new LeafBill(o[i]);
-    //     cb->addPerson(lb);
-    // }
-    // cb->printBill();
+    if(t != nullptr)
+    {
+        CompositeBill* cb = new CompositeBill();
+        t->setBill(cb);
+        std::vector<Order*> o = t->getOrders();
+        LeafBill* lb;
+        Customer* temp;
+        for(size_t i = 0;i < o.size();i++)
+        {
+            temp = t->getCustomer(o[i]->getCustomerID());
+            lb = new LeafBill(o[i],temp->getTip());
+            cb->addPerson(lb);
+        }
+        cb->printBill();
+    }
 }
