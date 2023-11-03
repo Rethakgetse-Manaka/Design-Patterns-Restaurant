@@ -17,6 +17,7 @@
 #include "ChickenBurger.h"
 #include "GreenSalad.h"
 #include "StirFry.h"
+#include "Customer.h"
 
 #include <iostream>
 
@@ -25,12 +26,9 @@ using namespace std;
 int main() {
     cout << "all files compiled successfully" << endl;
 
-    FoodItem* food1 = new FoodItem("Beef Burger", false, true, 79.95, true);
-    FoodItem* food2 = new FoodItem("Beef Kebab", false, true, 99.95, true);
-    FoodItem* food3 = new FoodItem("Chicken Burger", false, true, 69.95, true);
-    FoodItem* food4 = new FoodItem("Chicken Salad", true, false, 59.95, true);
+    Customer* customer1 = new Customer();
 
-    Order* order1 = new Order()
+    customer1->placeOrder();
 
     return 0;
 }
