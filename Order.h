@@ -18,8 +18,8 @@ public:
     Order(int cID, std::string cName);
     void addStarter(std::string, double val);
     void addItem(std::string item, bool g, bool s, double val, bool well);
-    std::vector<FoodItem*> getItems();
-    int getTableID();
+    std::vector<FoodItem*> getFoodItems();
+    int getTableNumber();
     void setTableID(int id);
     std::vector<SpecificCocktail*> getDrinks();
     void addDrink(std::string baseName, bool alch, double cost, std::vector<std::string> mixes);

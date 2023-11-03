@@ -20,12 +20,12 @@ void Order::addItem(std::string item, bool g, bool s, double val, bool well)
     items.push_back(newItem);
 }
 
-std::vector<FoodItem *> Order::getItems()
+std::vector<FoodItem *> Order::getFoodItems()
 {
     return items;
 }
 
-int Order::getTableID()
+int Order::getTableNumber()
 {
     return this->tableID;
 }

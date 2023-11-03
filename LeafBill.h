@@ -2,6 +2,7 @@
 #define LEAFBILL_H
 
 #include "Bill.h"
+#include "Order.h"
 
 class LeafBill: public Bill
 {

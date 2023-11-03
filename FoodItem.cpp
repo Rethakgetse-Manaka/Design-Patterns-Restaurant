@@ -60,8 +60,3 @@ std::string FoodItem::getMealName() {
 FoodItem::~FoodItem()
 {
 }
-
-std::string FoodItem::getMealName()
-{
-    return mealName;
-}

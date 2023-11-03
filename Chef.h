@@ -2,6 +2,12 @@
 #define Chef_H
 #include "Colleague.h"
 #include "Plate.h"
+#include "FoodItem.h"
+#include "OrderMediator.h"
+#include <string>
+#include <iostream>
+#include <unistd.h>
+
 class Chef:public Colleague
 {
     protected:

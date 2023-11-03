@@ -5,7 +5,8 @@
 
 void Waiter::receiveOrder(Order* o)
 {
-    mediator->notifyOrderPlaced(o);
+    if(o != nullptr)
+        mediator->notifyOrderPlaced(o);
 }
 
 void Waiter::addTable(Table* t)

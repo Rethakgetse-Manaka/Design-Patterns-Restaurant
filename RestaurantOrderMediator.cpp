@@ -10,19 +10,28 @@
 RestaurantOrderMediator::RestaurantOrderMediator()
 {
     chefs = {new VegetableChef,new FryCook,new PastaChef,new RotisseurChef,new GrillChef};
+    for(size_t i = 0; i < chefs.size();i++)
+    {
+        chefs[i]->setMediator(this);
+    }
 }
 void RestaurantOrderMediator::notifyOrderPlaced(Order* o)
 {
     if(o != nullptr)
     {
-        Chef::setPlate(new Plate());
+        Plate* t = new Plate();
+        t->setTableNumber(o->getTableNumber());
+        Chef::setPlate(t);
         std::cout << "Order handler received the order from the waiter and is passing it to an available chef.."<<std::endl;
+
+        
 
 
         //Need to handle passing the order  to chefs
         for(size_t i = 0; i < o->getFoodItems().size();i++)
         {
             std::string meal = o->getFoodItems()[i]->getMealName();
+            std::cout << meal << std::endl;
             if(meal == "Beef Kebab" || meal == "Beef Burger")
             {
                 chefs[4]->receiveOrder(o->getFoodItems()[i],o->getTableNumber(),o->getCustomerID(),o->getFoodItems().size());
@@ -79,3 +88,10 @@ void RestaurantOrderMediator::notifyPlateReady(Plate* p)
 
 }
 
+void RestaurantOrderMediator::addWaiter(Waiter *Waiter)
+{
+    if(Waiter != nullptr)
+    {
+        waiters.push_back(Waiter);
+    }
+}

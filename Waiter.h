@@ -2,9 +2,12 @@
 #define Waiter_H
 #include <iomanip>
 #include "Colleague.h"
+#include "OrderMediator.h"
+#include "Table.h"
+class Table;
+class Colleague;
 class Plate;
-class Waiter:public Colleague
-{
+class Waiter:public Colleague {
     private:
         std::string name;
         std::vector<Table*> tables;

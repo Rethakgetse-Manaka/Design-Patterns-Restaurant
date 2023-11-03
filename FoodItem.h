@@ -72,7 +72,7 @@ public:
      */
     std::string toString();
 
-    std::string FoodItem::getMealName()
+    std::string getMealName();
 
     /**
      * @brief Destroy the Food Item object.

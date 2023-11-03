@@ -11,6 +11,10 @@ void Plate::addMeal(Meal* item) {
     m_Meals.push_back(item);
 }
 
+void Plate::setTableNumber(int tableNum)
+{
+    tableNumber = tableNum;
+}
 
 void Plate::removeMeal(Meal* item) {
     for (size_t i = 0; i < m_Meals.size(); i++) {

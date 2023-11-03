@@ -16,15 +16,41 @@ void GrillChef::addMeal(Meal* meal){
 
 void GrillChef::receiveOrder(FoodItem* foodItem, int tableNumber, int custID, int numOfItems)
 {
+
     if(foodItem->getMealName() == "Beef Kebab")
-    {
-        this->addMeal(createStarter());// change to this->addMeal
+    {   
+        cout << "Chopping up beef..." << endl;
+        sleep(1);
+        cout << "Spicing that baby..." << endl;
+        sleep(1);
+        cout << "Thrown on the pan..." << endl;
+        sleep(1);
+        cout << "Sizzle Sizzle!" << endl;
+        sleep(1);
+        cout <<"Assembling Kebab..."<< endl;
+        sleep(1);
+        cout << "Beef Kebab done!" << endl;
+        sleep(1);
+        this->addMeal(createStarter());
     }
     else if(foodItem->getMealName() == "Beef Burger")
     {
+        cout << "Making patty" << endl;
+        sleep(1);
+        cout << "Spicing that baby..." << endl;
+        sleep(1);
+        cout << "Thrown on the pan..." << endl;
+        sleep(1);
+        cout << "Sizzle Sizzle!" << endl;
+        sleep(1);
+        cout <<"Assembling Burger..."<< endl;
+        sleep(1);
+        cout << "Burger done!" << endl;
+        sleep(1);
         this->addMeal(createMain());
     }
-    if(plate->getMeals().size() == numOfItems)
+
+    if((int) plate->getMeals().size() == numOfItems)
     {
         mediator->notifyPlateReady(plate);
     }

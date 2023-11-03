@@ -18,6 +18,8 @@ class Plate
        
         void addMeal(Meal* item);
 
+        void setTableNumber(int tableNum);
+
         
         void removeMeal(Meal* item);
 
