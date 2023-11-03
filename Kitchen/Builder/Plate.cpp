@@ -5,8 +5,10 @@
  *
  * @param NoOfFoods The initial capacity for food items in the plate.
  */
-Plate::Plate() {
+Plate::Plate(int c, int p) {
     m_Meals = std::vector<Meal*>();
+    customerID = c;
+    plateID = p;
 }
 
 /**
@@ -45,9 +47,19 @@ void Plate::showMeals(){
     }
     std::cout << std::endl;
 }
+
+int Plate::getPlateID()
+{
+    return plateID;
+}
+
+int Plate::getCustomerID()
+{
+    return customerID;
+}
 /**
- * @brief 
- * 
+ * @brief
+ *
  */
 Plate::~Plate() {
     if(!m_Meals.empty()){
