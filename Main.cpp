@@ -122,7 +122,7 @@ void testComplain(){
 void testInitialCustomerHandling(){
     Customer* customer = new Customer(1, "John");
     vector<Table*> tables;
-    tables.push_back(new Table());
+    tables.push_back(new Table(1));
     
     CustomerHandler *customerHandler = new CustomerHandler();
     customerHandler->add(new ValletHandler());
@@ -141,9 +141,9 @@ int main()
     //testBill();
     // testCustomerState();
     //testManagerVisitor();
-    //testInitialCustomerHandling();
-    testFindBill();
-    testEat();
-    testComplain();
+    testInitialCustomerHandling();
+    // testFindBill();
+    // testEat();
+    // testComplain();
     return 0;
 }
