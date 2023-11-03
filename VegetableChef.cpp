@@ -14,15 +14,15 @@ void VegetableChef::addMeal(Meal* meal){
     plate->addMeal(meal);
 }
 
-void VegetableChef::receiveOrder(std::string meal, int tableNumber, int custID, int numOfItems)
+void VegetableChef::receiveOrder(FoodItem* foodItem, int tableNumber, int custID, int numOfItems)
 {
-    if(meal == "Green Salad")
+    if(foodItem->getMealName() == "Green Salad")
     {
-        plate->addMeal(createStarter());
+        this->addMeal(createStarter());
     }
-    else if(meal == "Stir Fry")
+    else if(foodItem->getMealName() == "Stir Fry")
     {
-        plate->addMeal(createMain());
+        this->addMeal(createMain());
     }
     if(plate->getMeals().size() == numOfItems)
     {

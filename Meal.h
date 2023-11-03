@@ -8,7 +8,7 @@ using namespace std;
 class Meal {
     public:
         virtual ~Meal();
-        std::string getName();
+        virtual std::string getName() = 0;
         virtual void create() = 0;
         bool operator==(Meal& other);
     protected:

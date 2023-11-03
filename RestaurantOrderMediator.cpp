@@ -25,26 +25,26 @@ void RestaurantOrderMediator::notifyOrderPlaced(Order* o)
             std::string meal = o->getFoodItems()[i]->getMealName();
             if(meal == "Beef Kebab" || meal == "Beef Burger")
             {
-                chefs[4]->receiveOrder(meal,o->getTableNumber(),o->getCustomerID(),o->getFoodItems().size());
+                chefs[4]->receiveOrder(o->getFoodItems()[i],o->getTableNumber(),o->getCustomerID(),o->getFoodItems().size());
 
             }
             else if(meal == "Green Salad" || meal == "Stir Fry")
             {
-                chefs[0]->receiveOrder(meal,o->getTableNumber(),o->getCustomerID(),o->getFoodItems().size());
+                chefs[0]->receiveOrder(o->getFoodItems()[i],o->getTableNumber(),o->getCustomerID(),o->getFoodItems().size());
 
 
             }
             else if(meal == "Ramen" || meal == "Alfredo")
             {
-                chefs[2]->receiveOrder(meal,o->getTableNumber(),o->getCustomerID(),o->getFoodItems().size());
+                chefs[2]->receiveOrder(o->getFoodItems()[i],o->getTableNumber(),o->getCustomerID(),o->getFoodItems().size());
             }
             else if(meal == "Chicken Salad" || meal == "Chicken Burger")
             {
-                chefs[3]->receiveOrder(meal,o->getTableNumber(),o->getCustomerID(),o->getFoodItems().size());
+                chefs[3]->receiveOrder(o->getFoodItems()[i],o->getTableNumber(),o->getCustomerID(),o->getFoodItems().size());
             }
             else if(meal == "Wings" || meal == "Fried Meal")
             {
-                chefs[1]->receiveOrder(meal,o->getTableNumber(),o->getCustomerID(),o->getFoodItems().size());
+                chefs[1]->receiveOrder(o->getFoodItems()[i],o->getTableNumber(),o->getCustomerID(),o->getFoodItems().size());
             }
             
         }

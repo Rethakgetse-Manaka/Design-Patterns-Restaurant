@@ -16,15 +16,15 @@ void FryCook::addMeal(Meal* meal){
     plate->addMeal(meal);
 }
 
-void FryCook::receiveOrder(std::string meal, int tableNumber, int custID, int numOfItems)
+void FryCook::receiveOrder(FoodItem* foodItem, int tableNumber, int custID, int numOfItems)
 {
-    if(meal == "Wings")
+    if(foodItem->getMealName() == "Wings")
     {
-        plate->addMeal(createStarter());
+        this->addMeal(createStarter());
     }
-    else if(meal == "Fried Meal")
+    else if(foodItem->getMealName() == "Fried Meal")
     {
-        plate->addMeal(createMain());
+        this->addMeal(createMain());
     }
     if(plate->getMeals().size() == numOfItems)
     {

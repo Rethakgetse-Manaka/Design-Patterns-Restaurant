@@ -9,5 +9,6 @@ using namespace std;
 class ChickenBurger : public MainMeal {
     public:
         void create();
+        virtual string getName();
 };
 #endif

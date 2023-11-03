@@ -13,10 +13,7 @@ class Chef:public Colleague
         virtual Meal* createMain() = 0;
         virtual void addMeal(Meal* meal) = 0;
         static void setPlate(Plate* plate);
-        virtual void receiveOrder(std::string meal,int tableNumber,int custID,int numOfItems) = 0;
-        
-        
-
+        virtual void receiveOrder(FoodItem* foodItem,int tableNumber,int custID,int numOfItems) = 0;
 };
 
 #endif

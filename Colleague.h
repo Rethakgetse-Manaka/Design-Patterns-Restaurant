@@ -5,8 +5,5 @@ class Colleague
 {
     protected:
         OrderMediator* mediator;
-    
-
-
-};
+    };
 #endif

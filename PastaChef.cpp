@@ -15,15 +15,15 @@ void PastaChef::addMeal(Meal* meal){
 }
 
 
-void PastaChef::receiveOrder(std::string meal, int tableNumber, int custID, int numOfItems)
+void PastaChef::receiveOrder(FoodItem* foodItem, int tableNumber, int custID, int numOfItems)
 {
-    if(meal == "Ramen")
+    if(foodItem->getMealName() == "Ramen")
     {
-        plate->addMeal(createStarter());
+        this->addMeal(createStarter());
     }
-    else if(meal == "Alfredo")
+    else if(foodItem->getMealName() == "Alfredo")
     {
-        plate->addMeal(createMain());
+        this->addMeal(createMain());
     }
     if(plate->getMeals().size() == numOfItems)
     {

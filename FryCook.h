@@ -18,7 +18,7 @@ class FryCook : public Chef {
         Meal* createStarter();
         Meal* createMain();
         void addMeal(Meal* meal);
-        virtual void receiveOrder(std::string meal,int tableNumber,int custID,int numOfItems);
+        virtual void receiveOrder(FoodItem* foodItem,int tableNumber,int custID,int numOfItems);
         
 };
 #endif

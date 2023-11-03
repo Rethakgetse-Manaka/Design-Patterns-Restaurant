@@ -60,14 +60,14 @@ void Waiter::presentFoodToTable(Plate* p)
 }
 void Waiter::presentBill(Table* t)
 {
-    CompositeBill* cb = new CompositeBill();
-    t->setBill(cb);
-    std::vector<Order*> o = t->getOrders();
-    LeafBill* lb;
-    for(size_t i = 0;i < o.size();i++)
-    {
-        lb = new LeafBill(o[i]);
-        cb->addPerson(lb);
-    }
-    cb->printBill();
+    // CompositeBill* cb = new CompositeBill();
+    // t->setBill(cb);
+    // std::vector<Order*> o = t->getOrders();
+    // LeafBill* lb;
+    // for(size_t i = 0;i < o.size();i++)
+    // {
+    //     lb = new LeafBill(o[i]);
+    //     cb->addPerson(lb);
+    // }
+    // cb->printBill();
 }

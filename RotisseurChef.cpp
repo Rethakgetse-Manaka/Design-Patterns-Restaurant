@@ -15,15 +15,15 @@ void RotisseurChef::addMeal(Meal* meal){
 }
 
 
-void RotisseurChef::receiveOrder(std::string meal, int tableNumber, int custID, int numOfItems)
+void RotisseurChef::receiveOrder(FoodItem* foodItem, int tableNumber, int custID, int numOfItems)
 {
-    if(meal == "Chicken Salad")
+    if(foodItem->getMealName() == "Chicken Salad")
     {
-        plate->addMeal(createStarter());
+        this->addMeal(createStarter());
     }
-    else if(meal == "Chicken Burger")
+    else if(foodItem->getMealName() == "Chicken Burger")
     {
-        plate->addMeal(createMain());
+        this->addMeal(createMain());
     }
     if(plate->getMeals().size() == numOfItems)
     {

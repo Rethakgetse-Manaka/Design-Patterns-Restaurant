@@ -5,3 +5,8 @@ void BeefKebab::create()
 {
     cout << "Creating BeefKebab..." << endl;
 }
+
+string BeefKebab::getName()
+{
+    return "Beef Kebab";
+}

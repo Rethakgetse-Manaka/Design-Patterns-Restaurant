@@ -14,15 +14,15 @@ void GrillChef::addMeal(Meal* meal){
     plate->addMeal(meal);
 }
 
-void GrillChef::receiveOrder(std::string meal, int tableNumber, int custID, int numOfItems)
+void GrillChef::receiveOrder(FoodItem* foodItem, int tableNumber, int custID, int numOfItems)
 {
-    if(meal == "Beef Kebab")
+    if(foodItem->getMealName() == "Beef Kebab")
     {
-        plate->addMeal(createStarter());
+        this->addMeal(createStarter());// change to this->addMeal
     }
-    else if(meal == "Beef Burger")
+    else if(foodItem->getMealName() == "Beef Burger")
     {
-        plate->addMeal(createMain());
+        this->addMeal(createMain());
     }
     if(plate->getMeals().size() == numOfItems)
     {
