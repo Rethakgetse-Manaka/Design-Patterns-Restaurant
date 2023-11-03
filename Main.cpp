@@ -6,6 +6,9 @@
 #include "TableVisitor.h"
 #include "ComplaintsManager.h"
 #include "AdminManager.h"
+#include "CustomerHandler.h"
+#include "ValletHandler.h"
+#include "AssignTable.h"
 #include <vector>
 using namespace std;
 
@@ -77,11 +80,35 @@ void testManagerVisitor(){
     }
     customers.clear();
 }
+
+void testBillPayment(){
+
+}
+
+void testEat(){
+
+}
+
+void testComplain(){
+    
+}
+
+void testInitialCustomerHandling(){
+    Customer* customer = new Customer(1, "John");
+    vector<Table*> tables;
+    tables.push_back(new Table());
+    
+    CustomerHandler *customerHandler = new CustomerHandler();
+    customerHandler->add(new ValletHandler());
+    customerHandler->add(new AssignTable(tables));
+    customerHandler->handleRequest(customer);
+}
 int main()
 {
     //testOrderPlacing();
     // testBill();
     // testCustomerState();
-    testManagerVisitor();
+    //testManagerVisitor();
+    testInitialCustomerHandling();
     return 0;
 }

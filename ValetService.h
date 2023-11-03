@@ -1,10 +1,12 @@
 #ifndef VALETSERVICE_H
 #define VALETSERVICE_H
 
+#include "Customer.h"
+
 class ValetService {
 public:
-    virtual void parkVehicle() = 0;
-    virtual void returnVehicle() = 0;
+    virtual void parkVehicle(Customer* customer, int id) = 0;
+    virtual void returnVehicle(Customer* customer, int id) = 0;
     virtual ~ValetService() {}
 };
 

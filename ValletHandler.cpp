@@ -16,16 +16,19 @@ void ValletHandler::valletRequest(Customer* customer)
     std::cin >> response;
 
     if (response == 'y' || response == 'Y') {
+        // Create a Customer object and set a customer ID
+
         ValetFactoryImpl factory;
-        ValetService* valet = factory.createValet();
+        ValetService* valet = factory.createValet(customer, customer->getCustomerID());
 
         std::cout << "Using valet service..." << std::endl;
-        valet->parkVehicle();
-         std::cout << "You will be seated shortly . We hope you enjoy your night!" << std::endl;
-        //valet->returnVehicle();
+        valet->parkVehicle(customer, customer->getCustomerID());
+        std::cout << "You will be seated shortly. We hope you enjoy your night!" << std::endl;
+        //valet->returnVehicle(customer, customer->getCustomerID());
+        // Don't forget to delete valet when you're done.
         //delete valet;
     } else {
-        std::cout << "You will be seated shortly . We hope you enjoy your night!" << std::endl;
+        std::cout << "You will be seated shortly. We hope you enjoy your night!" << std::endl;
     }
 }
 

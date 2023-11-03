@@ -14,7 +14,7 @@ void AssignTable::handleRequest(Customer *customer)
     //     if (tables[i]->isAvailable())
     //     {
     //         tables[i]->setCustomer(customer);
-    //         cout << "Table " << tables[i]->getTableNumber() << " is assigned to you." << endl;
+    //         cout << customer->getCustomerName() <<  "was assigned to Table " << tables[i]->getTableNumber() << endl;
     //         return;
     //     }
     // }

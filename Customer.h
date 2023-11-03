@@ -51,6 +51,7 @@ public:
     void respondWithSatifaction();
     void respondWithDissatifaction();
     void eat();
+    void leave();
     void accept(TableVisitor *v);
 };
 

@@ -1,5 +1,6 @@
 #include "ValetFactoryImpl.h"
 
-ValetService* ValetFactoryImpl::createValet() {
-    return new Valet();
+ValetService *ValetFactoryImpl::createValet(Customer *customer, int vID) 
+{
+    return new Valet(vID, customer);
 }

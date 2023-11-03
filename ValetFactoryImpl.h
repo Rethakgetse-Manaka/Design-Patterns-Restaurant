@@ -4,9 +4,10 @@
 #include "ValetFactory.h"
 #include "Valet.h"
 
-class ValetFactoryImpl : public ValetFactory {
+class ValetFactoryImpl : public ValetFactory
+{
 public:
-    ValetService* createValet() override;
+    ValetService *createValet(Customer *customer, int vID) override;
 };
 
 #endif

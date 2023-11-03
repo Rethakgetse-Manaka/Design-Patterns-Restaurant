@@ -17,7 +17,7 @@ void AdminManager::visitCustomer(Customer *customer)
     std::uniform_int_distribution<int> dist(min, max);
 
     int randomNumber = dist(mt);
-    if(randomNumber > 5){
+    if(randomNumber >= 5){
         customer->respondWithSatifaction();
         customer->increaseTip();
     }else{
