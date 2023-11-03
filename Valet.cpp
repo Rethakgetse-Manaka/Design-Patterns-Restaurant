@@ -8,7 +8,7 @@ Valet::Valet(int valetId, Customer* customer) {
 
 void Valet::parkVehicle(Customer *customer, int id)
 {
-    std::cout << "Mr " << "Valet is parking the vehicle." << std::endl;
+    std::cout << "Dear " << customer->getCustomerName()  << " a valet is parking the vehicle." << std::endl;
     customer->setValletID(id);
 }
 

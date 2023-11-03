@@ -40,10 +40,16 @@ std::vector<SpecificCocktail *> Order::getDrinks()
     return drinks;
 }
 
-void Order::addDrink(std::string baseName, bool alch, double cost, vector<string> mixes)
+void Order::addDrink(std::string baseName, bool alch, double cost, string mixes)
 {
-    // SpecificCocktail* newDrink = new SpecificCocktail(baseName, alch, cost, mixes);
-    // drinks.push_back(newDrink);
+    BaseCocktail* base = new BaseCocktail(baseName, cost);
+    if(alch == true){
+        SpecificCocktail* newDrink = new SpecificCocktail(base, mixes);
+        drinks.push_back(newDrink);
+    }else{
+        SpecificCocktail* newDrink = new SpecificCocktail(base, "");
+        drinks.push_back(newDrink);
+    }
 }
 
 int Order::getCustomerID()
@@ -58,10 +64,11 @@ double Order::getTotal()
     {
         tot += items[i]->getPrice();
     }
-    // for(int i = 0; i < (int)drinks.size(); i++)
-    // {
-    //     tot += drinks[i]->getPrice();
-    // }
+
+    for(int i = 0; i < (int)drinks.size(); i++)
+    {
+        tot += drinks[i]->getPrice();
+    }
     return tot;
 }
 
@@ -88,15 +95,15 @@ std::string Order::printOrder()
         order += "No food items ordered\n";
     }
 
-    // if(drinks.size() > 0){
-    //     order += "Drinks:\n";
-    //     for(int i = 0; i < (int)drinks.size(); i++)
-    //     {
-    //         order += drinks[i]->toString() + "\n";
-    //     }
-    // }else{
-    //     order += "No drinks ordered\n";
-    //}
+    if(drinks.size() > 0){
+        order += "Drinks:\n";
+        for(int i = 0; i < (int)drinks.size(); i++)
+        {
+            order += drinks[i]->toString() + "\n";
+        }
+    }else{
+        order += "No drinks ordered\n";
+    }
     return order;
 }
 

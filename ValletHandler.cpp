@@ -26,17 +26,23 @@ void ValletHandler::valletRequest(Customer* customer)
         std::cout << "You will be seated shortly. We hope you enjoy your night!" << std::endl;
         //valet->returnVehicle(customer, customer->getCustomerID());
         // Don't forget to delete valet when you're done.
-        //delete valet;
+        delete valet;
     } else {
-        std::cout << "You will be seated shortly. We hope you enjoy your night!" << std::endl;
+        std::cout << "You will be seated shortly. We hope you enjoy your night!" << std::endl << std::endl;
     }
 }
 
 void ValletHandler::handleRequest(Customer* customer)
 {
     valletRequest(customer);
+    if(next != nullptr){
+        next->handleRequest(customer);
+    }
 }
 
 ValletHandler::~ValletHandler()
 {
+    // if(next != nullptr){
+    //     delete next;
+    // }
 }

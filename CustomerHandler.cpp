@@ -4,6 +4,7 @@ using namespace std;
 
 CustomerHandler::CustomerHandler()
 {
+    next = nullptr;
 }
 
 void CustomerHandler::add(CustomerHandler *n)
@@ -21,6 +22,10 @@ void CustomerHandler::add(CustomerHandler *n)
 
 CustomerHandler::~CustomerHandler()
 {
+    if (next != nullptr) 
+    {
+        delete next;
+    }
 }
 
 void CustomerHandler::handleRequest(Customer* customer)

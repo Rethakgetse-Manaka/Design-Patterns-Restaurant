@@ -42,11 +42,11 @@ void LeafBill::printBill()
     }
     cout<<"----------------------------------------------"<<endl;
     cout<<"Drinks:"<<endl;
-    // for(int i = 0; i < order->getDrinks().size(); i++)
-    // {
-    //     cout<<order->getDrinks()[i]->toString() << endl;
-    //     drinkTot += order->getDrinks()[i]->getPrice();
-    // }
+    for(int i = 0; i < (int)order->getDrinks().size(); i++)
+    {
+        cout<<order->getDrinks()[i]->toString() << endl;
+        drinkTot += order->getDrinks()[i]->getPrice();
+    }
     cout<<"----------------------------------------------"<<endl;
     total = foodTotal + drinkTot;
     cout<<"Tip: "<<endl;

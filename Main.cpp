@@ -82,15 +82,24 @@ void testManagerVisitor(){
 }
 
 void testBillPayment(){
-
+    cout<<"Unit testing eat function." << endl;
+    Customer* newCustomer = new Customer(1, "John");
+    Bill* b1 = new LeafBill(newCustomer->getOrder(), newCustomer->getTip());
+    newCustomer->payBill(b1);
 }
 
 void testEat(){
-
+    cout<<"Unit testing eat function." << endl;
+    Customer* newCustomer = new Customer(1, "John");
+    newCustomer->eat();
+    delete newCustomer;
 }
 
 void testComplain(){
-    
+    cout<<"Unit testing complain function." << endl;
+    Customer* newCustomer = new Customer(1, "John");
+    newCustomer->complain();
+    delete newCustomer;
 }
 
 void testInitialCustomerHandling(){
@@ -102,13 +111,21 @@ void testInitialCustomerHandling(){
     customerHandler->add(new ValletHandler());
     customerHandler->add(new AssignTable(tables));
     customerHandler->handleRequest(customer);
+    delete customer;
+    delete customerHandler;
+    for(int i = 0; i < (int)tables.size(); i++){
+        delete tables[i];
+    }
+    tables.clear();
 }
 int main()
 {
     //testOrderPlacing();
-    // testBill();
+    testBill();
     // testCustomerState();
     //testManagerVisitor();
-    testInitialCustomerHandling();
+    //testInitialCustomerHandling();
+    testEat();
+    testComplain();
     return 0;
 }
