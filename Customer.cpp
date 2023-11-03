@@ -399,7 +399,9 @@ void Customer::respondWithDissatifaction()
 void Customer::eat()
 {
     state->showHapiness(this);
-    cout << this->customerName << " is eating their food" << endl;
+    for(int i = 0; i < (int)order->getFoodItems().size(); i++){
+        cout << this->customerName << " is eating their " << order->getFoodItems()[i]->getMealName() << endl;
+    }
 }
 
 void Customer::accept(TableVisitor *v)
