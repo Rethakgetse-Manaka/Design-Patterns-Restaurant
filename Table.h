@@ -11,15 +11,14 @@ class Waiter;
 class Table
 {
     private:
-        std::vector<Order*> orders;
         Bill* bill;
         std::vector<Customer*> customers;
         int tableNumber;
         int maxNumOfCustomers;
         TableState* state;
+        Waiter* waiter;
 
     public:
-        std::vector<Order*> getOrders();
         void addCustomer(Customer* c);
         std::vector<Customer*> getCustomers();
         void removeCustomer(Customer* c);
@@ -43,6 +42,8 @@ class Table
         void setState(TableState* newState);
         TableState* getState() const;
         Customer* getCustomer(int custID);
+        Waiter* getWaiter();
+        void setWaiter(Waiter* w);
         bool isFree();
 
 

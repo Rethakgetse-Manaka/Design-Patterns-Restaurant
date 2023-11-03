@@ -13,7 +13,7 @@ public:
     Bill();
     virtual void printBill() ;
     virtual void addPerson(Bill* Bill) ;
-    virtual Bill* findBill(int customerId);
+    virtual Bill* findBill(int customerId) =0;
     virtual void removePerson(int customerId) ;
     virtual Order* getOrder() =0;
     virtual double getBillTotal() =0;

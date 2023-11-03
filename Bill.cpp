@@ -14,11 +14,6 @@ void Bill::addPerson(Bill *Bill)
 {
 }
 
-Bill *Bill::findBill(int customerId)
-{
-    return nullptr;
-}
-
 void Bill::removePerson(int customerID)
 {
     

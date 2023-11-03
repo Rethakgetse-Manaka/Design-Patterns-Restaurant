@@ -14,7 +14,7 @@ public:
     LeafBill(Order* ord, double tip);
     void setTip(double tip);
     double getTip();
-    Bill* findBill(int customer);
+    virtual Bill* findBill(int customer);
     Order* getOrder();
     double getBillTotal();
     void printBill();

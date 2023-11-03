@@ -16,6 +16,7 @@ void AssignTable::handleRequest(Customer *customer)
         {
             tables[i]->addCustomer(customer);
             customer->setTableID(tables[i]->getTableNumber());
+            customer->setTable(tables[i]);
             cout << customer->getCustomerName() <<  " was assigned to Table " << tables[i]->getTableNumber() << endl;
             return;
         }

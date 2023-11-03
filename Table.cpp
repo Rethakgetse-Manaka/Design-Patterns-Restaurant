@@ -2,20 +2,12 @@
 #include "Waiter.h"
 #include "Customer.h"
 #include "TableState.h"
-std::vector<Order*> Table::getOrders()
-{
-    return orders;
-}
+using namespace std;
 
 void Table::addCustomer(Customer *c)
 {
     customers.push_back(c);
     c->setTableID(tableNumber);
-}
-
-std::vector<Customer *> Table::getCustomers()
-{
-    return customers;
 }
 
 std::vector<Customer *> Table::getCustomers()
@@ -109,6 +101,11 @@ Customer *Table::getCustomer(int custID)
     return nullptr;
 }
 
+Waiter *Table::getWaiter()
+{
+    return waiter;
+}
+
 Table::~Table() {
     if(state != NULL){
         delete state;
@@ -156,6 +153,11 @@ int Table::getTableNumber() const
 
 void Table::printTableStatus() const {
     state->getTableStatus();
+}
+
+void Table::setWaiter(Waiter *w)
+{
+    this->waiter = w;
 }
 
 bool Table::isFree()

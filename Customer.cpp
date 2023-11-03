@@ -32,6 +32,16 @@ Customer::~Customer()
     }
 }
 
+void Customer::setTable(Table *t)
+{
+    this->table = t;
+}
+
+Table *Customer::getTable()
+{
+    return table;
+}
+
 int Customer::getCustomerID()
 {
     return this->customerID;
@@ -97,11 +107,10 @@ void Customer::placeOrder()
 {
     this->order = menu();
     std::cout << this->order->printOrder();
-    Waiter* waiter = new Waiter();
-    RestaurantOrderMediator* r = new RestaurantOrderMediator();
-    r->addWaiter(waiter);
-    waiter->setMediator(r);
-    waiter->receiveOrder(this->order);
+    
+    OrderMediator* r = table->getWaiter()->getMediator();
+    r->addWaiter(table->getWaiter());
+    table->getWaiter()->receiveOrder(this->order);
 }
 
 Order *Customer::menu()

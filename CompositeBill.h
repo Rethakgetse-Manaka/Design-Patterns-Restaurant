@@ -11,7 +11,7 @@ private:
 public:
     CompositeBill();
     void printBill();
-    Bill* findBill(int customer);
+    virtual Bill* findBill(int customer);
     void addPerson(Bill* Bill);
     void removePerson(int customer);
     double getBillTotal();

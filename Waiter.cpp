@@ -65,16 +65,19 @@ void Waiter::presentBill(Table* t)
     if(t != nullptr)
     {
         CompositeBill* cb = new CompositeBill();
-        t->setBill(cb);
-        std::vector<Order*> o = t->getOrders();
+        std::vector<Customer*> o = t->getCustomers();
         LeafBill* lb;
-        Customer* temp;
-        for(size_t i = 0;i < o.size();i++)
+        for(int i = 0;i < (int)o.size();i++)
         {
-            temp = t->getCustomer(o[i]->getCustomerID());
-            lb = new LeafBill(o[i],temp->getTip());
+            lb = new LeafBill(o[i]->getOrder(),o[i]->getTip());
             cb->addPerson(lb);
         }
+        t->setBill(cb);
         cb->printBill();
     }
+}
+
+Waiter::Waiter(std::string n)
+{
+    this->name = n;
 }
