@@ -4,7 +4,7 @@
 #include "Colleague.h"
 #include "OrderMediator.h"
 #include "Table.h"
-class Table;
+// class Table;;;
 class Colleague;
 class Plate;
 class Waiter:public Colleague {
