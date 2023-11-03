@@ -16,6 +16,8 @@ class Table
         std::vector<Customer*> customers;
         int tableNumber;
         TableState* state;
+        int count;
+        Waiter* waiter;
 
     public:
         std::vector<Order*> getOrders();
@@ -27,6 +29,7 @@ class Table
         void setBill(Bill * b);
         Bill* getBill();
         void setTableNumber(int tb);
+        void setWaiter(Waiter* waiter);
         
         
         //added for state Pattern
@@ -42,6 +45,7 @@ class Table
         void setState(TableState* newState);
         TableState* getState() const;
         Customer* getCustomer(int custID);
+        Waiter* getWaiter();
         bool isFree();
 
 

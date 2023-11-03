@@ -12,6 +12,7 @@ class Waiter:public Colleague {
         std::string name;
         std::vector<Table*> tables;
     public:
+        Waiter(std::string name);
         virtual void receiveOrder(Order* o);
         void addTable(Table* t);
         void removeTable(Table* t);
