@@ -28,7 +28,7 @@ class Table
         void setBill(Bill * b);
         Bill* getBill();
         void setTableNumber(int tb);
-        void setWaiter(Waiter* waiter);
+
         
         
         //added for state Pattern
