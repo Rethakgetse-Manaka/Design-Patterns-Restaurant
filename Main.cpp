@@ -1,4 +1,5 @@
 #include <iostream>
+#include "Cocktail.h"
 #include "Customer.h"
 #include "Bill.h"
 #include "CompositeBill.h"
