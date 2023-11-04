@@ -20,9 +20,7 @@ void RestaurantOrderMediator::notifyOrderPlaced(Order* o)
     if(o != nullptr)
     {
         Plate* t = new Plate();
-        t->setCustomerID(o->getCustomerID());
         t->setTableNumber(o->getTableNumber());
-
         Chef::setPlate(t);
         std::cout << "Order handler received the order from the waiter and is passing it to an available chef.."<<std::endl;
 

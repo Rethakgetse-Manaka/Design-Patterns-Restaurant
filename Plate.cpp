@@ -16,11 +16,6 @@ void Plate::setTableNumber(int tableNum)
     tableNumber = tableNum;
 }
 
-void Plate::setCustomerID(int id)
-{
-    customerID = id;
-}
-
 void Plate::removeMeal(Meal* item) {
     for (size_t i = 0; i < m_Meals.size(); i++) {
         if (m_Meals[i] == item) {
@@ -43,11 +38,6 @@ void Plate::showMeals(){
 int Plate::getTableNumber()
 {
     return tableNumber;
-}
-
-int Plate::getCustomerID()
-{
-    return customerID;;
 }
 
 Plate::~Plate() {

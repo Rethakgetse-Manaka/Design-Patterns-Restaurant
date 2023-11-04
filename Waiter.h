@@ -1,7 +1,6 @@
 #ifndef Waiter_H
 #define Waiter_H
 #include <iomanip>
-#include <vector>
 #include "Colleague.h"
 #include "OrderMediator.h"
 #include "Table.h"
@@ -13,7 +12,7 @@ class Waiter:public Colleague {
         std::string name;
         std::vector<Table*> tables;
     public:
-        Waiter(std::string name);
+        Waiter(std::string n);
         virtual void receiveOrder(Order* o);
         void addTable(Table* t);
         void removeTable(Table* t);

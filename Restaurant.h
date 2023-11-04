@@ -22,14 +22,13 @@ private:
     std::vector<Table*> tables;
     std::vector<Valet*> valets;
     std::vector<TableVisitor*> managers;
-    std::vector<Waiter*> waiters;
+    //std::vector<Waiter*> waiters;
 public:
     Restaurant();
     void addValet(Valet* valet);
     void addTable(Table* table);
     void addManager(TableVisitor* manager);
-    void initialCustomerHandling(Customer* customer);
-    void addWaiter(Waiter* waiter);
+    void initialCustomerHandling(Customer *customer);
     void requestBill(Table* table);
     void visitTable(TableVisitor *tableVisitor);
     ~Restaurant();

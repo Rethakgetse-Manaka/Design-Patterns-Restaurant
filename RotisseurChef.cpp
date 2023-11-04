@@ -1,5 +1,4 @@
 #include "RotisseurChef.h"
-#include "Plate.h"
 
 Meal* RotisseurChef::createStarter()
 {

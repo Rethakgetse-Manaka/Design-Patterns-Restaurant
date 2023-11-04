@@ -106,7 +106,6 @@ void testInitialCustomerHandling(){
     Customer* customer = new Customer(1, "John");
     vector<Table*> tables;
     tables.push_back(new Table(1));
-    
     CustomerHandler *customerHandler = new CustomerHandler();
     customerHandler->add(new ValletHandler());
     customerHandler->add(new AssignTable(tables));
@@ -122,8 +121,10 @@ void testInitialCustomerHandling(){
 void testPayBill2(){
     Customer *c = new Customer(1, "John");
     Customer *c2 = new Customer(2, "Jane");
+    TabCaretaker* tabCaretaker = new TabCaretaker();
     OrderMediator* mediator = new RestaurantOrderMediator();
     Table* t = new Table(1);
+    t->setCaretaker(tabCaretaker);
     t->addCustomer(c);
     t->addCustomer(c2);
     Waiter* waiter = new Waiter("Sam");
@@ -149,9 +150,9 @@ int main()
     //testBill();
     // testCustomerState();
     //testManagerVisitor();
-    testInitialCustomerHandling();
-    testEat();
-    testComplain();
-    //testPayBill2();
+    // testInitialCustomerHandling();
+    // testEat();
+    // testComplain();
+    testPayBill2();
     return 0;
 }
