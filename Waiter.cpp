@@ -4,7 +4,12 @@
 #include "LeafBill.h"
 #include "Customer.h"
 
-void Waiter::receiveOrder(Order* o)
+Waiter::Waiter(std::string name)
+{
+    this->name = name;
+}
+
+void Waiter::receiveOrder(Order *o)
 {
     if(o != nullptr)
         mediator->notifyOrderPlaced(o);
@@ -52,8 +57,12 @@ void Waiter::presentFoodToTable(Plate* p)
     if(p != nullptr)
     {
         std::cout << "Here is your meal, we hope you have a wonderful dining experience with us." <<std::endl;
-        std::cout << "Meals: ";
-        p->showMeals();
+        for (int i = 0; i < tables->size(); i++) {
+            if (tables[i]->getCustomer(p->getCustomerID()) != nullptr) {
+                tables[i]->getCustomer(p->getCustomerID())->eat();
+            }
+        }
+        // p->showMeals();
 
     }
     

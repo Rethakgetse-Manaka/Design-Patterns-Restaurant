@@ -35,7 +35,8 @@ public:
     void addValet(Valet* valet);
     void addTable(Table* table);
     void addManager(TableVisitor* manager);
-    void initialCustomerHandling(Customer *customer);
+    void initialCustomerHandling(Customer* customer);
+    void addWaiter(Waiter* waiter);
     void requestBill(Table* table);
     void visitTable(TableVisitor *tableVisitor);
     ~Restaurant();

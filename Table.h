@@ -17,6 +17,7 @@ class Table
         int tableNumber;
         int count;
         TableState* state;
+        int count;
         Waiter* waiter;
 
     public:
@@ -28,6 +29,7 @@ class Table
         void setBill(Bill * b);
         Bill* getBill();
         void setTableNumber(int tb);
+        void setWaiter(Waiter* waiter);
         
         
         //added for state Pattern
@@ -46,10 +48,5 @@ class Table
         Waiter* getWaiter();
         void setWaiter(Waiter* w);
         bool isFree();
-
-
-    
-
-
 };
 #endif
