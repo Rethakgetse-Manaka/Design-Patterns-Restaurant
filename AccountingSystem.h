@@ -13,14 +13,14 @@ public:
     void recordSale(Transaction* transaction);
     void setAccountingSystem(AccountingSystem *as);
     void generateReport();
-    double getBalance();
+    long long getBalance();
     void addBalance(double amount);
     void setBalance(double balance);
     std::list<Transaction*> getTransactions();
 
 private:
     Inventory* observedInventory;
-    double balance;
+    long long balance;
     std::list<Transaction*> transactions;
 };
 

@@ -48,7 +48,7 @@ void AccountingSystem::generateReport()
     std::cout << "Current Balance: R" << getBalance() << "\n";
 }
 
-double AccountingSystem::getBalance()
+long long AccountingSystem::getBalance()
 {
     double calculatedBalance = this->balance;
     for (const Transaction* transaction : transactions)
