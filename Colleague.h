@@ -9,5 +9,6 @@ class Colleague
 
     public:
         void setMediator(OrderMediator* mediator);
+        OrderMediator* getMediator();
 };
 #endif

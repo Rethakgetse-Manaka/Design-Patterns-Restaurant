@@ -28,10 +28,13 @@ private:
     Order *order;
     int tabID;
     double tip;
+    Table* table;
 public:
     Customer();
     Customer(int id, std::string name);
     ~Customer();
+    void setTable(Table* t);
+    Table* getTable();
     int getCustomerID();
     std::string getCustomerName();
     int getTableID();

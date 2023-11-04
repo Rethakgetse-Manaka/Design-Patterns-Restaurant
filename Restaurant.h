@@ -30,6 +30,7 @@ public:
     void addManager(TableVisitor* manager);
     void initialCustomerHandling(Customer* customer);
     void addWaiter(Waiter* waiter);
+    void requestBill(Table* table);
     void visitTable(TableVisitor *tableVisitor);
     ~Restaurant();
 };

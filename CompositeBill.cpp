@@ -21,6 +21,17 @@ void CompositeBill::printBill()
 	cout << "]" << endl;
 }
 
+Bill *CompositeBill::findBill(int customer)
+{
+    vector<Bill*>:: iterator it;
+	for (it = tableBills.begin(); it != tableBills.end(); ++it){
+        if ((*it)->getOrder()->getCustomerID() == customer) {
+            return *it;
+        }
+    }
+    return nullptr;
+}
+
 void CompositeBill::addPerson(Bill *bill)
 {
     this->tableBills.push_back(bill);
