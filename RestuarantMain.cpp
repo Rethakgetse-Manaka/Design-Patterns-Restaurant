@@ -21,14 +21,16 @@
 
 // #include <iostream>
 
+// const std::string RED_COLOR = "\x1B[31m";
+// const std::string GREEN_COLOR = "\x1B[32m";
+// const std::string RESET_COLOR = "\x1B[0m"; // Reset color to default
+
+
 // using namespace std;
 
 // int main() {
-//     cout << "all files compiled successfully" << endl;
+//     cout << GREEN_COLOR << "all files compiled successfully" << RESET_COLOR << endl;
 
-//     Customer* customer1 = new Customer();
-
-//     customer1->placeOrder();
-
+//     // Table*
 //     return 0;
 // }

@@ -29,6 +29,7 @@ public:
     void addTable(Table* table);
     void addManager(TableVisitor* manager);
     void initialCustomerHandling(Customer *customer);
+    void requestBill(Table* table);
     void visitTable(TableVisitor *tableVisitor);
     ~Restaurant();
 };

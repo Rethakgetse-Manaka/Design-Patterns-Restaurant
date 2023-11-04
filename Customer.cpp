@@ -32,6 +32,16 @@ Customer::~Customer()
     }
 }
 
+void Customer::setTable(Table *t)
+{
+    this->table = t;
+}
+
+Table *Customer::getTable()
+{
+    return table;
+}
+
 int Customer::getCustomerID()
 {
     return this->customerID;
@@ -97,11 +107,10 @@ void Customer::placeOrder()
 {
     this->order = menu();
     std::cout << this->order->printOrder();
-    Waiter* waiter = new Waiter();
-    RestaurantOrderMediator* r = new RestaurantOrderMediator();
-    r->addWaiter(waiter);
-    waiter->setMediator(r);
-    waiter->receiveOrder(this->order);
+
+    OrderMediator *r = table->getWaiter()->getMediator();
+    r->addWaiter(table->getWaiter());
+    table->getWaiter()->receiveOrder(this->order);
 }
 
 Order *Customer::menu()
@@ -220,14 +229,12 @@ Order *Customer::menu()
             break;
         }
 
-        
         mainVal = -1;
         cout << customerOrder->printOrder() << endl;
         cout << "Would you like to order another main?" << endl;
         cout << "1. Yes" << endl;
         cout << "2. No" << endl;
         cin >> multMain;
-        
     }
     cout << customerOrder->printOrder() << endl;
 
@@ -342,7 +349,7 @@ Order *Customer::menu()
 void Customer::complain()
 {
     state->showUnhapiness(this);
-    cout << this->customerName << " is complaining about their food."<< endl;
+    cout << this->customerName << " is complaining about their food." << endl;
 }
 
 void Customer::resolveComplaint()
@@ -390,7 +397,15 @@ void Customer::respondWithDissatifaction()
 void Customer::eat()
 {
     state->showHapiness(this);
-    cout << this->customerName << " is eating their food" << endl;
+    if (order != NULL)
+    {
+        for (int i = 0; i < (int)order->getFoodItems().size(); i++)
+        {
+            cout << this->customerName << " is eating their " << order->getFoodItems()[i]->getMealName() << endl;
+        }
+    }else{
+        cout << this->customerName << " is eating their food." << endl;
+    }
 }
 
 void Customer::accept(TableVisitor *v)

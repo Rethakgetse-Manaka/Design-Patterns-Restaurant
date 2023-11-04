@@ -4,7 +4,7 @@
 #include "Colleague.h"
 #include "OrderMediator.h"
 #include "Table.h"
-class Table;
+// class Table;;;
 class Colleague;
 class Plate;
 class Waiter:public Colleague {
@@ -12,6 +12,7 @@ class Waiter:public Colleague {
         std::string name;
         std::vector<Table*> tables;
     public:
+        Waiter(std::string n);
         virtual void receiveOrder(Order* o);
         void addTable(Table* t);
         void removeTable(Table* t);

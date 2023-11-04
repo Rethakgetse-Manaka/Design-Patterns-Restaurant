@@ -29,6 +29,38 @@ void Restaurant::initialCustomerHandling(Customer *customer)
     customerHandler->handleRequest(customer);
 }
 
+void Restaurant::requestBill(Table *table)
+{
+    int choice = 0;
+    Bill* currBill = table->getBill();
+    cout<<"Would you like to split the bill?" << endl;
+    cout<<"1. Yes" << endl;
+    cout<<"2. No" << endl;
+    cin >> choice;
+    if(choice == 1){
+        for(int i = 0; i < (int)table->getCustomers().size(); i++){
+            Customer* currCustomer = table->getCustomers()[i];
+            Bill* customerBill = currBill->findBill(currCustomer->getCustomerID());
+            currCustomer->payBill(customerBill);   
+        }
+    }else{
+        cout<<"Your bill is: " << currBill->getBillTotal() << endl;
+
+    }
+}
+
+void Restaurant::visitTable(TableVisitor *tableVisitor)
+{
+    int ranVal = rand() % managers.size();
+    int ranTable = rand()% tables.size();
+    TableVisitor* manager = managers[ranVal];
+    Table* table = tables[ranTable];
+    for(int i = 0; i < (int)table->getCustomers().size(); i++){
+        table->getCustomers()[i]->accept(manager);
+    }
+}
+
+
 Restaurant::~Restaurant()
 {
 }

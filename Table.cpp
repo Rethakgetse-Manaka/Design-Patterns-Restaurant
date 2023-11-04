@@ -2,16 +2,17 @@
 #include "Waiter.h"
 #include "Customer.h"
 #include "TableState.h"
-std::vector<Order*> Table::getOrders()
-{
-    return orders;
-}
+using namespace std;
 
 void Table::addCustomer(Customer *c)
 {
     customers.push_back(c);
     c->setTableID(tableNumber);
-    
+}
+
+std::vector<Customer *> Table::getCustomers()
+{
+    return customers;
 }
 
 std::vector<Customer *> Table::getCustomers()
@@ -23,14 +24,40 @@ void Table::removeCustomer(Customer *c)
 {
 
     customers.erase(std::remove(customers.begin(), customers.end(), c), customers.end());
-
 }
 
-void Table::readyForBill(Waiter* w)
+void Table::readyForBill(Waiter *w)
 {
 
-    std::cout << "Table "<<tableNumber<<" is ready for a bill...";
+    std::cout << "Table " << tableNumber << " is ready for a bill...";
     w->presentBill(this);
+    cout << "Would you like to pay now or later?" << endl;
+    cout << "1. Pay now" << endl;
+    cout << "2. Pay later" << endl;
+    int paymentChoice = 0;
+    cin >> paymentChoice;
+    if (paymentChoice == 1)
+    {
+        int choice = 0;
+        cout << "Would you like to split the bill?" << endl;
+        cout << "1. Yes" << endl;
+        cout << "2. No" << endl;
+        cin >> choice;
+        if(choice == 1){
+            for(int i = 0; i < (int)customers.size(); i++){
+                Customer* currCustomer = customers[i];
+                Bill* customerBill = bill->findBill(currCustomer->getCustomerID());
+                currCustomer->payBill(customerBill);   
+            }
+        }else{
+            cout<<"Your bill is: " << bill->getBillTotal() << endl;
+            int ranCustomer = rand() % customers.size();
+            Customer* currCustomer = customers[ranCustomer];
+            currCustomer->payBill(bill);
+        }
+    }else{
+        cout<<"Adding your bill to your tab account..." << endl;
+    }
 }
 
 void Table::placeOrder(Order* o,Waiter* w)
@@ -53,12 +80,6 @@ void Table::setTableNumber(int tb)
 {
     tableNumber = tb;
 }
-
-
-
-
-
-
 
 Table::Table(int tableNumber) : tableNumber(tableNumber), state(new Free()) {}
 
@@ -83,6 +104,11 @@ Customer *Table::getCustomer(int custID)
         }
     }
     return nullptr;
+}
+
+Waiter *Table::getWaiter()
+{
+    return waiter;
 }
 
 Table::~Table() {
@@ -132,6 +158,11 @@ int Table::getTableNumber() const
 
 void Table::printTableStatus() const {
     state->getTableStatus();
+}
+
+void Table::setWaiter(Waiter *w)
+{
+    this->waiter = w;
 }
 
 bool Table::isFree()
