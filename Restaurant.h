@@ -39,6 +39,7 @@ public:
     void addWaiter(Waiter* waiter);
     void requestBill(Table* table);
     void visitTable(TableVisitor *tableVisitor);
+    void payTab(Customer* customer,TabCaretaker* tabCaretaker);
     ~Restaurant();
 };
 

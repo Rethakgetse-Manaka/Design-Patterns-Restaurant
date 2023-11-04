@@ -12,9 +12,11 @@ Tab::~Tab() {
 
 void Tab::restoreMemento(TabMemento* memento) {
     // Restore the tab's state from the memento
+    
     customerID = memento->getCustomerID();
     customerName = memento->getCustomerName();
     bill=memento->findBill(customerID);
+    std::cout << customerName << "'s tab is restored"<<std::endl;
 }
 
 int Tab::getCustomerID() const {

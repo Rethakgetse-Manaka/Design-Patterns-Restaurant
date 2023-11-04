@@ -32,9 +32,12 @@ private:
     Order *order;
     double tip;
     Table* table;
+    Tab* tab;
 public:
     Customer();
     Customer(int id, std::string name);
+    void setTab(Tab* t);
+    Tab* getTab();
     ~Customer();
     void setTable(Table* t);
     Table* getTable();
