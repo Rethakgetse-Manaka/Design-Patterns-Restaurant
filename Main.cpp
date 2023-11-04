@@ -149,9 +149,9 @@ int main()
     //testBill();
     // testCustomerState();
     //testManagerVisitor();
-    //testInitialCustomerHandling();
-    //testEat();
-    //testComplain();
-    testPayBill2();
+    testInitialCustomerHandling();
+    testEat();
+    testComplain();
+    //testPayBill2();
     return 0;
 }
