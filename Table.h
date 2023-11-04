@@ -51,10 +51,5 @@ class Table
         Waiter* getWaiter();
         void setWaiter(Waiter* w);
         bool isFree();
-
-
-    
-
-
 };
 #endif
