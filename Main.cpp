@@ -151,7 +151,6 @@ void testInitialCustomerHandling(){
     Customer* customer = new Customer(1, "John");
     vector<Table*> tables;
     tables.push_back(new Table(1));
-    
     CustomerHandler *customerHandler = new CustomerHandler();
     customerHandler->add(new ValletHandler());
     customerHandler->add(new AssignTable(tables));
@@ -208,8 +207,10 @@ void testPayBill2(){
     accountingSystem->recordTransaction(t10);
     Customer *c = new Customer(1, "John");
     Customer *c2 = new Customer(2, "Jane");
+    TabCaretaker* tabCaretaker = new TabCaretaker();
     OrderMediator* mediator = new RestaurantOrderMediator();
     Table* t = new Table(1);
+    t->setCaretaker(tabCaretaker);
     t->addCustomer(c);
     t->addCustomer(c2);
     Waiter* waiter = new Waiter("Sam");

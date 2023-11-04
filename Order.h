@@ -18,6 +18,7 @@ private:
     std::vector<Cocktail*> drinks;
 public:
     Order(int cID, std::string cName);
+    Order(Order* o);
     void addStarter(std::string, double val);
     void addItem(std::string item, bool g, bool s, double val, bool well);
     std::vector<FoodItem*> getFoodItems();

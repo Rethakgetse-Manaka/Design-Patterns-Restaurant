@@ -43,6 +43,7 @@ public:
      * @param well Whether the food item is well done.
      */
     FoodItem(std::string n, bool gar, bool sauce, double val, bool well);
+    FoodItem(FoodItem* f);
 
     /**
      * @brief Get the price of the food item.
