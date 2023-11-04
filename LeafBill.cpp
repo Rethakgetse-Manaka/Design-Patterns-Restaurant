@@ -18,6 +18,11 @@ double LeafBill::getTip()
     return this->tip;
 }
 
+Bill *LeafBill::findBill(int customer)
+{
+    return nullptr;
+}
+
 Order *LeafBill::getOrder()
 {
     return this->order;
