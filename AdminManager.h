@@ -3,13 +3,15 @@
 
 #include "TableVisitor.h"
 #include "Customer.h"
+#include "AccountingSystem.h"
+#include "Transaction.h"
+#include "Inventory.h"
 #include <random>
 class AdminManager: public TableVisitor
 {
 private:
-    /* data */
 public:
-    AdminManager(/* args */);
+    AdminManager();
     void visitCustomer(Customer* customer);
     virtual ~AdminManager();
 };

@@ -9,9 +9,13 @@ class TableVisitor;
 #include <string>
 #include <vector>
 #include <iostream>
+#include <ctime>
 #include "Bill.h"
 #include "Neutral.h"
 #include "ComplaintsManager.h"
+#include "Item.h"
+#include "AccountingSystem.h"
+#include "Transaction.h"
 #include "AdminManager.h"
 #include "Waiter.h"
 
@@ -44,7 +48,7 @@ public:
     void setValletID(int id);
     OrderHandler *requestWaiter();
     void setState(CustomerState *s);
-    void payBill(Bill* bill);
+    void payBill(Bill* bill, AccountingSystem* aS);
     void placeOrder();
     Order* menu();
     void complain();

@@ -1,16 +1,16 @@
-// #include <iostream>
-// #include "Customer.h"
-// #include "Bill.h"
-// #include "CompositeBill.h"
-// #include "LeafBill.h"
-// #include "TableVisitor.h"
-// #include "ComplaintsManager.h"
-// #include "AdminManager.h"
-// #include "CustomerHandler.h"
-// #include "ValletHandler.h"
-// #include "AssignTable.h"
-// #include <vector>
-// using namespace std;
+#include <iostream>
+#include "Customer.h"
+#include "Bill.h"
+#include "CompositeBill.h"
+#include "LeafBill.h"
+#include "TableVisitor.h"
+#include "ComplaintsManager.h"
+#include "AdminManager.h"
+#include "CustomerHandler.h"
+#include "ValletHandler.h"
+#include "AssignTable.h"
+#include <vector>
+using namespace std;
 
 // void testBill(){
 //     Customer *c = new Customer(1, "John");
@@ -81,12 +81,12 @@
 //     customers.clear();
 // }
 
-// void testBillPayment(){
-//     cout<<"Unit testing eat function." << endl;
-//     Customer* newCustomer = new Customer(1, "John");
-//     Bill* b1 = new LeafBill(newCustomer->getOrder(), newCustomer->getTip());
-//     newCustomer->payBill(b1);
-// }
+void testBillPayment(){
+    cout<<"Unit testing eat function." << endl;
+    Customer* newCustomer = new Customer(1, "John");
+    Bill* b1 = new LeafBill(newCustomer->getOrder(), newCustomer->getTip());
+    newCustomer->payBill(b1);
+}
 
 // void testEat(){
 //     cout<<"Unit testing eat function." << endl;
@@ -119,39 +119,39 @@
 //     tables.clear();
 // }
 
-// void testPayBill2(){
-//     Customer *c = new Customer(1, "John");
-//     Customer *c2 = new Customer(2, "Jane");
-//     OrderMediator* mediator = new RestaurantOrderMediator();
-//     Table* t = new Table(1);
-//     t->addCustomer(c);
-//     t->addCustomer(c2);
-//     Waiter* waiter = new Waiter("Sam");
-//     c->setTable(t);
-//     c2->setTable(t);
-//     t->setWaiter(waiter);
-//     waiter->setMediator(mediator);
-//     waiter->addTable(t);
-//     c->setTableID(1);
-//     c2->setTableID(1);
+void testPayBill2(){
+    Customer *c = new Customer(1, "John");
+    Customer *c2 = new Customer(2, "Jane");
+    OrderMediator* mediator = new RestaurantOrderMediator();
+    Table* t = new Table(1);
+    t->addCustomer(c);
+    t->addCustomer(c2);
+    Waiter* waiter = new Waiter("Sam");
+    c->setTable(t);
+    c2->setTable(t);
+    t->setWaiter(waiter);
+    waiter->setMediator(mediator);
+    waiter->addTable(t);
+    c->setTableID(1);
+    c2->setTableID(1);
 
-//     c->placeOrder();
-//     c2->placeOrder();
-//     cout<<"Testing the Bill for a customer: "<<endl << endl;
-//     t->readyForBill(waiter);
-//     delete c;
-//     delete c2;
+    c->placeOrder();
+    c2->placeOrder();
+    cout<<"Testing the Bill for a customer: "<<endl << endl;
+    t->readyForBill(waiter);
+    delete c;
+    delete c2;
 
-// }
-// int main()
-// {
-//     //testOrderPlacing();
-//     //testBill();
-//     // testCustomerState();
-//     //testManagerVisitor();
-//     testInitialCustomerHandling();
-//     testEat();
-//     testComplain();
-//     //testPayBill2();
-//     return 0;
-// }
+}
+int main()
+{
+    //testOrderPlacing();
+    //testBill();
+    // testCustomerState();
+    //testManagerVisitor();
+    testInitialCustomerHandling();
+    testEat();
+    testComplain();
+    //testPayBill2();
+    return 0;
+}
