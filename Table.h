@@ -17,7 +17,6 @@ class Table
         int tableNumber;
         int count;
         TableState* state;
-        int count;
         Waiter* waiter;
 
     public:
