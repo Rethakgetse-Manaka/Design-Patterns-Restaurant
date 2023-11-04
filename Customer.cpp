@@ -142,8 +142,8 @@ Order *Customer::menu()
         cout << "1. Yes" << endl;
         cout << "2. No" << endl;
         cin >> multStarter;
+
     }
-    
     while (multStarter != 2)
     {
         while (starterVal != 1 && starterVal != 2 && starterVal != 3 && starterVal != 4 && starterVal != 5)
@@ -526,7 +526,14 @@ void Customer::respondWithDissatifaction()
     state->showUnhapiness(this);
     cout << this->customerName << " is now unhappy with their service." << endl;
 }
-
+void Customer::setTab(Tab* t)
+{
+    tab= t;
+}
+Tab* Customer::getTab()
+{
+    return tab;
+}
 void Customer::eat()
 {
     state->showHapiness(this);
