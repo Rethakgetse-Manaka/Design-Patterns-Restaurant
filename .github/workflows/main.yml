@@ -3,7 +3,7 @@ name: Victor-BranchTesting
 on:
   push:
     branches:
-      - Victor-FloorComponent
+      - Kamo_Kitchen
 
 jobs:
   build:
