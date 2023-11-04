@@ -22,7 +22,7 @@ private:
     std::vector<Table*> tables;
     std::vector<Valet*> valets;
     std::vector<TableVisitor*> managers;
-    //std::vector<Waiter*> waiters;
+    std::vector<Waiter*> waiters;
 public:
     Restaurant();
     void addValet(Valet* valet);

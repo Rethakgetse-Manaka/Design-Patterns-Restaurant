@@ -117,6 +117,7 @@ Order *Customer::menu()
 {
     cout << "-------Welcome to Patterning the Patterns.--------" << endl;
     Order *customerOrder = new Order(customerID, customerName);
+    customerOrder->setTableID(getTabID());
     int starterVal = -1, multStarter = 0;
     cout << "Would you like to order a starter?" << endl;
     cout << "1. Yes" << endl;
