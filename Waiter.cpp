@@ -4,7 +4,13 @@
 #include "LeafBill.h"
 #include "Customer.h"
 
-void Waiter::receiveOrder(Order* o)
+Waiter::Waiter(std::string n)
+{
+    name = n;
+    mediator = nullptr;
+}
+
+void Waiter::receiveOrder(Order *o)
 {
     if(o != nullptr)
         mediator->notifyOrderPlaced(o);
