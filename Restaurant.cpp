@@ -29,6 +29,11 @@ void Restaurant::initialCustomerHandling(Customer *customer)
     customerHandler->handleRequest(customer);
 }
 
+void Restaurant::addWaiter(Waiter *waiter)
+{
+    waiters.push_back(waiter);
+}
+
 void Restaurant::requestBill(Table *table)
 {
     int choice = 0;

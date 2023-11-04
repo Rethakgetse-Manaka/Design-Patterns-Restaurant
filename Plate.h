@@ -10,7 +10,7 @@ class Plate
     private:
         std::vector<Meal*> m_Meals; 
         int tableNumber;
-
+        int customerID;
     public:
         
         Plate();
@@ -19,6 +19,7 @@ class Plate
         void addMeal(Meal* item);
 
         void setTableNumber(int tableNum);
+        void setCustomerID(int id);
 
         
         void removeMeal(Meal* item);
@@ -29,6 +30,7 @@ class Plate
         
         void showMeals();
         int getTableNumber();
+        int getCustomerID();
         virtual ~Plate();
 };
 

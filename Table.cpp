@@ -6,10 +6,20 @@ using namespace std;
 
 void Table::addCustomer(Customer *c)
 {
-    customers.push_back(c);
-    c->setTableID(tableNumber);
-}
+    if(count < 8)
+    {
+         customers.push_back(c);
+        c->setTableID(tableNumber);
 
+    }
+    else
+    {
+        std::cout << "Table is full" << std::endl;
+        state->occupy(this);
+    }
+   
+    
+}
 
 std::vector<Customer *> Table::getCustomers()
 {
@@ -77,7 +87,12 @@ void Table::setTableNumber(int tb)
     tableNumber = tb;
 }
 
-Table::Table(int tableNumber) : tableNumber(tableNumber), state(new Free()) {}
+void Table::setWaiter(Waiter *waiter)
+{
+    this->waiter = waiter;
+}
+
+Table::Table(int tableNumber) : tableNumber(tableNumber), state(new Free()), count(0) {}
 
 void Table::setState(TableState* newState) {
     if (state) {
@@ -104,7 +119,7 @@ Customer *Table::getCustomer(int custID)
 
 Waiter *Table::getWaiter()
 {
-    return waiter;
+    return this->waiter;
 }
 
 Table::~Table() {
