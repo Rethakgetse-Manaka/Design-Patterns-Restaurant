@@ -50,12 +50,15 @@ int main() {
     Table* table3 = new Table(3);
 
     Waiter* waiter1 = new Waiter("John");
-    Waiter* waiter 2 = new Waiter("Jack");
+    Waiter* waiter2 = new Waiter("Jack");
     Waiter* waiter3 = new Waiter("Jill");
 
     waiter1->addTable(table1);
+    table1->setWaiter(waiter1);
     waiter2->addTable(table2);
+    table2->setWaiter(waiter2);
     waiter3->addTable(table3);
+    table3->setWaiter(waiter3);
 
     waiter1->setMediator(kitchenMediator);
     waiter2->setMediator(kitchenMediator);
@@ -69,7 +72,18 @@ int main() {
     restuarant->addWaiter(waiter2);
     restuarant->addWaiter(waiter3);
 
-    Customer* customer
+    Customer* customer1 = new Customer(1,"Kamo");
+    Customer* customer2 = new Customer(2,"KB");
+    Customer* customer3 = new Customer(3,"Victor");
+
+    restuarant->initialCustomerHandling(customer1);
+    restuarant->initialCustomerHandling(customer2);
+    restuarant->initialCustomerHandling(customer3);
+
+    customer1->placeOrder();
+    customer2->placeOrder();
+    customer3->placeOrder();
+
 
     return 0;
 }

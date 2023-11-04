@@ -26,7 +26,6 @@ private:
     std::string customerName;
     CustomerState *state;
     Order *order;
-    int tabID;
     double tip;
     Table* table;
 public:
@@ -40,7 +39,6 @@ public:
     int getTableID();
     CustomerState *getState();
     Order* getOrder();
-    int getTabID();
     double getTip();
     void setTableID(int id);
     void setValletID(int id);
@@ -57,6 +55,7 @@ public:
     void respondWithSatifaction();
     void respondWithDissatifaction();
     void eat();
+    void drink();
     void leave();
     void accept(TableVisitor *v);
 };
