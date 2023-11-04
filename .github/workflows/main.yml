@@ -27,4 +27,8 @@ jobs:
 
     - name: Clean up if tests passed
       if: ${{ success() }}
+      run: make all
+      
+    - name: Clean up if tests passed
+      if: ${{ success() }}
       run: make clean
