@@ -362,7 +362,7 @@ Order *Customer::menu()
             cout << "2. No" << endl;
             cin >> alVal;
         }
-    
+        
         std::string mixes = "";
         double alcoholCost = 0.0;
         if (alVal == 1)

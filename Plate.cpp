@@ -16,9 +16,9 @@ void Plate::setTableNumber(int tableNum)
     tableNumber = tableNum;
 }
 
-void Plate::setCustomerID(int id)
+void Plate::setCustomerID(int ID)
 {
-    customerID = id;
+    customerID = ID;
 }
 
 void Plate::removeMeal(Meal* item) {
@@ -47,7 +47,7 @@ int Plate::getTableNumber()
 
 int Plate::getCustomerID()
 {
-    return customerID;;
+    return customerID;
 }
 
 Plate::~Plate() {

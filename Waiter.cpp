@@ -4,9 +4,10 @@
 #include "LeafBill.h"
 #include "Customer.h"
 
-Waiter::Waiter(std::string name)
+Waiter::Waiter(std::string n)
 {
-    this->name = name;
+    name = n;
+    mediator = nullptr;
 }
 
 void Waiter::receiveOrder(Order *o)

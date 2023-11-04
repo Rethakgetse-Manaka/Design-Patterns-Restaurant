@@ -31,6 +31,21 @@ FoodItem::FoodItem(std::string n, bool gar, bool sauce, double v, bool well)
     this->welldone = well;
 }
 
+FoodItem::FoodItem(FoodItem *f)
+{
+    if(f != nullptr)
+    {
+        this->mealName = f->mealName;
+        this->type = f->type;
+        this->garnish = f->garnish;
+        this->sauce = f->sauce;
+        this->price = f->price;
+        this->welldone = f->welldone;
+
+    }
+    
+}
+
 double FoodItem::getPrice()
 {
     return this->price;

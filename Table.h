@@ -4,6 +4,8 @@
 #include "AccountingSystem.h"
 #include <iostream>
 #include <algorithm>
+#include "TabCaretaker.h"
+#include "Tab.h"
 class Customer;
 class Bill;
 class TableState;
@@ -18,6 +20,7 @@ class Table
         int count;
         TableState* state;
         Waiter* waiter;
+        TabCaretaker* tabCaretaker;
 
     public:
         void addCustomer(Customer* c);
@@ -29,10 +32,12 @@ class Table
         Bill* getBill();
         
         void setWaiter(Waiter* waiter);
+
         
         
         //added for state Pattern
         Table(int tableNumber);
+        void setCaretaker(TabCaretaker* t);
 
         ~Table();
         void occupyTable();

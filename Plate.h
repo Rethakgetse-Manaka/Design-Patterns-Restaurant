@@ -11,6 +11,8 @@ class Plate
         std::vector<Meal*> m_Meals; 
         int tableNumber;
         int customerID;
+
+
     public:
         
         Plate();
@@ -19,8 +21,7 @@ class Plate
         void addMeal(Meal* item);
 
         void setTableNumber(int tableNum);
-        void setCustomerID(int id);
-
+        void setCustomerID(int ID);
         
         void removeMeal(Meal* item);
 

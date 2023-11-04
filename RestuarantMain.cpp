@@ -39,15 +39,15 @@
 
 // using namespace std;
 
-// int main() {
-//     cout << GREEN_COLOR << "all files compiled successfully" << RESET_COLOR << endl;
+int main() {
+    cout << GREEN_COLOR << "all files compiled successfully" << RESET_COLOR << endl;
 
-//     Restaurant* restuarant = new Restaurant();
-//     OrderMediator* kitchenMediator = new RestaurantOrderMediator();
+    Restaurant* restuarant = new Restaurant();
+    OrderMediator* kitchenMediator = new RestaurantOrderMediator();
 
-//     Table* table1 = new Table(1);
-//     Table* table2 = new Table(2);
-//     Table* table3 = new Table(3);
+    Table* table1 = new Table(1);
+    Table* table2 = new Table(2);
+    Table* table3 = new Table(3);
 
 //     Waiter* waiter1 = new Waiter("John");
 //     Waiter* waiter2 = new Waiter("Jack");
@@ -85,5 +85,5 @@
 //     customer3->placeOrder();
 
 
-//     return 0;
-// }
+    return 0;
+}
