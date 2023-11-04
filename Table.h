@@ -3,6 +3,8 @@
 #include "Order.h"
 #include <iostream>
 #include <algorithm>
+#include "TabCaretaker.h"
+#include "Tab.h"
 class Customer;
 class Bill;
 class TableState;
@@ -18,6 +20,7 @@ class Table
         TableState* state;
         int count;
         Waiter* waiter;
+        TabCaretaker* tabCaretaker;
 
     public:
         void addCustomer(Customer* c);
@@ -33,6 +36,7 @@ class Table
         
         //added for state Pattern
         Table(int tableNumber);
+        void setCaretaker(TabCaretaker* t);
 
         ~Table();
         void occupyTable();

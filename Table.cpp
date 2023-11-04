@@ -62,7 +62,31 @@ void Table::readyForBill(Waiter *w)
             currCustomer->payBill(bill);
         }
     }else{
+        
+        int choice = 0;
+        cout << "Would you like to split the Tab?" << endl;
+        cout << "1. Yes" << endl;
+        cout << "2. No" << endl;
+        cin >> choice;
+        if(choice == 1){
+            for(int i = 0; i < (int)customers.size(); i++){
+                Customer* currCustomer = customers[i];
+                Bill* customerBill = bill->findBill(currCustomer->getCustomerID());
+                Tab* t = new Tab(currCustomer->getCustomerID(),currCustomer->getCustomerName(),customerBill);
+                tabCaretaker->addMemento(t->getMemento());
+
+                  
+            }
+        }else{
+            cout<<"Your tab is: " << bill->getBillTotal() << endl;
+            int ranCustomer = rand() % customers.size();
+            Customer* currCustomer = customers[ranCustomer];
+            Tab* t = new Tab(currCustomer->getCustomerID(),currCustomer->getCustomerName(),bill);
+            tabCaretaker->addMemento(t->getMemento());
+            
+        }
         cout<<"Adding your bill to your tab account..." << endl;
+
     }
 }
 
@@ -93,6 +117,11 @@ void Table::setWaiter(Waiter *waiter)
 }
 
 Table::Table(int tableNumber) : tableNumber(tableNumber), state(new Free()), count(0) {}
+
+void Table::setCaretaker(TabCaretaker *t)
+{
+    tabCaretaker = t;
+}
 
 void Table::setState(TableState* newState) {
     if (state) {
