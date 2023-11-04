@@ -262,7 +262,7 @@ void testInitialCustomerHandling(){
 //         delete tables[i];
 //     }
 //     tables.clear();
-}
+//}
 
 // void testPayBill2(){
 //     Inventory* inventory = new Inventory();
