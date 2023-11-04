@@ -11,10 +11,15 @@ void ValletHandler::valletRequest(Customer* customer)
     std::cout << "Welcome to Patterning The Patterns Cuisine!" << std::endl;
 
     // Prompt user for valet service
-    std::cout << "Do you want to use the valet service? (y/n): ";
+    std::cout << "Do you want to use the valet service? (y/n): " << endl;
     char response;
     std::cin >> response;
-
+    while (response != 'y' && response != 'Y' && response != 'n' && response != 'N')
+    {
+        std::cout << "Invalid response. Please enter 'y' or 'n': " << endl;
+        std::cin >> response;
+    }
+    
     if (response == 'y' || response == 'Y') {
         // Create a Customer object and set a customer ID
 
