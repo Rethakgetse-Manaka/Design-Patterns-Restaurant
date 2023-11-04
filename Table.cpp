@@ -79,6 +79,7 @@ void Table::readyForBill(Waiter *w, AccountingSystem* aS)
                 Bill* customerBill = bill->findBill(currCustomer->getCustomerID());
                 Tab* t = new Tab(currCustomer->getCustomerID(),currCustomer->getCustomerName(),customerBill);
                 tabCaretaker->addMemento(t->getMemento());
+                currCustomer->setTab(t);
                 cout<<"Your tab is: " << customerBill->getBillTotal() << endl;
                 cout<<"Adding "<<currCustomer->getCustomerName()<<"'s bill to tab account..." << endl;
 
@@ -89,6 +90,7 @@ void Table::readyForBill(Waiter *w, AccountingSystem* aS)
             int ranCustomer = rand() % customers.size();
             Customer* currCustomer = customers[ranCustomer];
             Tab* t = new Tab(currCustomer->getCustomerID(),currCustomer->getCustomerName(),bill);
+            currCustomer->setTab(t);
             tabCaretaker->addMemento(t->getMemento());
             cout<<"Adding "<<currCustomer->getCustomerName()<<"'s bill to tab account..." << endl;
             
