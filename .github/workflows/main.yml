@@ -18,6 +18,9 @@ jobs:
 
     - name: Clean project
       run: make clean
+
+    - name: Clean build
+      run: make clean-build
       
     - name: Build project
       run: make
@@ -25,7 +28,7 @@ jobs:
     - name: Run tests
       run: make run
 
-    - name: Clean up if tests passed
+    - name: create executable
       if: ${{ success() }}
       run: make all
       
