@@ -6,6 +6,7 @@
 #include "FoodItem.h"
 #include "SpecificCocktail.h"
 #include "BaseCocktail.h"
+#include "CockTail.h"
 
 class Order
 {
@@ -14,7 +15,7 @@ private:
     int tableID;
     std::string customerName;
     std::vector<FoodItem*> items;
-    std::vector<SpecificCocktail*> drinks;
+    std::vector<Cocktail*> drinks;
 public:
     Order(int cID, std::string cName);
     void addStarter(std::string, double val);
@@ -22,7 +23,7 @@ public:
     std::vector<FoodItem*> getFoodItems();
     int getTableNumber();
     void setTableID(int id);
-    std::vector<SpecificCocktail*> getDrinks();
+    std::vector<Cocktail*> getDrinks();
     void addDrink(std::string baseName, bool alch, double cost, std::string mixes);
     int getCustomerID();
     double getTotal();

@@ -10,6 +10,8 @@ private:
 public:
     BaseCocktail(std::string type, double cost);
     std::string getDescription() const override;
+    double getPrice();
+    std::string toString();
     double cost() const override;
     virtual ~BaseCocktail();
 };

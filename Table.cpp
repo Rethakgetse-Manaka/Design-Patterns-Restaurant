@@ -6,9 +6,9 @@ using namespace std;
 
 void Table::addCustomer(Customer *c)
 {
-    if(count < 8)
+    if(count <= 8)
     {
-         customers.push_back(c);
+        customers.push_back(c);
         c->setTableID(tableNumber);
 
     }
@@ -87,10 +87,7 @@ Bill *Table::getBill()
     return bill;
 }
 
-void Table::setTableNumber(int tb)
-{
-    tableNumber = tb;
-}
+
 
 void Table::setWaiter(Waiter *waiter)
 {
@@ -174,11 +171,6 @@ int Table::getTableNumber() const
 
 void Table::printTableStatus() const {
     state->getTableStatus();
-}
-
-void Table::setWaiter(Waiter *w)
-{
-    this->waiter = w;
 }
 
 bool Table::isFree()

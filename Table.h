@@ -28,7 +28,7 @@ class Table
         void placeOrder(Order* o,Waiter* w);
         void setBill(Bill * b);
         Bill* getBill();
-        void setTableNumber(int tb);
+        
         void setWaiter(Waiter* waiter);
         
         
@@ -46,7 +46,6 @@ class Table
         TableState* getState() const;
         Customer* getCustomer(int custID);
         Waiter* getWaiter();
-        void setWaiter(Waiter* w);
         bool isFree();
 };
 #endif

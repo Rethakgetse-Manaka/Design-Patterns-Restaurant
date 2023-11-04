@@ -5,7 +5,7 @@
 #include "Colleague.h"
 #include "OrderMediator.h"
 #include "Table.h"
-// class Table;;;
+// class Table;
 class Colleague;
 class Plate;
 class Waiter:public Colleague {
@@ -18,6 +18,7 @@ class Waiter:public Colleague {
         void addTable(Table* t);
         void removeTable(Table* t);
         void presentFoodToTable(Plate* p);
+        void presentDrinksToTable(DrinkTray* d);
         void presentBill(Table* t);
         bool managesTable(int tbn);
         Table* getTable(int tbn);

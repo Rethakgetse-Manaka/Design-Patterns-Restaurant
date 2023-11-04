@@ -67,10 +67,7 @@ Order *Customer::getOrder()
     return this->order;
 }
 
-int Customer::getTabID()
-{
-    return this->tabID;
-}
+
 
 double Customer::getTip()
 {
@@ -124,7 +121,7 @@ void Customer::placeOrder()
     this->order = menu();
     std::cout << this->order->printOrder();
 
-    OrderMediator *r = table->getWaiter()->getMediator();
+    OrderMediator* r = table->getWaiter()->getMediator();
     r->addWaiter(table->getWaiter());
     table->getWaiter()->receiveOrder(this->order);
 }
@@ -133,6 +130,7 @@ Order *Customer::menu()
 {
     cout << "-------Welcome to Patterning the Patterns.--------" << endl;
     Order *customerOrder = new Order(customerID, customerName);
+    customerOrder->setTableID(getTableID());
     int starterVal = -1, multStarter = 0;
     cout << "Would you like to order a starter?" << endl;
     cout << "1. Yes" << endl;
@@ -421,6 +419,20 @@ void Customer::eat()
         }
     }else{
         cout << this->customerName << " is eating their food." << endl;
+    }
+}
+
+void Customer::drink()
+{
+    state->showHapiness(this);
+    if (order != NULL)
+    {
+        for (int i = 0; i < (int)order->getDrinks().size(); i++)
+        {
+            cout << this->customerName << " is drinking their " << order->getDrinks()[i]->getDescription() << endl;
+        }
+    }else{
+        cout << this->customerName << " is drinking their drink." << endl;
     }
 }
 
