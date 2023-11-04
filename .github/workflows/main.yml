@@ -21,3 +21,7 @@ jobs:
 
     - name: Run tests
       run: make run
+
+    - name: Clean up if tests passed
+      if: ${{ success() }}
+      run: make clean
