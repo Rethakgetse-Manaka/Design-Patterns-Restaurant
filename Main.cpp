@@ -9,6 +9,10 @@
 #include "CustomerHandler.h"
 #include "ValletHandler.h"
 #include "AssignTable.h"
+#include "AccountingSystem.h"
+#include "RestaurantObserver.h"
+#include "Inventory.h"
+#include "Transaction.h"
 #include <vector>
 using namespace std;
 
@@ -85,7 +89,48 @@ void testBillPayment(){
     cout<<"Unit testing eat function." << endl;
     Customer* newCustomer = new Customer(1, "John");
     Bill* b1 = new LeafBill(newCustomer->getOrder(), newCustomer->getTip());
-    newCustomer->payBill(b1);
+    Inventory* inventory = new Inventory();
+    AccountingSystem* accountingSystem = new AccountingSystem(inventory);
+    accountingSystem->setBalance(35000000);
+    Observer* restaurantObserver = new RestaurantObserver(inventory, accountingSystem);
+    inventory->registerObserver(restaurantObserver);
+    inventory->addStock(new Item(new FoodItem("Beef Kebab", 50.0),50,0));
+    inventory->addStock(new Item(new FoodItem("Green Salad", 30.0),50,0));
+    inventory->addStock(new Item(new FoodItem("Ramen", 35.0),50,0));
+    inventory->addStock(new Item(new FoodItem("Wings", 65.0),50,0));
+    inventory->addStock(new Item(new FoodItem("Fries", 32.0),50,0));
+    inventory->addStock(new Item(new FoodItem("Beef Burger", false, false, 89.0, false),50,0));
+    inventory->addStock(new Item(new FoodItem("Chicken Burger", false, false, 65.0, false),50,0));
+    inventory->addStock(new Item(new FoodItem("Stirfry", false, false, 72.0, false),50,0));
+    inventory->addStock(new Item(new FoodItem("Alfredo", false, false, 90.0, false),50,0));
+    inventory->addStock(new Item(new FoodItem("Fried Meal", false, false, 85.0, false),50,0));
+
+     std::time_t now = std::time(nullptr);
+    std::tm* localTime = std::localtime(&now);
+    std::stringstream ss;
+    ss << std::put_time(localTime, "%Y-%m-%d %H:%M:%S");
+    Transaction* t1 = new Transaction(new Item(new FoodItem("Beef Kebab", 50.0),50,0),50*50,TransactionType::PURCHASE,ss.str());
+    Transaction* t2 = new Transaction(new Item(new FoodItem("Green Salad", 30.0),50,0),50*30,TransactionType::PURCHASE,ss.str());
+    Transaction* t3 = new Transaction(new Item(new FoodItem("Ramen", 35.0),50,0),50*35,TransactionType::PURCHASE,ss.str());
+    Transaction* t4 = new Transaction(new Item(new FoodItem("Wings", 65.0),50,0),50*65,TransactionType::PURCHASE,ss.str());
+    Transaction* t5 = new Transaction(new Item(new FoodItem("Fries", 32.0),50,0),50*32,TransactionType::PURCHASE,ss.str());
+    Transaction* t6 = new Transaction(new Item(new FoodItem("Beef Burger", false, false, 89.0, false),50,0),50*89,TransactionType::PURCHASE,ss.str());
+    Transaction* t7 = new Transaction(new Item(new FoodItem("Chicken Burger", false, false, 65.0, false),50,0),50*65,TransactionType::PURCHASE,ss.str());
+    Transaction* t8 = new Transaction(new Item(new FoodItem("Stirfry", false, false, 72.0, false),50,0),50*72,TransactionType::PURCHASE,ss.str());
+    Transaction* t9 = new Transaction(new Item(new FoodItem("Alfredo", false, false, 90.0, false),50,0),50*90,TransactionType::PURCHASE,ss.str());
+    Transaction* t10 = new Transaction(new Item(new FoodItem("Fried Meal", false, false, 85.0, false),50,0),50*85,TransactionType::PURCHASE,ss.str());
+
+    accountingSystem->recordTransaction(t1);
+    accountingSystem->recordTransaction(t2);
+    accountingSystem->recordTransaction(t3);
+    accountingSystem->recordTransaction(t4);
+    accountingSystem->recordTransaction(t5);
+    accountingSystem->recordTransaction(t6);
+    accountingSystem->recordTransaction(t7);
+    accountingSystem->recordTransaction(t8);
+    accountingSystem->recordTransaction(t9);
+    accountingSystem->recordTransaction(t10);
+    newCustomer->payBill(b1, accountingSystem);
 }
 
 void testEat(){
@@ -120,6 +165,47 @@ void testInitialCustomerHandling(){
 }
 
 void testPayBill2(){
+    Inventory* inventory = new Inventory();
+    AccountingSystem* accountingSystem = new AccountingSystem(inventory);
+    accountingSystem->setBalance(35000000);
+    Observer* restaurantObserver = new RestaurantObserver(inventory, accountingSystem);
+    inventory->registerObserver(restaurantObserver);
+    inventory->addStock(new Item(new FoodItem("Beef Kebab", 50.0),50,0));
+    inventory->addStock(new Item(new FoodItem("Green Salad", 30.0),50,0));
+    inventory->addStock(new Item(new FoodItem("Ramen", 35.0),50,0));
+    inventory->addStock(new Item(new FoodItem("Wings", 65.0),50,0));
+    inventory->addStock(new Item(new FoodItem("Fries", 32.0),50,0));
+    inventory->addStock(new Item(new FoodItem("Beef Burger", false, false, 89.0, false),50,0));
+    inventory->addStock(new Item(new FoodItem("Chicken Burger", false, false, 65.0, false),50,0));
+    inventory->addStock(new Item(new FoodItem("Stirfry", false, false, 72.0, false),50,0));
+    inventory->addStock(new Item(new FoodItem("Alfredo", false, false, 90.0, false),50,0));
+    inventory->addStock(new Item(new FoodItem("Fried Meal", false, false, 85.0, false),50,0));
+
+     std::time_t now = std::time(nullptr);
+    std::tm* localTime = std::localtime(&now);
+    std::stringstream ss;
+    ss << std::put_time(localTime, "%Y-%m-%d %H:%M:%S");
+    Transaction* t1 = new Transaction(new Item(new FoodItem("Beef Kebab", 50.0),50,0),50*50,TransactionType::PURCHASE,ss.str());
+    Transaction* t2 = new Transaction(new Item(new FoodItem("Green Salad", 30.0),50,0),50*30,TransactionType::PURCHASE,ss.str());
+    Transaction* t3 = new Transaction(new Item(new FoodItem("Ramen", 35.0),50,0),50*35,TransactionType::PURCHASE,ss.str());
+    Transaction* t4 = new Transaction(new Item(new FoodItem("Wings", 65.0),50,0),50*65,TransactionType::PURCHASE,ss.str());
+    Transaction* t5 = new Transaction(new Item(new FoodItem("Fries", 32.0),50,0),50*32,TransactionType::PURCHASE,ss.str());
+    Transaction* t6 = new Transaction(new Item(new FoodItem("Beef Burger", false, false, 89.0, false),50,0),50*89,TransactionType::PURCHASE,ss.str());
+    Transaction* t7 = new Transaction(new Item(new FoodItem("Chicken Burger", false, false, 65.0, false),50,0),50*65,TransactionType::PURCHASE,ss.str());
+    Transaction* t8 = new Transaction(new Item(new FoodItem("Stirfry", false, false, 72.0, false),50,0),50*72,TransactionType::PURCHASE,ss.str());
+    Transaction* t9 = new Transaction(new Item(new FoodItem("Alfredo", false, false, 90.0, false),50,0),50*90,TransactionType::PURCHASE,ss.str());
+    Transaction* t10 = new Transaction(new Item(new FoodItem("Fried Meal", false, false, 85.0, false),50,0),50*85,TransactionType::PURCHASE,ss.str());
+
+    accountingSystem->recordTransaction(t1);
+    accountingSystem->recordTransaction(t2);
+    accountingSystem->recordTransaction(t3);
+    accountingSystem->recordTransaction(t4);
+    accountingSystem->recordTransaction(t5);
+    accountingSystem->recordTransaction(t6);
+    accountingSystem->recordTransaction(t7);
+    accountingSystem->recordTransaction(t8);
+    accountingSystem->recordTransaction(t9);
+    accountingSystem->recordTransaction(t10);
     Customer *c = new Customer(1, "John");
     Customer *c2 = new Customer(2, "Jane");
     OrderMediator* mediator = new RestaurantOrderMediator();
@@ -138,9 +224,76 @@ void testPayBill2(){
     c->placeOrder();
     c2->placeOrder();
     cout<<"Testing the Bill for a customer: "<<endl << endl;
-    t->readyForBill(waiter);
+    t->readyForBill(waiter, accountingSystem);
     delete c;
     delete c2;
+
+}
+
+void testAccountSystem(){
+    Inventory* inventory = new Inventory();
+    AccountingSystem* accountingSystem = new AccountingSystem(inventory);
+    accountingSystem->setBalance(35000000);
+    Observer* restaurantObserver = new RestaurantObserver(inventory, accountingSystem);
+    inventory->registerObserver(restaurantObserver);
+    inventory->addStock(new Item(new FoodItem("Beef Kebab", 50.0),50,0));
+    inventory->addStock(new Item(new FoodItem("Green Salad", 30.0),50,0));
+    inventory->addStock(new Item(new FoodItem("Ramen", 35.0),50,0));
+    inventory->addStock(new Item(new FoodItem("Wings", 65.0),50,0));
+    inventory->addStock(new Item(new FoodItem("Fries", 32.0),50,0));
+    inventory->addStock(new Item(new FoodItem("Beef Burger", false, false, 89.0, false),50,0));
+    inventory->addStock(new Item(new FoodItem("Chicken Burger", false, false, 65.0, false),50,0));
+    inventory->addStock(new Item(new FoodItem("Stirfry", false, false, 72.0, false),50,0));
+    inventory->addStock(new Item(new FoodItem("Alfredo", false, false, 90.0, false),50,0));
+    inventory->addStock(new Item(new FoodItem("Fried Meal", false, false, 85.0, false),50,0));
+
+     std::time_t now = std::time(nullptr);
+    std::tm* localTime = std::localtime(&now);
+    std::stringstream ss;
+    ss << std::put_time(localTime, "%Y-%m-%d %H:%M:%S");
+    Transaction* t1 = new Transaction(new Item(new FoodItem("Beef Kebab", 50.0),50,0),50*50,TransactionType::PURCHASE,ss.str());
+    Transaction* t2 = new Transaction(new Item(new FoodItem("Green Salad", 30.0),50,0),50*30,TransactionType::PURCHASE,ss.str());
+    Transaction* t3 = new Transaction(new Item(new FoodItem("Ramen", 35.0),50,0),50*35,TransactionType::PURCHASE,ss.str());
+    Transaction* t4 = new Transaction(new Item(new FoodItem("Wings", 65.0),50,0),50*65,TransactionType::PURCHASE,ss.str());
+    Transaction* t5 = new Transaction(new Item(new FoodItem("Fries", 32.0),50,0),50*32,TransactionType::PURCHASE,ss.str());
+    Transaction* t6 = new Transaction(new Item(new FoodItem("Beef Burger", false, false, 89.0, false),50,0),50*89,TransactionType::PURCHASE,ss.str());
+    Transaction* t7 = new Transaction(new Item(new FoodItem("Chicken Burger", false, false, 65.0, false),50,0),50*65,TransactionType::PURCHASE,ss.str());
+    Transaction* t8 = new Transaction(new Item(new FoodItem("Stirfry", false, false, 72.0, false),50,0),50*72,TransactionType::PURCHASE,ss.str());
+    Transaction* t9 = new Transaction(new Item(new FoodItem("Alfredo", false, false, 90.0, false),50,0),50*90,TransactionType::PURCHASE,ss.str());
+    Transaction* t10 = new Transaction(new Item(new FoodItem("Fried Meal", false, false, 85.0, false),50,0),50*85,TransactionType::PURCHASE,ss.str());
+
+    accountingSystem->recordTransaction(t1);
+    accountingSystem->recordTransaction(t2);
+    accountingSystem->recordTransaction(t3);
+    accountingSystem->recordTransaction(t4);
+    accountingSystem->recordTransaction(t5);
+    accountingSystem->recordTransaction(t6);
+    accountingSystem->recordTransaction(t7);
+    accountingSystem->recordTransaction(t8);
+    accountingSystem->recordTransaction(t9);
+    accountingSystem->recordTransaction(t10);
+
+    accountingSystem->generateReport();
+    Customer *c = new Customer(1, "John");
+    Customer *c2 = new Customer(2, "Jane");
+    OrderMediator* mediator = new RestaurantOrderMediator();
+    mediator->setInventory(inventory);
+    Table* t = new Table(1);
+    t->addCustomer(c);
+    Waiter* waiter = new Waiter("Sam");
+    c->setTable(t);
+    t->setWaiter(waiter);
+    waiter->setMediator(mediator);
+    waiter->addTable(t);
+    c->setTableID(1);
+
+    c->placeOrder();
+    cout<<"Testing the Bill for a customer: "<<endl << endl;
+    t->readyForBill(waiter, accountingSystem);
+    accountingSystem->generateReport();
+    delete c;
+    delete c2;
+    delete accountingSystem;
 
 }
 int main()
@@ -149,9 +302,10 @@ int main()
     //testBill();
     // testCustomerState();
     //testManagerVisitor();
-    testInitialCustomerHandling();
-    testEat();
+    // testInitialCustomerHandling();
+    // testEat();
     testComplain();
+    //testAccountSystem();
     //testPayBill2();
     return 0;
 }

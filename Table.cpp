@@ -6,8 +6,14 @@ using namespace std;
 
 void Table::addCustomer(Customer *c)
 {
-    customers.push_back(c);
+    if(count <= 8){
+        customers.push_back(c);
     c->setTableID(tableNumber);
+    }else{
+        cout<<"Table is full"<<endl;
+        state->occupy(this);
+    }
+    
 }
 
 std::vector<Customer *> Table::getCustomers()
@@ -21,7 +27,7 @@ void Table::removeCustomer(Customer *c)
     customers.erase(std::remove(customers.begin(), customers.end(), c), customers.end());
 }
 
-void Table::readyForBill(Waiter *w)
+void Table::readyForBill(Waiter *w, AccountingSystem* aS)
 {
 
     std::cout << "Table " << tableNumber << " is ready for a bill...";
@@ -42,13 +48,18 @@ void Table::readyForBill(Waiter *w)
             for(int i = 0; i < (int)customers.size(); i++){
                 Customer* currCustomer = customers[i];
                 Bill* customerBill = bill->findBill(currCustomer->getCustomerID());
-                currCustomer->payBill(customerBill);   
+                currCustomer->payBill(customerBill, aS);   
             }
         }else{
             cout<<"Your bill is: " << bill->getBillTotal() << endl;
             int ranCustomer = rand() % customers.size();
-            Customer* currCustomer = customers[ranCustomer];
-            currCustomer->payBill(bill);
+            Customer* cur = customers[ranCustomer];
+            // currCustomer->payBill(bill, aS);
+            for(int i = 0; i < (int)customers.size(); i++){
+                Customer* currCustomer = customers[i];
+                Bill* customerBill = bill->findBill(currCustomer->getCustomerID());
+                cur->payBill(customerBill, aS); 
+            }
         }
     }else{
         cout<<"Adding your bill to your tab account..." << endl;

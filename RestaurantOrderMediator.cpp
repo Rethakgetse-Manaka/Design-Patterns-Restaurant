@@ -31,6 +31,11 @@ void RestaurantOrderMediator::notifyOrderPlaced(Order* o)
         for(size_t i = 0; i < o->getFoodItems().size();i++)
         {
             std::string meal = o->getFoodItems()[i]->getMealName();
+            int q = inventory->removeStock(meal);
+            if(q == 0)
+            {
+                std::cout << meal << "has just finished please order more" << std::endl;
+            }
             std::cout << meal << std::endl;
             if(meal == "Beef Kebab" || meal == "Beef Burger")
             {
@@ -63,6 +68,11 @@ void RestaurantOrderMediator::notifyOrderPlaced(Order* o)
 
     
     
+}
+
+void RestaurantOrderMediator::setInventory(Inventory *inventory)
+{
+    this->inventory = inventory;
 }
 
 void RestaurantOrderMediator::notifyPlateReady(Plate* p)

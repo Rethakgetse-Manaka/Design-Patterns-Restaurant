@@ -6,6 +6,11 @@ Restaurant::Restaurant()
 {
 }
 
+void Restaurant::setAccountingSystem(AccountingSystem *as)
+{
+    this->accountingSystem = as;
+}
+
 void Restaurant::addValet(Valet *valet)
 {
     valets.push_back(valet);
@@ -41,7 +46,7 @@ void Restaurant::requestBill(Table *table)
         for(int i = 0; i < (int)table->getCustomers().size(); i++){
             Customer* currCustomer = table->getCustomers()[i];
             Bill* customerBill = currBill->findBill(currCustomer->getCustomerID());
-            currCustomer->payBill(customerBill);   
+            currCustomer->payBill(customerBill, accountingSystem);   
         }
     }else{
         cout<<"Your bill is: " << currBill->getBillTotal() << endl;

@@ -98,9 +98,25 @@ void Customer::setState(CustomerState *s)
     this->state = s;
 }
 
-void Customer::payBill(Bill *bill)
+void Customer::payBill(Bill *bill, AccountingSystem *accountingSystem)
 {
     cout << this->customerName << " is paying their bill which totals to: R" << bill->getBillTotal() << endl;
+    std::time_t now = std::time(nullptr);
+    std::tm* localTime = std::localtime(&now);
+    std::stringstream ss;
+    ss << std::put_time(localTime, "%Y-%m-%d %H:%M:%S");
+
+    if(bill->getOrder() == NULL){
+        cout<< "null"<<endl;
+    }    
+    for (int i = 0; i < bill->getOrder()->getFoodItems().size(); i++)
+    {
+        FoodItem *foodItem = new FoodItem(bill->getOrder()->getFoodItems()[i]->getMealName(), bill->getOrder()->getFoodItems()[i]->getPrice());
+        Transaction *transaction = new Transaction(new Item(foodItem,1,0),bill->getBillTotal(), TransactionType::SALE,ss.str());
+        accountingSystem->recordSale(transaction);
+    }
+    
+    
 }
 
 void Customer::placeOrder()

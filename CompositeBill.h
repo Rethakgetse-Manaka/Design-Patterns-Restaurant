@@ -15,7 +15,7 @@ public:
     void addPerson(Bill* Bill);
     void removePerson(int customer);
     double getBillTotal();
-    Order* getOrder();
+    virtual Order* getOrder() ;
     virtual ~CompositeBill();
 };
 
