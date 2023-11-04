@@ -1,0 +1,23 @@
+name: Aidan-BranchTesting
+
+on:
+  push:
+    branches:
+      - Aidan-unit-testing
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install build dependencies
+      run: sudo apt-get install -y g++ make
+
+    - name: Build project
+      run: make
+
+    - name: Run tests
+      run: make run
