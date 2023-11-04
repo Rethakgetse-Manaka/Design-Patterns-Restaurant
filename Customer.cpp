@@ -355,6 +355,14 @@ Order *Customer::menu()
         cout << "1. Yes" << endl;
         cout << "2. No" << endl;
         cin >> alVal;
+        while (alVal != 1 && alVal != 2)
+        {
+            cout << "(Please try again) Would you like to add alcohol to your drink? (Pick an option below)" << endl;
+            cout << "1. Yes" << endl;
+            cout << "2. No" << endl;
+            cin >> alVal;
+        }
+    
         std::string mixes = "";
         double alcoholCost = 0.0;
         if (alVal == 1)
