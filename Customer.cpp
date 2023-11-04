@@ -109,7 +109,7 @@ void Customer::payBill(Bill *bill, AccountingSystem *accountingSystem)
     for (int i = 0; i < bill->getOrder()->getFoodItems().size(); i++)
     {
         FoodItem *foodItem = new FoodItem(bill->getOrder()->getFoodItems()[i]->getMealName(), bill->getOrder()->getFoodItems()[i]->getPrice());
-        Transaction *transaction = new Transaction(new Item(foodItem,1,0),bill->getBillTotal(), TransactionType::SALE,ss.str());
+        Transaction *transaction = new Transaction(new Item(foodItem,1,0),bill->getOrder()->getFoodItems()[i]->getPrice(), TransactionType::SALE,ss.str());
         accountingSystem->recordSale(transaction);
     }
     
