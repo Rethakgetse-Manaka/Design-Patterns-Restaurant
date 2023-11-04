@@ -61,6 +61,7 @@ double CompositeBill::getBillTotal()
 
 Order *CompositeBill::getOrder()
 {
+    cout << "Hello it's me i'm null" << endl;
     return nullptr;
 }
 

@@ -15,7 +15,7 @@ public:
     void setTip(double tip);
     double getTip();
     virtual Bill* findBill(int customer);
-    Order* getOrder();
+    virtual Order* getOrder();
     double getBillTotal();
     void printBill();
     virtual ~LeafBill();

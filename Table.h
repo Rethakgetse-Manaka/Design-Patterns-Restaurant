@@ -1,6 +1,7 @@
 #ifndef Table_H
 #define Table_H
 #include "Order.h"
+#include "AccountingSystem.h"
 #include <iostream>
 #include <algorithm>
 #include "TabCaretaker.h"
@@ -16,9 +17,8 @@ class Table
         Bill* bill;
         std::vector<Customer*> customers;
         int tableNumber;
-        int maxNumOfCustomers;
-        TableState* state;
         int count;
+        TableState* state;
         Waiter* waiter;
         TabCaretaker* tabCaretaker;
 
@@ -26,11 +26,12 @@ class Table
         void addCustomer(Customer* c);
         std::vector<Customer*> getCustomers();
         void removeCustomer(Customer* c);
-        void readyForBill(Waiter* w);
+        void readyForBill(Waiter* w, AccountingSystem* as);
         void placeOrder(Order* o,Waiter* w);
         void setBill(Bill * b);
         Bill* getBill();
-        void setTableNumber(int tb);
+        
+        void setWaiter(Waiter* waiter);
 
         
         
@@ -49,7 +50,6 @@ class Table
         TableState* getState() const;
         Customer* getCustomer(int custID);
         Waiter* getWaiter();
-        void setWaiter(Waiter* w);
         bool isFree();
 };
 #endif

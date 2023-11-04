@@ -4,7 +4,13 @@
 #include "LeafBill.h"
 #include "Customer.h"
 
-void Waiter::receiveOrder(Order* o)
+Waiter::Waiter(std::string n)
+{
+    name = n;
+    mediator = nullptr;
+}
+
+void Waiter::receiveOrder(Order *o)
 {
     if(o != nullptr)
         mediator->notifyOrderPlaced(o);
@@ -28,6 +34,8 @@ bool Waiter::managesTable(int tbn)
 {
     for(Table* t: tables)
     {
+        std::cout << "tbn:" << tbn << std::endl;
+        std::cout << "gettablenumber:" << t->getTableNumber() << std::endl;
 
         if(t != NULL && t->getTableNumber() == tbn)
             return true;
@@ -52,14 +60,37 @@ void Waiter::presentFoodToTable(Plate* p)
     if(p != nullptr)
     {
         std::cout << "Here is your meal, we hope you have a wonderful dining experience with us." <<std::endl;
-        std::cout << "Meals: ";
-        p->showMeals();
+        for (int i = 0; i < tables.size(); i++) {
+            if (tables[i]->getCustomer(p->getCustomerID()) != nullptr) {
+                tables[i]->getCustomer(p->getCustomerID())->eat();
+            }
+        }
+        // p->showMeals();
 
     }
     
 
 
 }
+
+void Waiter::presentDrinksToTable(DrinkTray* d)
+{
+    if(d != nullptr)
+    {
+        std::cout << "Here are your drinks, we hope you have a wonderful dining experience with us." <<std::endl;
+        for (int i = 0; i < tables.size(); i++) {
+            if (tables[i]->getCustomer(d->getCustomerID()) != nullptr) {
+                tables[i]->getCustomer(d->getCustomerID())->drink();
+            }
+        }
+        // p->showMeals();
+
+    }
+    
+
+
+}
+
 void Waiter::presentBill(Table* t)
 {
     if(t != nullptr)
@@ -75,9 +106,4 @@ void Waiter::presentBill(Table* t)
         t->setBill(cb);
         cb->printBill();
     }
-}
-
-Waiter::Waiter(std::string n)
-{
-    this->name = n;
 }

@@ -5,7 +5,7 @@ void Colleague::setMediator(OrderMediator *mediator)
     this->mediator = mediator;
 }
 
-OrderMediator *Colleague::getMediator()
+OrderMediator* Colleague::getMediator()
 {
     return mediator;
 }

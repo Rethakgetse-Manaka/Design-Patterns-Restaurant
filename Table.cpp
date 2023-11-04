@@ -6,9 +6,9 @@ using namespace std;
 
 void Table::addCustomer(Customer *c)
 {
-    if(count < 8)
+    if(count <= 8)
     {
-         customers.push_back(c);
+        customers.push_back(c);
         c->setTableID(tableNumber);
 
     }
@@ -32,7 +32,7 @@ void Table::removeCustomer(Customer *c)
     customers.erase(std::remove(customers.begin(), customers.end(), c), customers.end());
 }
 
-void Table::readyForBill(Waiter *w)
+void Table::readyForBill(Waiter *w, AccountingSystem* aS)
 {
 
     std::cout << "Table " << tableNumber << " is ready for a bill...";
@@ -53,13 +53,18 @@ void Table::readyForBill(Waiter *w)
             for(int i = 0; i < (int)customers.size(); i++){
                 Customer* currCustomer = customers[i];
                 Bill* customerBill = bill->findBill(currCustomer->getCustomerID());
-                currCustomer->payBill(customerBill);   
+                currCustomer->payBill(customerBill, aS);   
             }
         }else{
             cout<<"Your bill is: " << bill->getBillTotal() << endl;
             int ranCustomer = rand() % customers.size();
-            Customer* currCustomer = customers[ranCustomer];
-            currCustomer->payBill(bill);
+            Customer* cur = customers[ranCustomer];
+            // currCustomer->payBill(bill, aS);
+            for(int i = 0; i < (int)customers.size(); i++){
+                Customer* currCustomer = customers[i];
+                Bill* customerBill = bill->findBill(currCustomer->getCustomerID());
+                cur->payBill(customerBill, aS); 
+            }
         }
     }else{
         
@@ -74,6 +79,7 @@ void Table::readyForBill(Waiter *w)
                 Bill* customerBill = bill->findBill(currCustomer->getCustomerID());
                 Tab* t = new Tab(currCustomer->getCustomerID(),currCustomer->getCustomerName(),customerBill);
                 tabCaretaker->addMemento(t->getMemento());
+                currCustomer->setTab(t);
                 cout<<"Your tab is: " << customerBill->getBillTotal() << endl;
                 cout<<"Adding "<<currCustomer->getCustomerName()<<"'s bill to tab account..." << endl;
 
@@ -84,6 +90,7 @@ void Table::readyForBill(Waiter *w)
             int ranCustomer = rand() % customers.size();
             Customer* currCustomer = customers[ranCustomer];
             Tab* t = new Tab(currCustomer->getCustomerID(),currCustomer->getCustomerName(),bill);
+            currCustomer->setTab(t);
             tabCaretaker->addMemento(t->getMemento());
             cout<<"Adding "<<currCustomer->getCustomerName()<<"'s bill to tab account..." << endl;
             
@@ -109,10 +116,7 @@ Bill *Table::getBill()
     return bill;
 }
 
-void Table::setTableNumber(int tb)
-{
-    tableNumber = tb;
-}
+
 
 void Table::setWaiter(Waiter *waiter)
 {
@@ -202,7 +206,6 @@ int Table::getTableNumber() const
 void Table::printTableStatus() const {
     state->getTableStatus();
 }
-
 
 bool Table::isFree()
 {

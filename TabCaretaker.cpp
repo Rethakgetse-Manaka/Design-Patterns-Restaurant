@@ -11,6 +11,25 @@ TabMemento* TabCaretaker::getMemento(int index) {
     // Return a default-constructed TabMemento when the index is out of range
     return new TabMemento(0, "Default", nullptr);
 }
-size_t TabCaretaker::getMementoCount(){
+std::vector<TabMemento *> TabCaretaker::getMementos()
+{
+    return mementos;
+}
+size_t TabCaretaker::getMementoCount()
+{
     return mementos.size();
+}
+
+void TabCaretaker::removeMemento(TabMemento *memento)
+{
+    for(std::vector<TabMemento*>::iterator it = mementos.begin();it != mementos.end();++it)
+    {
+        if((*it)->getCustomerID() == memento->getCustomerID())
+        {
+            delete *it;
+            mementos.erase(it);
+            break;
+        }
+    }
+
 }

@@ -54,7 +54,7 @@ void Order::setTableID(int id)
     this->tableID = id;
 }
 
-std::vector<SpecificCocktail *> Order::getDrinks()
+std::vector<Cocktail*> Order::getDrinks()
 {
     return drinks;
 }

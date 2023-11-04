@@ -9,9 +9,13 @@ class TableVisitor;
 #include <string>
 #include <vector>
 #include <iostream>
+#include <ctime>
 #include "Bill.h"
 #include "Neutral.h"
 #include "ComplaintsManager.h"
+#include "Item.h"
+#include "AccountingSystem.h"
+#include "Transaction.h"
 #include "AdminManager.h"
 #include "Waiter.h"
 
@@ -26,12 +30,14 @@ private:
     std::string customerName;
     CustomerState *state;
     Order *order;
-    int tabID;
     double tip;
     Table* table;
+    Tab* tab;
 public:
     Customer();
     Customer(int id, std::string name);
+    void setTab(Tab* t);
+    Tab* getTab();
     ~Customer();
     void setTable(Table* t);
     Table* getTable();
@@ -40,13 +46,12 @@ public:
     int getTableID();
     CustomerState *getState();
     Order* getOrder();
-    int getTabID();
     double getTip();
     void setTableID(int id);
     void setValletID(int id);
     OrderHandler *requestWaiter();
     void setState(CustomerState *s);
-    void payBill(Bill* bill);
+    void payBill(Bill* bill, AccountingSystem* aS);
     void placeOrder();
     Order* menu();
     void complain();
@@ -57,6 +62,7 @@ public:
     void respondWithSatifaction();
     void respondWithDissatifaction();
     void eat();
+    void drink();
     void leave();
     void accept(TableVisitor *v);
 };

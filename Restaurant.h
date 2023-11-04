@@ -13,18 +13,25 @@
 #include "TableVisitor.h"
 #include "ComplaintsManager.h"
 #include "AdminManager.h"
+#include "Waiter.h"
+#include "AccountingSystem.h"
+#include "Observer.h"
+#include "RestaurantObserver.h"
 #include <vector>
 #include <iostream>
 
 class Restaurant
 {
 private:
+    AccountingSystem* accountingSystem;
     std::vector<Table*> tables;
     std::vector<Valet*> valets;
     std::vector<TableVisitor*> managers;
     std::vector<Waiter*> waiters;
 public:
     Restaurant();
+    void setAccountingSystem(AccountingSystem* as);
+    void displayBasicAccouting();
     void addValet(Valet* valet);
     void addTable(Table* table);
     void addManager(TableVisitor* manager);
@@ -32,6 +39,7 @@ public:
     void addWaiter(Waiter* waiter);
     void requestBill(Table* table);
     void visitTable(TableVisitor *tableVisitor);
+    void payTab(Customer* customer,TabCaretaker* tabCaretaker);
     ~Restaurant();
 };
 

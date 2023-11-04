@@ -6,6 +6,11 @@ Restaurant::Restaurant()
 {
 }
 
+void Restaurant::setAccountingSystem(AccountingSystem *as)
+{
+    this->accountingSystem = as;
+}
+
 void Restaurant::addValet(Valet *valet)
 {
     valets.push_back(valet);
@@ -46,7 +51,7 @@ void Restaurant::requestBill(Table *table)
         for(int i = 0; i < (int)table->getCustomers().size(); i++){
             Customer* currCustomer = table->getCustomers()[i];
             Bill* customerBill = currBill->findBill(currCustomer->getCustomerID());
-            currCustomer->payBill(customerBill);   
+            currCustomer->payBill(customerBill, accountingSystem);   
         }
     }else{
         cout<<"Your bill is: " << currBill->getBillTotal() << endl;
@@ -65,6 +70,25 @@ void Restaurant::visitTable(TableVisitor *tableVisitor)
     }
 }
 
+void Restaurant::payTab(Customer *customer, TabCaretaker *tabCaretaker)
+{
+    if(customer != nullptr && tabCaretaker != nullptr)
+    {
+        for(int i = 0;i < (int)tabCaretaker->getMementos().size();i++)
+        {
+            if(tabCaretaker->getMementos()[i]->getCustomerID() == customer->getCustomerID())
+            {
+                customer->getTab()->restoreMemento(tabCaretaker->getMementos()[i]);
+                std::cout << customer->getCustomerName() << " paid the tab..."<<std::endl;
+                tabCaretaker->removeMemento(tabCaretaker->getMementos()[i]);
+                delete customer;
+
+            }
+        }
+
+    }
+    
+}
 
 Restaurant::~Restaurant()
 {

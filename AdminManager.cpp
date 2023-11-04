@@ -2,7 +2,7 @@
 
 using namespace std;
 
-AdminManager::AdminManager(/* args */)
+AdminManager::AdminManager()
 {
 }
 
@@ -27,7 +27,6 @@ void AdminManager::visitCustomer(Customer *customer)
         customer->increaseTip();
     }
 }
-
 AdminManager::~AdminManager()
 {
 }

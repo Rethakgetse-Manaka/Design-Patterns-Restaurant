@@ -10,20 +10,37 @@
 RestaurantOrderMediator::RestaurantOrderMediator()
 {
     chefs = {new VegetableChef,new FryCook,new PastaChef,new RotisseurChef,new GrillChef};
+    bartender = new Bartender();
     for(size_t i = 0; i < chefs.size();i++)
     {
         chefs[i]->setMediator(this);
+        bartender->setMediator(this);
     }
+
+
 }
 void RestaurantOrderMediator::notifyOrderPlaced(Order* o)
 {
+
     if(o != nullptr)
     {
         Plate* t = new Plate();
         t->setTableNumber(o->getTableNumber());
+        DrinkTray* d = new DrinkTray();
+        d->setTableNumber(o->getTableNumber());
+        d->setCustomerID(o->getCustomerID());
+        t->setTableNumber(o->getTableNumber());
+        t->setCustomerID(o->getCustomerID());
+        t->setTableNumber(o->getTableNumber());
         Chef::setPlate(t);
+        bartender->setTray(d);
         std::cout << "Order handler received the order from the waiter and is passing it to an available chef.."<<std::endl;
 
+        for (size_t i = 0; i < o->getDrinks().size(); i++) {
+            std::string drink = o->getDrinks()[i]->getDescription();
+            std::cout << drink << std::endl;
+            bartender->receiveOrder(o->getDrinks()[i], o->getTableNumber(),o->getCustomerID(),o->getDrinks().size());
+        }
         
 
 
@@ -31,6 +48,11 @@ void RestaurantOrderMediator::notifyOrderPlaced(Order* o)
         for(size_t i = 0; i < o->getFoodItems().size();i++)
         {
             std::string meal = o->getFoodItems()[i]->getMealName();
+            int q = inventory->removeStock(meal);
+            if(q == 0)
+            {
+                std::cout << meal << "has just finished please order more" << std::endl;
+            }
             std::cout << meal << std::endl;
             if(meal == "Beef Kebab" || meal == "Beef Burger")
             {
@@ -65,15 +87,26 @@ void RestaurantOrderMediator::notifyOrderPlaced(Order* o)
     
 }
 
+void RestaurantOrderMediator::setInventory(Inventory *inventory)
+{
+    this->inventory = inventory;
+}
+
 void RestaurantOrderMediator::notifyPlateReady(Plate* p)
 {
+    // std::cout << "notified" << std::endl;
     if(p != nullptr)
     {
+        // std::cout << "notified 2" << std::endl;
         for(Waiter* w : waiters)
         {
-            
+            // std::cout << "notified 3" << std::endl;
+            // if (w == nullptr) {
+            //     std::cout << "w is null" << std::endl;
+            // }
             if(w != nullptr && w->managesTable(p->getTableNumber()))
-            {
+            {  
+                std::cout << "notified 4" << std::endl;
                 w->presentFoodToTable(p);
                 break;
 
@@ -82,10 +115,25 @@ void RestaurantOrderMediator::notifyPlateReady(Plate* p)
         }
 
     }
-    
+}
 
+void RestaurantOrderMediator::notifyDrinksReady(DrinkTray* d)
+{
+    if(d != nullptr)
+    {
+        for(Waiter* w : waiters)
+        {
+            
+            if(w != nullptr && w->managesTable(d->getTableNumber()))
+            {
+                w->presentDrinksToTable(d);
+                break;
 
+            }
+            
+        }
 
+    }
 }
 
 void RestaurantOrderMediator::addWaiter(Waiter *Waiter)
