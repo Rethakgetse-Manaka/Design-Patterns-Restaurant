@@ -74,6 +74,8 @@ void Table::readyForBill(Waiter *w)
                 Bill* customerBill = bill->findBill(currCustomer->getCustomerID());
                 Tab* t = new Tab(currCustomer->getCustomerID(),currCustomer->getCustomerName(),customerBill);
                 tabCaretaker->addMemento(t->getMemento());
+                cout<<"Your tab is: " << customerBill->getBillTotal() << endl;
+                cout<<"Adding "<<currCustomer->getCustomerName()<<"'s bill to tab account..." << endl;
 
                   
             }
@@ -83,9 +85,10 @@ void Table::readyForBill(Waiter *w)
             Customer* currCustomer = customers[ranCustomer];
             Tab* t = new Tab(currCustomer->getCustomerID(),currCustomer->getCustomerName(),bill);
             tabCaretaker->addMemento(t->getMemento());
+            cout<<"Adding "<<currCustomer->getCustomerName()<<"'s bill to tab account..." << endl;
             
         }
-        cout<<"Adding your bill to your tab account..." << endl;
+        
 
     }
 }
