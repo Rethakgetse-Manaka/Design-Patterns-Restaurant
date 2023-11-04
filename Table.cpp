@@ -10,10 +10,6 @@ void Table::addCustomer(Customer *c)
     c->setTableID(tableNumber);
 }
 
-std::vector<Customer *> Table::getCustomers()
-{
-    return customers;
-}
 
 std::vector<Customer *> Table::getCustomers()
 {
