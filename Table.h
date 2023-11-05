@@ -11,6 +11,12 @@ class Bill;
 class TableState;
 class Waiter;
 
+/**
+ * @brief The Table class represents a table in a restaurant.
+ * 
+ * It contains information about the customers seated at the table, the table number, the table state, the waiter serving the table, and the bill for the table.
+ * It also provides methods to add and remove customers, place orders, set and get the bill, set and get the waiter, and change the table state.
+ */
 class Table
 {
     private:

@@ -6,6 +6,11 @@
 #include "Item.h"
 
 
+/**
+ * @brief The AccountingSystem class manages the financial transactions of a store.
+ * 
+ * It records transactions, sales, generates reports, and keeps track of the store's balance.
+ */
 class AccountingSystem {
 public:
     AccountingSystem(Inventory* observedInventory);

@@ -12,6 +12,9 @@ private:
 public:
     AssignTable(std::vector<Table*> tables);
     void handleRequest(Customer* customer);
+    /**
+     * @brief Destructor for AssignTable class.
+     */
     virtual ~AssignTable();
 };
 

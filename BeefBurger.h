@@ -6,9 +6,22 @@
 
 using namespace std;
 
+/**
+ * @brief The BeefBurger class is a subclass of MainMeal that represents a beef burger.
+ * 
+ */
 class BeefBurger : public MainMeal {
     public:
+        /**
+         * @brief Creates the beef burger by adding the necessary ingredients.
+         * 
+         */
         void create();
+        /**
+         * @brief Returns the name of the beef burger.
+         * 
+         * @return string The name of the beef burger.
+         */
         virtual string getName();
 };
 #endif

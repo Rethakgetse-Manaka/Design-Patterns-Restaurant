@@ -4,6 +4,10 @@
 #include "Inventory.h"
 class Plate;
 class DrinkTray;
+/**
+ * @brief The OrderMediator class is an abstract class that defines the interface for a mediator between the Waiter, Chef, and Inventory classes.
+ * 
+ */
 class OrderMediator
 {
     public:

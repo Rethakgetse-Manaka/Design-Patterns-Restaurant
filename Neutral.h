@@ -6,15 +6,46 @@
 #include "Happy.h"
 #include "UnHappy.h"
 
+/**
+ * @brief The Neutral class represents the neutral state of a customer.
+ * 
+ */
 class Neutral: public CustomerState
 {
 private:
 
 public:
+    /**
+     * @brief Construct a new Neutral object
+     * 
+     */
     Neutral();
+
+    /**
+     * @brief Handles the customer's request while in the neutral state.
+     * 
+     * @param c A pointer to the customer object.
+     */
     void handle(Customer* c);
+
+    /**
+     * @brief Displays the customer's happiness level while in the neutral state.
+     * 
+     * @param c A pointer to the customer object.
+     */
     void showHapiness(Customer* c);
+
+    /**
+     * @brief Displays the customer's unhappiness level while in the neutral state.
+     * 
+     * @param c A pointer to the customer object.
+     */
     void showUnhapiness(Customer* c);
+
+    /**
+     * @brief Destroy the Neutral object
+     * 
+     */
     virtual ~Neutral();
 };
 

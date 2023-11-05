@@ -8,6 +8,12 @@
 #include "BaseCocktail.h"
 #include "Cocktail.h"
 
+/**
+ * @brief The Order class represents a customer's order at a restaurant.
+ * 
+ * It contains information about the customer, the table, the food items, and the drinks ordered.
+ * The class provides methods to add and remove items, get the total cost, and print the order.
+ */
 class Order
 {
 private:

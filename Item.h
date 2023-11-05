@@ -4,6 +4,10 @@
 #include <string>
 #include "FoodItem.h"
 
+/**
+ * @brief The Item class represents an item in the inventory.
+ * 
+ */
 class Item {
 public:
     Item(FoodItem* item, int quantity, int stockChange);

@@ -6,6 +6,11 @@
 
 using namespace std;
 
+/**
+ * @brief A class representing a Stir Fry main meal.
+ * 
+ * This class inherits from the MainMeal class and implements the create and getName methods.
+ */
 class StirFry : public MainMeal {
     public:
         void create();

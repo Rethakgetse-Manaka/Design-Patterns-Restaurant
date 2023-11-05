@@ -1,3 +1,7 @@
+/**
+ * @file ChickenSalad.h
+ * @brief Header file for the ChickenSalad class, a derived class of StarterMeal.
+ */
 #ifndef CHICKENSALAD_H
 #define CHICKENSALAD_H
 
