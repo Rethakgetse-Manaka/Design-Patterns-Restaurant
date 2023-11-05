@@ -9,7 +9,7 @@ class Bill;
 
 class Tab {
 public:
-    Tab(int customerID, std::string customerName, Bill* bill);
+    Tab(int customerID, std::string customerName, double amount);
     ~Tab();
 
     void restoreMemento( TabMemento* memento);
@@ -18,12 +18,12 @@ public:
     int getCustomerID() const;
     std::string getCustomerName() ;
     //bill
-    Bill* findBill(int customer) ;
+    
   
 private:
     int customerID;
     std::string customerName;
-    mutable Bill* bill;
+    double amount;
     
 };
 

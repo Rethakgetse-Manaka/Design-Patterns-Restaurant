@@ -6,17 +6,18 @@
 
 class TabMemento {
 public:
-  TabMemento(int customerID, std::string customerName,Bill* bill);
+  TabMemento(int customerID, std::string customerName,double amount);
 
-  Bill *findBill(int customerID);
+  
   int getCustomerID() const;
  std::string getCustomerName() ;
   void printMemento();
+  double getAmount() const;
 
   private:
   int customerID;
   std::string customerName;
-   Bill* bill; 
+   double amount; 
 };
 
 #endif

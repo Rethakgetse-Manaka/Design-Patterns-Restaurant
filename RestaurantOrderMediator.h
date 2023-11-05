@@ -16,6 +16,7 @@ class RestaurantOrderMediator: public OrderMediator
         Inventory* inventory;
     public:
         RestaurantOrderMediator();
+        ~RestaurantOrderMediator();
         
         virtual void notifyOrderPlaced(Order* o);
         void setInventory(Inventory* inventory);

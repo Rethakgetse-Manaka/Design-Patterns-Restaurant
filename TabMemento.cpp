@@ -2,8 +2,8 @@
 #include "Bill.h"
 
 
-TabMemento::TabMemento(int customerID, std::string customerName, Bill* bill)
-    : customerID(customerID), customerName(customerName), bill(bill) {}
+TabMemento::TabMemento(int customerID, std::string customerName, double amount)
+    : customerID(customerID), customerName(customerName), amount(amount) {}
 
 int TabMemento::getCustomerID() const {
     return customerID;
@@ -13,22 +13,18 @@ int TabMemento::getCustomerID() const {
     return customerName;
 }
 
-Bill* TabMemento::findBill(int customerID) {
-    if (bill) {
-        return bill->findBill(customerID);
-    }
-    return nullptr;
-}
+
 
 void TabMemento::printMemento() {
     std::cout << "Customer ID: " << customerID << std::endl;
     std::cout << "Customer Name: " << customerName << std::endl;
 
-    if (bill) {
-        std::cout << "Bill Amount: " << bill->findBill(customerID) << std::endl;
-    } else {
-        std::cout << "No Bill Found" << std::endl;
-    }
+    
+    std::cout << "Tab Amount: " << amount << std::endl;
+    
 }
 
-
+double TabMemento::getAmount() const
+{
+    return amount;
+}

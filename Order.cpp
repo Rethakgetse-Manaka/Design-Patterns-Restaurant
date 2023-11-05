@@ -33,6 +33,19 @@ void Order::addStarter(std::string name, double val)
     items.push_back(newItem);
 }
 
+void Order::removeItem(FoodItem *item)
+{
+    for(std::vector<FoodItem*>::iterator it = items.begin();it != items.end();++it)
+    {
+        if((*it) == item)
+        {
+            delete *it;
+            items.erase(it);
+            break;
+        }
+    }
+}
+
 void Order::addItem(std::string item, bool g, bool s, double val, bool well)
 {
     FoodItem *newItem = new FoodItem(item, g, s, val, well);

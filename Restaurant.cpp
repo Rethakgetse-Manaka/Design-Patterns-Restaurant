@@ -81,8 +81,7 @@ void Restaurant::payTab(Customer *customer, TabCaretaker *tabCaretaker)
                 customer->getTab()->restoreMemento(tabCaretaker->getMementos()[i]);
                 std::cout << customer->getCustomerName() << " paid the tab..."<<std::endl;
                 tabCaretaker->removeMemento(tabCaretaker->getMementos()[i]);
-                delete customer;
-
+                customer->getTable()->removeCustomer(customer);
             }
         }
 

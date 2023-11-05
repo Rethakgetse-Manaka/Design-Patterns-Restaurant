@@ -20,6 +20,7 @@ public:
     Order(int cID, std::string cName);
     Order(Order* o);
     void addStarter(std::string, double val);
+    void removeItem(FoodItem* item);
     void addItem(std::string item, bool g, bool s, double val, bool well);
     std::vector<FoodItem*> getFoodItems();
     int getTableNumber();

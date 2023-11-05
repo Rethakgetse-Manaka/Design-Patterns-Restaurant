@@ -19,7 +19,19 @@ RestaurantOrderMediator::RestaurantOrderMediator()
 
 
 }
-void RestaurantOrderMediator::notifyOrderPlaced(Order* o)
+RestaurantOrderMediator::~RestaurantOrderMediator()
+{
+    for(std::vector<Chef*>::iterator it = chefs.begin();it != chefs.end();++it)
+    {
+        
+        delete *it;
+        chefs.erase(it);
+    }
+    delete bartender;
+    bartender = nullptr;
+
+}
+void RestaurantOrderMediator::notifyOrderPlaced(Order *o)
 {
 
     if(o != nullptr)

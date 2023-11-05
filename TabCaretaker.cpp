@@ -9,7 +9,7 @@ TabMemento* TabCaretaker::getMemento(int index) {
         return mementos[index];
     }
     // Return a default-constructed TabMemento when the index is out of range
-    return new TabMemento(0, "Default", nullptr);
+    return nullptr;
 }
 std::vector<TabMemento *> TabCaretaker::getMementos()
 {
