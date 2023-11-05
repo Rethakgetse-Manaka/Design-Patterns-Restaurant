@@ -134,14 +134,14 @@ int main() {
     restuarant->initialCustomerHandling(customer2);
     restuarant->initialCustomerHandling(customer3);
 
-    customer1->placeOrder();
-    customer2->placeOrder();
-    customer3->placeOrder();
+    // customer1->placeOrder();
+    // customer2->placeOrder();
+    // customer3->placeOrder();
 
-    table1->readyForBill(waiter1,accountingSystem);
-    restuarant->payTab(customer1,careTaker);
-    restuarant->payTab(customer2,careTaker);
-    restuarant->payTab(customer3,careTaker);
-    accountingSystem->generateReport();
+    // table1->readyForBill(waiter1,accountingSystem);
+    // restuarant->payTab(customer1,careTaker);
+    // restuarant->payTab(customer2,careTaker);
+    // restuarant->payTab(customer3,careTaker);
+    // accountingSystem->generateReport();
     return 0;
 }
