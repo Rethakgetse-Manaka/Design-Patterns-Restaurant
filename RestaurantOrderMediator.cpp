@@ -41,8 +41,8 @@ void RestaurantOrderMediator::notifyOrderPlaced(Order* o)
             std::cout << drink << std::endl;
             bartender->receiveOrder(o->getDrinks()[i], o->getTableNumber(),o->getCustomerID(),o->getDrinks().size());
         }
-        
-
+        o->setTray(d);
+        o->setPlate(t);
 
         //Need to handle passing the order  to chefs
         for(size_t i = 0; i < o->getFoodItems().size();i++)
@@ -79,7 +79,10 @@ void RestaurantOrderMediator::notifyOrderPlaced(Order* o)
             }
             
         }
-
+        // delete t;
+        // delete d;
+        // Chef::setPlate(NULL);
+        // bartender->setTray(NULL);
     }
     
 
@@ -142,4 +145,21 @@ void RestaurantOrderMediator::addWaiter(Waiter *Waiter)
     {
         waiters.push_back(Waiter);
     }
+}
+
+RestaurantOrderMediator::~RestaurantOrderMediator()
+{
+    for(int i = 0; i < (int) chefs.size();i++)
+    {
+        delete chefs[i];
+    }
+    chefs.clear();
+
+    if (bartender != nullptr)
+    {
+        delete bartender;
+        bartender = nullptr;
+    }
+    
+    
 }

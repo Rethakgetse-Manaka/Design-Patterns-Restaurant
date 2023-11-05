@@ -31,6 +31,7 @@ private:
 public:
     Restaurant();
     void setAccountingSystem(AccountingSystem* as);
+    AccountingSystem* getAccountingSystem();
     void displayBasicAccouting();
     void addValet(Valet* valet);
     void addTable(Table* table);
@@ -38,7 +39,7 @@ public:
     void initialCustomerHandling(Customer* customer);
     void addWaiter(Waiter* waiter);
     void requestBill(Table* table);
-    void visitTable(TableVisitor *tableVisitor);
+    void visitTable();
     void payTab(Customer* customer,TabCaretaker* tabCaretaker);
     ~Restaurant();
 };

@@ -13,6 +13,7 @@ class Waiter:public Colleague {
         std::vector<Table*> tables;
     public:
         Waiter(std::string n);
+        virtual ~Waiter();
         virtual void receiveOrder(Order* o);
         void addTable(Table* t);
         void removeTable(Table* t);

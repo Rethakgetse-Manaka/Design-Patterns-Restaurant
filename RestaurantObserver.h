@@ -1,3 +1,6 @@
+#ifndef RESTAURANTOBSERVER_H
+#define RESTAURANTOBSERVER_H
+
 #include "Observer.h"
 #include "Inventory.h"
 #include "AccountingSystem.h"
@@ -10,8 +13,10 @@ public:
     void setAccountingSystem(AccountingSystem* accountingSystem);
     Inventory* getInventory();
     std::string getCurrentDate();
-
+    virtual ~RestaurantObserver();
 private:
     Inventory* inventory;
     AccountingSystem* accountingSystem;
 };
+
+#endif

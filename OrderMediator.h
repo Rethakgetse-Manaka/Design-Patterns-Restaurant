@@ -12,6 +12,6 @@ class OrderMediator
         virtual void notifyDrinksReady(DrinkTray* d) = 0;
         virtual void addWaiter(Waiter* Waiter) = 0;
         virtual void setInventory(Inventory* i) = 0;
-
+        virtual ~OrderMediator();
 };
 #endif

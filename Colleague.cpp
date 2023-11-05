@@ -9,3 +9,7 @@ OrderMediator* Colleague::getMediator()
 {
     return mediator;
 }
+
+Colleague::~Colleague()
+{
+}

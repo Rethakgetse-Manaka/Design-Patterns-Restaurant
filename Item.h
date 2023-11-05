@@ -14,7 +14,7 @@ public:
     double getCost() const;
     int getStockChange() const;
     void resetStockChange();
-
+    ~Item();
 private:
     FoodItem* foodItem;
     int stockChange;

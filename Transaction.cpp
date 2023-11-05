@@ -25,6 +25,15 @@ std::string Transaction::getDate() const {
     return date;
 }
 
+Transaction::~Transaction()
+{
+    if(item != nullptr)
+    {
+        delete item;
+        item = nullptr;
+    }
+}
+
 double Transaction::getTotalCost() const {
     if (type == TransactionType::PURCHASE) {
         return amount * item->getQuantity();

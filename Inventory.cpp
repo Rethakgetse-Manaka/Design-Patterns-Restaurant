@@ -2,21 +2,29 @@
 #include "Observer.h"
 
 using namespace std;
-void Inventory::registerObserver(Observer* observer) {
+Inventory::Inventory()
+{
+
+}
+void Inventory::registerObserver(Observer *observer)
+{
     observers.push_back(observer);
 }
 
-void Inventory::removeObserver(Observer* observer) {
-    observers.remove(observer);
+void Inventory::removeObserver(Observer *observer)
+{
+    //observers.erase();
 }
 
-void Inventory::notifyObservers() {
-    for (Observer* observer : observers) {
+void Inventory::notifyObservers()
+{
+    for (Observer *observer : observers)
+    {
         observer->update();
     }
 }
 
-void Inventory::addStock(Item* item)
+void Inventory::addStock(Item *item)
 {
     stock.push_back(item);
     notifyObservers();
@@ -24,18 +32,22 @@ void Inventory::addStock(Item* item)
 
 int Inventory::removeStock(string item)
 {
-    for (list<Item*>::iterator it = stock.begin(); it != stock.end(); ++it) {
-        if ((*it)->getName() == item) {
+    for (vector<Item *>::iterator it = stock.begin(); it != stock.end(); ++it)
+    {
+        if ((*it)->getName() == item)
+        {
             (*it)->decrementQuantity();
             return (*it)->getQuantity();
         }
     }
 }
 
-std::string Inventory::stockToString() {
+std::string Inventory::stockToString()
+{
     std::string stockStr = "Stock List:\n";
 
-    for (Item* item : stock) {
+    for (Item *item : stock)
+    {
         stockStr += "Name: " + item->getName() +
                     ", Quantity: " + std::to_string(item->getQuantity()) +
                     ", Cost: $" + std::to_string(item->getCost()) +
@@ -45,10 +57,9 @@ std::string Inventory::stockToString() {
     return stockStr;
 }
 
-
-int Inventory::getStockLevel(Item* item)
+int Inventory::getStockLevel(Item *item)
 {
-    for (Item* existingItem : stock)
+    for (Item *existingItem : stock)
     {
         if (existingItem->getName() == item->getName())
         {
@@ -57,6 +68,21 @@ int Inventory::getStockLevel(Item* item)
     }
     return 0;
 }
-std::list<Item*> Inventory::getItems() {
+std::vector<Item*> Inventory::getItems()
+{
     return stock;
+}
+
+Inventory::~Inventory()
+{
+    for (vector<Item *>::iterator it = stock.begin(); it != stock.end(); ++it)
+    {
+        delete (*it);
+    }
+    stock.clear();
+    // for (vector<Observer *>::iterator it = observers.begin(); it != observers.end(); ++it)
+    // {
+    //     delete (*it);
+    // }
+    // observers.clear();
 }

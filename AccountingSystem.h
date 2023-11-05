@@ -11,12 +11,12 @@ public:
     AccountingSystem(Inventory* observedInventory);
     void recordTransaction(Transaction* transaction);
     void recordSale(Transaction* transaction);
-    void setAccountingSystem(AccountingSystem *as);
     void generateReport();
     long long getBalance();
     void addBalance(double amount);
     void setBalance(double balance);
     std::list<Transaction*> getTransactions();
+    ~AccountingSystem();
 
 private:
     Inventory* observedInventory;

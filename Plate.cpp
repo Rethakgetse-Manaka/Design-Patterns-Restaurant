@@ -56,4 +56,5 @@ Plate::~Plate() {
             delete m_Meals[i];
         }
     }
+    m_Meals.clear();
 }

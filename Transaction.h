@@ -17,7 +17,7 @@ public:
     double getTotalCost() const;
     double getTotalRevenue() const;
     std::string getDate() const;
-
+    ~Transaction();
 private:
     Item* item;
     double amount;

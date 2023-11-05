@@ -2,6 +2,7 @@
 #ifndef Plate_H
 #define Plate_H
 class Meal;
+//#include "Meal.h"
 #include <vector>
 class Plate
 {

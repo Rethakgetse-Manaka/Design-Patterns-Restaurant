@@ -10,6 +10,10 @@ Waiter::Waiter(std::string n)
     mediator = nullptr;
 }
 
+Waiter::~Waiter()
+{
+}
+
 void Waiter::receiveOrder(Order *o)
 {
     if(o != nullptr)
@@ -60,7 +64,7 @@ void Waiter::presentFoodToTable(Plate* p)
     if(p != nullptr)
     {
         std::cout << "Here is your meal, we hope you have a wonderful dining experience with us." <<std::endl;
-        for (int i = 0; i < tables.size(); i++) {
+        for (int i = 0; i < (int) tables.size(); i++) {
             if (tables[i]->getCustomer(p->getCustomerID()) != nullptr) {
                 tables[i]->getCustomer(p->getCustomerID())->eat();
             }
@@ -69,7 +73,7 @@ void Waiter::presentFoodToTable(Plate* p)
 
     }
     
-
+    
 
 }
 
@@ -78,13 +82,13 @@ void Waiter::presentDrinksToTable(DrinkTray* d)
     if(d != nullptr)
     {
         std::cout << "Here are your drinks, we hope you have a wonderful dining experience with us." <<std::endl;
-        for (int i = 0; i < tables.size(); i++) {
+        for (int i = 0; i < (int) tables.size(); i++) {
             if (tables[i]->getCustomer(d->getCustomerID()) != nullptr) {
                 tables[i]->getCustomer(d->getCustomerID())->drink();
             }
         }
         // p->showMeals();
-
+        
     }
     
 

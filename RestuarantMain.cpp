@@ -29,6 +29,9 @@
 #include "SpecificCocktail.h"
 #include "BaseCocktail.h"
 #include "Order.h"
+#include "TableVisitor.h"
+#include "ComplaintsManager.h"
+#include "AdminManager.h"
 
 #include <iostream>
 
@@ -92,6 +95,7 @@ int main() {
 
 
     Restaurant* restuarant = new Restaurant();
+    restuarant->setAccountingSystem(accountingSystem);
     OrderMediator* kitchenMediator = new RestaurantOrderMediator();
     TabCaretaker* careTaker = new TabCaretaker();
     kitchenMediator->setInventory(inventory);
@@ -138,10 +142,24 @@ int main() {
     customer2->placeOrder();
     customer3->placeOrder();
 
+    TableVisitor *cManager = new ComplaintsManager();
+    TableVisitor *aManager = new AdminManager();
+    restuarant->addManager(cManager);
+    restuarant->addManager(aManager);
+    restuarant->visitTable();
+
     table1->readyForBill(waiter1,accountingSystem);
     restuarant->payTab(customer1,careTaker);
     restuarant->payTab(customer2,careTaker);
     restuarant->payTab(customer3,careTaker);
     accountingSystem->generateReport();
+    
+    delete restuarant;
+    delete restaurantObserver;
+    delete kitchenMediator;
+    delete careTaker;
+    delete customer1;
+    delete customer2;
+    delete customer3;
     return 0;
 }

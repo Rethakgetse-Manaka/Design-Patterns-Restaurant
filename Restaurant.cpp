@@ -4,11 +4,17 @@ using namespace std;
 
 Restaurant::Restaurant()
 {
+    this->accountingSystem = nullptr;
 }
 
 void Restaurant::setAccountingSystem(AccountingSystem *as)
 {
     this->accountingSystem = as;
+}
+
+AccountingSystem *Restaurant::getAccountingSystem()
+{
+    return this->accountingSystem;
 }
 
 void Restaurant::addValet(Valet *valet)
@@ -32,6 +38,7 @@ void Restaurant::initialCustomerHandling(Customer *customer)
     customerHandler->add(new ValletHandler());
     customerHandler->add(new AssignTable(tables));
     customerHandler->handleRequest(customer);
+    delete customerHandler;
 }
 
 void Restaurant::addWaiter(Waiter *waiter)
@@ -59,12 +66,18 @@ void Restaurant::requestBill(Table *table)
     }
 }
 
-void Restaurant::visitTable(TableVisitor *tableVisitor)
+void Restaurant::visitTable()
 {
     int ranVal = rand() % managers.size();
     int ranTable = rand()% tables.size();
     TableVisitor* manager = managers[ranVal];
     Table* table = tables[ranTable];
+    while ((int) table->getCustomers().size() <= 0)
+    {
+        ranTable = rand()% tables.size();
+        table = tables[ranTable];
+    }
+    
     for(int i = 0; i < (int)table->getCustomers().size(); i++){
         table->getCustomers()[i]->accept(manager);
     }
@@ -92,4 +105,29 @@ void Restaurant::payTab(Customer *customer, TabCaretaker *tabCaretaker)
 
 Restaurant::~Restaurant()
 {
+    for(int i = 0; i < (int)valets.size(); i++)
+    {
+        delete valets[i];
+    }
+    valets.clear();
+    for(int i = 0; i < (int)tables.size(); i++)
+    {
+        delete tables[i];
+    }
+    tables.clear();
+    for(int i = 0; i < (int)managers.size(); i++)
+    {
+        delete managers[i];
+    }
+    managers.clear();
+    for(int i = 0; i < (int)waiters.size(); i++)
+    {
+        delete waiters[i];
+    }
+    waiters.clear();
+
+    if(accountingSystem != nullptr){
+        delete accountingSystem;
+        accountingSystem = nullptr;
+    }
 }

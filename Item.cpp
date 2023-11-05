@@ -32,3 +32,12 @@ int Item::getStockChange() const {
 void Item::resetStockChange() {
     stockChange = 0;
 }
+
+Item::~Item()
+{
+    if(foodItem != nullptr)
+    {
+        delete foodItem;
+        foodItem = nullptr;
+    }
+}

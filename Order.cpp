@@ -6,6 +6,9 @@ Order::Order(int cID, string cName)
 {
     this->customerID = cID;
     this->customerName = cName;
+    this->tray = nullptr;
+    this->plate = nullptr;
+    this->tableID = 0;
 }
 
 Order::Order(Order* o)
@@ -25,6 +28,16 @@ Order::Order(Order* o)
 
     }
     
+}
+
+void Order::setTray(DrinkTray *tray)
+{
+    this->tray = tray;
+}
+
+void Order::setPlate(Plate *p)
+{
+    this->plate = p;
 }
 
 void Order::addStarter(std::string name, double val)
@@ -138,4 +151,14 @@ Order::~Order()
         delete drinks[i];
     }
     drinks.clear();
+
+    if(tray != nullptr){
+        delete tray;
+        tray = nullptr;
+    }
+
+    if(plate != nullptr){
+        delete plate;
+        //plate = nullptr;
+    }
 }

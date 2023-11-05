@@ -53,7 +53,7 @@ void LeafBill::printBill()
         drinkTot += order->getDrinks()[i]->getPrice();
     }
     cout<<"----------------------------------------------"<<endl;
-    total = foodTotal + drinkTot;
+    total = foodTotal + drinkTot+tip;
     cout<<"Tip: "<<endl;
     cout<<"R"<<tip<<endl;
     cout<<"----------------------------------------------"<<endl;

@@ -47,13 +47,14 @@ int DrinkTray::getCustomerID()
 
 DrinkTray::~DrinkTray()
 {
-    if (!m_Drinks.empty())
-    {
-        for (int i = 0; i < m_Drinks.size(); i++)
-        {
-            delete m_Drinks[i];
-        }
-    }
+    // if (!m_Drinks.empty())
+    // {
+    //     for (int i = 0; i < m_Drinks.size(); i++)
+    //     {
+    //         delete m_Drinks[i];
+    //     }
+    //     m_Drinks.clear();
+    // }
 }
 
 

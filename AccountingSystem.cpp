@@ -84,3 +84,18 @@ std::list<Transaction*> AccountingSystem::getTransactions()
 {
     return transactions;
 }
+
+AccountingSystem::~AccountingSystem()
+{
+    if(observedInventory)
+    {
+        delete observedInventory;
+        observedInventory = nullptr;
+    }
+
+    for (Transaction* transaction : transactions)
+    {
+        delete transaction;
+        transaction = nullptr;
+    }
+}

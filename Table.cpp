@@ -123,7 +123,9 @@ void Table::setWaiter(Waiter *waiter)
     this->waiter = waiter;
 }
 
-Table::Table(int tableNumber) : tableNumber(tableNumber), state(new Free()), count(0) {}
+Table::Table(int tableNumber) : tableNumber(tableNumber), state(new Free()), count(0) {
+    this->bill = nullptr;
+}
 
 void Table::setCaretaker(TabCaretaker *t)
 {
@@ -163,6 +165,12 @@ Table::~Table() {
         delete state;
     }
     
+    if(bill != NULL){
+        delete bill;
+    }
+    // if(tabCaretaker != NULL){
+    //     delete tabCaretaker;
+    // }
 }
 
 

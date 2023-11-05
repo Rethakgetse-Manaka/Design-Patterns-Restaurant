@@ -6,6 +6,7 @@ Customer::Customer()
     this->state = new Neutral();
     this->order = NULL;
     this->tip = 0.0;
+    this->tab = NULL;
 }
 
 Customer::Customer(int id, std::string name)
@@ -15,20 +16,27 @@ Customer::Customer(int id, std::string name)
     this->state = new Neutral();
     this->order = NULL;
     this->tip = 0.0;
+    this->tab = NULL;
 }
 
 Customer::~Customer()
 {
     if (this->order != NULL)
-    {
+{
         delete order;
         order = NULL;
-    }
+    }    
 
     if (this->state != NULL)
     {
         delete state;
         state = NULL;
+    }
+
+    if(this->tab != NULL)
+    {
+        delete tab;
+        tab = NULL;
     }
 }
 

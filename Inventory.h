@@ -3,12 +3,14 @@
 
 #include <list>
 #include <string>
+#include <vector>
 #include "Item.h"
 
 class Observer;
 
 class Inventory {
 public:
+    Inventory();
     void registerObserver(Observer* observer);
     void removeObserver(Observer* observer);
     void notifyObservers();
@@ -17,11 +19,11 @@ public:
     //void useStock(Item item, int quantity);
     std::string stockToString();
     int getStockLevel(Item* item);
-    std::list<Item*> getItems();
-
+    std::vector<Item*> getItems();
+    ~Inventory();
 private:
-    std::list<Observer*> observers;
-    std::list<Item*> stock;
+    std::vector<Observer*> observers;
+    std::vector<Item*> stock;
 };
 
 #endif
