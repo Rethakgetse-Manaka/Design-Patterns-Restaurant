@@ -146,6 +146,6 @@ void RestaurantOrderMediator::addWaiter(Waiter *Waiter)
 
 RestaurantOrderMediator::~RestaurantOrderMediator()
 {
-    chefs.clear()
+    chefs.clear();
     delete bartender;
 }
