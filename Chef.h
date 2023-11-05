@@ -14,7 +14,7 @@ class Chef:public Colleague
         std::string name;
         static Plate* plate;
     public:
-        
+        virtual ~Chef();
         virtual Meal* createStarter() = 0;
         virtual Meal* createMain() = 0;
         virtual void addMeal(Meal* meal) = 0;

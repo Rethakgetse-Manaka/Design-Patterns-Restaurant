@@ -78,10 +78,11 @@ void Restaurant::payTab(Customer *customer, TabCaretaker *tabCaretaker)
         {
             if(tabCaretaker->getMementos()[i]->getCustomerID() == customer->getCustomerID())
             {
+                tabCaretaker->getMementos()[i]->printMemento();
                 customer->getTab()->restoreMemento(tabCaretaker->getMementos()[i]);
                 std::cout << customer->getCustomerName() << " paid the tab..."<<std::endl;
                 tabCaretaker->removeMemento(tabCaretaker->getMementos()[i]);
-                customer->getTable()->removeCustomer(customer);
+                delete customer;
             }
         }
 

@@ -35,8 +35,17 @@ void Table::removeCustomer(Customer *c)
     {
         if((*it) == c)
         {
-            delete *it;
-            customers.erase(it);
+            if(c->getTab() == nullptr)
+            {
+                delete *it;
+                customers.erase(it);
+            }
+            else
+            {
+                *it = nullptr;
+                customers.erase(it);
+            }
+            
             count--;
             if(state->getTableStatus() == "Occupied")
             {
@@ -144,6 +153,14 @@ Table::Table(int tableNumber) : tableNumber(tableNumber), state(new Free()), cou
 void Table::setCaretaker(TabCaretaker *t)
 {
     tabCaretaker = t;
+}
+
+void Table::printCustomers()
+{
+    for(int i = 0; i < (int)customers.size();i++)
+    {
+        std::cout << customers[i]->getCustomerName() <<std::endl;
+    }
 }
 
 void Table::setState(TableState* newState) {

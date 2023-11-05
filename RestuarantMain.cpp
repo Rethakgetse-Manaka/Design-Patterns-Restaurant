@@ -98,8 +98,8 @@ int main() {
     Table* table3 = new Table(3);
 
     table1->setCaretaker(careTaker);
-    // table2->setCaretaker(careTaker);
-    // table3->setCaretaker(careTaker);
+    table2->setCaretaker(careTaker);
+    table3->setCaretaker(careTaker);
 
     Waiter* waiter1 = new Waiter("John");
     Waiter* waiter2 = new Waiter("Jack");
@@ -125,7 +125,7 @@ int main() {
     restuarant->addWaiter(waiter3);
 
     Customer* customer1 = new Customer(1,"Kamo");
-    // Customer* customer2 = new Customer(2,"KB");
+    Customer* customer2 = new Customer(2,"KB");
     // Customer* customer3 = new Customer(3,"Victor");
 
     // restuarant->initialCustomerHandling(customer1);

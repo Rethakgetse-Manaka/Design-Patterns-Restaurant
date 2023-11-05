@@ -15,7 +15,6 @@ void AssignTable::handleRequest(Customer *customer)
         if (tables[i]->isFree())
         {
             tables[i]->addCustomer(customer);
-            cout << "assign to customer tableId" << tables[i]->getTableNumber() << endl;
             customer->setTableID(tables[i]->getTableNumber());
             customer->setTable(tables[i]);
             cout << customer->getCustomerName() <<  " was assigned to Table " << tables[i]->getTableNumber() << endl;

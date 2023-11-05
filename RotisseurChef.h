@@ -2,7 +2,6 @@
 #define ROTISSEURCHEF_H
 
 #include <string>
-
 #include "Chef.h"
 
 #include "StarterMeal.h"

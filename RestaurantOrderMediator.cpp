@@ -106,19 +106,16 @@ void RestaurantOrderMediator::setInventory(Inventory *inventory)
 
 void RestaurantOrderMediator::notifyPlateReady(Plate* p)
 {
-    // std::cout << "notified" << std::endl;
+    
     if(p != nullptr)
     {
-        // std::cout << "notified 2" << std::endl;
+        
         for(Waiter* w : waiters)
         {
-            // std::cout << "notified 3" << std::endl;
-            // if (w == nullptr) {
-            //     std::cout << "w is null" << std::endl;
-            // }
+            
             if(w != nullptr && w->managesTable(p->getTableNumber()))
             {  
-                std::cout << "notified 4" << std::endl;
+                
                 w->presentFoodToTable(p);
                 break;
 

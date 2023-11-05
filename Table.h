@@ -38,7 +38,7 @@ class Table
         //added for state Pattern
         Table(int tableNumber);
         void setCaretaker(TabCaretaker* t);
-
+        void printCustomers();
         ~Table();
         void occupyTable();
         void freeTable();

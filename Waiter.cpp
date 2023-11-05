@@ -34,9 +34,6 @@ bool Waiter::managesTable(int tbn)
 {
     for(Table* t: tables)
     {
-        std::cout << "tbn:" << tbn << std::endl;
-        std::cout << "gettablenumber:" << t->getTableNumber() << std::endl;
-
         if(t != NULL && t->getTableNumber() == tbn)
             return true;
     }
