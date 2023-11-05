@@ -1,9 +1,9 @@
-name: Kamo-BranchTesting
+name: Victor-BranchTesting
 
 on:
   push:
     branches:
-      - Kamo_Kitchen
+      - Victor-FloorComponent
 
 jobs:
   build:
@@ -24,10 +24,6 @@ jobs:
 
     - name: Run tests
       run: make run
-
-    - name: create executable
-      if: ${{ success() }}
-      run: make all
       
     - name: Clean up if tests passed
       if: ${{ success() }}
