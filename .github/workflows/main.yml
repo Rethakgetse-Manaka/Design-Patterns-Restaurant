@@ -1,9 +1,9 @@
-name: Kamo-BranchTesting
+name: KB-BranchTesting
 
 on:
   push:
     branches:
-      - Kamo_Kitchen
+      - KB
 
 jobs:
   build:
