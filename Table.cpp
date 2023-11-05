@@ -10,12 +10,15 @@ void Table::addCustomer(Customer *c)
     {
         customers.push_back(c);
         c->setTableID(tableNumber);
-
+        count++;
+        if(count > 8)
+        {
+            state->occupy(this);
+        }
     }
     else
     {
-        std::cout << "Table is full" << std::endl;
-        state->occupy(this);
+        std::cout << "Table "<<tableNumber<<" is full" << std::endl;
     }
    
     
@@ -28,16 +31,21 @@ std::vector<Customer *> Table::getCustomers()
 
 void Table::removeCustomer(Customer *c)
 {
-
     for(std::vector<Customer*>::iterator it = customers.begin();it != customers.end();++it)
     {
         if((*it) == c)
         {
             delete *it;
             customers.erase(it);
+            count--;
+            if(state->getTableStatus() == "Occupied")
+            {
+                state->free(this);
+            }
             break;
         }
     }
+    
 }
 
 void Table::readyForBill(Waiter *w, AccountingSystem* aS)

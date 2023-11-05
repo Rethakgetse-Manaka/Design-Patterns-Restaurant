@@ -9,7 +9,6 @@ void Occupied::occupy(Table* table) {
 
 void Occupied::free(Table* table) {
     table->setState(new Free());
-    std::cout << "Table " << table->getTableNumber() << " is now free." << std::endl;
 }
 
 void Occupied::combine(Table* table) {
@@ -76,7 +75,6 @@ std::string Split::getTableStatus() {
 // Free state
 void Free::occupy(Table* table) {
     table->setState(new Occupied());
-    std::cout << "Table " << table->getTableNumber() << " is now occupied." << std::endl;
 }
 
 void Free::free(Table* table) {
