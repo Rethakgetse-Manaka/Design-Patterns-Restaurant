@@ -50,24 +50,7 @@ void AccountingSystem::generateReport()
 
 long long AccountingSystem::getBalance()
 {
-    double calculatedBalance = this->balance;
-    for (const Transaction* transaction : transactions)
-    {
-        if (transaction->getType() == TransactionType::PURCHASE)
-        {
-            // Deduct the cost of the purchased items from the balance
-            double totalCost = transaction->getTotalCost();
-            calculatedBalance = calculatedBalance - totalCost;
-        }
-        else if (transaction->getType() == TransactionType::SALE)
-        {
-            // Add the revenue from the sold items to the balance
-            double totalRevenue = transaction->getTotalRevenue();
-            calculatedBalance += totalRevenue;
-        }
-    }
-
-    return calculatedBalance;
+    return this->balance;
 }
 
 void AccountingSystem::addBalance(double amount)

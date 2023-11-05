@@ -49,16 +49,16 @@ int main() {
     accountingSystem->setBalance(3500000);
     Observer* restaurantObserver = new RestaurantObserver(inventory, accountingSystem);
     inventory->registerObserver(restaurantObserver);
-    inventory->addStock(new Item(new FoodItem("Beef Kebab", 50.0),50,0));
-    inventory->addStock(new Item(new FoodItem("Green Salad", 30.0),50,0));
-    inventory->addStock(new Item(new FoodItem("Ramen", 35.0),50,0));
-    inventory->addStock(new Item(new FoodItem("Wings", 65.0),50,0));
-    inventory->addStock(new Item(new FoodItem("Fries", 32.0),50,0));
-    inventory->addStock(new Item(new FoodItem("Beef Burger", false, false, 89.0, false),50,0));
-    inventory->addStock(new Item(new FoodItem("Chicken Burger", false, false, 65.0, false),50,0));
-    inventory->addStock(new Item(new FoodItem("Stirfry", false, false, 72.0, false),50,0));
-    inventory->addStock(new Item(new FoodItem("Alfredo", false, false, 90.0, false),50,0));
-    inventory->addStock(new Item(new FoodItem("Fried Meal", false, false, 85.0, false),50,0));
+    // inventory->addStock(new Item(new FoodItem("Beef Kebab", 50.0),50,0));
+    // inventory->addStock(new Item(new FoodItem("Green Salad", 30.0),50,0));
+    // inventory->addStock(new Item(new FoodItem("Ramen", 35.0),50,0));
+    // inventory->addStock(new Item(new FoodItem("Wings", 65.0),50,0));
+    // inventory->addStock(new Item(new FoodItem("Fries", 32.0),50,0));
+    // inventory->addStock(new Item(new FoodItem("Beef Burger", false, false, 89.0, false),50,0));
+    // inventory->addStock(new Item(new FoodItem("Chicken Burger", false, false, 65.0, false),50,0));
+    // inventory->addStock(new Item(new FoodItem("Stirfry", false, false, 72.0, false),50,0));
+    // inventory->addStock(new Item(new FoodItem("Alfredo", false, false, 90.0, false),50,0));
+    // inventory->addStock(new Item(new FoodItem("Fried Meal", false, false, 85.0, false),50,0));
 
      std::time_t now = std::time(nullptr);
     std::tm* localTime = std::localtime(&now);
@@ -98,8 +98,8 @@ int main() {
     Table* table3 = new Table(3);
 
     table1->setCaretaker(careTaker);
-    table2->setCaretaker(careTaker);
-    table3->setCaretaker(careTaker);
+    // table2->setCaretaker(careTaker);
+    // table3->setCaretaker(careTaker);
 
     Waiter* waiter1 = new Waiter("John");
     Waiter* waiter2 = new Waiter("Jack");
@@ -125,8 +125,8 @@ int main() {
     restuarant->addWaiter(waiter3);
 
     Customer* customer1 = new Customer(1,"Kamo");
-    Customer* customer2 = new Customer(2,"KB");
-    Customer* customer3 = new Customer(3,"Victor");
+    // Customer* customer2 = new Customer(2,"KB");
+    // Customer* customer3 = new Customer(3,"Victor");
 
     // restuarant->initialCustomerHandling(customer1);
     // restuarant->initialCustomerHandling(customer2);
