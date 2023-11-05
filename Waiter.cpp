@@ -66,10 +66,7 @@ void Waiter::presentFoodToTable(Plate* p)
 
     }
 
-    for (int i = 0; i < p->getMeals().size(); i++) {
-        delete p->getMeals()[i];
-    }
-    delete p->getMeals();
+    p->getMeals().clear();
     delete p;
 }
 
@@ -87,10 +84,8 @@ void Waiter::presentDrinksToTable(DrinkTray* d)
 
     }
     
-    for (int i = 0; i < d->getDrinks().size(); i++) {
-        delete d->getDrinks()[i];
-    }
-    delete d->getDrinks();
+    
+    delete d->getDrinks().clear();
     delete d;
 
 
