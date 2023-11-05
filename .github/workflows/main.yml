@@ -18,9 +18,6 @@ jobs:
 
     - name: Clean project
       run: make clean
-
-    - name: Clean build
-      run: make clean-build
       
     - name: Build project
       run: make
