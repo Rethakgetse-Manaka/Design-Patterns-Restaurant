@@ -144,7 +144,5 @@ int main() {
     // restuarant->payTab(customer3,careTaker);
     // accountingSystem->generateReport();
 
-
-    for (int i = 0; 9 )
     return 0;
 }
