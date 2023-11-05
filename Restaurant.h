@@ -31,7 +31,7 @@ private:
 public:
     Restaurant();
     void setAccountingSystem(AccountingSystem* as);
-    void displayBasicAccouting();
+    // void displayBasicAccouting();
     void addValet(Valet* valet);
     void addTable(Table* table);
     void addManager(TableVisitor* manager);

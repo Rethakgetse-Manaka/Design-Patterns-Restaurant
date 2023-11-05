@@ -2,6 +2,7 @@
 #define CUSTOMERHANDLER_H
 
 #include <iostream>
+#include <unistd.h>
 #include "Customer.h"
 class CustomerHandler
 {

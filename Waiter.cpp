@@ -34,9 +34,6 @@ bool Waiter::managesTable(int tbn)
 {
     for(Table* t: tables)
     {
-        std::cout << "tbn:" << tbn << std::endl;
-        std::cout << "gettablenumber:" << t->getTableNumber() << std::endl;
-
         if(t != NULL && t->getTableNumber() == tbn)
             return true;
     }
@@ -68,16 +65,19 @@ void Waiter::presentFoodToTable(Plate* p)
         // p->showMeals();
 
     }
-    
 
-
+    for (int i = 0; i < p->getMeals().size(); i++) {
+        delete p->getMeals()[i];
+    }
+    delete p->getMeals();
+    delete p;
 }
 
 void Waiter::presentDrinksToTable(DrinkTray* d)
 {
     if(d != nullptr)
     {
-        std::cout << "Here are your drinks, we hope you have a wonderful dining experience with us." <<std::endl;
+        std::cout << "Here are your drinks, we hope you have a wonderful dining experience with us." <<std::endl << std::endl;
         for (int i = 0; i < tables.size(); i++) {
             if (tables[i]->getCustomer(d->getCustomerID()) != nullptr) {
                 tables[i]->getCustomer(d->getCustomerID())->drink();
@@ -87,6 +87,11 @@ void Waiter::presentDrinksToTable(DrinkTray* d)
 
     }
     
+    for (int i = 0; i < d->getDrinks().size(); i++) {
+        delete d->getDrinks()[i];
+    }
+    delete d->getDrinks();
+    delete d;
 
 
 }

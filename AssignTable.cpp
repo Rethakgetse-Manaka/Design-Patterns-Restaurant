@@ -15,10 +15,11 @@ void AssignTable::handleRequest(Customer *customer)
         if (tables[i]->isFree())
         {
             tables[i]->addCustomer(customer);
-            cout << "assign to customer tableId" << tables[i]->getTableNumber() << endl;
+            // cout << "assign to customer tableId" << tables[i]->getTableNumber() << endl;
             customer->setTableID(tables[i]->getTableNumber());
             customer->setTable(tables[i]);
-            cout << customer->getCustomerName() <<  " was assigned to Table " << tables[i]->getTableNumber() << endl;
+            cout << customer->getCustomerName() <<  " has been seated at Table" << tables[i]->getTableNumber() << endl;
+            sleep(1);
             return;
         }
     }

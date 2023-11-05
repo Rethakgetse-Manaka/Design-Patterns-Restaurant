@@ -97,7 +97,22 @@ void Customer::setState(CustomerState *s)
 
 void Customer::payBill(Bill *bill, AccountingSystem *accountingSystem)
 {
+    const std::string RED_COLOR = "\x1B[31m";
+    const std::string GREEN_COLOR = "\x1B[32m";
+    const std::string RESET_COLOR = "\x1B[0m";
+    
     cout << this->customerName << " is paying their bill which totals to: R" << bill->getBillTotal() << endl;
+    sleep(1);
+    cout << "authorising payment";
+    sleep(1); 
+    cout << "."; 
+    sleep(1); 
+    cout << "."; 
+    sleep(1); 
+    cout << "."; 
+    sleep(1); 
+    cout << endl;
+    cout << GREEN_COLOR << "Transaction approved. Thank you!" << RESET_COLOR << endl;
     std::time_t now = std::time(nullptr);
     std::tm* localTime = std::localtime(&now);
     std::stringstream ss;
@@ -106,7 +121,7 @@ void Customer::payBill(Bill *bill, AccountingSystem *accountingSystem)
     if(bill->getOrder() == NULL){
         cout<< "null"<<endl;
     }    
-    for (int i = 0; i < bill->getOrder()->getFoodItems().size(); i++)
+    for (int i = 0; i < (int) bill->getOrder()->getFoodItems().size(); i++)
     {
         FoodItem *foodItem = new FoodItem(bill->getOrder()->getFoodItems()[i]->getMealName(), bill->getOrder()->getFoodItems()[i]->getPrice());
         Transaction *transaction = new Transaction(new Item(foodItem,1,0),bill->getOrder()->getFoodItems()[i]->getPrice(), TransactionType::SALE,ss.str());

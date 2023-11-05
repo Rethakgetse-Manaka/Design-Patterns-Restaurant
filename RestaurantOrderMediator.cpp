@@ -143,3 +143,12 @@ void RestaurantOrderMediator::addWaiter(Waiter *Waiter)
         waiters.push_back(Waiter);
     }
 }
+
+RestaurantOrderMediator::~RestaurantOrderMediator()
+{
+    for (int i = 0; i < chefs.size(); i++) {
+        delete chefs[i];
+    }
+    delete chefs;
+    delete bartender;
+}

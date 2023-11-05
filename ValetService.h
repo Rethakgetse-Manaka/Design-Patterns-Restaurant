@@ -1,6 +1,6 @@
 #ifndef VALETSERVICE_H
 #define VALETSERVICE_H
-
+#include <unistd.h>
 #include "Customer.h"
 
 class ValetService {

@@ -5,6 +5,8 @@
 #include "Transaction.h"
 #include "Item.h"
 
+using namespace std;
+
 
 class AccountingSystem {
 public:

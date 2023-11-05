@@ -22,6 +22,8 @@ class RestaurantOrderMediator: public OrderMediator
         virtual void notifyPlateReady(Plate* p);
         virtual void notifyDrinksReady(DrinkTray* d);
         void addWaiter(Waiter* Waiter);
+
+        ~RestaurantOrderMediator();
 };
 
 #endif
