@@ -84,11 +84,6 @@ void Waiter::presentDrinksToTable(DrinkTray* d)
 
     }
     
-    
-    delete d->getDrinks().clear();
-    delete d;
-
-
 }
 
 void Waiter::presentBill(Table* t)
