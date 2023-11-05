@@ -1,20 +1,20 @@
-// #include <iostream>
-// #include "Customer.h"
-// #include "Bill.h"
-// #include "CompositeBill.h"
-// #include "LeafBill.h"
-// #include "TableVisitor.h"
-// #include "ComplaintsManager.h"
-// #include "AdminManager.h"
-// #include "CustomerHandler.h"
-// #include "ValletHandler.h"
-// #include "AssignTable.h"
-// #include "AccountingSystem.h"
-// #include "RestaurantObserver.h"
-// #include "Inventory.h"
-// #include "Transaction.h"
-// #include <vector>
-// using namespace std;
+#include <iostream>
+#include "Customer.h"
+#include "Bill.h"
+#include "CompositeBill.h"
+#include "LeafBill.h"
+#include "TableVisitor.h"
+#include "ComplaintsManager.h"
+#include "AdminManager.h"
+#include "CustomerHandler.h"
+#include "ValletHandler.h"
+#include "AssignTable.h"
+#include "AccountingSystem.h"
+#include "RestaurantObserver.h"
+#include "Inventory.h"
+#include "Transaction.h"
+#include <vector>
+using namespace std;
 
 // void testBill(){
 //     Customer *c = new Customer(1, "John");
@@ -133,19 +133,19 @@
 //     newCustomer->payBill(b1, accountingSystem);
 // }
 
-// void testEat(){
-//     cout<<"Unit testing eat function." << endl;
-//     Customer* newCustomer = new Customer(1, "John");
-//     newCustomer->eat();
-//     delete newCustomer;
-// }
+void testEat(){
+    cout<<"Unit testing eat function." << endl;
+    Customer* newCustomer = new Customer(1, "John");
+    newCustomer->eat();
+    delete newCustomer;
+}
 
-// void testComplain(){
-//     cout<<"Unit testing complain function." << endl;
-//     Customer* newCustomer = new Customer(1, "John");
-//     newCustomer->complain();
-//     delete newCustomer;
-// }
+void testComplain(){
+    cout<<"Unit testing complain function." << endl;
+    Customer* newCustomer = new Customer(1, "John");
+    newCustomer->complain();
+    delete newCustomer;
+}
 
 // void testInitialCustomerHandling(){
 //     Customer* customer = new Customer(1, "John");
@@ -398,16 +398,16 @@
 //     delete accountingSystem;
 
 // }
-// int main()
-// {
-//     //testOrderPlacing();
-//     //testBill();
-//     // testCustomerState();
-//     //testManagerVisitor();
-//     // testInitialCustomerHandling();
-//     // testEat();
-//     testComplain();
-//     //testAccountSystem();
-//     //testPayBill2();
-//     return 0;
-// }
+int main()
+{
+    //testOrderPlacing();
+    //testBill();
+    // testCustomerState();
+    //testManagerVisitor();
+    // testInitialCustomerHandling();
+    testEat();
+    testComplain();
+    //testAccountSystem();
+    //testPayBill2();
+    return 0;
+}
