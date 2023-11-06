@@ -1,9 +1,9 @@
-name: Victor-BranchTesting
+name: Develop-BranchTesting
 
 on:
   push:
     branches:
-      - Victor-FloorComponent
+      - develop
 
 jobs:
   build:

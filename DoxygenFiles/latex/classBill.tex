@@ -1,0 +1,49 @@
+\hypertarget{classBill}{}\doxysection{Bill Class Reference}
+\label{classBill}\index{Bill@{Bill}}
+
+
+The \mbox{\hyperlink{classBill}{Bill}} class is an abstract class that represents a bill for a customer.  
+
+
+
+
+{\ttfamily \#include $<$Bill.\+h$>$}
+
+
+
+Inheritance diagram for Bill\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBill_a12164e1d0b7d19a59a7b51162e5368fb}\label{classBill_a12164e1d0b7d19a59a7b51162e5368fb}} 
+virtual void {\bfseries print\+Bill} ()
+\item 
+\mbox{\Hypertarget{classBill_a897634e295ccb258457db1321f319be6}\label{classBill_a897634e295ccb258457db1321f319be6}} 
+virtual void {\bfseries add\+Person} (\mbox{\hyperlink{classBill}{Bill}} $\ast$\mbox{\hyperlink{classBill}{Bill}})
+\item 
+\mbox{\Hypertarget{classBill_a75b1227bf15aef555f3f7c06fe39d4e5}\label{classBill_a75b1227bf15aef555f3f7c06fe39d4e5}} 
+virtual \mbox{\hyperlink{classBill}{Bill}} $\ast$ {\bfseries find\+Bill} (int customer\+Id)=0
+\item 
+\mbox{\Hypertarget{classBill_a4143cb84c1d50bdc10f84465453b882f}\label{classBill_a4143cb84c1d50bdc10f84465453b882f}} 
+virtual void {\bfseries remove\+Person} (int customer\+Id)
+\item 
+\mbox{\Hypertarget{classBill_a77471381c322dd46dafa86a850223be5}\label{classBill_a77471381c322dd46dafa86a850223be5}} 
+virtual \mbox{\hyperlink{classOrder}{Order}} $\ast$ {\bfseries get\+Order} ()=0
+\item 
+\mbox{\Hypertarget{classBill_ac40f1f8abb7f2929d402f2aee1982ee1}\label{classBill_ac40f1f8abb7f2929d402f2aee1982ee1}} 
+virtual double {\bfseries get\+Bill\+Total} ()=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classBill}{Bill}} class is an abstract class that represents a bill for a customer. 
+
+This class provides methods for printing the bill, adding and removing persons from the bill, finding a bill by customer ID, getting the order, and getting the total bill amount.
+
+This class is abstract and cannot be instantiated directly. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Bill.\+h\item 
+Bill.\+cpp\end{DoxyCompactItemize}

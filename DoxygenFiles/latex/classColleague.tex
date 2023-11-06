@@ -1,0 +1,50 @@
+\hypertarget{classColleague}{}\doxysection{Colleague Class Reference}
+\label{classColleague}\index{Colleague@{Colleague}}
+
+
+The \mbox{\hyperlink{classColleague}{Colleague}} class is an abstract base class that defines the interface for objects that communicate with each other through a mediator.  
+
+
+
+
+{\ttfamily \#include $<$Colleague.\+h$>$}
+
+
+
+Inheritance diagram for Colleague\+:
+% FIG 0
+
+
+Collaboration diagram for Colleague\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classColleague_a61442903ee2a46879f3765c371e47040}\label{classColleague_a61442903ee2a46879f3765c371e47040}} 
+void {\bfseries set\+Mediator} (\mbox{\hyperlink{classOrderMediator}{Order\+Mediator}} $\ast$mediator)
+\item 
+\mbox{\Hypertarget{classColleague_a992bf44acab9977b10a71fd4d122b0f9}\label{classColleague_a992bf44acab9977b10a71fd4d122b0f9}} 
+\mbox{\hyperlink{classOrderMediator}{Order\+Mediator}} $\ast$ {\bfseries get\+Mediator} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classColleague_a3573461e5deeaf80b4b3a3287cab744b}\label{classColleague_a3573461e5deeaf80b4b3a3287cab744b}} 
+\mbox{\hyperlink{classOrderMediator}{Order\+Mediator}} $\ast$ {\bfseries mediator}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classColleague}{Colleague}} class is an abstract base class that defines the interface for objects that communicate with each other through a mediator. 
+
+The \mbox{\hyperlink{classColleague}{Colleague}} class has a pointer to an \mbox{\hyperlink{classOrderMediator}{Order\+Mediator}} object, which is used to communicate with other \mbox{\hyperlink{classColleague}{Colleague}} objects. It provides methods to set and get the mediator object. This class is meant to be subclassed to create concrete \mbox{\hyperlink{classColleague}{Colleague}} objects that can communicate with each other through the mediator.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classOrderMediator}{Order\+Mediator}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Colleague.\+h\item 
+Colleague.\+cpp\end{DoxyCompactItemize}

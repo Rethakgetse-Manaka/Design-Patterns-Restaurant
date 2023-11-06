@@ -1,0 +1,141 @@
+\hypertarget{classInventory}{}\doxysection{Inventory Class Reference}
+\label{classInventory}\index{Inventory@{Inventory}}
+
+
+{\ttfamily \#include $<$Inventory.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classInventory_a10485613fc8bfb32ee564d9b5110f8fb}{Inventory}} ()
+\item 
+void \mbox{\hyperlink{classInventory_a4ba2fe57966bab84db54829152d33c98}{register\+Observer}} (\mbox{\hyperlink{classObserver}{Observer}} $\ast$observer)
+\item 
+void \mbox{\hyperlink{classInventory_a03a5067bf2838db2ca5cfc558996d503}{remove\+Observer}} (\mbox{\hyperlink{classObserver}{Observer}} $\ast$observer)
+\item 
+void \mbox{\hyperlink{classInventory_a6cef02334a7bd9b91c03325902097fab}{notify\+Observers}} ()
+\item 
+void \mbox{\hyperlink{classInventory_a07fb42ebc2221cf1538a3801d8bbd77b}{add\+Stock}} (\mbox{\hyperlink{classItem}{Item}} $\ast$item)
+\item 
+int \mbox{\hyperlink{classInventory_a91f6880cf11f68b28666e12c74e09dfe}{remove\+Stock}} (std\+::string item)
+\item 
+std\+::string \mbox{\hyperlink{classInventory_a608252fbbdd5327f600c9215287b41f3}{stock\+To\+String}} ()
+\item 
+int \mbox{\hyperlink{classInventory_a689271890920a4138157efa3ca6f98c5}{get\+Stock\+Level}} (\mbox{\hyperlink{classItem}{Item}} $\ast$item)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classItem}{Item}} $\ast$ $>$ \mbox{\hyperlink{classInventory_a866368e146ba209b21170195fec17731}{get\+Items}} ()
+\item 
+\mbox{\hyperlink{classInventory_a6c6dfcb6d977c74a7abf46809e892e3d}{$\sim$\+Inventory}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classInventory}{Inventory}} class represents a collection of items that can be added to or removed from. It also allows for observers to be registered and notified of changes to the inventory. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classInventory_a10485613fc8bfb32ee564d9b5110f8fb}\label{classInventory_a10485613fc8bfb32ee564d9b5110f8fb}} 
+\index{Inventory@{Inventory}!Inventory@{Inventory}}
+\index{Inventory@{Inventory}!Inventory@{Inventory}}
+\doxysubsubsection{\texorpdfstring{Inventory()}{Inventory()}}
+{\footnotesize\ttfamily Inventory\+::\+Inventory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructs an empty \mbox{\hyperlink{classInventory}{Inventory}} object. \mbox{\Hypertarget{classInventory_a6c6dfcb6d977c74a7abf46809e892e3d}\label{classInventory_a6c6dfcb6d977c74a7abf46809e892e3d}} 
+\index{Inventory@{Inventory}!````~Inventory@{$\sim$Inventory}}
+\index{````~Inventory@{$\sim$Inventory}!Inventory@{Inventory}}
+\doxysubsubsection{\texorpdfstring{$\sim$Inventory()}{~Inventory()}}
+{\footnotesize\ttfamily Inventory\+::$\sim$\+Inventory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destroys the \mbox{\hyperlink{classInventory}{Inventory}} object and frees any memory allocated to it. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classInventory_a07fb42ebc2221cf1538a3801d8bbd77b}\label{classInventory_a07fb42ebc2221cf1538a3801d8bbd77b}} 
+\index{Inventory@{Inventory}!addStock@{addStock}}
+\index{addStock@{addStock}!Inventory@{Inventory}}
+\doxysubsubsection{\texorpdfstring{addStock()}{addStock()}}
+{\footnotesize\ttfamily void Inventory\+::add\+Stock (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{item }\end{DoxyParamCaption})}
+
+Adds an item to the inventory. 
+\begin{DoxyParams}{Parameters}
+{\em item} & A pointer to the item object to be added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classInventory_a866368e146ba209b21170195fec17731}\label{classInventory_a866368e146ba209b21170195fec17731}} 
+\index{Inventory@{Inventory}!getItems@{getItems}}
+\index{getItems@{getItems}!Inventory@{Inventory}}
+\doxysubsubsection{\texorpdfstring{getItems()}{getItems()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classItem}{Item}} $\ast$ $>$ Inventory\+::get\+Items (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns a vector of pointers to all the items in the inventory. \begin{DoxyReturn}{Returns}
+A vector of pointers to all the items in the inventory. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classInventory_a689271890920a4138157efa3ca6f98c5}\label{classInventory_a689271890920a4138157efa3ca6f98c5}} 
+\index{Inventory@{Inventory}!getStockLevel@{getStockLevel}}
+\index{getStockLevel@{getStockLevel}!Inventory@{Inventory}}
+\doxysubsubsection{\texorpdfstring{getStockLevel()}{getStockLevel()}}
+{\footnotesize\ttfamily int Inventory\+::get\+Stock\+Level (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{item }\end{DoxyParamCaption})}
+
+Returns the current stock level of a given item. 
+\begin{DoxyParams}{Parameters}
+{\em item} & A pointer to the item object to check the stock level of. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current stock level of the given item. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classInventory_a6cef02334a7bd9b91c03325902097fab}\label{classInventory_a6cef02334a7bd9b91c03325902097fab}} 
+\index{Inventory@{Inventory}!notifyObservers@{notifyObservers}}
+\index{notifyObservers@{notifyObservers}!Inventory@{Inventory}}
+\doxysubsubsection{\texorpdfstring{notifyObservers()}{notifyObservers()}}
+{\footnotesize\ttfamily void Inventory\+::notify\+Observers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Notifies all registered observers of changes to the inventory. \mbox{\Hypertarget{classInventory_a4ba2fe57966bab84db54829152d33c98}\label{classInventory_a4ba2fe57966bab84db54829152d33c98}} 
+\index{Inventory@{Inventory}!registerObserver@{registerObserver}}
+\index{registerObserver@{registerObserver}!Inventory@{Inventory}}
+\doxysubsubsection{\texorpdfstring{registerObserver()}{registerObserver()}}
+{\footnotesize\ttfamily void Inventory\+::register\+Observer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classObserver}{Observer}} $\ast$}]{observer }\end{DoxyParamCaption})}
+
+Registers an observer to be notified of changes to the inventory. 
+\begin{DoxyParams}{Parameters}
+{\em observer} & A pointer to the observer object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classInventory_a03a5067bf2838db2ca5cfc558996d503}\label{classInventory_a03a5067bf2838db2ca5cfc558996d503}} 
+\index{Inventory@{Inventory}!removeObserver@{removeObserver}}
+\index{removeObserver@{removeObserver}!Inventory@{Inventory}}
+\doxysubsubsection{\texorpdfstring{removeObserver()}{removeObserver()}}
+{\footnotesize\ttfamily void Inventory\+::remove\+Observer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classObserver}{Observer}} $\ast$}]{observer }\end{DoxyParamCaption})}
+
+Removes an observer from the list of observers to be notified of changes to the inventory. 
+\begin{DoxyParams}{Parameters}
+{\em observer} & A pointer to the observer object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classInventory_a91f6880cf11f68b28666e12c74e09dfe}\label{classInventory_a91f6880cf11f68b28666e12c74e09dfe}} 
+\index{Inventory@{Inventory}!removeStock@{removeStock}}
+\index{removeStock@{removeStock}!Inventory@{Inventory}}
+\doxysubsubsection{\texorpdfstring{removeStock()}{removeStock()}}
+{\footnotesize\ttfamily int Inventory\+::remove\+Stock (\begin{DoxyParamCaption}\item[{std\+::string}]{item }\end{DoxyParamCaption})}
+
+Removes an item from the inventory. 
+\begin{DoxyParams}{Parameters}
+{\em item} & The name of the item to be removed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The quantity of the item that was removed. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classInventory_a608252fbbdd5327f600c9215287b41f3}\label{classInventory_a608252fbbdd5327f600c9215287b41f3}} 
+\index{Inventory@{Inventory}!stockToString@{stockToString}}
+\index{stockToString@{stockToString}!Inventory@{Inventory}}
+\doxysubsubsection{\texorpdfstring{stockToString()}{stockToString()}}
+{\footnotesize\ttfamily std\+::string Inventory\+::stock\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns a string representation of the current stock in the inventory. \begin{DoxyReturn}{Returns}
+A string representation of the current stock in the inventory. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Inventory.\+h\item 
+Inventory.\+cpp\end{DoxyCompactItemize}

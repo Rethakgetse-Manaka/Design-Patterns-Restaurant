@@ -1,0 +1,167 @@
+\hypertarget{classChef}{}\doxysection{Chef Class Reference}
+\label{classChef}\index{Chef@{Chef}}
+
+
+The \mbox{\hyperlink{classChef}{Chef}} class is an abstract base class that defines the interface for creating meals and receiving orders.  
+
+
+
+
+{\ttfamily \#include $<$Chef.\+h$>$}
+
+
+
+Inheritance diagram for Chef\+:
+% FIG 0
+
+
+Collaboration diagram for Chef\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classMeal}{Meal}} $\ast$ \mbox{\hyperlink{classChef_a14c3a0db90b1ce2a7eca636693b8c027}{create\+Starter}} ()=0
+\begin{DoxyCompactList}\small\item\em Creates a starter meal. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classMeal}{Meal}} $\ast$ \mbox{\hyperlink{classChef_a2da753c1b710c7fb1c9e0b92a671e268}{create\+Main}} ()=0
+\begin{DoxyCompactList}\small\item\em Creates a main meal. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classChef_af8fe2b871d9665c1b75cae87f9bbb0da}{add\+Meal}} (\mbox{\hyperlink{classMeal}{Meal}} $\ast$meal)=0
+\begin{DoxyCompactList}\small\item\em Adds a meal to the plate. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classChef_a34839d079bbb4619e1e55079a3574439}{receive\+Order}} (\mbox{\hyperlink{classFoodItem}{Food\+Item}} $\ast$food\+Item, int table\+Number, int cust\+ID, int num\+Of\+Items)=0
+\begin{DoxyCompactList}\small\item\em Receives an order for a food item. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classChef_a90fcac8904c17b65f4656adba3b647ae}{set\+Plate}} (\mbox{\hyperlink{classPlate}{Plate}} $\ast$\mbox{\hyperlink{classChef_a956e9f69a7118fab3c899adc5444bb03}{plate}})
+\begin{DoxyCompactList}\small\item\em Sets the plate object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classChef_ae05f33ffa7813875a22851cea1ee5e66}{name}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classPlate}{Plate}} $\ast$ \mbox{\hyperlink{classChef_a956e9f69a7118fab3c899adc5444bb03}{plate}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classChef}{Chef}} class is an abstract base class that defines the interface for creating meals and receiving orders. 
+
+It contains a protected member variable for the chef\textquotesingle{}s name and a static member variable for the plate. The class provides pure virtual functions for creating starters and mains, adding meals, and receiving orders. It also provides a static function to set the plate. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classChef_af8fe2b871d9665c1b75cae87f9bbb0da}\label{classChef_af8fe2b871d9665c1b75cae87f9bbb0da}} 
+\index{Chef@{Chef}!addMeal@{addMeal}}
+\index{addMeal@{addMeal}!Chef@{Chef}}
+\doxysubsubsection{\texorpdfstring{addMeal()}{addMeal()}}
+{\footnotesize\ttfamily virtual void Chef\+::add\+Meal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMeal}{Meal}} $\ast$}]{meal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Adds a meal to the plate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em meal} & A pointer to the meal to be added. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classVegetableChef_ab283fb862cbc40d53a4ba4350c21084a}{Vegetable\+Chef}}, \mbox{\hyperlink{classRotisseurChef_a7eb8ff41ebc76d569a61b492fa9f4671}{Rotisseur\+Chef}}, \mbox{\hyperlink{classPastaChef_ae7f1f7bdc2d0f9607daf349e712b083a}{Pasta\+Chef}}, \mbox{\hyperlink{classGrillChef_aa706d14478dd6a122f737275d993d32b}{Grill\+Chef}}, and \mbox{\hyperlink{classFryCook_aa849915f6b6cd76fb68e5081168eba25}{Fry\+Cook}}.
+
+\mbox{\Hypertarget{classChef_a2da753c1b710c7fb1c9e0b92a671e268}\label{classChef_a2da753c1b710c7fb1c9e0b92a671e268}} 
+\index{Chef@{Chef}!createMain@{createMain}}
+\index{createMain@{createMain}!Chef@{Chef}}
+\doxysubsubsection{\texorpdfstring{createMain()}{createMain()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classMeal}{Meal}}$\ast$ Chef\+::create\+Main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Creates a main meal. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the created main meal. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classVegetableChef_a5cca12a678cef40c09aeb8189fce9ea9}{Vegetable\+Chef}}, \mbox{\hyperlink{classRotisseurChef_a4ff61ec2871616efbe2214187f180eb9}{Rotisseur\+Chef}}, \mbox{\hyperlink{classPastaChef_a4f58179d5c67996dcd44138bf0f474c5}{Pasta\+Chef}}, \mbox{\hyperlink{classGrillChef_a3e68b9bd84ff7c38c9d5a7fd3ca24fb8}{Grill\+Chef}}, and \mbox{\hyperlink{classFryCook_a8ba22efda7ab849a8a08bbca67ec70c8}{Fry\+Cook}}.
+
+\mbox{\Hypertarget{classChef_a14c3a0db90b1ce2a7eca636693b8c027}\label{classChef_a14c3a0db90b1ce2a7eca636693b8c027}} 
+\index{Chef@{Chef}!createStarter@{createStarter}}
+\index{createStarter@{createStarter}!Chef@{Chef}}
+\doxysubsubsection{\texorpdfstring{createStarter()}{createStarter()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classMeal}{Meal}}$\ast$ Chef\+::create\+Starter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Creates a starter meal. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the created starter meal. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classVegetableChef_afb00989b8c2b12cbf0ef8dd7acfb4111}{Vegetable\+Chef}}, \mbox{\hyperlink{classRotisseurChef_aa372e7cd525721730d2a77a40b72b648}{Rotisseur\+Chef}}, \mbox{\hyperlink{classPastaChef_a0ae2a9499cb14cf95fbc76525de9876f}{Pasta\+Chef}}, \mbox{\hyperlink{classGrillChef_ac9f0545d7803bb77e928a86a609f24c0}{Grill\+Chef}}, and \mbox{\hyperlink{classFryCook_ad9daa77b50f6b64a69db47098ab58f76}{Fry\+Cook}}.
+
+\mbox{\Hypertarget{classChef_a34839d079bbb4619e1e55079a3574439}\label{classChef_a34839d079bbb4619e1e55079a3574439}} 
+\index{Chef@{Chef}!receiveOrder@{receiveOrder}}
+\index{receiveOrder@{receiveOrder}!Chef@{Chef}}
+\doxysubsubsection{\texorpdfstring{receiveOrder()}{receiveOrder()}}
+{\footnotesize\ttfamily virtual void Chef\+::receive\+Order (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFoodItem}{Food\+Item}} $\ast$}]{food\+Item,  }\item[{int}]{table\+Number,  }\item[{int}]{cust\+ID,  }\item[{int}]{num\+Of\+Items }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Receives an order for a food item. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em food\+Item} & A pointer to the food item being ordered. \\
+\hline
+{\em table\+Number} & The number of the table the order is for. \\
+\hline
+{\em cust\+ID} & The ID of the customer placing the order. \\
+\hline
+{\em num\+Of\+Items} & The number of items being ordered. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classVegetableChef_a70af941bb1b8a017f505e2bbf5369a34}{Vegetable\+Chef}}, \mbox{\hyperlink{classRotisseurChef_a66c4c8243bd2496f9e33019e337ac46a}{Rotisseur\+Chef}}, \mbox{\hyperlink{classPastaChef_ad07b1f1d2eb3a73efd39fbac093cc3dc}{Pasta\+Chef}}, \mbox{\hyperlink{classGrillChef_a9be7b9eaf67d68cad3aaed28667ca272}{Grill\+Chef}}, and \mbox{\hyperlink{classFryCook_afdd063340eb4ab28b03bc8925f9864c5}{Fry\+Cook}}.
+
+\mbox{\Hypertarget{classChef_a90fcac8904c17b65f4656adba3b647ae}\label{classChef_a90fcac8904c17b65f4656adba3b647ae}} 
+\index{Chef@{Chef}!setPlate@{setPlate}}
+\index{setPlate@{setPlate}!Chef@{Chef}}
+\doxysubsubsection{\texorpdfstring{setPlate()}{setPlate()}}
+{\footnotesize\ttfamily void Chef\+::set\+Plate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlate}{Plate}} $\ast$}]{plate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sets the plate object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em plate} & A pointer to the plate object. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classChef_ae05f33ffa7813875a22851cea1ee5e66}\label{classChef_ae05f33ffa7813875a22851cea1ee5e66}} 
+\index{Chef@{Chef}!name@{name}}
+\index{name@{name}!Chef@{Chef}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string Chef\+::name\hspace{0.3cm}{\ttfamily [protected]}}
+
+The name of the chef. \mbox{\Hypertarget{classChef_a956e9f69a7118fab3c899adc5444bb03}\label{classChef_a956e9f69a7118fab3c899adc5444bb03}} 
+\index{Chef@{Chef}!plate@{plate}}
+\index{plate@{plate}!Chef@{Chef}}
+\doxysubsubsection{\texorpdfstring{plate}{plate}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlate}{Plate}} $\ast$ Chef\+::plate\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+A pointer to the plate object. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Chef.\+h\item 
+Chef.\+cpp\end{DoxyCompactItemize}

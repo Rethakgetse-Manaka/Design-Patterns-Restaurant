@@ -34,8 +34,8 @@ void RestaurantOrderMediator::notifyOrderPlaced(Order* o)
         t->setTableNumber(o->getTableNumber());
         Chef::setPlate(t);
         bartender->setTray(d);
-
-        std::cout << "Order handler received the order from the waiter and is passing it to a Bartender"<<std::endl << std::endl;
+        if(o->getDrinks().size() != 0)
+            std::cout << "Order handler received the order from the waiter and is passing it to a Bartender"<<std::endl << std::endl;
 
 
         for (size_t i = 0; i < o->getDrinks().size(); i++) {
@@ -46,8 +46,8 @@ void RestaurantOrderMediator::notifyOrderPlaced(Order* o)
         o->setTray(d);
         o->setPlate(t);
 
-        
-        std::cout << "Order handler received the order from the waiter and is passing it to an available chef.."<<std::endl << std::endl;
+        if(o->getFoodItems().size() != 0)
+            std::cout << "Order handler received the order from the waiter and is passing it to an available chef.."<<std::endl << std::endl;
 
 
         //Need to handle passing the order  to chefs

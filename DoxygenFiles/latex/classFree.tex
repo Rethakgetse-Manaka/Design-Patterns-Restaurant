@@ -1,0 +1,137 @@
+\hypertarget{classFree}{}\doxysection{Free Class Reference}
+\label{classFree}\index{Free@{Free}}
+
+
+The \mbox{\hyperlink{classFree}{Free}} class represents the state of a table when it is unoccupied and available for customers to use.  
+
+
+
+
+{\ttfamily \#include $<$Table\+State.\+h$>$}
+
+
+
+Inheritance diagram for Free\+:
+% FIG 0
+
+
+Collaboration diagram for Free\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classFree_ae6a4c8bfa153c2bdcf4f1be7017c01c4}{occupy}} (\mbox{\hyperlink{classTable}{Table}} $\ast$table) override
+\begin{DoxyCompactList}\small\item\em This method is called when a table is occupied. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFree_a8229de80738b4ced161844a8292a2e57}{free}} (\mbox{\hyperlink{classTable}{Table}} $\ast$table) override
+\begin{DoxyCompactList}\small\item\em This method is called when a table is freed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFree_a7b85dca29dc69130e87a464ebabbfa9a}{combine}} (\mbox{\hyperlink{classTable}{Table}} $\ast$table) override
+\begin{DoxyCompactList}\small\item\em This method is called when two tables are combined. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFree_a5d977672cc3aa21ec600b2a8a5d0fe55}{split}} (\mbox{\hyperlink{classTable}{Table}} $\ast$table) override
+\begin{DoxyCompactList}\small\item\em This method is called when a table is split into two tables. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classFree_a6f93bd7cea58fd7221fad852e7020dda}{get\+Table\+Status}} () override
+\begin{DoxyCompactList}\small\item\em This method returns the status of the table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classFree}{Free}} class represents the state of a table when it is unoccupied and available for customers to use. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classFree_a7b85dca29dc69130e87a464ebabbfa9a}\label{classFree_a7b85dca29dc69130e87a464ebabbfa9a}} 
+\index{Free@{Free}!combine@{combine}}
+\index{combine@{combine}!Free@{Free}}
+\doxysubsubsection{\texorpdfstring{combine()}{combine()}}
+{\footnotesize\ttfamily void Free\+::combine (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTable}{Table}} $\ast$}]{table }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+This method is called when two tables are combined. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table} & A pointer to the table that is being combined with another table. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classTableState_af4500f88560dd884d460801c04ec50b6}{Table\+State}}.
+
+\mbox{\Hypertarget{classFree_a8229de80738b4ced161844a8292a2e57}\label{classFree_a8229de80738b4ced161844a8292a2e57}} 
+\index{Free@{Free}!free@{free}}
+\index{free@{free}!Free@{Free}}
+\doxysubsubsection{\texorpdfstring{free()}{free()}}
+{\footnotesize\ttfamily void Free\+::free (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTable}{Table}} $\ast$}]{table }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+This method is called when a table is freed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table} & A pointer to the table that is being freed. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classTableState_acbf39b480387c5cd93b3abe5b4abeb6e}{Table\+State}}.
+
+\mbox{\Hypertarget{classFree_a6f93bd7cea58fd7221fad852e7020dda}\label{classFree_a6f93bd7cea58fd7221fad852e7020dda}} 
+\index{Free@{Free}!getTableStatus@{getTableStatus}}
+\index{getTableStatus@{getTableStatus}!Free@{Free}}
+\doxysubsubsection{\texorpdfstring{getTableStatus()}{getTableStatus()}}
+{\footnotesize\ttfamily std\+::string Free\+::get\+Table\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+This method returns the status of the table. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string The status of the table. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classTableState_a85b3a640a565ad55cb0a7c74c6442670}{Table\+State}}.
+
+\mbox{\Hypertarget{classFree_ae6a4c8bfa153c2bdcf4f1be7017c01c4}\label{classFree_ae6a4c8bfa153c2bdcf4f1be7017c01c4}} 
+\index{Free@{Free}!occupy@{occupy}}
+\index{occupy@{occupy}!Free@{Free}}
+\doxysubsubsection{\texorpdfstring{occupy()}{occupy()}}
+{\footnotesize\ttfamily void Free\+::occupy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTable}{Table}} $\ast$}]{table }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+This method is called when a table is occupied. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table} & A pointer to the table that is being occupied. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classTableState_ac8d589baeaa41bd884418c0deee36a89}{Table\+State}}.
+
+\mbox{\Hypertarget{classFree_a5d977672cc3aa21ec600b2a8a5d0fe55}\label{classFree_a5d977672cc3aa21ec600b2a8a5d0fe55}} 
+\index{Free@{Free}!split@{split}}
+\index{split@{split}!Free@{Free}}
+\doxysubsubsection{\texorpdfstring{split()}{split()}}
+{\footnotesize\ttfamily void Free\+::split (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTable}{Table}} $\ast$}]{table }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+This method is called when a table is split into two tables. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table} & A pointer to the table that is being split. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classTableState_a433d6e347877ed66f6b9b8015f11f8b8}{Table\+State}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Table\+State.\+h\item 
+Table\+State.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,57 @@
+\hypertarget{classTableVisitor}{}\doxysection{Table\+Visitor Class Reference}
+\label{classTableVisitor}\index{TableVisitor@{TableVisitor}}
+
+
+The \mbox{\hyperlink{classTableVisitor}{Table\+Visitor}} class is an abstract class that defines the interface for visiting customers in a restaurant.  
+
+
+
+
+{\ttfamily \#include $<$Table\+Visitor.\+h$>$}
+
+
+
+Inheritance diagram for Table\+Visitor\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTableVisitor_a2faeb3034ad9979bcf433bfa83450950}\label{classTableVisitor_a2faeb3034ad9979bcf433bfa83450950}} 
+\mbox{\hyperlink{classTableVisitor_a2faeb3034ad9979bcf433bfa83450950}{Table\+Visitor}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classTable}{Table}} Visitor object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classTableVisitor_ad7633f477455ed03ab26580a405c052c}{visit\+Customer}} (\mbox{\hyperlink{classCustomer}{Customer}} $\ast$customer)=0
+\begin{DoxyCompactList}\small\item\em Visit a customer object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTableVisitor_a083e70dfe0ef2bcd115d9255eb209512}\label{classTableVisitor_a083e70dfe0ef2bcd115d9255eb209512}} 
+virtual \mbox{\hyperlink{classTableVisitor_a083e70dfe0ef2bcd115d9255eb209512}{$\sim$\+Table\+Visitor}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classTable}{Table}} Visitor object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classTableVisitor}{Table\+Visitor}} class is an abstract class that defines the interface for visiting customers in a restaurant. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTableVisitor_ad7633f477455ed03ab26580a405c052c}\label{classTableVisitor_ad7633f477455ed03ab26580a405c052c}} 
+\index{TableVisitor@{TableVisitor}!visitCustomer@{visitCustomer}}
+\index{visitCustomer@{visitCustomer}!TableVisitor@{TableVisitor}}
+\doxysubsubsection{\texorpdfstring{visitCustomer()}{visitCustomer()}}
+{\footnotesize\ttfamily virtual void Table\+Visitor\+::visit\+Customer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCustomer}{Customer}} $\ast$}]{customer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Visit a customer object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em customer} & The customer to visit \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classComplaintsManager_a4550debbb5a85b5269397c7700e38450}{Complaints\+Manager}}, and \mbox{\hyperlink{classAdminManager_a1f0a468460c81d9829e8e0439071713c}{Admin\+Manager}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Table\+Visitor.\+h\item 
+Table\+Visitor.\+cpp\end{DoxyCompactItemize}

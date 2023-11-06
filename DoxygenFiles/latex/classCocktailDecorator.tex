@@ -1,0 +1,161 @@
+\hypertarget{classCocktailDecorator}{}\doxysection{Cocktail\+Decorator Class Reference}
+\label{classCocktailDecorator}\index{CocktailDecorator@{CocktailDecorator}}
+
+
+The \mbox{\hyperlink{classCocktailDecorator}{Cocktail\+Decorator}} class is an abstract class that serves as a base for all cocktail decorators.  
+
+
+
+
+{\ttfamily \#include $<$Cocktail\+Decorator.\+h$>$}
+
+
+
+Inheritance diagram for Cocktail\+Decorator\+:
+% FIG 0
+
+
+Collaboration diagram for Cocktail\+Decorator\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCocktailDecorator_addd666b6133f8920cfcf64c59e0394d8}{Cocktail\+Decorator}} (\mbox{\hyperlink{classCocktail}{Cocktail}} $\ast$base\+Cocktail)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classCocktail}{Cocktail}} Decorator object. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classCocktailDecorator_a214445dcb0d7e66ae0f35333ac6810d4}{get\+Description}} () const
+\begin{DoxyCompactList}\small\item\em Get the description of the decorated cocktail. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classCocktailDecorator_a75665cc6299f982c3b6c876788e9ee71}{cost}} () const
+\begin{DoxyCompactList}\small\item\em Get the cost of the decorated cocktail. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classCocktailDecorator_a8f39f7bb8c68a7786572104484002e4e}{get\+Price}} ()=0
+\begin{DoxyCompactList}\small\item\em Get the price of the decorated cocktail. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classCocktailDecorator_acb449b9b6c650feb5d7c88284709e32c}{to\+String}} ()=0
+\begin{DoxyCompactList}\small\item\em Get a string representation of the decorated cocktail. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCocktailDecorator_a9354f9dd59d6ef18ff1adff2ec5e3086}\label{classCocktailDecorator_a9354f9dd59d6ef18ff1adff2ec5e3086}} 
+virtual \mbox{\hyperlink{classCocktailDecorator_a9354f9dd59d6ef18ff1adff2ec5e3086}{$\sim$\+Cocktail\+Decorator}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classCocktail}{Cocktail}} Decorator object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCocktail}{Cocktail}} $\ast$ \mbox{\hyperlink{classCocktailDecorator_a3c47d37b1673f76dd775beae0e1df878}{cocktail}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classCocktailDecorator}{Cocktail\+Decorator}} class is an abstract class that serves as a base for all cocktail decorators. 
+
+It inherits from the \mbox{\hyperlink{classCocktail}{Cocktail}} class and provides a common interface for all decorators to implement. The class contains a pointer to a \mbox{\hyperlink{classCocktail}{Cocktail}} object that it decorates. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCocktailDecorator_addd666b6133f8920cfcf64c59e0394d8}\label{classCocktailDecorator_addd666b6133f8920cfcf64c59e0394d8}} 
+\index{CocktailDecorator@{CocktailDecorator}!CocktailDecorator@{CocktailDecorator}}
+\index{CocktailDecorator@{CocktailDecorator}!CocktailDecorator@{CocktailDecorator}}
+\doxysubsubsection{\texorpdfstring{CocktailDecorator()}{CocktailDecorator()}}
+{\footnotesize\ttfamily Cocktail\+Decorator\+::\+Cocktail\+Decorator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCocktail}{Cocktail}} $\ast$}]{base\+Cocktail }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classCocktail}{Cocktail}} Decorator object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Cocktail} & A pointer to the \mbox{\hyperlink{classCocktail}{Cocktail}} object that is being decorated. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCocktailDecorator_a75665cc6299f982c3b6c876788e9ee71}\label{classCocktailDecorator_a75665cc6299f982c3b6c876788e9ee71}} 
+\index{CocktailDecorator@{CocktailDecorator}!cost@{cost}}
+\index{cost@{cost}!CocktailDecorator@{CocktailDecorator}}
+\doxysubsubsection{\texorpdfstring{cost()}{cost()}}
+{\footnotesize\ttfamily double Cocktail\+Decorator\+::cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the cost of the decorated cocktail. 
+
+\begin{DoxyReturn}{Returns}
+double The cost of the decorated cocktail. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCocktail_a293ecfea681a93c073ca2829be0b506c}{Cocktail}}.
+
+\mbox{\Hypertarget{classCocktailDecorator_a214445dcb0d7e66ae0f35333ac6810d4}\label{classCocktailDecorator_a214445dcb0d7e66ae0f35333ac6810d4}} 
+\index{CocktailDecorator@{CocktailDecorator}!getDescription@{getDescription}}
+\index{getDescription@{getDescription}!CocktailDecorator@{CocktailDecorator}}
+\doxysubsubsection{\texorpdfstring{getDescription()}{getDescription()}}
+{\footnotesize\ttfamily std\+::string Cocktail\+Decorator\+::get\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the description of the decorated cocktail. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string The description of the decorated cocktail. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCocktail_a937bde8f2c7adbf30c712b530dd847a7}{Cocktail}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classSpecificCocktail_a51072903c14267a9e2cc72d75865fe62}{Specific\+Cocktail}}, and \mbox{\hyperlink{classAlcoholDecorator_a9503a2290eb26207dc429bfb55df510b}{Alcohol\+Decorator}}.
+
+\mbox{\Hypertarget{classCocktailDecorator_a8f39f7bb8c68a7786572104484002e4e}\label{classCocktailDecorator_a8f39f7bb8c68a7786572104484002e4e}} 
+\index{CocktailDecorator@{CocktailDecorator}!getPrice@{getPrice}}
+\index{getPrice@{getPrice}!CocktailDecorator@{CocktailDecorator}}
+\doxysubsubsection{\texorpdfstring{getPrice()}{getPrice()}}
+{\footnotesize\ttfamily virtual double Cocktail\+Decorator\+::get\+Price (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the price of the decorated cocktail. 
+
+\begin{DoxyReturn}{Returns}
+double The price of the decorated cocktail. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCocktail_aa13b9a7c4d4f178fbf1bb3c19fc9f252}{Cocktail}}.
+
+
+
+Implemented in \mbox{\hyperlink{classSpecificCocktail_a0488718f0f3e1998815ea18ed7b7424e}{Specific\+Cocktail}}.
+
+\mbox{\Hypertarget{classCocktailDecorator_acb449b9b6c650feb5d7c88284709e32c}\label{classCocktailDecorator_acb449b9b6c650feb5d7c88284709e32c}} 
+\index{CocktailDecorator@{CocktailDecorator}!toString@{toString}}
+\index{toString@{toString}!CocktailDecorator@{CocktailDecorator}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily virtual std\+::string Cocktail\+Decorator\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get a string representation of the decorated cocktail. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string A string representation of the decorated cocktail. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classCocktail_a16aad18c46fc838e67b3440d1ba560dd}{Cocktail}}.
+
+
+
+Implemented in \mbox{\hyperlink{classSpecificCocktail_af94aab0aa289f9006bd102f4dd008a26}{Specific\+Cocktail}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classCocktailDecorator_a3c47d37b1673f76dd775beae0e1df878}\label{classCocktailDecorator_a3c47d37b1673f76dd775beae0e1df878}} 
+\index{CocktailDecorator@{CocktailDecorator}!cocktail@{cocktail}}
+\index{cocktail@{cocktail}!CocktailDecorator@{CocktailDecorator}}
+\doxysubsubsection{\texorpdfstring{cocktail}{cocktail}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCocktail}{Cocktail}}$\ast$ Cocktail\+Decorator\+::cocktail\hspace{0.3cm}{\ttfamily [protected]}}
+
+A pointer to the \mbox{\hyperlink{classCocktail}{Cocktail}} object that is being decorated. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Cocktail\+Decorator.\+h\item 
+Cocktail\+Decorator.\+cpp\end{DoxyCompactItemize}

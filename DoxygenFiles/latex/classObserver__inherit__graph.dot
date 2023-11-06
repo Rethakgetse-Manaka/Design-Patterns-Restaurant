@@ -1,0 +1,9 @@
+digraph "Observer"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Observer",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="The Observer class is an abstract class that defines the interface for objects that should be notifie..."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="RestaurantObserver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRestaurantObserver.html",tooltip="The RestaurantObserver class is a concrete Observer that observes changes in the Inventory and update..."];
+}

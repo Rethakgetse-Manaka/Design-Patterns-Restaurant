@@ -1,0 +1,147 @@
+\hypertarget{classCompositeBill}{}\doxysection{Composite\+Bill Class Reference}
+\label{classCompositeBill}\index{CompositeBill@{CompositeBill}}
+
+
+The \mbox{\hyperlink{classCompositeBill}{Composite\+Bill}} class represents a composite bill that can contain multiple bills.  
+
+
+
+
+{\ttfamily \#include $<$Composite\+Bill.\+h$>$}
+
+
+
+Inheritance diagram for Composite\+Bill\+:
+% FIG 0
+
+
+Collaboration diagram for Composite\+Bill\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCompositeBill_acb04d03746401f3b1deea97ffd94da63}\label{classCompositeBill_acb04d03746401f3b1deea97ffd94da63}} 
+\mbox{\hyperlink{classCompositeBill_acb04d03746401f3b1deea97ffd94da63}{Composite\+Bill}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new Composite \mbox{\hyperlink{classBill}{Bill}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCompositeBill_a800455284bdfd6ecd3e31c885174ab73}\label{classCompositeBill_a800455284bdfd6ecd3e31c885174ab73}} 
+void \mbox{\hyperlink{classCompositeBill_a800455284bdfd6ecd3e31c885174ab73}{print\+Bill}} ()
+\begin{DoxyCompactList}\small\item\em Prints the composite bill. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classBill}{Bill}} $\ast$ \mbox{\hyperlink{classCompositeBill_ac46833e548d52fc93f238cddec21a85e}{find\+Bill}} (int customer)
+\begin{DoxyCompactList}\small\item\em Finds a bill with the specified customer ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCompositeBill_acc02f092332deb841f1c499c0fc4646e}{add\+Person}} (\mbox{\hyperlink{classBill}{Bill}} $\ast$\mbox{\hyperlink{classBill}{Bill}})
+\begin{DoxyCompactList}\small\item\em Adds a bill to the composite bill. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCompositeBill_aaaebd122fc376f73a1c66c3ed6a67e6c}{remove\+Person}} (int customer)
+\begin{DoxyCompactList}\small\item\em Removes a bill with the specified customer ID from the composite bill. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classCompositeBill_a0a07fe60ce99da8825d5c238eafd7dd5}{get\+Bill\+Total}} ()
+\begin{DoxyCompactList}\small\item\em Gets the total amount of the composite bill. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classOrder}{Order}} $\ast$ \mbox{\hyperlink{classCompositeBill_aaec3c064b0b8118e7a4873fe8118a30a}{get\+Order}} ()
+\begin{DoxyCompactList}\small\item\em Gets the order associated with the composite bill. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCompositeBill_ae98e7bc03cba2b1baeeaa0d09753ab78}\label{classCompositeBill_ae98e7bc03cba2b1baeeaa0d09753ab78}} 
+virtual \mbox{\hyperlink{classCompositeBill_ae98e7bc03cba2b1baeeaa0d09753ab78}{$\sim$\+Composite\+Bill}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the Composite \mbox{\hyperlink{classBill}{Bill}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classCompositeBill}{Composite\+Bill}} class represents a composite bill that can contain multiple bills. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCompositeBill_acc02f092332deb841f1c499c0fc4646e}\label{classCompositeBill_acc02f092332deb841f1c499c0fc4646e}} 
+\index{CompositeBill@{CompositeBill}!addPerson@{addPerson}}
+\index{addPerson@{addPerson}!CompositeBill@{CompositeBill}}
+\doxysubsubsection{\texorpdfstring{addPerson()}{addPerson()}}
+{\footnotesize\ttfamily void Composite\+Bill\+::add\+Person (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBill}{Bill}} $\ast$}]{Bill }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Adds a bill to the composite bill. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{classBill}{Bill}}} & A pointer to the \mbox{\hyperlink{classBill}{Bill}} object to add. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classBill}{Bill}}.
+
+\mbox{\Hypertarget{classCompositeBill_ac46833e548d52fc93f238cddec21a85e}\label{classCompositeBill_ac46833e548d52fc93f238cddec21a85e}} 
+\index{CompositeBill@{CompositeBill}!findBill@{findBill}}
+\index{findBill@{findBill}!CompositeBill@{CompositeBill}}
+\doxysubsubsection{\texorpdfstring{findBill()}{findBill()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBill}{Bill}} $\ast$ Composite\+Bill\+::find\+Bill (\begin{DoxyParamCaption}\item[{int}]{customer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Finds a bill with the specified customer ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em customer} & The customer ID to search for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the \mbox{\hyperlink{classBill}{Bill}} object with the specified customer ID, or nullptr if not found. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBill}{Bill}}.
+
+\mbox{\Hypertarget{classCompositeBill_a0a07fe60ce99da8825d5c238eafd7dd5}\label{classCompositeBill_a0a07fe60ce99da8825d5c238eafd7dd5}} 
+\index{CompositeBill@{CompositeBill}!getBillTotal@{getBillTotal}}
+\index{getBillTotal@{getBillTotal}!CompositeBill@{CompositeBill}}
+\doxysubsubsection{\texorpdfstring{getBillTotal()}{getBillTotal()}}
+{\footnotesize\ttfamily double Composite\+Bill\+::get\+Bill\+Total (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the total amount of the composite bill. 
+
+\begin{DoxyReturn}{Returns}
+The total amount of the composite bill. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBill}{Bill}}.
+
+\mbox{\Hypertarget{classCompositeBill_aaec3c064b0b8118e7a4873fe8118a30a}\label{classCompositeBill_aaec3c064b0b8118e7a4873fe8118a30a}} 
+\index{CompositeBill@{CompositeBill}!getOrder@{getOrder}}
+\index{getOrder@{getOrder}!CompositeBill@{CompositeBill}}
+\doxysubsubsection{\texorpdfstring{getOrder()}{getOrder()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classOrder}{Order}} $\ast$ Composite\+Bill\+::get\+Order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the order associated with the composite bill. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the \mbox{\hyperlink{classOrder}{Order}} object associated with the composite bill. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBill}{Bill}}.
+
+\mbox{\Hypertarget{classCompositeBill_aaaebd122fc376f73a1c66c3ed6a67e6c}\label{classCompositeBill_aaaebd122fc376f73a1c66c3ed6a67e6c}} 
+\index{CompositeBill@{CompositeBill}!removePerson@{removePerson}}
+\index{removePerson@{removePerson}!CompositeBill@{CompositeBill}}
+\doxysubsubsection{\texorpdfstring{removePerson()}{removePerson()}}
+{\footnotesize\ttfamily void Composite\+Bill\+::remove\+Person (\begin{DoxyParamCaption}\item[{int}]{customer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Removes a bill with the specified customer ID from the composite bill. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em customer} & The customer ID of the bill to remove. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classBill}{Bill}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Composite\+Bill.\+h\item 
+Composite\+Bill.\+cpp\end{DoxyCompactItemize}

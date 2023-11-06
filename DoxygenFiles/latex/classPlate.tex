@@ -1,0 +1,148 @@
+\hypertarget{classPlate}{}\doxysection{Plate Class Reference}
+\label{classPlate}\index{Plate@{Plate}}
+
+
+The \mbox{\hyperlink{classPlate}{Plate}} class represents a plate that can hold multiple meals for a customer at a table.  
+
+
+
+
+{\ttfamily \#include $<$Plate.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPlate_aaa77995d1d6acb3f0a9437b8685d5294}\label{classPlate_aaa77995d1d6acb3f0a9437b8685d5294}} 
+\mbox{\hyperlink{classPlate_aaa77995d1d6acb3f0a9437b8685d5294}{Plate}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classPlate}{Plate}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlate_a67b08644cbe3e3c20c6c97331c7622be}{add\+Meal}} (\mbox{\hyperlink{classMeal}{Meal}} $\ast$item)
+\begin{DoxyCompactList}\small\item\em Add a meal to the plate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlate_ac13ad519ef0c51612e10270b497370a8}{set\+Table\+Number}} (int table\+Num)
+\begin{DoxyCompactList}\small\item\em Set the table number where the plate is located. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlate_afba2016bd1bbf1bd9325cbe7804393c3}{set\+Customer\+ID}} (int ID)
+\begin{DoxyCompactList}\small\item\em Set the ID of the customer who ordered the plate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlate_abb5248f62f97544a66ddb0379c1d4255}{remove\+Meal}} (\mbox{\hyperlink{classMeal}{Meal}} $\ast$item)
+\begin{DoxyCompactList}\small\item\em Remove a meal from the plate. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classMeal}{Meal}} $\ast$ $>$ \& \mbox{\hyperlink{classPlate_a286acd803bfe205fabc2e1e5a4eb68b4}{get\+Meals}} ()
+\begin{DoxyCompactList}\small\item\em Get a reference to the vector of \mbox{\hyperlink{classMeal}{Meal}} pointers representing the meals on the plate. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPlate_a82db84e46e1f667f0c04dc3824043817}\label{classPlate_a82db84e46e1f667f0c04dc3824043817}} 
+void \mbox{\hyperlink{classPlate_a82db84e46e1f667f0c04dc3824043817}{show\+Meals}} ()
+\begin{DoxyCompactList}\small\item\em Display the meals on the plate. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classPlate_a3f12d0467a89996193f5ac4687197b21}{get\+Table\+Number}} ()
+\begin{DoxyCompactList}\small\item\em Get the table number where the plate is located. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classPlate_a8fe7bf65b94bb4f47a90eb506d65b30c}{get\+Customer\+ID}} ()
+\begin{DoxyCompactList}\small\item\em Get the ID of the customer who ordered the plate. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPlate_a30453677da71df28af7da668a1279110}\label{classPlate_a30453677da71df28af7da668a1279110}} 
+virtual \mbox{\hyperlink{classPlate_a30453677da71df28af7da668a1279110}{$\sim$\+Plate}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classPlate}{Plate}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classPlate}{Plate}} class represents a plate that can hold multiple meals for a customer at a table. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPlate_a67b08644cbe3e3c20c6c97331c7622be}\label{classPlate_a67b08644cbe3e3c20c6c97331c7622be}} 
+\index{Plate@{Plate}!addMeal@{addMeal}}
+\index{addMeal@{addMeal}!Plate@{Plate}}
+\doxysubsubsection{\texorpdfstring{addMeal()}{addMeal()}}
+{\footnotesize\ttfamily void Plate\+::add\+Meal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMeal}{Meal}} $\ast$}]{item }\end{DoxyParamCaption})}
+
+
+
+Add a meal to the plate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & A pointer to the \mbox{\hyperlink{classMeal}{Meal}} object to be added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPlate_a8fe7bf65b94bb4f47a90eb506d65b30c}\label{classPlate_a8fe7bf65b94bb4f47a90eb506d65b30c}} 
+\index{Plate@{Plate}!getCustomerID@{getCustomerID}}
+\index{getCustomerID@{getCustomerID}!Plate@{Plate}}
+\doxysubsubsection{\texorpdfstring{getCustomerID()}{getCustomerID()}}
+{\footnotesize\ttfamily int Plate\+::get\+Customer\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the ID of the customer who ordered the plate. 
+
+\begin{DoxyReturn}{Returns}
+int An integer representing the customer ID. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPlate_a286acd803bfe205fabc2e1e5a4eb68b4}\label{classPlate_a286acd803bfe205fabc2e1e5a4eb68b4}} 
+\index{Plate@{Plate}!getMeals@{getMeals}}
+\index{getMeals@{getMeals}!Plate@{Plate}}
+\doxysubsubsection{\texorpdfstring{getMeals()}{getMeals()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classMeal}{Meal}} $\ast$ $>$ \& Plate\+::get\+Meals (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get a reference to the vector of \mbox{\hyperlink{classMeal}{Meal}} pointers representing the meals on the plate. 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Meal$\ast$$>$\& A reference to the vector of \mbox{\hyperlink{classMeal}{Meal}} pointers. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPlate_a3f12d0467a89996193f5ac4687197b21}\label{classPlate_a3f12d0467a89996193f5ac4687197b21}} 
+\index{Plate@{Plate}!getTableNumber@{getTableNumber}}
+\index{getTableNumber@{getTableNumber}!Plate@{Plate}}
+\doxysubsubsection{\texorpdfstring{getTableNumber()}{getTableNumber()}}
+{\footnotesize\ttfamily int Plate\+::get\+Table\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the table number where the plate is located. 
+
+\begin{DoxyReturn}{Returns}
+int An integer representing the table number. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPlate_abb5248f62f97544a66ddb0379c1d4255}\label{classPlate_abb5248f62f97544a66ddb0379c1d4255}} 
+\index{Plate@{Plate}!removeMeal@{removeMeal}}
+\index{removeMeal@{removeMeal}!Plate@{Plate}}
+\doxysubsubsection{\texorpdfstring{removeMeal()}{removeMeal()}}
+{\footnotesize\ttfamily void Plate\+::remove\+Meal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMeal}{Meal}} $\ast$}]{item }\end{DoxyParamCaption})}
+
+
+
+Remove a meal from the plate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & A pointer to the \mbox{\hyperlink{classMeal}{Meal}} object to be removed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPlate_afba2016bd1bbf1bd9325cbe7804393c3}\label{classPlate_afba2016bd1bbf1bd9325cbe7804393c3}} 
+\index{Plate@{Plate}!setCustomerID@{setCustomerID}}
+\index{setCustomerID@{setCustomerID}!Plate@{Plate}}
+\doxysubsubsection{\texorpdfstring{setCustomerID()}{setCustomerID()}}
+{\footnotesize\ttfamily void Plate\+::set\+Customer\+ID (\begin{DoxyParamCaption}\item[{int}]{ID }\end{DoxyParamCaption})}
+
+
+
+Set the ID of the customer who ordered the plate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & An integer representing the customer ID. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPlate_ac13ad519ef0c51612e10270b497370a8}\label{classPlate_ac13ad519ef0c51612e10270b497370a8}} 
+\index{Plate@{Plate}!setTableNumber@{setTableNumber}}
+\index{setTableNumber@{setTableNumber}!Plate@{Plate}}
+\doxysubsubsection{\texorpdfstring{setTableNumber()}{setTableNumber()}}
+{\footnotesize\ttfamily void Plate\+::set\+Table\+Number (\begin{DoxyParamCaption}\item[{int}]{table\+Num }\end{DoxyParamCaption})}
+
+
+
+Set the table number where the plate is located. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table\+Num} & An integer representing the table number. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Plate.\+h\item 
+Plate.\+cpp\end{DoxyCompactItemize}

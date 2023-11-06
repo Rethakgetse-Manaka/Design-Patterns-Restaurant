@@ -1,0 +1,130 @@
+\hypertarget{classTab}{}\doxysection{Tab Class Reference}
+\label{classTab}\index{Tab@{Tab}}
+
+
+The \mbox{\hyperlink{classTab}{Tab}} class represents a customer\textquotesingle{}s tab, which includes their ID, name, and amount owed.  
+
+
+
+
+{\ttfamily \#include $<$Tab.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTab_a0bd6f1ff00bf0b2894193a60cb33cb70}{Tab}} (int customer\+ID, std\+::string customer\+Name, double amount)
+\begin{DoxyCompactList}\small\item\em Constructs a new \mbox{\hyperlink{classTab}{Tab}} object with the given customer ID, name, and amount owed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTab_a8cc210bcede02daa21145bb1675c3c80}\label{classTab_a8cc210bcede02daa21145bb1675c3c80}} 
+\mbox{\hyperlink{classTab_a8cc210bcede02daa21145bb1675c3c80}{$\sim$\+Tab}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \mbox{\hyperlink{classTab}{Tab}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTab_a5b6ca8d697860fd6ec47cb17081bba2d}{restore\+Memento}} (\mbox{\hyperlink{classTabMemento}{Tab\+Memento}} $\ast$memento)
+\begin{DoxyCompactList}\small\item\em Restores the state of the \mbox{\hyperlink{classTab}{Tab}} object from a memento. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTabMemento}{Tab\+Memento}} $\ast$ \mbox{\hyperlink{classTab_a36926f493bbc7ca06aeb5f9093f94a73}{get\+Memento}} ()
+\begin{DoxyCompactList}\small\item\em Returns a memento representing the current state of the \mbox{\hyperlink{classTab}{Tab}} object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classTab_a85a85878aafbe1053aa387555a8df088}{get\+Customer\+ID}} () const
+\begin{DoxyCompactList}\small\item\em Returns the ID of the customer associated with the tab. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classTab_a9d61b3edf4e4111d09c03e0ebcf2d3d2}{get\+Amount}} () const
+\begin{DoxyCompactList}\small\item\em Returns the amount owed by the customer associated with the tab. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classTab_a8498577a478603da538bc38517e3958a}{get\+Customer\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Returns the name of the customer associated with the tab. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classTab}{Tab}} class represents a customer\textquotesingle{}s tab, which includes their ID, name, and amount owed. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTab_a0bd6f1ff00bf0b2894193a60cb33cb70}\label{classTab_a0bd6f1ff00bf0b2894193a60cb33cb70}} 
+\index{Tab@{Tab}!Tab@{Tab}}
+\index{Tab@{Tab}!Tab@{Tab}}
+\doxysubsubsection{\texorpdfstring{Tab()}{Tab()}}
+{\footnotesize\ttfamily Tab\+::\+Tab (\begin{DoxyParamCaption}\item[{int}]{customer\+ID,  }\item[{std\+::string}]{customer\+Name,  }\item[{double}]{amount }\end{DoxyParamCaption})}
+
+
+
+Constructs a new \mbox{\hyperlink{classTab}{Tab}} object with the given customer ID, name, and amount owed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em customer\+ID} & The ID of the customer. \\
+\hline
+{\em customer\+Name} & The name of the customer. \\
+\hline
+{\em amount} & The amount owed by the customer. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTab_a9d61b3edf4e4111d09c03e0ebcf2d3d2}\label{classTab_a9d61b3edf4e4111d09c03e0ebcf2d3d2}} 
+\index{Tab@{Tab}!getAmount@{getAmount}}
+\index{getAmount@{getAmount}!Tab@{Tab}}
+\doxysubsubsection{\texorpdfstring{getAmount()}{getAmount()}}
+{\footnotesize\ttfamily double Tab\+::get\+Amount (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the amount owed by the customer associated with the tab. 
+
+\begin{DoxyReturn}{Returns}
+The amount owed by the customer associated with the tab. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTab_a85a85878aafbe1053aa387555a8df088}\label{classTab_a85a85878aafbe1053aa387555a8df088}} 
+\index{Tab@{Tab}!getCustomerID@{getCustomerID}}
+\index{getCustomerID@{getCustomerID}!Tab@{Tab}}
+\doxysubsubsection{\texorpdfstring{getCustomerID()}{getCustomerID()}}
+{\footnotesize\ttfamily int Tab\+::get\+Customer\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the ID of the customer associated with the tab. 
+
+\begin{DoxyReturn}{Returns}
+The ID of the customer associated with the tab. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTab_a8498577a478603da538bc38517e3958a}\label{classTab_a8498577a478603da538bc38517e3958a}} 
+\index{Tab@{Tab}!getCustomerName@{getCustomerName}}
+\index{getCustomerName@{getCustomerName}!Tab@{Tab}}
+\doxysubsubsection{\texorpdfstring{getCustomerName()}{getCustomerName()}}
+{\footnotesize\ttfamily std\+::string Tab\+::get\+Customer\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the name of the customer associated with the tab. 
+
+\begin{DoxyReturn}{Returns}
+The name of the customer associated with the tab. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTab_a36926f493bbc7ca06aeb5f9093f94a73}\label{classTab_a36926f493bbc7ca06aeb5f9093f94a73}} 
+\index{Tab@{Tab}!getMemento@{getMemento}}
+\index{getMemento@{getMemento}!Tab@{Tab}}
+\doxysubsubsection{\texorpdfstring{getMemento()}{getMemento()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTabMemento}{Tab\+Memento}} $\ast$ Tab\+::get\+Memento (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns a memento representing the current state of the \mbox{\hyperlink{classTab}{Tab}} object. 
+
+\begin{DoxyReturn}{Returns}
+The memento representing the current state of the \mbox{\hyperlink{classTab}{Tab}} object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTab_a5b6ca8d697860fd6ec47cb17081bba2d}\label{classTab_a5b6ca8d697860fd6ec47cb17081bba2d}} 
+\index{Tab@{Tab}!restoreMemento@{restoreMemento}}
+\index{restoreMemento@{restoreMemento}!Tab@{Tab}}
+\doxysubsubsection{\texorpdfstring{restoreMemento()}{restoreMemento()}}
+{\footnotesize\ttfamily void Tab\+::restore\+Memento (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTabMemento}{Tab\+Memento}} $\ast$}]{memento }\end{DoxyParamCaption})}
+
+
+
+Restores the state of the \mbox{\hyperlink{classTab}{Tab}} object from a memento. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em memento} & The memento to restore from. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Tab.\+h\item 
+Tab.\+cpp\end{DoxyCompactItemize}

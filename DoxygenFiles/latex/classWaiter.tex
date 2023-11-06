@@ -1,0 +1,215 @@
+\hypertarget{classWaiter}{}\doxysection{Waiter Class Reference}
+\label{classWaiter}\index{Waiter@{Waiter}}
+
+
+The \mbox{\hyperlink{classWaiter}{Waiter}} class represents a colleague who takes orders from tables, presents food and drinks to tables, and presents bills to tables.  
+
+
+
+
+{\ttfamily \#include $<$Waiter.\+h$>$}
+
+
+
+Inheritance diagram for Waiter\+:
+% FIG 0
+
+
+Collaboration diagram for Waiter\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWaiter_a38082357dd4a223640af0a5c3c432e4f}{Waiter}} (std\+::string n)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classWaiter}{Waiter}} object with the given name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWaiter_aa3eac8a78439feb99b0bb50380f8597d}\label{classWaiter_aa3eac8a78439feb99b0bb50380f8597d}} 
+virtual \mbox{\hyperlink{classWaiter_aa3eac8a78439feb99b0bb50380f8597d}{$\sim$\+Waiter}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classWaiter}{Waiter}} object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWaiter_a4279885ed961191a9716948dcbd51dc1}{receive\+Order}} (\mbox{\hyperlink{classOrder}{Order}} $\ast$o)
+\begin{DoxyCompactList}\small\item\em Receive an order from a table. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWaiter_a4bf71e087e22795596c1de7c77303aed}{add\+Table}} (\mbox{\hyperlink{classTable}{Table}} $\ast$t)
+\begin{DoxyCompactList}\small\item\em Add a table to the waiter\textquotesingle{}s list of tables. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWaiter_a90b7ce814876537297daaa9336d260cc}{remove\+Table}} (\mbox{\hyperlink{classTable}{Table}} $\ast$t)
+\begin{DoxyCompactList}\small\item\em Remove a table from the waiter\textquotesingle{}s list of tables. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWaiter_a038d98d330be92341c5ce8af7d52e188}{present\+Food\+To\+Table}} (\mbox{\hyperlink{classPlate}{Plate}} $\ast$p)
+\begin{DoxyCompactList}\small\item\em Present a plate of food to a table. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWaiter_a39371b4c8629a6e2a3ccf216ab7249c3}{present\+Drinks\+To\+Table}} (\mbox{\hyperlink{classDrinkTray}{Drink\+Tray}} $\ast$d)
+\begin{DoxyCompactList}\small\item\em Present a drink tray to a table. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWaiter_aab5807cc4d2b110560738bdec9612249}{present\+Bill}} (\mbox{\hyperlink{classTable}{Table}} $\ast$t)
+\begin{DoxyCompactList}\small\item\em Present the bill to a table. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWaiter_a8588cb15ced2b74c6cfa567550701814}{manages\+Table}} (int tbn)
+\begin{DoxyCompactList}\small\item\em Check if the waiter manages a table with the given table number. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTable}{Table}} $\ast$ \mbox{\hyperlink{classWaiter_af250c3e5ba3d6df324d2c8fc27a6be3e}{get\+Table}} (int tbn)
+\begin{DoxyCompactList}\small\item\em Get the table with the given table number. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWaiter_a6b2e2da03b23552760de8949b80d616c}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Get the name of the waiter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classWaiter}{Waiter}} class represents a colleague who takes orders from tables, presents food and drinks to tables, and presents bills to tables. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWaiter_a38082357dd4a223640af0a5c3c432e4f}\label{classWaiter_a38082357dd4a223640af0a5c3c432e4f}} 
+\index{Waiter@{Waiter}!Waiter@{Waiter}}
+\index{Waiter@{Waiter}!Waiter@{Waiter}}
+\doxysubsubsection{\texorpdfstring{Waiter()}{Waiter()}}
+{\footnotesize\ttfamily Waiter\+::\+Waiter (\begin{DoxyParamCaption}\item[{std\+::string}]{n }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classWaiter}{Waiter}} object with the given name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The name of the waiter. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWaiter_a4bf71e087e22795596c1de7c77303aed}\label{classWaiter_a4bf71e087e22795596c1de7c77303aed}} 
+\index{Waiter@{Waiter}!addTable@{addTable}}
+\index{addTable@{addTable}!Waiter@{Waiter}}
+\doxysubsubsection{\texorpdfstring{addTable()}{addTable()}}
+{\footnotesize\ttfamily void Waiter\+::add\+Table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTable}{Table}} $\ast$}]{t }\end{DoxyParamCaption})}
+
+
+
+Add a table to the waiter\textquotesingle{}s list of tables. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & The table to add. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classWaiter_a6b2e2da03b23552760de8949b80d616c}\label{classWaiter_a6b2e2da03b23552760de8949b80d616c}} 
+\index{Waiter@{Waiter}!getName@{getName}}
+\index{getName@{getName}!Waiter@{Waiter}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Waiter\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the name of the waiter. 
+
+\begin{DoxyReturn}{Returns}
+The name of the waiter. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classWaiter_af250c3e5ba3d6df324d2c8fc27a6be3e}\label{classWaiter_af250c3e5ba3d6df324d2c8fc27a6be3e}} 
+\index{Waiter@{Waiter}!getTable@{getTable}}
+\index{getTable@{getTable}!Waiter@{Waiter}}
+\doxysubsubsection{\texorpdfstring{getTable()}{getTable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTable}{Table}} $\ast$ Waiter\+::get\+Table (\begin{DoxyParamCaption}\item[{int}]{tbn }\end{DoxyParamCaption})}
+
+
+
+Get the table with the given table number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tbn} & The table number to get. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The table with the given table number, or nullptr if no such table exists. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classWaiter_a8588cb15ced2b74c6cfa567550701814}\label{classWaiter_a8588cb15ced2b74c6cfa567550701814}} 
+\index{Waiter@{Waiter}!managesTable@{managesTable}}
+\index{managesTable@{managesTable}!Waiter@{Waiter}}
+\doxysubsubsection{\texorpdfstring{managesTable()}{managesTable()}}
+{\footnotesize\ttfamily bool Waiter\+::manages\+Table (\begin{DoxyParamCaption}\item[{int}]{tbn }\end{DoxyParamCaption})}
+
+
+
+Check if the waiter manages a table with the given table number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tbn} & The table number to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the waiter manages a table with the given table number, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classWaiter_aab5807cc4d2b110560738bdec9612249}\label{classWaiter_aab5807cc4d2b110560738bdec9612249}} 
+\index{Waiter@{Waiter}!presentBill@{presentBill}}
+\index{presentBill@{presentBill}!Waiter@{Waiter}}
+\doxysubsubsection{\texorpdfstring{presentBill()}{presentBill()}}
+{\footnotesize\ttfamily void Waiter\+::present\+Bill (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTable}{Table}} $\ast$}]{t }\end{DoxyParamCaption})}
+
+
+
+Present the bill to a table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & The table to present the bill to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classWaiter_a39371b4c8629a6e2a3ccf216ab7249c3}\label{classWaiter_a39371b4c8629a6e2a3ccf216ab7249c3}} 
+\index{Waiter@{Waiter}!presentDrinksToTable@{presentDrinksToTable}}
+\index{presentDrinksToTable@{presentDrinksToTable}!Waiter@{Waiter}}
+\doxysubsubsection{\texorpdfstring{presentDrinksToTable()}{presentDrinksToTable()}}
+{\footnotesize\ttfamily void Waiter\+::present\+Drinks\+To\+Table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDrinkTray}{Drink\+Tray}} $\ast$}]{d }\end{DoxyParamCaption})}
+
+
+
+Present a drink tray to a table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & The drink tray to present. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classWaiter_a038d98d330be92341c5ce8af7d52e188}\label{classWaiter_a038d98d330be92341c5ce8af7d52e188}} 
+\index{Waiter@{Waiter}!presentFoodToTable@{presentFoodToTable}}
+\index{presentFoodToTable@{presentFoodToTable}!Waiter@{Waiter}}
+\doxysubsubsection{\texorpdfstring{presentFoodToTable()}{presentFoodToTable()}}
+{\footnotesize\ttfamily void Waiter\+::present\+Food\+To\+Table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlate}{Plate}} $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+Present a plate of food to a table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & The plate of food to present. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classWaiter_a4279885ed961191a9716948dcbd51dc1}\label{classWaiter_a4279885ed961191a9716948dcbd51dc1}} 
+\index{Waiter@{Waiter}!receiveOrder@{receiveOrder}}
+\index{receiveOrder@{receiveOrder}!Waiter@{Waiter}}
+\doxysubsubsection{\texorpdfstring{receiveOrder()}{receiveOrder()}}
+{\footnotesize\ttfamily void Waiter\+::receive\+Order (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classOrder}{Order}} $\ast$}]{o }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Receive an order from a table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em o} & The order to receive. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classWaiter_a90b7ce814876537297daaa9336d260cc}\label{classWaiter_a90b7ce814876537297daaa9336d260cc}} 
+\index{Waiter@{Waiter}!removeTable@{removeTable}}
+\index{removeTable@{removeTable}!Waiter@{Waiter}}
+\doxysubsubsection{\texorpdfstring{removeTable()}{removeTable()}}
+{\footnotesize\ttfamily void Waiter\+::remove\+Table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTable}{Table}} $\ast$}]{t }\end{DoxyParamCaption})}
+
+
+
+Remove a table from the waiter\textquotesingle{}s list of tables. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & The table to remove. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Waiter.\+h\item 
+Waiter.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,191 @@
+\hypertarget{classRestaurant}{}\doxysection{Restaurant Class Reference}
+\label{classRestaurant}\index{Restaurant@{Restaurant}}
+
+
+The \mbox{\hyperlink{classRestaurant}{Restaurant}} class represents a restaurant that has tables, valets, managers, waiters, and an accounting system.  
+
+
+
+
+{\ttfamily \#include $<$Restaurant.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRestaurant_af72b2ed0971d325dc5d5dbf91e8462b5}\label{classRestaurant_af72b2ed0971d325dc5d5dbf91e8462b5}} 
+\mbox{\hyperlink{classRestaurant_af72b2ed0971d325dc5d5dbf91e8462b5}{Restaurant}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classRestaurant}{Restaurant}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRestaurant_a7bc35f515e2ffc122137f83a4cb0db3e}{set\+Accounting\+System}} (\mbox{\hyperlink{classAccountingSystem}{Accounting\+System}} $\ast$as)
+\begin{DoxyCompactList}\small\item\em Set the Accounting System object of the restaurant. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classAccountingSystem}{Accounting\+System}} $\ast$ \mbox{\hyperlink{classRestaurant_a38bdc876933d43ec9daf19d6d93ffa02}{get\+Accounting\+System}} ()
+\begin{DoxyCompactList}\small\item\em Get the Accounting System object of the restaurant. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRestaurant_ae74602f4acb10f73a4ce3a14593487c3}\label{classRestaurant_ae74602f4acb10f73a4ce3a14593487c3}} 
+void \mbox{\hyperlink{classRestaurant_ae74602f4acb10f73a4ce3a14593487c3}{display\+Basic\+Accouting}} ()
+\begin{DoxyCompactList}\small\item\em Display the basic accounting information of the restaurant. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRestaurant_a0ae15cf29655735f28bd318155419bd4}{add\+Valet}} (\mbox{\hyperlink{classValet}{Valet}} $\ast$valet)
+\begin{DoxyCompactList}\small\item\em Add a valet to the restaurant. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRestaurant_a9e8563162fe96008152c5260ddc5f439}{add\+Table}} (\mbox{\hyperlink{classTable}{Table}} $\ast$table)
+\begin{DoxyCompactList}\small\item\em Add a table to the restaurant. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRestaurant_a0058e28b72f909cbe7571638e437ea2a}{add\+Manager}} (\mbox{\hyperlink{classTableVisitor}{Table\+Visitor}} $\ast$manager)
+\begin{DoxyCompactList}\small\item\em Add a manager to the restaurant. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRestaurant_aec1c0b8632dac9f3c4d6a4905777bc77}{initial\+Customer\+Handling}} (\mbox{\hyperlink{classCustomer}{Customer}} $\ast$customer)
+\begin{DoxyCompactList}\small\item\em Handle the initial customer request. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRestaurant_ac948f2102a82853afc795245967e209b}{add\+Waiter}} (\mbox{\hyperlink{classWaiter}{Waiter}} $\ast$waiter)
+\begin{DoxyCompactList}\small\item\em Add a waiter to the restaurant. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRestaurant_a64a3037c074d93dd8b4ee14499b592d6}{request\+Bill}} (\mbox{\hyperlink{classTable}{Table}} $\ast$table)
+\begin{DoxyCompactList}\small\item\em Request a bill for a table. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRestaurant_a87b6dcd7b764e6fc88a29aef99f5f5e4}\label{classRestaurant_a87b6dcd7b764e6fc88a29aef99f5f5e4}} 
+void \mbox{\hyperlink{classRestaurant_a87b6dcd7b764e6fc88a29aef99f5f5e4}{visit\+Table}} ()
+\begin{DoxyCompactList}\small\item\em Visit a table. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRestaurant_a5d0c72e31e072728fbff491282ebf1b2}{pay\+Tab}} (\mbox{\hyperlink{classCustomer}{Customer}} $\ast$customer, \mbox{\hyperlink{classTabCaretaker}{Tab\+Caretaker}} $\ast$tab\+Caretaker)
+\begin{DoxyCompactList}\small\item\em Pay the tab for a customer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRestaurant_acb1d786ab04bc4880e79f13d839b9cbc}\label{classRestaurant_acb1d786ab04bc4880e79f13d839b9cbc}} 
+\mbox{\hyperlink{classRestaurant_acb1d786ab04bc4880e79f13d839b9cbc}{$\sim$\+Restaurant}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classRestaurant}{Restaurant}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classRestaurant}{Restaurant}} class represents a restaurant that has tables, valets, managers, waiters, and an accounting system. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRestaurant_a0058e28b72f909cbe7571638e437ea2a}\label{classRestaurant_a0058e28b72f909cbe7571638e437ea2a}} 
+\index{Restaurant@{Restaurant}!addManager@{addManager}}
+\index{addManager@{addManager}!Restaurant@{Restaurant}}
+\doxysubsubsection{\texorpdfstring{addManager()}{addManager()}}
+{\footnotesize\ttfamily void Restaurant\+::add\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTableVisitor}{Table\+Visitor}} $\ast$}]{manager }\end{DoxyParamCaption})}
+
+
+
+Add a manager to the restaurant. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em manager} & A pointer to the manager object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRestaurant_a9e8563162fe96008152c5260ddc5f439}\label{classRestaurant_a9e8563162fe96008152c5260ddc5f439}} 
+\index{Restaurant@{Restaurant}!addTable@{addTable}}
+\index{addTable@{addTable}!Restaurant@{Restaurant}}
+\doxysubsubsection{\texorpdfstring{addTable()}{addTable()}}
+{\footnotesize\ttfamily void Restaurant\+::add\+Table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTable}{Table}} $\ast$}]{table }\end{DoxyParamCaption})}
+
+
+
+Add a table to the restaurant. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table} & A pointer to the table object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRestaurant_a0ae15cf29655735f28bd318155419bd4}\label{classRestaurant_a0ae15cf29655735f28bd318155419bd4}} 
+\index{Restaurant@{Restaurant}!addValet@{addValet}}
+\index{addValet@{addValet}!Restaurant@{Restaurant}}
+\doxysubsubsection{\texorpdfstring{addValet()}{addValet()}}
+{\footnotesize\ttfamily void Restaurant\+::add\+Valet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classValet}{Valet}} $\ast$}]{valet }\end{DoxyParamCaption})}
+
+
+
+Add a valet to the restaurant. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em valet} & A pointer to the valet object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRestaurant_ac948f2102a82853afc795245967e209b}\label{classRestaurant_ac948f2102a82853afc795245967e209b}} 
+\index{Restaurant@{Restaurant}!addWaiter@{addWaiter}}
+\index{addWaiter@{addWaiter}!Restaurant@{Restaurant}}
+\doxysubsubsection{\texorpdfstring{addWaiter()}{addWaiter()}}
+{\footnotesize\ttfamily void Restaurant\+::add\+Waiter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWaiter}{Waiter}} $\ast$}]{waiter }\end{DoxyParamCaption})}
+
+
+
+Add a waiter to the restaurant. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em waiter} & A pointer to the waiter object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRestaurant_a38bdc876933d43ec9daf19d6d93ffa02}\label{classRestaurant_a38bdc876933d43ec9daf19d6d93ffa02}} 
+\index{Restaurant@{Restaurant}!getAccountingSystem@{getAccountingSystem}}
+\index{getAccountingSystem@{getAccountingSystem}!Restaurant@{Restaurant}}
+\doxysubsubsection{\texorpdfstring{getAccountingSystem()}{getAccountingSystem()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classAccountingSystem}{Accounting\+System}} $\ast$ Restaurant\+::get\+Accounting\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Accounting System object of the restaurant. 
+
+\begin{DoxyReturn}{Returns}
+Accounting\+System$\ast$ A pointer to the accounting system object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRestaurant_aec1c0b8632dac9f3c4d6a4905777bc77}\label{classRestaurant_aec1c0b8632dac9f3c4d6a4905777bc77}} 
+\index{Restaurant@{Restaurant}!initialCustomerHandling@{initialCustomerHandling}}
+\index{initialCustomerHandling@{initialCustomerHandling}!Restaurant@{Restaurant}}
+\doxysubsubsection{\texorpdfstring{initialCustomerHandling()}{initialCustomerHandling()}}
+{\footnotesize\ttfamily void Restaurant\+::initial\+Customer\+Handling (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCustomer}{Customer}} $\ast$}]{customer }\end{DoxyParamCaption})}
+
+
+
+Handle the initial customer request. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em customer} & A pointer to the customer object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRestaurant_a5d0c72e31e072728fbff491282ebf1b2}\label{classRestaurant_a5d0c72e31e072728fbff491282ebf1b2}} 
+\index{Restaurant@{Restaurant}!payTab@{payTab}}
+\index{payTab@{payTab}!Restaurant@{Restaurant}}
+\doxysubsubsection{\texorpdfstring{payTab()}{payTab()}}
+{\footnotesize\ttfamily void Restaurant\+::pay\+Tab (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCustomer}{Customer}} $\ast$}]{customer,  }\item[{\mbox{\hyperlink{classTabCaretaker}{Tab\+Caretaker}} $\ast$}]{tab\+Caretaker }\end{DoxyParamCaption})}
+
+
+
+Pay the tab for a customer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em customer} & A pointer to the customer object. \\
+\hline
+{\em tab\+Caretaker} & A pointer to the tab caretaker object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRestaurant_a64a3037c074d93dd8b4ee14499b592d6}\label{classRestaurant_a64a3037c074d93dd8b4ee14499b592d6}} 
+\index{Restaurant@{Restaurant}!requestBill@{requestBill}}
+\index{requestBill@{requestBill}!Restaurant@{Restaurant}}
+\doxysubsubsection{\texorpdfstring{requestBill()}{requestBill()}}
+{\footnotesize\ttfamily void Restaurant\+::request\+Bill (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTable}{Table}} $\ast$}]{table }\end{DoxyParamCaption})}
+
+
+
+Request a bill for a table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table} & A pointer to the table object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRestaurant_a7bc35f515e2ffc122137f83a4cb0db3e}\label{classRestaurant_a7bc35f515e2ffc122137f83a4cb0db3e}} 
+\index{Restaurant@{Restaurant}!setAccountingSystem@{setAccountingSystem}}
+\index{setAccountingSystem@{setAccountingSystem}!Restaurant@{Restaurant}}
+\doxysubsubsection{\texorpdfstring{setAccountingSystem()}{setAccountingSystem()}}
+{\footnotesize\ttfamily void Restaurant\+::set\+Accounting\+System (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classAccountingSystem}{Accounting\+System}} $\ast$}]{as }\end{DoxyParamCaption})}
+
+
+
+Set the Accounting System object of the restaurant. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em as} & A pointer to the accounting system object. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Restaurant.\+h\item 
+Restaurant.\+cpp\end{DoxyCompactItemize}

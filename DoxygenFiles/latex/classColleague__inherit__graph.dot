@@ -1,0 +1,23 @@
+digraph "Colleague"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Colleague",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="The Colleague class is an abstract base class that defines the interface for objects that communicate..."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Bartender",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classBartender.html",tooltip="The Bartender class is a concrete Colleague in the Mediator design pattern."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Chef",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classChef.html",tooltip="The Chef class is an abstract base class that defines the interface for creating meals and receiving ..."];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="FryCook",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classFryCook.html",tooltip=" "];
+  Node3 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="GrillChef",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classGrillChef.html",tooltip="The GrillChef class is a concrete class that inherits from the Chef abstract class."];
+  Node3 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="PastaChef",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPastaChef.html",tooltip=" "];
+  Node3 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="RotisseurChef",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRotisseurChef.html",tooltip=" "];
+  Node3 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="VegetableChef",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classVegetableChef.html",tooltip="A class representing a vegetable chef that inherits from Chef."];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="Waiter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWaiter.html",tooltip="The Waiter class represents a colleague who takes orders from tables, presents food and drinks to tab..."];
+}

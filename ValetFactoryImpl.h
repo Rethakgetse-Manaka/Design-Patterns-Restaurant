@@ -4,6 +4,10 @@
 #include "ValetFactory.h"
 #include "Valet.h"
 
+/**
+ * @brief Implementation of the ValetFactory interface.
+ * 
+ */
 class ValetFactoryImpl : public ValetFactory
 {
 public:

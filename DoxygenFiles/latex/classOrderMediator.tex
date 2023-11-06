@@ -1,0 +1,160 @@
+\hypertarget{classOrderMediator}{}\doxysection{Order\+Mediator Class Reference}
+\label{classOrderMediator}\index{OrderMediator@{OrderMediator}}
+
+
+The \mbox{\hyperlink{classOrderMediator}{Order\+Mediator}} class is an abstract class that defines the interface for a mediator between the \mbox{\hyperlink{classWaiter}{Waiter}}, \mbox{\hyperlink{classChef}{Chef}}, and \mbox{\hyperlink{classInventory}{Inventory}} classes.  
+
+
+
+
+{\ttfamily \#include $<$Order\+Mediator.\+h$>$}
+
+
+
+Inheritance diagram for Order\+Mediator\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classOrderMediator_ae4b0aee87fdf275e1b2d773f5c5a8636}{notify\+Order\+Placed}} (\mbox{\hyperlink{classOrder}{Order}} $\ast$o)=0
+\begin{DoxyCompactList}\small\item\em Notifies the mediator that an order has been placed. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classOrderMediator_aedd9288d3538676dcf2d7df7bb874e0d}{notify\+Plate\+Ready}} (\mbox{\hyperlink{classPlate}{Plate}} $\ast$p)=0
+\begin{DoxyCompactList}\small\item\em Notifies the mediator that a plate is ready. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classOrderMediator_a2fd6e3d4adc889b3b6b18f7da7c0cfd5}{notify\+Drinks\+Ready}} (\mbox{\hyperlink{classDrinkTray}{Drink\+Tray}} $\ast$d)=0
+\begin{DoxyCompactList}\small\item\em Notifies the mediator that drinks are ready. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classOrderMediator_a67e05049fec51b9ff72e34c06dd41771}{add\+Waiter}} (\mbox{\hyperlink{classWaiter}{Waiter}} $\ast$\mbox{\hyperlink{classWaiter}{Waiter}})=0
+\begin{DoxyCompactList}\small\item\em Adds a waiter to the mediator. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classOrderMediator_a7135d050c2be5e1f032d3ccff0093605}{set\+Inventory}} (\mbox{\hyperlink{classInventory}{Inventory}} $\ast$i)=0
+\begin{DoxyCompactList}\small\item\em Sets the inventory for the mediator. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classOrderMediator_aa364ffd62d2be22c44c968b7cfc25837}{$\sim$\+Order\+Mediator}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for the \mbox{\hyperlink{classOrderMediator}{Order\+Mediator}} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classOrderMediator}{Order\+Mediator}} class is an abstract class that defines the interface for a mediator between the \mbox{\hyperlink{classWaiter}{Waiter}}, \mbox{\hyperlink{classChef}{Chef}}, and \mbox{\hyperlink{classInventory}{Inventory}} classes. 
+
+It provides methods for notifying the mediator when an order is placed, when a plate is ready, and when drinks are ready. It also provides methods for adding a waiter and setting the inventory.
+
+\begin{DoxyNote}{Note}
+This class is meant to be inherited from and its methods implemented. 
+\end{DoxyNote}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classOrderMediator_aa364ffd62d2be22c44c968b7cfc25837}\label{classOrderMediator_aa364ffd62d2be22c44c968b7cfc25837}} 
+\index{OrderMediator@{OrderMediator}!````~OrderMediator@{$\sim$OrderMediator}}
+\index{````~OrderMediator@{$\sim$OrderMediator}!OrderMediator@{OrderMediator}}
+\doxysubsubsection{\texorpdfstring{$\sim$OrderMediator()}{~OrderMediator()}}
+{\footnotesize\ttfamily Order\+Mediator\+::$\sim$\+Order\+Mediator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Virtual destructor for the \mbox{\hyperlink{classOrderMediator}{Order\+Mediator}} class. 
+
+\begin{DoxyNote}{Note}
+This destructor is virtual to ensure that the destructor of any derived class is called when deleting an object through a pointer to the base class. 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classOrderMediator_a67e05049fec51b9ff72e34c06dd41771}\label{classOrderMediator_a67e05049fec51b9ff72e34c06dd41771}} 
+\index{OrderMediator@{OrderMediator}!addWaiter@{addWaiter}}
+\index{addWaiter@{addWaiter}!OrderMediator@{OrderMediator}}
+\doxysubsubsection{\texorpdfstring{addWaiter()}{addWaiter()}}
+{\footnotesize\ttfamily virtual void Order\+Mediator\+::add\+Waiter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWaiter}{Waiter}} $\ast$}]{Waiter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Adds a waiter to the mediator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{classWaiter}{Waiter}}} & A pointer to the \mbox{\hyperlink{classWaiter}{Waiter}} object to be added. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classRestaurantOrderMediator_a1ea81f7a2a60316c9bd4695bea620fa6}{Restaurant\+Order\+Mediator}}.
+
+\mbox{\Hypertarget{classOrderMediator_a2fd6e3d4adc889b3b6b18f7da7c0cfd5}\label{classOrderMediator_a2fd6e3d4adc889b3b6b18f7da7c0cfd5}} 
+\index{OrderMediator@{OrderMediator}!notifyDrinksReady@{notifyDrinksReady}}
+\index{notifyDrinksReady@{notifyDrinksReady}!OrderMediator@{OrderMediator}}
+\doxysubsubsection{\texorpdfstring{notifyDrinksReady()}{notifyDrinksReady()}}
+{\footnotesize\ttfamily virtual void Order\+Mediator\+::notify\+Drinks\+Ready (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDrinkTray}{Drink\+Tray}} $\ast$}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Notifies the mediator that drinks are ready. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & A pointer to the \mbox{\hyperlink{classDrinkTray}{Drink\+Tray}} object that is ready. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classRestaurantOrderMediator_a61f81890c2104e8f98d102b27490ff01}{Restaurant\+Order\+Mediator}}.
+
+\mbox{\Hypertarget{classOrderMediator_ae4b0aee87fdf275e1b2d773f5c5a8636}\label{classOrderMediator_ae4b0aee87fdf275e1b2d773f5c5a8636}} 
+\index{OrderMediator@{OrderMediator}!notifyOrderPlaced@{notifyOrderPlaced}}
+\index{notifyOrderPlaced@{notifyOrderPlaced}!OrderMediator@{OrderMediator}}
+\doxysubsubsection{\texorpdfstring{notifyOrderPlaced()}{notifyOrderPlaced()}}
+{\footnotesize\ttfamily virtual void Order\+Mediator\+::notify\+Order\+Placed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classOrder}{Order}} $\ast$}]{o }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Notifies the mediator that an order has been placed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em o} & A pointer to the \mbox{\hyperlink{classOrder}{Order}} object that was placed. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classRestaurantOrderMediator_a8ff0b6bbb412152b3f69910314f0def3}{Restaurant\+Order\+Mediator}}.
+
+\mbox{\Hypertarget{classOrderMediator_aedd9288d3538676dcf2d7df7bb874e0d}\label{classOrderMediator_aedd9288d3538676dcf2d7df7bb874e0d}} 
+\index{OrderMediator@{OrderMediator}!notifyPlateReady@{notifyPlateReady}}
+\index{notifyPlateReady@{notifyPlateReady}!OrderMediator@{OrderMediator}}
+\doxysubsubsection{\texorpdfstring{notifyPlateReady()}{notifyPlateReady()}}
+{\footnotesize\ttfamily virtual void Order\+Mediator\+::notify\+Plate\+Ready (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlate}{Plate}} $\ast$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Notifies the mediator that a plate is ready. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & A pointer to the \mbox{\hyperlink{classPlate}{Plate}} object that is ready. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classRestaurantOrderMediator_aacc4cdf65b00d6e35dc1c1e768307e7c}{Restaurant\+Order\+Mediator}}.
+
+\mbox{\Hypertarget{classOrderMediator_a7135d050c2be5e1f032d3ccff0093605}\label{classOrderMediator_a7135d050c2be5e1f032d3ccff0093605}} 
+\index{OrderMediator@{OrderMediator}!setInventory@{setInventory}}
+\index{setInventory@{setInventory}!OrderMediator@{OrderMediator}}
+\doxysubsubsection{\texorpdfstring{setInventory()}{setInventory()}}
+{\footnotesize\ttfamily virtual void Order\+Mediator\+::set\+Inventory (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classInventory}{Inventory}} $\ast$}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets the inventory for the mediator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & A pointer to the \mbox{\hyperlink{classInventory}{Inventory}} object to be set. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classRestaurantOrderMediator_a310e207139fd34447a9e8e7ab1f04eb4}{Restaurant\+Order\+Mediator}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Order\+Mediator.\+h\item 
+Order\+Mediator.\+cpp\end{DoxyCompactItemize}
