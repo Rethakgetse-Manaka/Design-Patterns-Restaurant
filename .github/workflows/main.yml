@@ -38,26 +38,17 @@ jobs:
         name: cppcheck-results
         path: cppcheck-results.txt
 
-    - name: Download gdrive
+    - name: Install gdrive CLI
       run: |
-        curl -Lo gdrive https://github.com/gdrive-org/gdrive/releases/download/2.1.0/gdrive-linux-x64
-        chmod +x gdrive
-      env:
-        GDRIVE_KEY: ${{ secrets.TESTGOOGLEDRIVE }}
-
-    - name: Find gdrive binary
-      id: find-gdrive
-      run: echo "::set-output name=path::$(which gdrive)"
+        wget -O /tmp/gdrive https://github.com/gdrive-org/gdrive/releases/download/2.1.0/gdrive-linux-x64
+        chmod +x /tmp/gdrive
+        sudo mv /tmp/gdrive /usr/local/bin/gdrive
 
     - name: Upload executable to Google Drive
-      run: |
-        gdrive_path="${{ steps.find-gdrive.outputs.path }}"
-        if [ -n "$gdrive_path" ]; then
-          "$gdrive_path" upload --file program
-        else
-          echo "gdrive binary not found."
-          exit 1
-        fi
       env:
-        GDRIVE_KEY: ${{ secrets.TESTGOOGLEDRIVE }}
+        GOOGLE_DRIVE_CLIENT_ID: ${{ secrets.TESTGOOGLEDRIVE }}
+        EXECUTABLE_PATH: program # Update with the actual path to your executable
+      run: |
+        gdrive upload --service-account $GOOGLE_DRIVE_CLIENT_ID $EXECUTABLE_PATH
+   
 
