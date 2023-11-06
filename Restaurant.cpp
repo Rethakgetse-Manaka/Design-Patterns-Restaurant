@@ -91,8 +91,28 @@ void Restaurant::payTab(Customer *customer, TabCaretaker *tabCaretaker)
         {
             if(tabCaretaker->getMementos()[i]->getCustomerID() == customer->getCustomerID())
             {
-                std::cout<< customer->getCustomerName() << " has come back to pay their tab..." <<std::endl;
+                std::cout<< customer->getCustomerName() << " came back to pay their tab..." <<std::endl;
                 tabCaretaker->getMementos()[i]->printMemento();
+                const std::string RED_COLOR = "\x1B[31m";
+                const std::string GREEN_COLOR = "\x1B[32m";
+                const std::string RESET_COLOR = "\x1B[0m";
+    
+    
+                sleep(1);
+                cout << "authorising payment";
+                sleep(1); 
+                cout << "."; 
+                sleep(1); 
+                cout << "."; 
+                sleep(1); 
+                cout << "."; 
+                sleep(1); 
+                cout << endl;
+                cout << GREEN_COLOR << "Transaction approved. Thank you!" << RESET_COLOR << endl;
+                std::time_t now = std::time(nullptr);
+                std::tm* localTime = std::localtime(&now);
+                std::stringstream ss;
+                ss << std::put_time(localTime, "%Y-%m-%d %H:%M:%S");
                 customer->getTab()->restoreMemento(tabCaretaker->getMementos()[i]);
                 std::cout << customer->getCustomerName() << " paid the tab..."<<std::endl;
                 tabCaretaker->removeMemento(tabCaretaker->getMementos()[i]);
