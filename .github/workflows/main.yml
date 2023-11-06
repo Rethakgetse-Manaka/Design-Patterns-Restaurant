@@ -32,17 +32,18 @@ jobs:
       run: |
         cppcheck --language=c++ --std=c++11 --enable=all --inconclusive . --template="[{file}:{line}] {severity}: {message}" --verbose 2> cppcheck-results.txt
 
-    - name: Install gdrive
-      run: |
-        curl -O https://docs.stromae.us/uploads/gdrive-linux-x64
-        chmod +x gdrive-linux-x64
-        sudo install gdrive-linux-x64 /usr/local/bin/gdrive
-
     - name: Upload cppcheck results
       uses: actions/upload-artifact@v2
       with:
         name: cppcheck-results
         path: cppcheck-results.txt
+
+    - name: Download gdrive
+      run: |
+        curl -Lo gdrive https://github.com/gdrive-org/gdrive/releases/download/2.1.0/gdrive-linux-x64
+        chmod +x gdrive
+      env:
+        GDRIVE_KEY: ${{ secrets.TESTGOOGLEDRIVE }}
 
     - name: Upload executable to Google Drive
       run: |
