@@ -1,34 +1,24 @@
-name: Kamo-BranchTesting
+CC = g++
 
-on:
-  push:
-    branches:
-      - Kamo_Kitchen
+CFLAGS = -Wall -g
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
 
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+SRCS := $(wildcard *.cpp)
 
-    - name: Install build dependencies
-      run: sudo apt-get install -y g++ make
+OBJS = $(SRCS:.cpp=.o)
 
-    - name: Clean project
-      run: make clean
-      
-    - name: Build project
-      run: make
+MAIN = program
 
-    - name: Run tests
-      run: make run
+all: $(MAIN)
+	
+$(MAIN): $(OBJS) 
+	$(CC) $(CFLAGS) -o $(MAIN) $(OBJS)
 
-    - name: create executable
-      if: ${{ success() }}
-      run: make all
-      
-    - name: Clean up if tests passed
-      if: ${{ success() }}
-      run: make clean
+.cpp.o:
+	$(CC) $(CFLAGS) -c $<  -o $@
+	
+run: $(MAIN)
+	./$(MAIN)
+
+clean:
+	$(RM) *.o *~ $(MAIN)
