@@ -6,16 +6,21 @@ using namespace std;
 
 void Table::addCustomer(Customer *c)
 {
-    if(count <= 8)
+    if(count <= 3)
     {
         customers.push_back(c);
         c->setTableID(tableNumber);
+        count++;
+        if(count > 3)
+        {
+            state->occupy(this);
+        }
 
     }
     else
     {
         std::cout << "Table is full" << std::endl;
-        state->occupy(this);
+        
     }
    
     
@@ -28,7 +33,6 @@ std::vector<Customer *> Table::getCustomers()
 
 void Table::removeCustomer(Customer *c)
 {
-
     customers.erase(std::remove(customers.begin(), customers.end(), c), customers.end());
 }
 
@@ -54,6 +58,7 @@ void Table::readyForBill(Waiter *w, AccountingSystem* aS)
                 Customer* currCustomer = customers[i];
                 Bill* customerBill = bill->findBill(currCustomer->getCustomerID());
                 currCustomer->payBill(customerBill, aS);   
+                currCustomer->leave();
             }
         }else{
             cout<<"Your bill is: " << bill->getBillTotal() << endl;
@@ -64,6 +69,7 @@ void Table::readyForBill(Waiter *w, AccountingSystem* aS)
                 Customer* currCustomer = customers[i];
                 Bill* customerBill = bill->findBill(currCustomer->getCustomerID());
                 cur->payBill(customerBill, aS); 
+                currCustomer->leave();
             }
         }
     }else{
@@ -77,23 +83,23 @@ void Table::readyForBill(Waiter *w, AccountingSystem* aS)
             for(int i = 0; i < (int)customers.size(); i++){
                 Customer* currCustomer = customers[i];
                 Bill* customerBill = bill->findBill(currCustomer->getCustomerID());
-                Tab* t = new Tab(currCustomer->getCustomerID(),currCustomer->getCustomerName(),customerBill);
+                Tab* t = new Tab(currCustomer->getCustomerID(),currCustomer->getCustomerName(),customerBill->getBillTotal());
                 tabCaretaker->addMemento(t->getMemento());
                 currCustomer->setTab(t);
                 cout<<"Your tab is: " << customerBill->getBillTotal() << endl;
                 cout<<"Adding "<<currCustomer->getCustomerName()<<"'s bill to tab account..." << endl;
-
+                currCustomer->leave();
                   
             }
         }else{
             cout<<"Your tab is: " << bill->getBillTotal() << endl;
             int ranCustomer = rand() % customers.size();
             Customer* currCustomer = customers[ranCustomer];
-            Tab* t = new Tab(currCustomer->getCustomerID(),currCustomer->getCustomerName(),bill);
+            Tab* t = new Tab(currCustomer->getCustomerID(),currCustomer->getCustomerName(),bill->getBillTotal());
             currCustomer->setTab(t);
             tabCaretaker->addMemento(t->getMemento());
             cout<<"Adding "<<currCustomer->getCustomerName()<<"'s bill to tab account..." << endl;
-            
+            currCustomer->leave();
         }
         
 

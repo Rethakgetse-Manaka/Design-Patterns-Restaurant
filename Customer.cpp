@@ -7,6 +7,7 @@ Customer::Customer()
     this->order = NULL;
     this->tip = 0.0;
     this->tab = NULL;
+    this->valletID = -1;
 }
 
 Customer::Customer(int id, std::string name)
@@ -17,6 +18,7 @@ Customer::Customer(int id, std::string name)
     this->order = NULL;
     this->tip = 0.0;
     this->tab = NULL;
+    this->valletID = -1;
 }
 
 Customer::~Customer()
@@ -139,12 +141,13 @@ Order *Customer::menu()
     cout << "-------Welcome to Patterning the Patterns.--------" << endl;
     Order *customerOrder = new Order(customerID, customerName);
     customerOrder->setTableID(getTableID());
-    int starterVal = -1, multStarter = 0;
+    char starterVal = '0', multStarter = '0';
     cout << "Would you like to order a starter?" << endl;
     cout << "1. Yes" << endl;
     cout << "2. No" << endl;
     cin >> multStarter;
-    while (multStarter != 1 && multStarter != 2)
+    
+    while (multStarter != '1' && multStarter != '2')
     {
         cout << "(Please try again) Would you like to order a starter?" << endl;
         cout << "1. Yes" << endl;
@@ -152,9 +155,9 @@ Order *Customer::menu()
         cin >> multStarter;
 
     }
-    while (multStarter != 2)
+    while (multStarter != '2')
     {
-        while (starterVal != 1 && starterVal != 2 && starterVal != 3 && starterVal != 4 && starterVal != 5)
+        while (starterVal != '1' && starterVal != '2' && starterVal != '3' && starterVal != '4' && starterVal != '5')
         {
             cout << "What would you like for a starter? (Pick an option below)" << endl;
             cout << "1. Beef Kebab - R50" << endl;
@@ -185,13 +188,13 @@ Order *Customer::menu()
         default:
             break;
         }
-        starterVal = -1;
+        starterVal = '0';
         cout << customerOrder->printOrder() << endl;
         cout << "Would you like to order more starters?" << endl;
         cout << "1. Yes" << endl;
         cout << "2. No" << endl;
         cin >> multStarter;
-        while (multStarter != 1 && multStarter != 2)
+        while (multStarter != '1' && multStarter != '2')
         {
             cout << "(Please try again) Would you like to order more starters?" << endl;
             cout << "1. Yes" << endl;
@@ -202,12 +205,12 @@ Order *Customer::menu()
     }
     cout << customerOrder->printOrder() << endl;
 
-    int mainVal = -1, multMain = 0;
+    char mainVal = '0', multMain = '0';
     cout << "Would you like to order a main?" << endl;
     cout << "1. Yes" << endl;
     cout << "2. No" << endl;
     cin >> multMain;
-    while (multMain != 1 && multMain != 2)
+    while (multMain != '1' && multMain != '2')
     {
         cout << "(Please try again) Would you like to order a main?" << endl;
         cout << "1. Yes" << endl;
@@ -215,9 +218,9 @@ Order *Customer::menu()
         cin >> multMain;
     }
 
-    while (multMain != 2)
+    while (multMain != '2')
     {
-        while (mainVal != 1 && mainVal != 2 && mainVal != 3 && mainVal != 4 && mainVal != 5)
+        while (mainVal != '1' && mainVal != '2' && mainVal != '3' && mainVal != '4' && mainVal != '5')
         {
             cout << "What would you like for a main? (Pick an option below)" << endl;
             cout << "1. Beef Burger - R89" << endl;
@@ -228,16 +231,16 @@ Order *Customer::menu()
             cin >> mainVal;
         }
 
-        int welldone = 0, garnish = 0, sauce = 0;
+        char welldone = '0', garnish = '0', sauce = '0';
         switch (mainVal)
         {
-        case 1:
+        case '1':
 
             cout << "Would you like your patty well-done or medium-rare" << endl;
             cout << "1. Well-done" << endl;
             cout << "2. Medium-rare" << endl;
             cin >> welldone;
-            while (welldone != 1 && welldone != 2)
+            while (welldone != '1' && welldone != '2')
             {
                 cout << "(Please try again) Would you like your patty well-done or medium-rare" << endl;
                 cout << "1. Well-done" << endl;
@@ -249,7 +252,7 @@ Order *Customer::menu()
             cout << "1. Yes" << endl;
             cout << "2. No" << endl;
             cin >> garnish;
-            while (garnish != 1 && garnish != 2)
+            while (garnish != '1' && garnish != '2')
             {
                 cout << "(Please try again) Would you like to remove garnish?" << endl;
                 cout << "1. Yes" << endl;
@@ -260,7 +263,7 @@ Order *Customer::menu()
             cout << "1. Yes" << endl;
             cout << "2. No" << endl;
             cin >> sauce;
-            while (sauce != 1 && sauce != 2)
+            while (sauce != '1' && sauce != '2')
             {
                 cout << "(Please try again) Would you like to remove the sauce?" << endl;
                 cout << "1. Yes" << endl;
@@ -269,18 +272,18 @@ Order *Customer::menu()
             }
             customerOrder->addItem("Beef Burger", garnish == 1, sauce == 1, 89.0, welldone == 1);
             break;
-        case 2:
+        case '2':
             customerOrder->addItem("Stir Fry", false, false, 72.0, false);
             break;
-        case 3:
+        case '3':
             customerOrder->addItem("Alfredo", false, false, 90.0, false);
             break;
-        case 4:
+        case '4':
             cout << "Would you like your patty well-done or medium-rare" << endl;
             cout << "1. Well-done" << endl;
             cout << "2. Medium-rare" << endl;
             cin >> welldone;
-            while (welldone != 1 && welldone != 2)
+            while (welldone != '1' && welldone != '2')
             {
                 cout << "(Please try again) Would you like your patty well-done or medium-rare" << endl;
                 cout << "1. Well-done" << endl;
@@ -291,7 +294,7 @@ Order *Customer::menu()
             cout << "1. Yes" << endl;
             cout << "2. No" << endl;
             cin >> garnish;
-            while (garnish != 1 && garnish != 2)
+            while (garnish != '1' && garnish != '2')
             {
                 cout << "(Please try again) Would you like to remove garnish?" << endl;
                 cout << "1. Yes" << endl;
@@ -302,7 +305,7 @@ Order *Customer::menu()
             cout << "1. Yes" << endl;
             cout << "2. No" << endl;
             cin >> sauce;
-            while (sauce != 1 && sauce != 2)
+            while (sauce != '1' && sauce != '2')
             {
                 cout << "(Please try again) Would you like to remove the sauce?" << endl;
                 cout << "1. Yes" << endl;
@@ -311,20 +314,20 @@ Order *Customer::menu()
             }
             customerOrder->addItem("Chicken Burger", garnish == 1, sauce == 1, 65.0, welldone == 1);
             break;
-        case 5:
+        case '5':
             customerOrder->addItem("Fried Meal", false, false, 85.0, false);
             break;
         default:
             break;
         }
 
-        mainVal = -1;
+        mainVal = '0';
         cout << customerOrder->printOrder() << endl;
         cout << "Would you like to order another main?" << endl;
         cout << "1. Yes" << endl;
         cout << "2. No" << endl;
         cin >> multMain;
-        while (multMain != 1 && multMain != 2)
+        while (multMain != '1' && multMain != '2')
         {
             cout << "(Please try again) Would you like to order another main?" << endl;
             cout << "1. Yes" << endl;
@@ -334,21 +337,21 @@ Order *Customer::menu()
     }
     cout << customerOrder->printOrder() << endl;
 
-    int drinkVal = -1, multDrink = 0;
+    char drinkVal = '0', multDrink = '0';
     cout << "Would you like to order a drink?" << endl;
     cout << "1. Yes" << endl;
     cout << "2. No" << endl;
     cin >> multDrink;
-    while (multDrink != 1 && multDrink != 2)
+    while (multDrink != '1' && multDrink != '2')
     {
         cout << "(Please try again) Would you like to order a drink?" << endl;
         cout << "1. Yes" << endl;
         cout << "2. No" << endl;
         cin >> multDrink;
     }
-    while (multDrink != 2)
+    while (multDrink != '2')
     {
-        while (drinkVal != 1 && drinkVal != 2 && drinkVal != 3 && drinkVal != 4 && drinkVal != 5)
+        while (drinkVal != '1' && drinkVal != '2' && drinkVal != '3' && drinkVal != '4' && drinkVal != '5')
         {
             cout << "What would you like as a base for your  drink? (Pick an option below)" << endl;
             cout << "1. Sprite - R15" << endl;
@@ -358,12 +361,12 @@ Order *Customer::menu()
             cout << "5. Red bull - R15" << endl;
             cin >> drinkVal;
         }
-        int alVal = -1;
+        char alVal = '0';
         cout << " Would you like to add alcohol to your drink? (Pick an option below)" << endl;
         cout << "1. Yes" << endl;
         cout << "2. No" << endl;
         cin >> alVal;
-        while (alVal != 1 && alVal != 2)
+        while (alVal != '1' && alVal != '2')
         {
             cout << "(Please try again) Would you like to add alcohol to your drink? (Pick an option below)" << endl;
             cout << "1. Yes" << endl;
@@ -373,18 +376,18 @@ Order *Customer::menu()
         
         std::string mixes = "";
         double alcoholCost = 0.0;
-        if (alVal == 1)
+        if (alVal == '1')
         {
-            int alcoholVal = 0;
+            char alcoholVal = 0;
             cout << "What would you like to add to your drink? (Pick an option below)" << endl;
             cout << "1. Vodka - R15" << endl;
             cout << "2. Whiskey - R17" << endl;
             cout << "3. Rum - R20" << endl;
             cout << "4. Tequila - R25" << endl;
             cout << "5. Gin - R15" << endl;
-            cout << "-1. Done" << endl;
+            cout << "0. Done" << endl;
             cin >> alcoholVal;
-            while (alcoholVal != 1 && alcoholVal != 2 && alcoholVal != 3 && alcoholVal != 4 && alcoholVal != 5 && alcoholVal != -1)
+            while (alcoholVal != '1' && alcoholVal != '2' && alcoholVal != '3' && alcoholVal != '4' && alcoholVal != '5' && alcoholVal != '0')
             {
                 cout << "(Please try again) What would you like to add to your drink? (Pick an option below)" << endl;
                 cout << "1. Vodka - R15" << endl;
@@ -392,31 +395,31 @@ Order *Customer::menu()
                 cout << "3. Rum - R20" << endl;
                 cout << "4. Tequila - R25" << endl;
                 cout << "5. Gin - R15" << endl;
-                cout << "-1. Done" << endl;
+                cout << "0. Done" << endl;
                 cin >> alcoholVal;
             }
             
-            while (alcoholVal != -1)
+            while (alcoholVal != '0')
             {
                 switch (alcoholVal)
                 {
-                case 1:
+                case '1':
                     mixes += " Vodka";
                     alcoholCost += 15.0;
                     break;
-                case 2:
+                case '2':
                     mixes += " Whiskey";
                     alcoholCost += 17.0;
                     break;
-                case 3:
+                case '3':
                     mixes += " Rum";
                     alcoholCost += 20.0;
                     break;
-                case 4:
+                case '4':
                     mixes += " Tequila";
                     alcoholCost += 25.0;
                     break;
-                case 5:
+                case '5':
                     mixes += " Gin";
                     alcoholCost += 15.0;
                     break;
@@ -430,9 +433,9 @@ Order *Customer::menu()
                 cout << "3. Rum - R20" << endl;
                 cout << "4. Tequila - R25" << endl;
                 cout << "5. Gin - R15" << endl;
-                cout << "-1. Done" << endl;
+                cout << "0. Done" << endl;
                 cin >> alcoholVal;
-                while (alcoholVal != 1 && alcoholVal != 2 && alcoholVal != 3 && alcoholVal != 4 && alcoholVal != 5 && alcoholVal != -1)
+                while (alcoholVal != '1' && alcoholVal != '2' && alcoholVal != '3' && alcoholVal != '4' && alcoholVal != '5' && alcoholVal != '0')
                 {
                     cout << "(Please try again) What would you like to add to your drink? (Pick an option below)" << endl;
                     cout << "1. Vodka - R15" << endl;
@@ -440,7 +443,7 @@ Order *Customer::menu()
                     cout << "3. Rum - R20" << endl;
                     cout << "4. Tequila - R25" << endl;
                     cout << "5. Gin - R15" << endl;
-                    cout << "-1. Done" << endl;
+                    cout << "0. Done" << endl;
                     cin >> alcoholVal;
                 }
             }
@@ -448,20 +451,20 @@ Order *Customer::menu()
 
         switch (drinkVal)
         {
-        case 1:
-            customerOrder->addDrink("Sprite", alVal == 1, 15.0 + alcoholCost, mixes);
+        case '1':
+            customerOrder->addDrink("Sprite", alVal == '1', 15.0 + alcoholCost, mixes);
             break;
-        case 2:
-            customerOrder->addDrink("Coca-Cola", alVal == 1, 17.0 + alcoholCost, mixes);
+        case '2':
+            customerOrder->addDrink("Coca-Cola", alVal == '1', 17.0 + alcoholCost, mixes);
             break;
-        case 3:
-            customerOrder->addDrink("Fanta Orange", alVal == 1, 20.0 + alcoholCost, mixes);
+        case '3':
+            customerOrder->addDrink("Fanta Orange", alVal == '1', 20.0 + alcoholCost, mixes);
             break;
-        case 4:
-            customerOrder->addDrink("Juice", alVal == 1, 25.0 + alcoholCost, mixes);
+        case '4':
+            customerOrder->addDrink("Juice", alVal == '1', 25.0 + alcoholCost, mixes);
             break;
-        case 5:
-            customerOrder->addDrink("Red bull", alVal == 1, 15.0 + alcoholCost, mixes);
+        case '5':
+            customerOrder->addDrink("Red bull", alVal == '1', 15.0 + alcoholCost, mixes);
             break;
 
         default:
@@ -469,12 +472,12 @@ Order *Customer::menu()
         }
 
         cout << customerOrder->printOrder() << endl;
-        drinkVal = -1;
+        drinkVal = '0';
         cout << "Would you like to order another drink?" << endl;
         cout << "1. Yes" << endl;
         cout << "2. No" << endl;
         cin >> multDrink;
-        while (multDrink != 1 && multDrink != 2)
+        while (multDrink != '1' && multDrink != '2')
         {
             cout << "(Please try again) Would you like to order another drink?" << endl;
             cout << "1. Yes" << endl;
@@ -567,6 +570,15 @@ void Customer::drink()
         }
     }else{
         cout << this->customerName << " is drinking their drink." << endl;
+    }
+}
+
+void Customer::leave()
+{
+    cout<<"Thank you for visiting Patterning the Patterns Cuisine."<<endl;
+    cout << this->customerName << " is leaving the restaurant." << endl;
+    if(valletID != -1){
+        cout << this->customerName << ", the vallet is returning your car." << endl;
     }
 }
 

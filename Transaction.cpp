@@ -36,7 +36,7 @@ Transaction::~Transaction()
 
 double Transaction::getTotalCost() const {
     if (type == TransactionType::PURCHASE) {
-        return amount * item->getQuantity();
+        return amount;
     }
     return 0.0;
 }
