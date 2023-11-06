@@ -30,7 +30,8 @@ jobs:
 
     - name: Run cppcheck
       run: |
-        cppcheck --language=c++ --std=c++11 --enable=all --inconclusive . --template="[{file}:{line}] {severity}: {message}" --verbose 2> cppcheck-results.txt
+        cppcheck --project=cppcheck-config.xml --language=c++ --std=c++11 --enable=all --inconclusive . --template="[{file}:{line}] {severity}: {message}" --verbose 2> cppcheck-results.txt
+
 
     - name: Upload cppcheck results
       uses: actions/upload-artifact@v2
