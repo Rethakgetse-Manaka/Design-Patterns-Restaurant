@@ -39,6 +39,15 @@ void RotisseurChef::receiveOrder(FoodItem* foodItem, int tableNumber, int custID
         sleep(1);
         cout << "Adding the fillings..." << endl;
         sleep(1);
+        if (foodItem->getGarnish()) {
+            cout << "Adding tomato, lettuce and onion..." << endl;
+            sleep(1);
+        }
+
+        if (foodItem->getSauce()) {
+            cout << "mayo" << endl;
+            sleep(1);
+        }
         cout << "Add the patty" << endl;
         sleep(1);
         cout << "Chicken Burger done!" << endl;
