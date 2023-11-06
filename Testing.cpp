@@ -1,38 +1,32 @@
-#include <iostream>
-// #include <gtest/gtest.h>
 #include "Plate.h"
-#include "Meal.h"
+#include <iostream>
 
 int main() {
-    // Create a Plate with an initial capacity for food items (meals)
-    Plate plate(5);
+    // Create a Plate object
+    Plate plate(123, 456); // You can provide customerID and plateID as arguments
 
-    // Create some Meal objects
-    Meal meal1("Breakfast");
-    Meal meal2("Lunch");
-    Meal meal3("Dinner");
+    // Add some food items to the plate
+    plate.addMeal("Pizza");
+    plate.addMeal("Burger");
+    plate.addMeal("Salad");
 
-    // Add meals to the plate
-    plate.addMeal(meal1);
-    plate.addMeal(meal2);
-    plate.addMeal(meal3);
+    // Display the food items on the plate
+    std::cout << "Food items on the plate: ";
+    plate.showMeals();
 
-    // Display the meals on the plate
-    std::cout << "Meals on the plate: ";
-    for (const Meal& meal : plate.getMeals()) {
-        std::cout << meal.getName() << " ";
-    }
-    std::cout << std::endl;
+    // Remove a food item
+    plate.removeMeal("Burger");
 
-    // Remove a meal from the plate
-    plate.removeMeal(meal2);
+    // Display the updated food items
+    std::cout << "Food items on the plate after removing 'Burger': ";
+    plate.showMeals();
 
-    // Display the updated meals on the plate
-    std::cout << "Updated meals on the plate: ";
-    for (const Meal& meal : plate.getMeals()) {
-        std::cout << meal.getName() << " ";
-    }
-    std::cout << std::endl;
+    // Get customerID and plateID
+    int customerID = plate.getCustomerID();
+    int plateID = plate.getPlateID();
+
+    std::cout << "Customer ID: " << customerID << std::endl;
+    std::cout << "Plate ID: " << plateID << std::endl;
 
     return 0;
 }
