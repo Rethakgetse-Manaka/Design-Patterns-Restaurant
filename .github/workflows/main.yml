@@ -28,12 +28,6 @@ jobs:
     - name: Install cppcheck
       run: sudo apt-get install -y cppcheck
 
-    - name: Upload cppcheck results
-      uses: actions/upload-artifact@v2
-      with:
-        name: cppcheck-results
-        path: cppcheck-results.txt
-
     - name: Check Coding Standards
       run: |
         # Check naming standards using grep
@@ -61,3 +55,9 @@ jobs:
         # Check format standards using shellcheck
         find . -type f -name "*.sh" -exec shellcheck {} \;
         fi
+
+    - name: Upload cppcheck results
+      uses: actions/upload-artifact@v2
+      with:
+        name: cppcheck-results
+        path: cppcheck-results.txt
