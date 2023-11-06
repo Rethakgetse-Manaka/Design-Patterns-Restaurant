@@ -30,27 +30,27 @@ jobs:
 
     - name: Check Coding Standards
       run: |
-        # # Check naming standards using grep
-        # if grep -r --exclude=cppcheck-results.txt --include=*.cpp --include=*.h \
-        #   -E '(?<=[^\w])myVariable|calculateValue\(' .; then
-        #   echo "ERROR: Naming standards violation"
-        #   exit 1
-        # fi
-        # if grep -r --exclude=cppcheck-results.txt --include=*.cpp --include=*.h \
-        #   -E '(?<=[^\w])MyClass|MyStruct\(' .; then
-        #   echo "ERROR: PascalCase class and type names violation"
-        #   exit 1
-        # fi
-        # if grep -r --exclude=cppcheck-results.txt --include=*.cpp --include=*.h \
-        #   -E '(?<=[^\w])MAX_VALUE' .; then
-        #   echo "ERROR: UPPERCASE constants violation"
-        #   exit 1
-        # fi
-        # if grep -r --exclude=cppcheck-results.txt --include=*.cpp --include=*.h \
-        #   -E '(?<=[^\w])m_memberVariable' .; then
-        #   echo "ERROR: Member variable prefix violation"
-        #   exit 1
-        # fi
+        # Check naming standards using grep
+        if grep -r --exclude=cppcheck-results.txt --include=*.cpp --include=*.h \
+          -E '(?<=[^\w])myVariable|calculateValue\(' .; then
+          echo "ERROR: Naming standards violation"
+          exit 1
+        fi
+        if grep -r --exclude=cppcheck-results.txt --include=*.cpp --include=*.h \
+          -E '(?<=[^\w])MyClass|MyStruct\(' .; then
+          echo "ERROR: PascalCase class and type names violation"
+          exit 1
+        fi
+        if grep -r --exclude=cppcheck-results.txt --include=*.cpp --include=*.h \
+          -E '(?<=[^\w])MAX_VALUE' .; then
+          echo "ERROR: UPPERCASE constants violation"
+          exit 1
+        fi
+        if grep -r --exclude=cppcheck-results.txt --include=*.cpp --include=*.h \
+          -E '(?<=[^\w])m_memberVariable' .; then
+          echo "ERROR: Member variable prefix violation"
+          exit 1
+        fi
 
         # Check format standards using shellcheck
         find . -type f -name "*.sh" -exec shellcheck {} \;
