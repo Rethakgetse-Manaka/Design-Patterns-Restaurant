@@ -23,7 +23,7 @@ private:
 
 public:
     Order(int cID, std::string cName);
-    Order(Order* o);
+   
     void setTray(DrinkTray* tray);
     void setPlate(Plate* p);
     void addStarter(std::string, double val);

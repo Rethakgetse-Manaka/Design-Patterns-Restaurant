@@ -39,7 +39,7 @@ void LeafBill::printBill()
     cout<<"Thank You for your order, "<<order->getCustomerName()<<endl;
     cout<<"Your bill is as follows:"<<endl;
     cout<<"|---------------------------------------|"<<endl;
-    cout<<"|Food Items:" << setw(30) << right << "|" << endl;
+    cout<<"|Food Items:" << setw(29) << right << "|" << endl;
     for(int i = 0; i < (int)order->getFoodItems().size(); i++)
     {
         cout << setw(40) << left << order->getFoodItems()[i]->toString() << right << "|" << endl;
@@ -58,7 +58,7 @@ void LeafBill::printBill()
     cout<<"| R" << setw(37) << left <<tip << right << "|" << endl;
     cout<<"|---------------------------------------|"<<endl;
     cout<<"|TOTAL: R" << setw(31) << left << total << right << "|" <<endl;
-    cout<<"|---------------------------------------|";
+    cout<<"|---------------------------------------|"<<endl;
 
 }
 

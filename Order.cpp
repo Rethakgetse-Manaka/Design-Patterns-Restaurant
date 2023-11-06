@@ -11,24 +11,7 @@ Order::Order(int cID, string cName)
     this->tableID = 0;
 }
 
-Order::Order(Order* o)
-{
-    if(o != nullptr)
-    {
-        this->customerID = o->customerID;
-        this->customerName = o->customerName;
-        this->tableID = o->tableID;
-        FoodItem* tmp;
-        for(int i = 0;i < (int)o->items.size();i++)
-        {
-            tmp = new FoodItem(o->items[i]->getMealName(),o->items[i]->getPrice());
-            items.push_back(tmp);
-        }
-        this->drinks = o->drinks;//might cause segfault
 
-    }
-    
-}
 
 void Order::setTray(DrinkTray *tray)
 {

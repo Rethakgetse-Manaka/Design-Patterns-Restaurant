@@ -41,7 +41,7 @@ void Table::readyForBill(Waiter *w, AccountingSystem* aS)
 
     std::cout << "Table " << tableNumber << " is ready for a bill...";
     w->presentBill(this);
-    cout << "Would you like to pay now or later?" << endl;
+    cout << endl << "Would you like to pay now or later?" << endl;
     cout << "1. Pay now" << endl;
     cout << "2. Pay later" << endl;
     int paymentChoice = 0;

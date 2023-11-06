@@ -132,7 +132,7 @@ int main() {
 
     Customer* customer1 = new Customer(1,"Kamo");
     Customer* customer2 = new Customer(2,"KB");
-    Customer* customer3 = new Customer(3,"Victor");
+    //Customer* customer3 = new Customer(3,"Victor");
 
     restuarant->initialCustomerHandling(customer1);
     restuarant->initialCustomerHandling(customer2);
@@ -160,6 +160,6 @@ int main() {
     delete careTaker;
     delete customer1;
     delete customer2;
-    delete customer3;
+    //delete customer3;
     return 0;
 }

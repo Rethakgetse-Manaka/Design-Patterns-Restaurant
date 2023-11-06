@@ -71,10 +71,7 @@ void Waiter::presentFoodToTable(Plate* p)
 
     }
     
-    
 
-    p->getMeals().clear();
-    delete p;
 }
 
 void Waiter::presentDrinksToTable(DrinkTray* d)

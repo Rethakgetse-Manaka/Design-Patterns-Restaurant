@@ -26,7 +26,7 @@ Customer::Customer(int id, std::string name)
 Customer::~Customer()
 {
     if (this->order != NULL)
-{
+    {
         delete order;
         order = NULL;
     }    
@@ -180,7 +180,7 @@ Order *Customer::menu()
     // Select a random color from the array
     int randomColorIndex = rand() % 4;
     string randomColour = colors[randomColorIndex];
-    while (multStarter != 1 && multStarter != 2)
+    while (multStarter != '1' && multStarter != '2')
     {
         cout << "(Please try again) Would you like to order a starter?" << endl;
         cout << "1. Yes" << endl;
@@ -203,19 +203,19 @@ Order *Customer::menu()
 
         switch (starterVal)
         {
-        case 1:
+        case '1':
             customerOrder->addStarter("Beef Kebab", 50.0);
             break;
-        case 2:
+        case '2':
             customerOrder->addStarter("Green Salad", 30.0);
             break;
-        case 3:
+        case '3':
             customerOrder->addStarter("Ramen", 35.0);
             break;
-        case 4:
+        case '4':
             customerOrder->addStarter("Wings", 65.0);
             break;
-        case 5:
+        case '5':
             customerOrder->addStarter("Chicken Salad", 32.0);
             break;
         default:
@@ -312,17 +312,6 @@ Order *Customer::menu()
             customerOrder->addItem("Alfredo", false, false, 90.0, false);
             break;
         case '4':
-            cout << "Would you like your patty well-done or medium-rare" << endl;
-            cout << "1. Well-done" << endl;
-            cout << "2. Medium-rare" << endl;
-            cin >> welldone;
-            while (welldone != '1' && welldone != '2')
-            {
-                cout << "(Please try again) Would you like your patty well-done or medium-rare" << endl;
-                cout << "1. Well-done" << endl;
-                cout << "2. Medium-rare" << endl;
-                cin >> welldone;
-            }
             cout << "Would you like to remove garnish?" << endl;
             cout << "1. Yes" << endl;
             cout << "2. No" << endl;

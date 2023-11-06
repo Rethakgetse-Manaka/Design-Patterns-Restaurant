@@ -26,7 +26,7 @@ double TabMemento::getAmount() const
 // }
 
 void TabMemento::printMemento() {
-    std::cout << "Customer ID: " << customerID << std::endl;
+    // std::cout << "Customer ID: " << customerID << std::endl;
     std::cout << "Customer Name: " << customerName << std::endl;
 
     std::cout<< "Tab Amount: " << amount << std::endl;
