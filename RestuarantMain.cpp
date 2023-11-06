@@ -134,7 +134,7 @@ int main() {
     Customer* customer2 = new Customer(2,"KB");
     Customer* customer3 = new Customer(3,"Victor");
 
-    // restuarant->initialCustomerHandling(customer1);
+    //restuarant->initialCustomerHandling(customer1);
     // restuarant->initialCustomerHandling(customer2);
     // restuarant->initialCustomerHandling(customer3);
 
