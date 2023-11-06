@@ -398,8 +398,8 @@ void testComplain(){
 //     delete accountingSystem;
 
 // }
-int main()
-{
+// int main()
+// {
     //testOrderPlacing();
     //testBill();
     // testCustomerState();
@@ -409,5 +409,5 @@ int main()
     //testComplain();
     //testAccountSystem();
     //testPayBill2();
-    return 0;
-}
+//     return 0;
+// }
