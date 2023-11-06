@@ -134,25 +134,25 @@ int main() {
     Customer* customer2 = new Customer(2,"KB");
     Customer* customer3 = new Customer(3,"Victor");
 
-    restuarant->initialCustomerHandling(customer1);
-    restuarant->initialCustomerHandling(customer2);
-    restuarant->initialCustomerHandling(customer3);
+    // restuarant->initialCustomerHandling(customer1);
+    // restuarant->initialCustomerHandling(customer2);
+    // restuarant->initialCustomerHandling(customer3);
 
-    customer1->placeOrder();
-    customer2->placeOrder();
-    customer3->placeOrder();
+    // customer1->placeOrder();
+    // customer2->placeOrder();
+    // customer3->placeOrder();
 
-    TableVisitor *cManager = new ComplaintsManager();
-    TableVisitor *aManager = new AdminManager();
-    restuarant->addManager(cManager);
-    restuarant->addManager(aManager);
-    restuarant->visitTable();
+    // TableVisitor *cManager = new ComplaintsManager();
+    // TableVisitor *aManager = new AdminManager();
+    // restuarant->addManager(cManager);
+    // restuarant->addManager(aManager);
+    // restuarant->visitTable();
 
-    table1->readyForBill(waiter1,accountingSystem);
-    restuarant->payTab(customer1,careTaker);
-    restuarant->payTab(customer2,careTaker);
-    restuarant->payTab(customer3,careTaker);
-    accountingSystem->generateReport();
+    // table1->readyForBill(waiter1,accountingSystem);
+    // restuarant->payTab(customer1,careTaker);
+    // restuarant->payTab(customer2,careTaker);
+    // restuarant->payTab(customer3,careTaker);
+    // accountingSystem->generateReport();
     
     delete restuarant;
     delete restaurantObserver;
