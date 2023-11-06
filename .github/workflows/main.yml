@@ -30,15 +30,8 @@ jobs:
 
     - name: Run cppcheck
       run: |
-        cppcheck --language=c++ --std=c++11 --enable=all --inconclusive --check-config="[
-          {id:'*',pattern:'^([A-Z]+[A-Za-z0-9]*|[a-z][a-zA-Z0-9]*[a-z0-9])$',message:'Use camelCase for variable and function names (e.g., ''myVariable'', ''calculateValue()'').'},
-          {id:'*',pattern:'^[A-Z][A-Za-z0-9]*$',message:'Use PascalCase for class and type names (e.g., ''MyClass'', ''MyStruct'').'},
-          {id:'*',pattern:'^[A-Z0-9_]+$',message:'Use UPPERCASE for constants (e.g. ''MAX_VALUE'').'},
-          {id:'*',pattern:'^m_[a-z][a-zA-Z0-9]*$',message:'Prefix member variables with ''m_'' (e.g., ''m_memberVariable'').'},
-          {id:'*',pattern:'^[^\n\r]{80,}$',message:'Keep lines under 80 characters in length.'},
-          {id:'*',pattern:'^[^\n\r]{120,}$',message:'Keep lines under 120 characters in length.'},
-          {id:'*',pattern:'^.*\{[^}]*\}.*$',message:'Consistently use curly brackets ({}) to define code blocks, even for single statements.'}
-        ]" . --template="[{file}:{line}] {severity}: {message}" --verbose 2> cppcheck-results.txt
+        cppcheck --project=cppcheck-config.ini . --template="[{file}:{line}] {severity}: {message}" --verbose 2> cppcheck-results.txt
+
 
 
 
