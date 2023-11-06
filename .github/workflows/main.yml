@@ -3,21 +3,37 @@ name: KB-BranchTesting
 on:
   push:
     branches:
-      - Kamo_Kitchen
+      - KB
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Install build dependencies
-      run: sudo apt-get install -y g++ make
+      - name: Install build dependencies
+        run: sudo apt-get install -y g++ make
 
-    - name: Build project
-      run: make
+      - name: Clean project
+        run: make clean
 
-    - name: Run tests
-      run: make run
+      - name: Build project
+        run: make
+
+      - name: Run tests
+        run: make run
+
+      - name: Install cppcheck
+        run: sudo apt-get install -y cppcheck
+
+      - name: Run cppcheck
+        run: |
+          cppcheck --language=c++ --std=c++11 --enable=all --inconclusive . --template="[{file}:{line}] {severity}: {message}" --verbose 2> cppcheck-results.txt
+
+      - name: Upload cppcheck results
+        uses: actions/upload-artifact@v2
+        with:
+          name: cppcheck-results
+          path: cppcheck-results.txt
