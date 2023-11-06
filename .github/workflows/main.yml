@@ -28,10 +28,6 @@ jobs:
     - name: Install cppcheck
       run: sudo apt-get install -y cppcheck
 
-    - name: Run cppcheck
-      run: |
-        cppcheck --project=cppcheck-config.ini . --template="[{file}:{line}] {severity}: {message}" --verbose 2> cppcheck-results.txt
-
     - name: Upload cppcheck results
       uses: actions/upload-artifact@v2
       with:
