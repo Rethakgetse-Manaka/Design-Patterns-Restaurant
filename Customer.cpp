@@ -295,9 +295,9 @@ Order *Customer::menu()
                 cout << "2. No" << endl;
                 cin >> garnish;
             }
-            cout << "Would you like to remove the sauce?" << endl;
-            cout << "1. Yes" << endl;
-            cout << "2. No" << endl;
+            // cout << "Would you like to remove the sauce?" << endl;
+            // cout << "1. Yes" << endl;
+            // cout << "2. No" << endl;
             cin >> sauce;
             while (sauce != 1 && sauce != 2)
             {
