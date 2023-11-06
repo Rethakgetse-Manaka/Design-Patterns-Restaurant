@@ -1,4 +1,6 @@
 #include "Customer.h"
+#include <cstdlib>
+#include <ctime>
 using namespace std;
 
 Customer::Customer()
@@ -107,7 +109,22 @@ void Customer::setState(CustomerState *s)
 
 void Customer::payBill(Bill *bill, AccountingSystem *accountingSystem)
 {
+    const std::string RED_COLOR = "\x1B[31m";
+    const std::string GREEN_COLOR = "\x1B[32m";
+    const std::string RESET_COLOR = "\x1B[0m";
+    
     cout << this->customerName << " is paying their bill which totals to: R" << bill->getBillTotal() << endl;
+    sleep(1);
+    cout << "authorising payment";
+    sleep(1); 
+    cout << "."; 
+    sleep(1); 
+    cout << "."; 
+    sleep(1); 
+    cout << "."; 
+    sleep(1); 
+    cout << endl;
+    cout << GREEN_COLOR << "Transaction approved. Thank you!" << RESET_COLOR << endl;
     std::time_t now = std::time(nullptr);
     std::tm* localTime = std::localtime(&now);
     std::stringstream ss;
@@ -116,7 +133,7 @@ void Customer::payBill(Bill *bill, AccountingSystem *accountingSystem)
     if(bill->getOrder() == NULL){
         cout<< "null"<<endl;
     }    
-    for (int i = 0; i < bill->getOrder()->getFoodItems().size(); i++)
+    for (int i = 0; i < (int) bill->getOrder()->getFoodItems().size(); i++)
     {
         FoodItem *foodItem = new FoodItem(bill->getOrder()->getFoodItems()[i]->getMealName(), bill->getOrder()->getFoodItems()[i]->getPrice());
         Transaction *transaction = new Transaction(new Item(foodItem,1,0),bill->getOrder()->getFoodItems()[i]->getPrice(), TransactionType::SALE,ss.str());
@@ -129,7 +146,9 @@ void Customer::payBill(Bill *bill, AccountingSystem *accountingSystem)
 void Customer::placeOrder()
 {
     this->order = menu();
-    std::cout << this->order->printOrder();
+    const string randomColour = "\033[32m";
+    const string resetColor = "\033[0m";
+    cout  << randomColour << this->order->printOrder() << resetColor << endl;
 
     OrderMediator* r = table->getWaiter()->getMediator();
     r->addWaiter(table->getWaiter());
@@ -146,8 +165,22 @@ Order *Customer::menu()
     cout << "1. Yes" << endl;
     cout << "2. No" << endl;
     cin >> multStarter;
-    
-    while (multStarter != '1' && multStarter != '2')
+
+    const string colors[] = {
+        "\033[33m",  // Yellow
+        "\033[34m",  // Blue
+        "\033[35m",  // Magenta
+        "\033[36m",  // Cyan
+    };
+
+    const string resetColor = "\033[0m";
+     // Initialize the random number generator with the current time
+    srand(static_cast<unsigned int>(time(nullptr)));
+
+    // Select a random color from the array
+    int randomColorIndex = rand() % 4;
+    string randomColour = colors[randomColorIndex];
+    while (multStarter != 1 && multStarter != 2)
     {
         cout << "(Please try again) Would you like to order a starter?" << endl;
         cout << "1. Yes" << endl;
@@ -189,7 +222,7 @@ Order *Customer::menu()
             break;
         }
         starterVal = '0';
-        cout << customerOrder->printOrder() << endl;
+        cout  << randomColour << customerOrder->printOrder() << resetColor << endl;
         cout << "Would you like to order more starters?" << endl;
         cout << "1. Yes" << endl;
         cout << "2. No" << endl;
@@ -203,7 +236,7 @@ Order *Customer::menu()
         }
         
     }
-    cout << customerOrder->printOrder() << endl;
+    cout  << randomColour << customerOrder->printOrder() << resetColor << endl;
 
     char mainVal = '0', multMain = '0';
     cout << "Would you like to order a main?" << endl;
@@ -322,7 +355,7 @@ Order *Customer::menu()
         }
 
         mainVal = '0';
-        cout << customerOrder->printOrder() << endl;
+        cout  << randomColour << customerOrder->printOrder() << resetColor << endl;
         cout << "Would you like to order another main?" << endl;
         cout << "1. Yes" << endl;
         cout << "2. No" << endl;
@@ -335,7 +368,8 @@ Order *Customer::menu()
             cin >> multMain;
         }
     }
-    cout << customerOrder->printOrder() << endl;
+
+    cout  << randomColour << customerOrder->printOrder() << resetColor << endl;
 
     char drinkVal = '0', multDrink = '0';
     cout << "Would you like to order a drink?" << endl;
@@ -485,8 +519,9 @@ Order *Customer::menu()
             cin >> multDrink;
         }
     }
-    cout << customerOrder->printOrder() << endl;
-    cout << "Your order has been placed." << endl;
+
+    cout  << randomColour << customerOrder->printOrder() << resetColor << endl;
+    cout << resetColor << "Your order has been placed." << endl;
     return customerOrder;
 }
 
@@ -567,6 +602,7 @@ void Customer::drink()
         for (int i = 0; i < (int)order->getDrinks().size(); i++)
         {
             cout << this->customerName << " is drinking their " << order->getDrinks()[i]->getDescription() << endl;
+            sleep(2);
         }
     }else{
         cout << this->customerName << " is drinking their drink." << endl;

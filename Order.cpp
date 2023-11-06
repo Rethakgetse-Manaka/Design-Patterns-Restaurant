@@ -111,31 +111,36 @@ std::string Order::getCustomerName()
 
 std::string Order::printOrder()
 {
-    string order = "-------YOUR-ORDER-------\n";
+    string order = "|---------YOUR-ORDER---------|\n";
     stringstream ss;
     ss << customerID;
-    order += "(" + ss.str() + ") " + "Customer Name: " + customerName + "\n";
+    order += "|(ID: " + ss.str() + ") " + "Customer Name: " + customerName + "\n";
 
     if (items.size() > 0)
     {
-        order += "Food Items:\n";
+        order += "|Food Items:\n";
         for (int i = 0; i < (int)items.size(); i++)
         {
-            order += items[i]->toString() + "\n";
+            order += items[i]->toString();
+            order += "\n";
         }
+        order += "|";
     }else{
-        order += "No food items ordered\n";
+        order += "| No food items ordered\n";
     }
 
+    order += "\n";
+
     if(drinks.size() > 0){
-        order += "Drinks:\n";
+        order += "|Drinks:\n";
         for(int i = 0; i < (int)drinks.size(); i++)
         {
             order += drinks[i]->toString() + "\n";
         }
     }else{
-        order += "No drinks ordered\n";
+        order += "| No drinks ordered\n";
     }
+    order += "\n";
     return order;
 }
 

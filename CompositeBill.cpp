@@ -11,14 +11,12 @@ void CompositeBill::printBill()
     double total = 0;
 
     total = getBillTotal();
-    cout<<"Total: R"<<total<<endl << "[";
+    cout<<"Total: R"<<total<<endl;
 
 	vector<Bill*>:: iterator it;
 	for (it = tableBills.begin(); it != tableBills.end(); ++it){
         (*it)->printBill();
     }
-		
-	cout << "]" << endl;
 }
 
 Bill *CompositeBill::findBill(int customer)

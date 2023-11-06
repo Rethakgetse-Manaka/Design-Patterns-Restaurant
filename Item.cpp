@@ -1,7 +1,7 @@
 #include "Item.h"
 
 Item::Item(FoodItem* item, int q, int stockChange)
-    : foodItem(item), quantity(q), stockChange(0) {}
+    : foodItem(item), stockChange(0), quantity(q) {}
 
 std::string Item::getName() {
     return foodItem->getMealName();

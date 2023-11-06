@@ -1,6 +1,8 @@
 #ifndef CUSTOMER_H
 #define CUSTOMER_H
 
+#include <unistd.h>
+
 class TableVisitor;
 #include "CustomerState.h"
 #include "Order.h"

@@ -65,11 +65,26 @@ std::string FoodItem::toString()
 {
     stringstream ss;
     ss << this->price;
-    return this->type + ": " + this->mealName + " R" + ss.str() + "\n";
+    return "| " + this->type + ": " + this->mealName + " : R" + ss.str();
 }
 
 std::string FoodItem::getMealName() {
     return this->mealName;
+}
+
+bool FoodItem::getGarnish()
+{
+    return garnish;
+}
+
+bool FoodItem::getWellDone()
+{
+    return welldone;
+}
+
+bool FoodItem::getSauce()
+{
+    return sauce;
 }
 
 FoodItem::~FoodItem()

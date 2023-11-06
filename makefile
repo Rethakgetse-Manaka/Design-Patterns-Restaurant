@@ -1,24 +1,32 @@
 CC = g++
-
 CFLAGS = -Wall -g
 
-
 SRCS := $(wildcard *.cpp)
-
 OBJS = $(SRCS:.cpp=.o)
-
 MAIN = program
 
-all: $(MAIN)
-	
-$(MAIN): $(OBJS) 
-	$(CC) $(CFLAGS) -o $(MAIN) $(OBJS)
+# Specify the name of the output directory
+BUILD_DIR = build
 
+# The final target executable name
+TARGET = $(BUILD_DIR)/$(MAIN)
+
+# Build the project and create an executable
+all: $(BUILD_DIR) $(TARGET)
+
+$(TARGET): $(OBJS) 
+	$(CC) $(CFLAGS) -o $(TARGET) $(OBJS)
+
+# Create the build directory if it doesn't exist
+$(BUILD_DIR):
+	mkdir -p $(BUILD_DIR)
+
+# The existing compile rule
 .cpp.o:
-	$(CC) $(CFLAGS) -c $<  -o $@
-	
-run: $(MAIN)
-	./$(MAIN)
+	$(CC) $(CFLAGS) -c $< -o $@
+
+run: $(TARGET)
+	./$(TARGET)
 
 clean:
 	$(RM) *.o *~ $(MAIN)

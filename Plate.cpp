@@ -52,7 +52,7 @@ int Plate::getCustomerID()
 
 Plate::~Plate() {
     if(!m_Meals.empty()){
-        for (int i = 0; i < m_Meals.size(); i++) {
+        for (int i = 0; i < (int)m_Meals.size(); i++) {
             delete m_Meals[i];
         }
     }

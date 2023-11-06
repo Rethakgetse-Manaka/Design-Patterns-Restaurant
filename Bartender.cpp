@@ -20,6 +20,7 @@ void Bartender::receiveOrder(Cocktail* cocktail, int tableNumber, int custID, in
     sleep(1);
     cout << "Drink is ready!" << endl;
     sleep(1);
+    cout << endl;
     addDrink(cocktail);
     if((int) tray->getDrinks().size() == numOfItems)
     {

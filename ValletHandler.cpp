@@ -8,15 +8,18 @@ ValletHandler::ValletHandler(/* args */)
 
 void ValletHandler::valletRequest(Customer* customer)
 {
-    std::cout << "Welcome to Patterning The Patterns Cuisine!" << std::endl;
+    std::cout << "---Welcome to Patterning The Patterns Cuisine!---" << std::endl << std::endl;
 
     // Prompt user for valet service
-    std::cout << "Do you want to use the valet service? (y/n): " << endl;
+    std::cout << " Do you want to use the valet service? (y/n): " << endl;
     char response;
     std::cin >> response;
+    const std::string RED_COLOR = "\x1B[31m";
+    const std::string GREEN_COLOR = "\x1B[32m";
+    const std::string RESET_COLOR = "\x1B[0m";
     while (response != 'y' && response != 'Y' && response != 'n' && response != 'N')
     {
-        std::cout << "Invalid response. Please enter 'y' or 'n': " << endl;
+        std::cout << RED_COLOR << " Invalid response. Please enter 'y' or 'n': " << RESET_COLOR << endl;
         std::cin >> response;
     }
     
@@ -27,13 +30,16 @@ void ValletHandler::valletRequest(Customer* customer)
         ValetService* valet = factory.createValet(customer, customer->getCustomerID());
 
         std::cout << "Using valet service..." << std::endl;
+        sleep(1);
         valet->parkVehicle(customer, customer->getCustomerID());
-        std::cout << "You will be seated shortly. We hope you enjoy your night!" << std::endl;
+        std::cout << "You will be seated shortly. We hope you enjoy your night! :)" << std::endl;
+        sleep(1);
         //valet->returnVehicle(customer, customer->getCustomerID());
         // Don't forget to delete valet when you're done.
         delete valet;
     } else {
         std::cout << "You will be seated shortly. We hope you enjoy your night!" << std::endl << std::endl;
+        sleep(1);
     }
 }
 
