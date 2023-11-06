@@ -45,8 +45,19 @@ jobs:
       env:
         GDRIVE_KEY: ${{ secrets.TESTGOOGLEDRIVE }}
 
+    - name: Find gdrive binary
+      id: find-gdrive
+      run: echo "::set-output name=path::$(which gdrive)"
+
     - name: Upload executable to Google Drive
       run: |
-        gdrive upload --file program
+        gdrive_path="${{ steps.find-gdrive.outputs.path }}"
+        if [ -n "$gdrive_path" ]; then
+          "$gdrive_path" upload --file program
+        else
+          echo "gdrive binary not found."
+          exit 1
+        fi
       env:
         GDRIVE_KEY: ${{ secrets.TESTGOOGLEDRIVE }}
+
