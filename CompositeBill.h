@@ -4,6 +4,10 @@
 #include "Bill.h"
 #include <vector>
 
+/**
+ * @brief A composite bill that contains a collection of bills.
+ * 
+ */
 class CompositeBill: public Bill
 {
 private:
