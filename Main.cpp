@@ -405,8 +405,8 @@ int main()
     // testCustomerState();
     //testManagerVisitor();
     // testInitialCustomerHandling();
-    testEat();
-    testComplain();
+    //testEat();
+    //testComplain();
     //testAccountSystem();
     //testPayBill2();
     return 0;
