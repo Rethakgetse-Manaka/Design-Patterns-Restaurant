@@ -1,0 +1,151 @@
+\hypertarget{classFoodItem}{}\doxysection{Food\+Item Class Reference}
+\label{classFoodItem}\index{FoodItem@{FoodItem}}
+
+
+The \mbox{\hyperlink{classFoodItem}{Food\+Item}} class represents a food item in a restaurant menu.  
+
+
+
+
+{\ttfamily \#include $<$Food\+Item.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFoodItem_a70e0ac6655a8c4fb69f3c31af378b3fd}\label{classFoodItem_a70e0ac6655a8c4fb69f3c31af378b3fd}} 
+\mbox{\hyperlink{classFoodItem_a70e0ac6655a8c4fb69f3c31af378b3fd}{Food\+Item}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new Food \mbox{\hyperlink{classItem}{Item}} object with default values. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classFoodItem_ab5a2982bcc0e1e7d9c06517a0cf3adb7}{Food\+Item}} (std\+::string n, double val)
+\begin{DoxyCompactList}\small\item\em Construct a new Food \mbox{\hyperlink{classItem}{Item}} object with a name and price. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classFoodItem_af3d4267ca4c14d1c4f683ce8d48a2ed4}{Food\+Item}} (std\+::string n, bool gar, bool sauce, double val, bool well)
+\begin{DoxyCompactList}\small\item\em Construct a new Food \mbox{\hyperlink{classItem}{Item}} object with a name, garnish, sauce, price and well done status. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classFoodItem_a8c909c9f9cb2dfa8adf0426a8846ceca}\label{classFoodItem_a8c909c9f9cb2dfa8adf0426a8846ceca}} 
+{\bfseries Food\+Item} (\mbox{\hyperlink{classFoodItem}{Food\+Item}} $\ast$f)
+\item 
+double \mbox{\hyperlink{classFoodItem_a4f05f51a2478c0618720ed353ad3135a}{get\+Price}} ()
+\begin{DoxyCompactList}\small\item\em Get the price of the food item. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classFoodItem_ac2553a145e47cf19676944d04afdd926}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Get the name of the food item. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classFoodItem_afa7257fb765bb605709ccd718fc9d109}{get\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Get the type of the food item. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classFoodItem_aa4e5e87047eb6c9eb8c6f27a7ba21b05}{to\+String}} ()
+\begin{DoxyCompactList}\small\item\em Get a string representation of the food item. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classFoodItem_a43236d7b67a8512b321e70a3a17ac648}\label{classFoodItem_a43236d7b67a8512b321e70a3a17ac648}} 
+std\+::string {\bfseries get\+Meal\+Name} ()
+\item 
+\mbox{\Hypertarget{classFoodItem_ad30f9950ffdfaa304c157f18964be101}\label{classFoodItem_ad30f9950ffdfaa304c157f18964be101}} 
+bool \mbox{\hyperlink{classFoodItem_ad30f9950ffdfaa304c157f18964be101}{get\+Garnish}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the Food \mbox{\hyperlink{classItem}{Item}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classFoodItem_a7264c13260083fc1ce0ba43d0913a73f}\label{classFoodItem_a7264c13260083fc1ce0ba43d0913a73f}} 
+bool {\bfseries get\+Well\+Done} ()
+\item 
+\mbox{\Hypertarget{classFoodItem_a86f31b6556f2cc80354e0fdddf0f0229}\label{classFoodItem_a86f31b6556f2cc80354e0fdddf0f0229}} 
+bool {\bfseries get\+Sauce} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classFoodItem}{Food\+Item}} class represents a food item in a restaurant menu. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classFoodItem_ab5a2982bcc0e1e7d9c06517a0cf3adb7}\label{classFoodItem_ab5a2982bcc0e1e7d9c06517a0cf3adb7}} 
+\index{FoodItem@{FoodItem}!FoodItem@{FoodItem}}
+\index{FoodItem@{FoodItem}!FoodItem@{FoodItem}}
+\doxysubsubsection{\texorpdfstring{FoodItem()}{FoodItem()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Food\+Item\+::\+Food\+Item (\begin{DoxyParamCaption}\item[{std\+::string}]{n,  }\item[{double}]{val }\end{DoxyParamCaption})}
+
+
+
+Construct a new Food \mbox{\hyperlink{classItem}{Item}} object with a name and price. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The name of the food item. \\
+\hline
+{\em val} & The price of the food item. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFoodItem_af3d4267ca4c14d1c4f683ce8d48a2ed4}\label{classFoodItem_af3d4267ca4c14d1c4f683ce8d48a2ed4}} 
+\index{FoodItem@{FoodItem}!FoodItem@{FoodItem}}
+\index{FoodItem@{FoodItem}!FoodItem@{FoodItem}}
+\doxysubsubsection{\texorpdfstring{FoodItem()}{FoodItem()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Food\+Item\+::\+Food\+Item (\begin{DoxyParamCaption}\item[{std\+::string}]{n,  }\item[{bool}]{gar,  }\item[{bool}]{sauce,  }\item[{double}]{val,  }\item[{bool}]{well }\end{DoxyParamCaption})}
+
+
+
+Construct a new Food \mbox{\hyperlink{classItem}{Item}} object with a name, garnish, sauce, price and well done status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The name of the food item. \\
+\hline
+{\em gar} & Whether the food item has garnish. \\
+\hline
+{\em sauce} & Whether the food item has sauce. \\
+\hline
+{\em val} & The price of the food item. \\
+\hline
+{\em well} & Whether the food item is well done. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classFoodItem_ac2553a145e47cf19676944d04afdd926}\label{classFoodItem_ac2553a145e47cf19676944d04afdd926}} 
+\index{FoodItem@{FoodItem}!getName@{getName}}
+\index{getName@{getName}!FoodItem@{FoodItem}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Food\+Item\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the name of the food item. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string The name of the food item. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFoodItem_a4f05f51a2478c0618720ed353ad3135a}\label{classFoodItem_a4f05f51a2478c0618720ed353ad3135a}} 
+\index{FoodItem@{FoodItem}!getPrice@{getPrice}}
+\index{getPrice@{getPrice}!FoodItem@{FoodItem}}
+\doxysubsubsection{\texorpdfstring{getPrice()}{getPrice()}}
+{\footnotesize\ttfamily double Food\+Item\+::get\+Price (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the price of the food item. 
+
+\begin{DoxyReturn}{Returns}
+double The price of the food item. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFoodItem_afa7257fb765bb605709ccd718fc9d109}\label{classFoodItem_afa7257fb765bb605709ccd718fc9d109}} 
+\index{FoodItem@{FoodItem}!getType@{getType}}
+\index{getType@{getType}!FoodItem@{FoodItem}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily std\+::string Food\+Item\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the type of the food item. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string The type of the food item. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFoodItem_aa4e5e87047eb6c9eb8c6f27a7ba21b05}\label{classFoodItem_aa4e5e87047eb6c9eb8c6f27a7ba21b05}} 
+\index{FoodItem@{FoodItem}!toString@{toString}}
+\index{toString@{toString}!FoodItem@{FoodItem}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily std\+::string Food\+Item\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get a string representation of the food item. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string A string representation of the food item. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Food\+Item.\+h\item 
+Food\+Item.\+cpp\end{DoxyCompactItemize}

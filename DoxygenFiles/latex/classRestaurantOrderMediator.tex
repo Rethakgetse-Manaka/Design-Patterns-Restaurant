@@ -1,0 +1,145 @@
+\hypertarget{classRestaurantOrderMediator}{}\doxysection{Restaurant\+Order\+Mediator Class Reference}
+\label{classRestaurantOrderMediator}\index{RestaurantOrderMediator@{RestaurantOrderMediator}}
+
+
+A mediator class that coordinates communication between waiters, chefs, and bartender to fulfill orders in a restaurant.  
+
+
+
+
+{\ttfamily \#include $<$Restaurant\+Order\+Mediator.\+h$>$}
+
+
+
+Inheritance diagram for Restaurant\+Order\+Mediator\+:
+% FIG 0
+
+
+Collaboration diagram for Restaurant\+Order\+Mediator\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRestaurantOrderMediator_a069efa6107ef52112358d90b1ff449b6}\label{classRestaurantOrderMediator_a069efa6107ef52112358d90b1ff449b6}} 
+\mbox{\hyperlink{classRestaurantOrderMediator_a069efa6107ef52112358d90b1ff449b6}{Restaurant\+Order\+Mediator}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a new \mbox{\hyperlink{classRestaurantOrderMediator}{Restaurant\+Order\+Mediator}} object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classRestaurantOrderMediator_a8ff0b6bbb412152b3f69910314f0def3}{notify\+Order\+Placed}} (\mbox{\hyperlink{classOrder}{Order}} $\ast$o)
+\begin{DoxyCompactList}\small\item\em Notifies the mediator that an order has been placed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRestaurantOrderMediator_a310e207139fd34447a9e8e7ab1f04eb4}{set\+Inventory}} (\mbox{\hyperlink{classInventory}{Inventory}} $\ast$inventory)
+\begin{DoxyCompactList}\small\item\em Sets the inventory for the restaurant. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classRestaurantOrderMediator_aacc4cdf65b00d6e35dc1c1e768307e7c}{notify\+Plate\+Ready}} (\mbox{\hyperlink{classPlate}{Plate}} $\ast$p)
+\begin{DoxyCompactList}\small\item\em Notifies the mediator that a plate is ready. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classRestaurantOrderMediator_a61f81890c2104e8f98d102b27490ff01}{notify\+Drinks\+Ready}} (\mbox{\hyperlink{classDrinkTray}{Drink\+Tray}} $\ast$d)
+\begin{DoxyCompactList}\small\item\em Notifies the mediator that drinks are ready. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRestaurantOrderMediator_a1ea81f7a2a60316c9bd4695bea620fa6}{add\+Waiter}} (\mbox{\hyperlink{classWaiter}{Waiter}} $\ast$\mbox{\hyperlink{classWaiter}{Waiter}})
+\begin{DoxyCompactList}\small\item\em Adds a waiter to the restaurant. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRestaurantOrderMediator_aba234f6cc47dc24adbf52928c165e773}\label{classRestaurantOrderMediator_aba234f6cc47dc24adbf52928c165e773}} 
+virtual \mbox{\hyperlink{classRestaurantOrderMediator_aba234f6cc47dc24adbf52928c165e773}{$\sim$\+Restaurant\+Order\+Mediator}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \mbox{\hyperlink{classRestaurantOrderMediator}{Restaurant\+Order\+Mediator}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A mediator class that coordinates communication between waiters, chefs, and bartender to fulfill orders in a restaurant. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRestaurantOrderMediator_a1ea81f7a2a60316c9bd4695bea620fa6}\label{classRestaurantOrderMediator_a1ea81f7a2a60316c9bd4695bea620fa6}} 
+\index{RestaurantOrderMediator@{RestaurantOrderMediator}!addWaiter@{addWaiter}}
+\index{addWaiter@{addWaiter}!RestaurantOrderMediator@{RestaurantOrderMediator}}
+\doxysubsubsection{\texorpdfstring{addWaiter()}{addWaiter()}}
+{\footnotesize\ttfamily void Restaurant\+Order\+Mediator\+::add\+Waiter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWaiter}{Waiter}} $\ast$}]{Waiter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Adds a waiter to the restaurant. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{classWaiter}{Waiter}}} & The waiter to be added. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classOrderMediator_a67e05049fec51b9ff72e34c06dd41771}{Order\+Mediator}}.
+
+\mbox{\Hypertarget{classRestaurantOrderMediator_a61f81890c2104e8f98d102b27490ff01}\label{classRestaurantOrderMediator_a61f81890c2104e8f98d102b27490ff01}} 
+\index{RestaurantOrderMediator@{RestaurantOrderMediator}!notifyDrinksReady@{notifyDrinksReady}}
+\index{notifyDrinksReady@{notifyDrinksReady}!RestaurantOrderMediator@{RestaurantOrderMediator}}
+\doxysubsubsection{\texorpdfstring{notifyDrinksReady()}{notifyDrinksReady()}}
+{\footnotesize\ttfamily void Restaurant\+Order\+Mediator\+::notify\+Drinks\+Ready (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDrinkTray}{Drink\+Tray}} $\ast$}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Notifies the mediator that drinks are ready. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & The drink tray that is ready. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classOrderMediator_a2fd6e3d4adc889b3b6b18f7da7c0cfd5}{Order\+Mediator}}.
+
+\mbox{\Hypertarget{classRestaurantOrderMediator_a8ff0b6bbb412152b3f69910314f0def3}\label{classRestaurantOrderMediator_a8ff0b6bbb412152b3f69910314f0def3}} 
+\index{RestaurantOrderMediator@{RestaurantOrderMediator}!notifyOrderPlaced@{notifyOrderPlaced}}
+\index{notifyOrderPlaced@{notifyOrderPlaced}!RestaurantOrderMediator@{RestaurantOrderMediator}}
+\doxysubsubsection{\texorpdfstring{notifyOrderPlaced()}{notifyOrderPlaced()}}
+{\footnotesize\ttfamily void Restaurant\+Order\+Mediator\+::notify\+Order\+Placed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classOrder}{Order}} $\ast$}]{o }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Notifies the mediator that an order has been placed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em o} & The order that has been placed. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classOrderMediator_ae4b0aee87fdf275e1b2d773f5c5a8636}{Order\+Mediator}}.
+
+\mbox{\Hypertarget{classRestaurantOrderMediator_aacc4cdf65b00d6e35dc1c1e768307e7c}\label{classRestaurantOrderMediator_aacc4cdf65b00d6e35dc1c1e768307e7c}} 
+\index{RestaurantOrderMediator@{RestaurantOrderMediator}!notifyPlateReady@{notifyPlateReady}}
+\index{notifyPlateReady@{notifyPlateReady}!RestaurantOrderMediator@{RestaurantOrderMediator}}
+\doxysubsubsection{\texorpdfstring{notifyPlateReady()}{notifyPlateReady()}}
+{\footnotesize\ttfamily void Restaurant\+Order\+Mediator\+::notify\+Plate\+Ready (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlate}{Plate}} $\ast$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Notifies the mediator that a plate is ready. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & The plate that is ready. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classOrderMediator_aedd9288d3538676dcf2d7df7bb874e0d}{Order\+Mediator}}.
+
+\mbox{\Hypertarget{classRestaurantOrderMediator_a310e207139fd34447a9e8e7ab1f04eb4}\label{classRestaurantOrderMediator_a310e207139fd34447a9e8e7ab1f04eb4}} 
+\index{RestaurantOrderMediator@{RestaurantOrderMediator}!setInventory@{setInventory}}
+\index{setInventory@{setInventory}!RestaurantOrderMediator@{RestaurantOrderMediator}}
+\doxysubsubsection{\texorpdfstring{setInventory()}{setInventory()}}
+{\footnotesize\ttfamily void Restaurant\+Order\+Mediator\+::set\+Inventory (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classInventory}{Inventory}} $\ast$}]{inventory }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sets the inventory for the restaurant. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inventory} & The inventory to be set. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classOrderMediator_a7135d050c2be5e1f032d3ccff0093605}{Order\+Mediator}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Restaurant\+Order\+Mediator.\+h\item 
+Restaurant\+Order\+Mediator.\+cpp\end{DoxyCompactItemize}

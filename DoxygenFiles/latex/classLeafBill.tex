@@ -1,0 +1,141 @@
+\hypertarget{classLeafBill}{}\doxysection{Leaf\+Bill Class Reference}
+\label{classLeafBill}\index{LeafBill@{LeafBill}}
+
+
+{\ttfamily \#include $<$Leaf\+Bill.\+h$>$}
+
+
+
+Inheritance diagram for Leaf\+Bill\+:
+% FIG 0
+
+
+Collaboration diagram for Leaf\+Bill\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLeafBill_aea19087a428cca4ee7f83f0846adf175}{Leaf\+Bill}} (\mbox{\hyperlink{classOrder}{Order}} $\ast$ord, double tip)
+\item 
+void \mbox{\hyperlink{classLeafBill_a35913a9e5868b066c0cf9def9ad83971}{set\+Tip}} (double tip)
+\item 
+double \mbox{\hyperlink{classLeafBill_a2f0381483585d8aebdf802ca98ad257b}{get\+Tip}} ()
+\item 
+virtual \mbox{\hyperlink{classBill}{Bill}} $\ast$ \mbox{\hyperlink{classLeafBill_a25333d63bd8fbcfead92f8dba56e2171}{find\+Bill}} (int customer)
+\item 
+virtual \mbox{\hyperlink{classOrder}{Order}} $\ast$ \mbox{\hyperlink{classLeafBill_a65958c83b81d75b58a220b5c759bcd1d}{get\+Order}} ()
+\item 
+double \mbox{\hyperlink{classLeafBill_ae50e37de708801a49de8579cdeca4382}{get\+Bill\+Total}} ()
+\item 
+void \mbox{\hyperlink{classLeafBill_a4b1398508f5cc0c3f937883b576c0c32}{print\+Bill}} ()
+\item 
+virtual \mbox{\hyperlink{classLeafBill_afc7feff5a7585db4ecc6285b055ca48a}{$\sim$\+Leaf\+Bill}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classLeafBill}{Leaf\+Bill}} class represents a single bill for a customer\textquotesingle{}s order. It contains information about the order, bill ID, and tip amount. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classLeafBill_aea19087a428cca4ee7f83f0846adf175}\label{classLeafBill_aea19087a428cca4ee7f83f0846adf175}} 
+\index{LeafBill@{LeafBill}!LeafBill@{LeafBill}}
+\index{LeafBill@{LeafBill}!LeafBill@{LeafBill}}
+\doxysubsubsection{\texorpdfstring{LeafBill()}{LeafBill()}}
+{\footnotesize\ttfamily Leaf\+Bill\+::\+Leaf\+Bill (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classOrder}{Order}} $\ast$}]{ord,  }\item[{double}]{tip }\end{DoxyParamCaption})}
+
+Constructor for \mbox{\hyperlink{classLeafBill}{Leaf\+Bill}} class. 
+\begin{DoxyParams}{Parameters}
+{\em ord} & Pointer to the order associated with this bill \\
+\hline
+{\em tip} & Tip amount for this bill \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLeafBill_afc7feff5a7585db4ecc6285b055ca48a}\label{classLeafBill_afc7feff5a7585db4ecc6285b055ca48a}} 
+\index{LeafBill@{LeafBill}!````~LeafBill@{$\sim$LeafBill}}
+\index{````~LeafBill@{$\sim$LeafBill}!LeafBill@{LeafBill}}
+\doxysubsubsection{\texorpdfstring{$\sim$LeafBill()}{~LeafBill()}}
+{\footnotesize\ttfamily Leaf\+Bill\+::$\sim$\+Leaf\+Bill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destructor for \mbox{\hyperlink{classLeafBill}{Leaf\+Bill}} class. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLeafBill_a25333d63bd8fbcfead92f8dba56e2171}\label{classLeafBill_a25333d63bd8fbcfead92f8dba56e2171}} 
+\index{LeafBill@{LeafBill}!findBill@{findBill}}
+\index{findBill@{findBill}!LeafBill@{LeafBill}}
+\doxysubsubsection{\texorpdfstring{findBill()}{findBill()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBill}{Bill}} $\ast$ Leaf\+Bill\+::find\+Bill (\begin{DoxyParamCaption}\item[{int}]{customer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Finds the bill associated with the given customer ID. Since this is a leaf node, it simply returns itself if the customer ID matches. 
+\begin{DoxyParams}{Parameters}
+{\em customer} & \mbox{\hyperlink{classCustomer}{Customer}} ID to search for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the bill associated with the given customer ID, or nullptr if not found 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBill}{Bill}}.
+
+\mbox{\Hypertarget{classLeafBill_ae50e37de708801a49de8579cdeca4382}\label{classLeafBill_ae50e37de708801a49de8579cdeca4382}} 
+\index{LeafBill@{LeafBill}!getBillTotal@{getBillTotal}}
+\index{getBillTotal@{getBillTotal}!LeafBill@{LeafBill}}
+\doxysubsubsection{\texorpdfstring{getBillTotal()}{getBillTotal()}}
+{\footnotesize\ttfamily double Leaf\+Bill\+::get\+Bill\+Total (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Calculates the total cost of this bill, including the order cost and tip amount. \begin{DoxyReturn}{Returns}
+Total cost of this bill 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBill}{Bill}}.
+
+\mbox{\Hypertarget{classLeafBill_a65958c83b81d75b58a220b5c759bcd1d}\label{classLeafBill_a65958c83b81d75b58a220b5c759bcd1d}} 
+\index{LeafBill@{LeafBill}!getOrder@{getOrder}}
+\index{getOrder@{getOrder}!LeafBill@{LeafBill}}
+\doxysubsubsection{\texorpdfstring{getOrder()}{getOrder()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classOrder}{Order}} $\ast$ Leaf\+Bill\+::get\+Order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Getter for the order associated with this bill. \begin{DoxyReturn}{Returns}
+Pointer to the order associated with this bill 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBill}{Bill}}.
+
+\mbox{\Hypertarget{classLeafBill_a2f0381483585d8aebdf802ca98ad257b}\label{classLeafBill_a2f0381483585d8aebdf802ca98ad257b}} 
+\index{LeafBill@{LeafBill}!getTip@{getTip}}
+\index{getTip@{getTip}!LeafBill@{LeafBill}}
+\doxysubsubsection{\texorpdfstring{getTip()}{getTip()}}
+{\footnotesize\ttfamily double Leaf\+Bill\+::get\+Tip (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Getter for tip amount. \begin{DoxyReturn}{Returns}
+Tip amount for this bill 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLeafBill_a4b1398508f5cc0c3f937883b576c0c32}\label{classLeafBill_a4b1398508f5cc0c3f937883b576c0c32}} 
+\index{LeafBill@{LeafBill}!printBill@{printBill}}
+\index{printBill@{printBill}!LeafBill@{LeafBill}}
+\doxysubsubsection{\texorpdfstring{printBill()}{printBill()}}
+{\footnotesize\ttfamily void Leaf\+Bill\+::print\+Bill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Prints the details of this bill to the console. 
+
+Reimplemented from \mbox{\hyperlink{classBill}{Bill}}.
+
+\mbox{\Hypertarget{classLeafBill_a35913a9e5868b066c0cf9def9ad83971}\label{classLeafBill_a35913a9e5868b066c0cf9def9ad83971}} 
+\index{LeafBill@{LeafBill}!setTip@{setTip}}
+\index{setTip@{setTip}!LeafBill@{LeafBill}}
+\doxysubsubsection{\texorpdfstring{setTip()}{setTip()}}
+{\footnotesize\ttfamily void Leaf\+Bill\+::set\+Tip (\begin{DoxyParamCaption}\item[{double}]{tip }\end{DoxyParamCaption})}
+
+Setter for tip amount. 
+\begin{DoxyParams}{Parameters}
+{\em tip} & Tip amount for this bill \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Leaf\+Bill.\+h\item 
+Leaf\+Bill.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,44 @@
+\hypertarget{classCustomerState}{}\doxysection{Customer\+State Class Reference}
+\label{classCustomerState}\index{CustomerState@{CustomerState}}
+
+
+The base class for all customer states.  
+
+
+
+
+{\ttfamily \#include $<$Customer\+State.\+h$>$}
+
+
+
+Inheritance diagram for Customer\+State\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCustomerState_a54e472c2d0dda4d14a184c090ee95d72}\label{classCustomerState_a54e472c2d0dda4d14a184c090ee95d72}} 
+virtual void {\bfseries handle} (\mbox{\hyperlink{classCustomer}{Customer}} $\ast$c)=0
+\item 
+\mbox{\Hypertarget{classCustomerState_adf97eb27025569eb2a3d70d5f49e2b22}\label{classCustomerState_adf97eb27025569eb2a3d70d5f49e2b22}} 
+virtual void {\bfseries show\+Hapiness} (\mbox{\hyperlink{classCustomer}{Customer}} $\ast$c)=0
+\item 
+\mbox{\Hypertarget{classCustomerState_ad5bb8724b4b1c9bc8a000396facabaa8}\label{classCustomerState_ad5bb8724b4b1c9bc8a000396facabaa8}} 
+virtual void {\bfseries show\+Unhapiness} (\mbox{\hyperlink{classCustomer}{Customer}} $\ast$c)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCustomerState_a5e572bda3e53610dee8b26ecd54d266d}\label{classCustomerState_a5e572bda3e53610dee8b26ecd54d266d}} 
+std\+::string {\bfseries state}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The base class for all customer states. 
+
+This class defines the interface for all customer states. It contains pure virtual functions that must be implemented by derived classes. It also has a protected member variable \textquotesingle{}state\textquotesingle{} which stores the current state of the customer. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Customer\+State.\+h\item 
+Customer\+State.\+cpp\end{DoxyCompactItemize}

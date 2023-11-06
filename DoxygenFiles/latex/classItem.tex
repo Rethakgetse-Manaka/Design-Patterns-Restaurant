@@ -1,0 +1,119 @@
+\hypertarget{classItem}{}\doxysection{Item Class Reference}
+\label{classItem}\index{Item@{Item}}
+
+
+The \mbox{\hyperlink{classItem}{Item}} class represents an item in a shopping cart.  
+
+
+
+
+{\ttfamily \#include $<$Item.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classItem_a48152a51bfce49e386522e6dc0fc4947}{Item}} (\mbox{\hyperlink{classFoodItem}{Food\+Item}} $\ast$item, int quantity, int stock\+Change)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classItem}{Item}} object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classItem_a4ff297b946505e7956eae16006cada04}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Get the name of the \mbox{\hyperlink{classFoodItem}{Food\+Item}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classItem_a48cd558b78c340b9a54c85935693d8c4}{get\+Quantity}} () const
+\begin{DoxyCompactList}\small\item\em Get the quantity of the \mbox{\hyperlink{classFoodItem}{Food\+Item}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classItem_a9ba4c81dfcb6b3a5dbfbae154276ea48}\label{classItem_a9ba4c81dfcb6b3a5dbfbae154276ea48}} 
+void \mbox{\hyperlink{classItem_a9ba4c81dfcb6b3a5dbfbae154276ea48}{decrement\+Quantity}} ()
+\begin{DoxyCompactList}\small\item\em Decrement the quantity of the \mbox{\hyperlink{classFoodItem}{Food\+Item}} by 1. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classItem_a57b89f336b692abed52b67f3119f77a1}{get\+Cost}} () const
+\begin{DoxyCompactList}\small\item\em Get the cost of the \mbox{\hyperlink{classFoodItem}{Food\+Item}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classItem_a1f84bca4b1e05735577dcb59fed270fc}{get\+Stock\+Change}} () const
+\begin{DoxyCompactList}\small\item\em Get the change in stock of the \mbox{\hyperlink{classFoodItem}{Food\+Item}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classItem_a61c4b2b1285bcf61960fb04c76f5fe1b}\label{classItem_a61c4b2b1285bcf61960fb04c76f5fe1b}} 
+void \mbox{\hyperlink{classItem_a61c4b2b1285bcf61960fb04c76f5fe1b}{reset\+Stock\+Change}} ()
+\begin{DoxyCompactList}\small\item\em Reset the change in stock of the \mbox{\hyperlink{classFoodItem}{Food\+Item}} to 0. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classItem_a11663c84075b78c3ae5e30fdfcd7c458}\label{classItem_a11663c84075b78c3ae5e30fdfcd7c458}} 
+\mbox{\hyperlink{classItem_a11663c84075b78c3ae5e30fdfcd7c458}{$\sim$\+Item}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classItem}{Item}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classItem}{Item}} class represents an item in a shopping cart. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classItem_a48152a51bfce49e386522e6dc0fc4947}\label{classItem_a48152a51bfce49e386522e6dc0fc4947}} 
+\index{Item@{Item}!Item@{Item}}
+\index{Item@{Item}!Item@{Item}}
+\doxysubsubsection{\texorpdfstring{Item()}{Item()}}
+{\footnotesize\ttfamily Item\+::\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFoodItem}{Food\+Item}} $\ast$}]{item,  }\item[{int}]{quantity,  }\item[{int}]{stock\+Change }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classItem}{Item}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & A pointer to the \mbox{\hyperlink{classFoodItem}{Food\+Item}} that this \mbox{\hyperlink{classItem}{Item}} represents. \\
+\hline
+{\em quantity} & The quantity of the \mbox{\hyperlink{classFoodItem}{Food\+Item}}. \\
+\hline
+{\em stock\+Change} & The change in stock of the \mbox{\hyperlink{classFoodItem}{Food\+Item}}. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classItem_a57b89f336b692abed52b67f3119f77a1}\label{classItem_a57b89f336b692abed52b67f3119f77a1}} 
+\index{Item@{Item}!getCost@{getCost}}
+\index{getCost@{getCost}!Item@{Item}}
+\doxysubsubsection{\texorpdfstring{getCost()}{getCost()}}
+{\footnotesize\ttfamily double Item\+::get\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the cost of the \mbox{\hyperlink{classFoodItem}{Food\+Item}}. 
+
+\begin{DoxyReturn}{Returns}
+double The cost of the \mbox{\hyperlink{classFoodItem}{Food\+Item}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classItem_a4ff297b946505e7956eae16006cada04}\label{classItem_a4ff297b946505e7956eae16006cada04}} 
+\index{Item@{Item}!getName@{getName}}
+\index{getName@{getName}!Item@{Item}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Item\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the name of the \mbox{\hyperlink{classFoodItem}{Food\+Item}}. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string The name of the \mbox{\hyperlink{classFoodItem}{Food\+Item}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classItem_a48cd558b78c340b9a54c85935693d8c4}\label{classItem_a48cd558b78c340b9a54c85935693d8c4}} 
+\index{Item@{Item}!getQuantity@{getQuantity}}
+\index{getQuantity@{getQuantity}!Item@{Item}}
+\doxysubsubsection{\texorpdfstring{getQuantity()}{getQuantity()}}
+{\footnotesize\ttfamily int Item\+::get\+Quantity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the quantity of the \mbox{\hyperlink{classFoodItem}{Food\+Item}}. 
+
+\begin{DoxyReturn}{Returns}
+int The quantity of the \mbox{\hyperlink{classFoodItem}{Food\+Item}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classItem_a1f84bca4b1e05735577dcb59fed270fc}\label{classItem_a1f84bca4b1e05735577dcb59fed270fc}} 
+\index{Item@{Item}!getStockChange@{getStockChange}}
+\index{getStockChange@{getStockChange}!Item@{Item}}
+\doxysubsubsection{\texorpdfstring{getStockChange()}{getStockChange()}}
+{\footnotesize\ttfamily int Item\+::get\+Stock\+Change (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the change in stock of the \mbox{\hyperlink{classFoodItem}{Food\+Item}}. 
+
+\begin{DoxyReturn}{Returns}
+int The change in stock of the \mbox{\hyperlink{classFoodItem}{Food\+Item}}. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Item.\+h\item 
+Item.\+cpp\end{DoxyCompactItemize}

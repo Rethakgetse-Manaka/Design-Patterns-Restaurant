@@ -1,0 +1,61 @@
+\hypertarget{classComplaintsManager}{}\doxysection{Complaints\+Manager Class Reference}
+\label{classComplaintsManager}\index{ComplaintsManager@{ComplaintsManager}}
+
+
+The \mbox{\hyperlink{classComplaintsManager}{Complaints\+Manager}} class is a concrete implementation of the \mbox{\hyperlink{classTableVisitor}{Table\+Visitor}} interface.  
+
+
+
+
+{\ttfamily \#include $<$Complaints\+Manager.\+h$>$}
+
+
+
+Inheritance diagram for Complaints\+Manager\+:
+% FIG 0
+
+
+Collaboration diagram for Complaints\+Manager\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classComplaintsManager_a29b8802a3cb27e0b03b56b47b8044ebc}\label{classComplaintsManager_a29b8802a3cb27e0b03b56b47b8044ebc}} 
+\mbox{\hyperlink{classComplaintsManager_a29b8802a3cb27e0b03b56b47b8044ebc}{Complaints\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new Complaints Manager object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classComplaintsManager_a4550debbb5a85b5269397c7700e38450}{visit\+Customer}} (\mbox{\hyperlink{classCustomer}{Customer}} $\ast$customer)
+\begin{DoxyCompactList}\small\item\em Visit the given customer and handle any complaints they may have. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classComplaintsManager_acbc0a2ce35e4e3a38469d918d74f05a7}\label{classComplaintsManager_acbc0a2ce35e4e3a38469d918d74f05a7}} 
+virtual \mbox{\hyperlink{classComplaintsManager_acbc0a2ce35e4e3a38469d918d74f05a7}{$\sim$\+Complaints\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the Complaints Manager object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classComplaintsManager}{Complaints\+Manager}} class is a concrete implementation of the \mbox{\hyperlink{classTableVisitor}{Table\+Visitor}} interface. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classComplaintsManager_a4550debbb5a85b5269397c7700e38450}\label{classComplaintsManager_a4550debbb5a85b5269397c7700e38450}} 
+\index{ComplaintsManager@{ComplaintsManager}!visitCustomer@{visitCustomer}}
+\index{visitCustomer@{visitCustomer}!ComplaintsManager@{ComplaintsManager}}
+\doxysubsubsection{\texorpdfstring{visitCustomer()}{visitCustomer()}}
+{\footnotesize\ttfamily void Complaints\+Manager\+::visit\+Customer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCustomer}{Customer}} $\ast$}]{customer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Visit the given customer and handle any complaints they may have. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em customer} & The customer to visit. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classTableVisitor_ad7633f477455ed03ab26580a405c052c}{Table\+Visitor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Complaints\+Manager.\+h\item 
+Complaints\+Manager.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,13 @@
+digraph "CocktailDecorator"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="CocktailDecorator",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="The CocktailDecorator class is an abstract class that serves as a base for all cocktail decorators."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Cocktail",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCocktail.html",tooltip="The Cocktail class is an abstract base class that defines the interface for all cocktails."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="AlcoholDecorator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classAlcoholDecorator.html",tooltip="The AlcoholDecorator class is a concrete decorator that adds an alcohol to a cocktail."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="SpecificCocktail",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classSpecificCocktail.html",tooltip="The SpecificCocktail class is a concrete decorator that adds a specific type of alcohol to a base coc..."];
+}

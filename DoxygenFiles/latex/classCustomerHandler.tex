@@ -1,0 +1,84 @@
+\hypertarget{classCustomerHandler}{}\doxysection{Customer\+Handler Class Reference}
+\label{classCustomerHandler}\index{CustomerHandler@{CustomerHandler}}
+
+
+The base class for handling customer requests.  
+
+
+
+
+{\ttfamily \#include $<$Customer\+Handler.\+h$>$}
+
+
+
+Inheritance diagram for Customer\+Handler\+:
+% FIG 0
+
+
+Collaboration diagram for Customer\+Handler\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCustomerHandler_a19afbb552ea0722c412cab7fa430c26b}\label{classCustomerHandler_a19afbb552ea0722c412cab7fa430c26b}} 
+\mbox{\hyperlink{classCustomerHandler_a19afbb552ea0722c412cab7fa430c26b}{Customer\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classCustomerHandler}{Customer\+Handler}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCustomerHandler_a35144951cada57eb3e23fdfff9a525c0}{add}} (\mbox{\hyperlink{classCustomerHandler}{Customer\+Handler}} $\ast$n)
+\begin{DoxyCompactList}\small\item\em Add a new \mbox{\hyperlink{classCustomerHandler}{Customer\+Handler}} object to the chain. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCustomerHandler_a1bd6e5e3c75f523f18519da35f50b825}\label{classCustomerHandler_a1bd6e5e3c75f523f18519da35f50b825}} 
+virtual \mbox{\hyperlink{classCustomerHandler_a1bd6e5e3c75f523f18519da35f50b825}{$\sim$\+Customer\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classCustomerHandler}{Customer\+Handler}} object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classCustomerHandler_afefc2def6433461235f2ee2a547a902a}{handle\+Request}} (\mbox{\hyperlink{classCustomer}{Customer}} $\ast$customer)
+\begin{DoxyCompactList}\small\item\em Handle the customer request. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCustomerHandler_a29f4e16afd7816e86a4b060cd12663b1}\label{classCustomerHandler_a29f4e16afd7816e86a4b060cd12663b1}} 
+\mbox{\hyperlink{classCustomerHandler}{Customer\+Handler}} $\ast$ {\bfseries next}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The base class for handling customer requests. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCustomerHandler_a35144951cada57eb3e23fdfff9a525c0}\label{classCustomerHandler_a35144951cada57eb3e23fdfff9a525c0}} 
+\index{CustomerHandler@{CustomerHandler}!add@{add}}
+\index{add@{add}!CustomerHandler@{CustomerHandler}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void Customer\+Handler\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCustomerHandler}{Customer\+Handler}} $\ast$}]{n }\end{DoxyParamCaption})}
+
+
+
+Add a new \mbox{\hyperlink{classCustomerHandler}{Customer\+Handler}} object to the chain. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The \mbox{\hyperlink{classCustomerHandler}{Customer\+Handler}} object to add. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCustomerHandler_afefc2def6433461235f2ee2a547a902a}\label{classCustomerHandler_afefc2def6433461235f2ee2a547a902a}} 
+\index{CustomerHandler@{CustomerHandler}!handleRequest@{handleRequest}}
+\index{handleRequest@{handleRequest}!CustomerHandler@{CustomerHandler}}
+\doxysubsubsection{\texorpdfstring{handleRequest()}{handleRequest()}}
+{\footnotesize\ttfamily void Customer\+Handler\+::handle\+Request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCustomer}{Customer}} $\ast$}]{customer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handle the customer request. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em customer} & The customer making the request. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classValletHandler_a006aa13dd2287736de8762cf233446a2}{Vallet\+Handler}}, and \mbox{\hyperlink{classAssignTable_a045b026dee9b49a53af24c5bb018df31}{Assign\+Table}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Customer\+Handler.\+h\item 
+Customer\+Handler.\+cpp\end{DoxyCompactItemize}

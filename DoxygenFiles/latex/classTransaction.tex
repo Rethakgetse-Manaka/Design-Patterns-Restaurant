@@ -1,0 +1,145 @@
+\hypertarget{classTransaction}{}\doxysection{Transaction Class Reference}
+\label{classTransaction}\index{Transaction@{Transaction}}
+
+
+The \mbox{\hyperlink{classTransaction}{Transaction}} class represents a single transaction made for an item.  
+
+
+
+
+{\ttfamily \#include $<$Transaction.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTransaction_ae71ef53ab1e47c8e37ea700504262e2e}{Transaction}} (\mbox{\hyperlink{classItem}{Item}} $\ast$item, double amount, Transaction\+Type type, const std\+::string \&date)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classTransaction}{Transaction}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classItem}{Item}} $\ast$ \mbox{\hyperlink{classTransaction_a76925e3823bbc64bb661fdf009565d7a}{get\+Item}} () const
+\begin{DoxyCompactList}\small\item\em Get the item involved in the transaction. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classTransaction_a82032f30ae2c62aaf5b911994f844a31}{get\+Amount}} () const
+\begin{DoxyCompactList}\small\item\em Get the amount of the item involved in the transaction. \end{DoxyCompactList}\item 
+Transaction\+Type \mbox{\hyperlink{classTransaction_a51fdfa6df976ac3040bc544904987373}{get\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Get the type of the transaction. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classTransaction_a8f1ad6be57b527f814cfafbc7899e63c}{get\+Total\+Cost}} () const
+\begin{DoxyCompactList}\small\item\em Get the total cost of the transaction. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classTransaction_a11a3180f71e5e279c87cf823ae1ee93e}{get\+Total\+Revenue}} () const
+\begin{DoxyCompactList}\small\item\em Get the total revenue of the transaction. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classTransaction_aafdd9dc3ddc90f295d0e3992ac5c4a26}{get\+Date}} () const
+\begin{DoxyCompactList}\small\item\em Get the date of the transaction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTransaction_a362b0d2524d0c799165190517192dca9}\label{classTransaction_a362b0d2524d0c799165190517192dca9}} 
+\mbox{\hyperlink{classTransaction_a362b0d2524d0c799165190517192dca9}{$\sim$\+Transaction}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classTransaction}{Transaction}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classTransaction}{Transaction}} class represents a single transaction made for an item. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTransaction_ae71ef53ab1e47c8e37ea700504262e2e}\label{classTransaction_ae71ef53ab1e47c8e37ea700504262e2e}} 
+\index{Transaction@{Transaction}!Transaction@{Transaction}}
+\index{Transaction@{Transaction}!Transaction@{Transaction}}
+\doxysubsubsection{\texorpdfstring{Transaction()}{Transaction()}}
+{\footnotesize\ttfamily Transaction\+::\+Transaction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classItem}{Item}} $\ast$}]{item,  }\item[{double}]{amount,  }\item[{Transaction\+Type}]{type,  }\item[{const std\+::string \&}]{date }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classTransaction}{Transaction}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & The item involved in the transaction. \\
+\hline
+{\em amount} & The amount of the item involved in the transaction. \\
+\hline
+{\em type} & The type of the transaction (buy or sell). \\
+\hline
+{\em date} & The date of the transaction. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTransaction_a82032f30ae2c62aaf5b911994f844a31}\label{classTransaction_a82032f30ae2c62aaf5b911994f844a31}} 
+\index{Transaction@{Transaction}!getAmount@{getAmount}}
+\index{getAmount@{getAmount}!Transaction@{Transaction}}
+\doxysubsubsection{\texorpdfstring{getAmount()}{getAmount()}}
+{\footnotesize\ttfamily double Transaction\+::get\+Amount (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the amount of the item involved in the transaction. 
+
+\begin{DoxyReturn}{Returns}
+double The amount of the item involved in the transaction. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTransaction_aafdd9dc3ddc90f295d0e3992ac5c4a26}\label{classTransaction_aafdd9dc3ddc90f295d0e3992ac5c4a26}} 
+\index{Transaction@{Transaction}!getDate@{getDate}}
+\index{getDate@{getDate}!Transaction@{Transaction}}
+\doxysubsubsection{\texorpdfstring{getDate()}{getDate()}}
+{\footnotesize\ttfamily std\+::string Transaction\+::get\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the date of the transaction. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string The date of the transaction. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTransaction_a76925e3823bbc64bb661fdf009565d7a}\label{classTransaction_a76925e3823bbc64bb661fdf009565d7a}} 
+\index{Transaction@{Transaction}!getItem@{getItem}}
+\index{getItem@{getItem}!Transaction@{Transaction}}
+\doxysubsubsection{\texorpdfstring{getItem()}{getItem()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classItem}{Item}} $\ast$ Transaction\+::get\+Item (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the item involved in the transaction. 
+
+\begin{DoxyReturn}{Returns}
+Item$\ast$ The item involved in the transaction. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTransaction_a8f1ad6be57b527f814cfafbc7899e63c}\label{classTransaction_a8f1ad6be57b527f814cfafbc7899e63c}} 
+\index{Transaction@{Transaction}!getTotalCost@{getTotalCost}}
+\index{getTotalCost@{getTotalCost}!Transaction@{Transaction}}
+\doxysubsubsection{\texorpdfstring{getTotalCost()}{getTotalCost()}}
+{\footnotesize\ttfamily double Transaction\+::get\+Total\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the total cost of the transaction. 
+
+\begin{DoxyReturn}{Returns}
+double The total cost of the transaction. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTransaction_a11a3180f71e5e279c87cf823ae1ee93e}\label{classTransaction_a11a3180f71e5e279c87cf823ae1ee93e}} 
+\index{Transaction@{Transaction}!getTotalRevenue@{getTotalRevenue}}
+\index{getTotalRevenue@{getTotalRevenue}!Transaction@{Transaction}}
+\doxysubsubsection{\texorpdfstring{getTotalRevenue()}{getTotalRevenue()}}
+{\footnotesize\ttfamily double Transaction\+::get\+Total\+Revenue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the total revenue of the transaction. 
+
+\begin{DoxyReturn}{Returns}
+double The total revenue of the transaction. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTransaction_a51fdfa6df976ac3040bc544904987373}\label{classTransaction_a51fdfa6df976ac3040bc544904987373}} 
+\index{Transaction@{Transaction}!getType@{getType}}
+\index{getType@{getType}!Transaction@{Transaction}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily Transaction\+Type Transaction\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the type of the transaction. 
+
+\begin{DoxyReturn}{Returns}
+Transaction\+Type The type of the transaction. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Transaction.\+h\item 
+Transaction.\+cpp\end{DoxyCompactItemize}

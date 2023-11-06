@@ -1,0 +1,57 @@
+\hypertarget{classObserver}{}\doxysection{Observer Class Reference}
+\label{classObserver}\index{Observer@{Observer}}
+
+
+The \mbox{\hyperlink{classObserver}{Observer}} class is an abstract class that defines the interface for objects that should be notified of changes in the subject.  
+
+
+
+
+{\ttfamily \#include $<$Observer.\+h$>$}
+
+
+
+Inheritance diagram for Observer\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classObserver_ac75e4b339faeb3ea6fe0a01bf0b4a215}\label{classObserver_ac75e4b339faeb3ea6fe0a01bf0b4a215}} 
+virtual void \mbox{\hyperlink{classObserver_ac75e4b339faeb3ea6fe0a01bf0b4a215}{update}} ()=0
+\begin{DoxyCompactList}\small\item\em This method is called by the subject to notify the observer of a change. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classObserver_a79c0202c492eb2c7cb0aa47c04b30762}{set\+Accounting\+System}} (\mbox{\hyperlink{classAccountingSystem}{Accounting\+System}} $\ast$accounting\+System)=0
+\begin{DoxyCompactList}\small\item\em This method is used to set the accounting system for the observer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classObserver_a450645e61c136826f09940a1334c7f34}\label{classObserver_a450645e61c136826f09940a1334c7f34}} 
+virtual \mbox{\hyperlink{classObserver_a450645e61c136826f09940a1334c7f34}{$\sim$\+Observer}} ()
+\begin{DoxyCompactList}\small\item\em This is the destructor for the \mbox{\hyperlink{classObserver}{Observer}} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classObserver}{Observer}} class is an abstract class that defines the interface for objects that should be notified of changes in the subject. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classObserver_a79c0202c492eb2c7cb0aa47c04b30762}\label{classObserver_a79c0202c492eb2c7cb0aa47c04b30762}} 
+\index{Observer@{Observer}!setAccountingSystem@{setAccountingSystem}}
+\index{setAccountingSystem@{setAccountingSystem}!Observer@{Observer}}
+\doxysubsubsection{\texorpdfstring{setAccountingSystem()}{setAccountingSystem()}}
+{\footnotesize\ttfamily virtual void Observer\+::set\+Accounting\+System (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classAccountingSystem}{Accounting\+System}} $\ast$}]{accounting\+System }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+This method is used to set the accounting system for the observer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em accounting\+System} & A pointer to the accounting system. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classRestaurantObserver_a72d0ca5478506c62260f334ba3bb6f5b}{Restaurant\+Observer}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Observer.\+h\item 
+Observer.\+cpp\end{DoxyCompactItemize}

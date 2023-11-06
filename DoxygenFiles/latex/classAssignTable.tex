@@ -1,0 +1,79 @@
+\hypertarget{classAssignTable}{}\doxysection{Assign\+Table Class Reference}
+\label{classAssignTable}\index{AssignTable@{AssignTable}}
+
+
+The \mbox{\hyperlink{classAssignTable}{Assign\+Table}} class is a subclass of \mbox{\hyperlink{classCustomerHandler}{Customer\+Handler}} and is responsible for assigning tables to customers.  
+
+
+
+
+{\ttfamily \#include $<$Assign\+Table.\+h$>$}
+
+
+
+Inheritance diagram for Assign\+Table\+:
+% FIG 0
+
+
+Collaboration diagram for Assign\+Table\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAssignTable_aa26b73f18418e5e594262635ea2ac49a}{Assign\+Table}} (std\+::vector$<$ \mbox{\hyperlink{classTable}{Table}} $\ast$ $>$ tables)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classAssignTable}{Assign\+Table}} object with the given vector of tables. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAssignTable_a045b026dee9b49a53af24c5bb018df31}{handle\+Request}} (\mbox{\hyperlink{classCustomer}{Customer}} $\ast$customer)
+\begin{DoxyCompactList}\small\item\em Handles the customer\textquotesingle{}s request by assigning them a table if one is available. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAssignTable_a0809678cc89dac5627490399449f85d3}\label{classAssignTable_a0809678cc89dac5627490399449f85d3}} 
+virtual \mbox{\hyperlink{classAssignTable_a0809678cc89dac5627490399449f85d3}{$\sim$\+Assign\+Table}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classAssignTable}{Assign\+Table}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classAssignTable}{Assign\+Table}} class is a subclass of \mbox{\hyperlink{classCustomerHandler}{Customer\+Handler}} and is responsible for assigning tables to customers. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classAssignTable_aa26b73f18418e5e594262635ea2ac49a}\label{classAssignTable_aa26b73f18418e5e594262635ea2ac49a}} 
+\index{AssignTable@{AssignTable}!AssignTable@{AssignTable}}
+\index{AssignTable@{AssignTable}!AssignTable@{AssignTable}}
+\doxysubsubsection{\texorpdfstring{AssignTable()}{AssignTable()}}
+{\footnotesize\ttfamily Assign\+Table\+::\+Assign\+Table (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classTable}{Table}} $\ast$ $>$}]{tables }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classAssignTable}{Assign\+Table}} object with the given vector of tables. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tables} & A vector of pointers to \mbox{\hyperlink{classTable}{Table}} objects representing the available tables. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classAssignTable_a045b026dee9b49a53af24c5bb018df31}\label{classAssignTable_a045b026dee9b49a53af24c5bb018df31}} 
+\index{AssignTable@{AssignTable}!handleRequest@{handleRequest}}
+\index{handleRequest@{handleRequest}!AssignTable@{AssignTable}}
+\doxysubsubsection{\texorpdfstring{handleRequest()}{handleRequest()}}
+{\footnotesize\ttfamily void Assign\+Table\+::handle\+Request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCustomer}{Customer}} $\ast$}]{customer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles the customer\textquotesingle{}s request by assigning them a table if one is available. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em customer} & A pointer to the \mbox{\hyperlink{classCustomer}{Customer}} object making the request. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classCustomerHandler_afefc2def6433461235f2ee2a547a902a}{Customer\+Handler}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Assign\+Table.\+h\item 
+Assign\+Table.\+cpp\end{DoxyCompactItemize}

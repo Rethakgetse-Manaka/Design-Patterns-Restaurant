@@ -1,0 +1,284 @@
+\hypertarget{classTable}{}\doxysection{Table Class Reference}
+\label{classTable}\index{Table@{Table}}
+
+
+The \mbox{\hyperlink{classTable}{Table}} class represents a table in a restaurant.  
+
+
+
+
+{\ttfamily \#include $<$Table.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classTable_ad8bf9d0f6a988f07ad9e98872a2de368}{add\+Customer}} (\mbox{\hyperlink{classCustomer}{Customer}} $\ast$c)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classCustomer}{Customer}} $\ast$ $>$ \mbox{\hyperlink{classTable_a244f532bade35bc6ba7ed381aecc7255}{get\+Customers}} ()
+\item 
+void \mbox{\hyperlink{classTable_a920b67cc7772be683a74463f2c0815b4}{remove\+Customer}} (\mbox{\hyperlink{classCustomer}{Customer}} $\ast$c)
+\item 
+void \mbox{\hyperlink{classTable_a98c7ee51200a14e8d4dc543b3d61552e}{ready\+For\+Bill}} (\mbox{\hyperlink{classWaiter}{Waiter}} $\ast$w, \mbox{\hyperlink{classAccountingSystem}{Accounting\+System}} $\ast$as)
+\item 
+void \mbox{\hyperlink{classTable_a86b61f509c49fc622f4426e5dc6a023a}{place\+Order}} (\mbox{\hyperlink{classOrder}{Order}} $\ast$o, \mbox{\hyperlink{classWaiter}{Waiter}} $\ast$w)
+\item 
+void \mbox{\hyperlink{classTable_a39eb55aba6bb5bb9887db615b1281b4e}{set\+Bill}} (\mbox{\hyperlink{classBill}{Bill}} $\ast$b)
+\item 
+\mbox{\hyperlink{classBill}{Bill}} $\ast$ \mbox{\hyperlink{classTable_ad7ab85b57bc68777ada421a871040243}{get\+Bill}} ()
+\item 
+void \mbox{\hyperlink{classTable_aa58f45d4b7d44fd477b4fc71eb4247f6}{set\+Waiter}} (\mbox{\hyperlink{classWaiter}{Waiter}} $\ast$waiter)
+\item 
+\mbox{\hyperlink{classTable_a07432d2834b49dc83486d3d26a6af649}{Table}} (int table\+Number)
+\item 
+void \mbox{\hyperlink{classTable_ab0f7af21d609ad9bf4a9ca84c95050af}{set\+Caretaker}} (\mbox{\hyperlink{classTabCaretaker}{Tab\+Caretaker}} $\ast$t)
+\item 
+\mbox{\hyperlink{classTable_a9a559f2e7beb37b511ee9f88873164f8}{$\sim$\+Table}} ()
+\item 
+void \mbox{\hyperlink{classTable_a5cc3273144110a41c9cb9fe94db52ff2}{occupy\+Table}} ()
+\item 
+void \mbox{\hyperlink{classTable_a2fce65babbd4c32a04b7c5866eac88b5}{free\+Table}} ()
+\item 
+void \mbox{\hyperlink{classTable_ab1dec3ee4e92d878571d4a934ba2810b}{combine\+Table}} ()
+\item 
+void \mbox{\hyperlink{classTable_afc6c89a8559e1a1dec350efb0e3da041}{split\+Table}} ()
+\item 
+int \mbox{\hyperlink{classTable_ac4a249ba02742b22975ac7cd47b2174d}{get\+Table\+Number}} () const
+\item 
+void \mbox{\hyperlink{classTable_aa4b562ca38358d602b65b21c6e2125ff}{print\+Table\+Status}} () const
+\item 
+void \mbox{\hyperlink{classTable_a5ca41176464ee465c2fb5f967c35368f}{set\+State}} (\mbox{\hyperlink{classTableState}{Table\+State}} $\ast$new\+State)
+\item 
+\mbox{\hyperlink{classTableState}{Table\+State}} $\ast$ \mbox{\hyperlink{classTable_acd216b521f85204aef4acab743c741d9}{get\+State}} () const
+\item 
+\mbox{\hyperlink{classCustomer}{Customer}} $\ast$ \mbox{\hyperlink{classTable_abb64421ee7377081d76edde02c2c598b}{get\+Customer}} (int cust\+ID)
+\item 
+\mbox{\hyperlink{classWaiter}{Waiter}} $\ast$ \mbox{\hyperlink{classTable_a338c4589c6178408556e6943ceda3453}{get\+Waiter}} ()
+\item 
+bool \mbox{\hyperlink{classTable_a46a66d65ac5a54581d26926276bc3edb}{is\+Free}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classTable}{Table}} class represents a table in a restaurant. 
+
+It contains information about the customers seated at the table, the table number, the current state of the table, the waiter serving the table, and the bill for the table. It also provides methods to add and remove customers, place orders, set and get the bill, and change the state of the table.
+
+The \mbox{\hyperlink{classTable}{Table}} class implements the State design pattern to manage the state of the table. The \mbox{\hyperlink{classTable}{Table}} class represents a table in a restaurant. It contains information about the customers seated at the table, the table number, the current state of the table, the waiter serving the table, and the bill associated with the table. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTable_a07432d2834b49dc83486d3d26a6af649}\label{classTable_a07432d2834b49dc83486d3d26a6af649}} 
+\index{Table@{Table}!Table@{Table}}
+\index{Table@{Table}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{Table()}{Table()}}
+{\footnotesize\ttfamily Table\+::\+Table (\begin{DoxyParamCaption}\item[{int}]{table\+Number }\end{DoxyParamCaption})}
+
+Constructs a new \mbox{\hyperlink{classTable}{Table}} object with the given table number. 
+\begin{DoxyParams}{Parameters}
+{\em table\+Number} & The table number. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTable_a9a559f2e7beb37b511ee9f88873164f8}\label{classTable_a9a559f2e7beb37b511ee9f88873164f8}} 
+\index{Table@{Table}!````~Table@{$\sim$Table}}
+\index{````~Table@{$\sim$Table}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{$\sim$Table()}{~Table()}}
+{\footnotesize\ttfamily Table\+::$\sim$\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destroys the \mbox{\hyperlink{classTable}{Table}} object. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTable_ad8bf9d0f6a988f07ad9e98872a2de368}\label{classTable_ad8bf9d0f6a988f07ad9e98872a2de368}} 
+\index{Table@{Table}!addCustomer@{addCustomer}}
+\index{addCustomer@{addCustomer}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{addCustomer()}{addCustomer()}}
+{\footnotesize\ttfamily void Table\+::add\+Customer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCustomer}{Customer}} $\ast$}]{c }\end{DoxyParamCaption})}
+
+Adds a customer to the table. 
+\begin{DoxyParams}{Parameters}
+{\em c} & The customer to add. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTable_ab1dec3ee4e92d878571d4a934ba2810b}\label{classTable_ab1dec3ee4e92d878571d4a934ba2810b}} 
+\index{Table@{Table}!combineTable@{combineTable}}
+\index{combineTable@{combineTable}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{combineTable()}{combineTable()}}
+{\footnotesize\ttfamily void Table\+::combine\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Combines the table with another table. \mbox{\Hypertarget{classTable_a2fce65babbd4c32a04b7c5866eac88b5}\label{classTable_a2fce65babbd4c32a04b7c5866eac88b5}} 
+\index{Table@{Table}!freeTable@{freeTable}}
+\index{freeTable@{freeTable}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{freeTable()}{freeTable()}}
+{\footnotesize\ttfamily void Table\+::free\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Frees the table. \mbox{\Hypertarget{classTable_ad7ab85b57bc68777ada421a871040243}\label{classTable_ad7ab85b57bc68777ada421a871040243}} 
+\index{Table@{Table}!getBill@{getBill}}
+\index{getBill@{getBill}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{getBill()}{getBill()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBill}{Bill}} $\ast$ Table\+::get\+Bill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the bill associated with the table. \begin{DoxyReturn}{Returns}
+The bill associated with the table. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTable_abb64421ee7377081d76edde02c2c598b}\label{classTable_abb64421ee7377081d76edde02c2c598b}} 
+\index{Table@{Table}!getCustomer@{getCustomer}}
+\index{getCustomer@{getCustomer}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{getCustomer()}{getCustomer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCustomer}{Customer}} $\ast$ Table\+::get\+Customer (\begin{DoxyParamCaption}\item[{int}]{cust\+ID }\end{DoxyParamCaption})}
+
+Returns the customer with the given ID. 
+\begin{DoxyParams}{Parameters}
+{\em cust\+ID} & The ID of the customer to return. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The customer with the given ID. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTable_a244f532bade35bc6ba7ed381aecc7255}\label{classTable_a244f532bade35bc6ba7ed381aecc7255}} 
+\index{Table@{Table}!getCustomers@{getCustomers}}
+\index{getCustomers@{getCustomers}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{getCustomers()}{getCustomers()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classCustomer}{Customer}} $\ast$ $>$ Table\+::get\+Customers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns a vector of the customers seated at the table. \begin{DoxyReturn}{Returns}
+A vector of the customers seated at the table. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTable_acd216b521f85204aef4acab743c741d9}\label{classTable_acd216b521f85204aef4acab743c741d9}} 
+\index{Table@{Table}!getState@{getState}}
+\index{getState@{getState}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{getState()}{getState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTableState}{Table\+State}} $\ast$ Table\+::get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the current state of the table. \begin{DoxyReturn}{Returns}
+The current state of the table. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTable_ac4a249ba02742b22975ac7cd47b2174d}\label{classTable_ac4a249ba02742b22975ac7cd47b2174d}} 
+\index{Table@{Table}!getTableNumber@{getTableNumber}}
+\index{getTableNumber@{getTableNumber}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{getTableNumber()}{getTableNumber()}}
+{\footnotesize\ttfamily int Table\+::get\+Table\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the table number. \begin{DoxyReturn}{Returns}
+The table number. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTable_a338c4589c6178408556e6943ceda3453}\label{classTable_a338c4589c6178408556e6943ceda3453}} 
+\index{Table@{Table}!getWaiter@{getWaiter}}
+\index{getWaiter@{getWaiter}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{getWaiter()}{getWaiter()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWaiter}{Waiter}} $\ast$ Table\+::get\+Waiter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the waiter serving the table. \begin{DoxyReturn}{Returns}
+The waiter serving the table. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTable_a46a66d65ac5a54581d26926276bc3edb}\label{classTable_a46a66d65ac5a54581d26926276bc3edb}} 
+\index{Table@{Table}!isFree@{isFree}}
+\index{isFree@{isFree}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{isFree()}{isFree()}}
+{\footnotesize\ttfamily bool Table\+::is\+Free (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns true if the table is free, false otherwise. \begin{DoxyReturn}{Returns}
+True if the table is free, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTable_a5cc3273144110a41c9cb9fe94db52ff2}\label{classTable_a5cc3273144110a41c9cb9fe94db52ff2}} 
+\index{Table@{Table}!occupyTable@{occupyTable}}
+\index{occupyTable@{occupyTable}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{occupyTable()}{occupyTable()}}
+{\footnotesize\ttfamily void Table\+::occupy\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Occupies the table. \mbox{\Hypertarget{classTable_a86b61f509c49fc622f4426e5dc6a023a}\label{classTable_a86b61f509c49fc622f4426e5dc6a023a}} 
+\index{Table@{Table}!placeOrder@{placeOrder}}
+\index{placeOrder@{placeOrder}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{placeOrder()}{placeOrder()}}
+{\footnotesize\ttfamily void Table\+::place\+Order (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classOrder}{Order}} $\ast$}]{o,  }\item[{\mbox{\hyperlink{classWaiter}{Waiter}} $\ast$}]{w }\end{DoxyParamCaption})}
+
+Places an order for the table. 
+\begin{DoxyParams}{Parameters}
+{\em o} & The order to place. \\
+\hline
+{\em w} & The waiter serving the table. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTable_aa4b562ca38358d602b65b21c6e2125ff}\label{classTable_aa4b562ca38358d602b65b21c6e2125ff}} 
+\index{Table@{Table}!printTableStatus@{printTableStatus}}
+\index{printTableStatus@{printTableStatus}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{printTableStatus()}{printTableStatus()}}
+{\footnotesize\ttfamily void Table\+::print\+Table\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Prints the status of the table. \mbox{\Hypertarget{classTable_a98c7ee51200a14e8d4dc543b3d61552e}\label{classTable_a98c7ee51200a14e8d4dc543b3d61552e}} 
+\index{Table@{Table}!readyForBill@{readyForBill}}
+\index{readyForBill@{readyForBill}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{readyForBill()}{readyForBill()}}
+{\footnotesize\ttfamily void Table\+::ready\+For\+Bill (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWaiter}{Waiter}} $\ast$}]{w,  }\item[{\mbox{\hyperlink{classAccountingSystem}{Accounting\+System}} $\ast$}]{as }\end{DoxyParamCaption})}
+
+Notifies the waiter that the table is ready for the bill. 
+\begin{DoxyParams}{Parameters}
+{\em w} & The waiter serving the table. \\
+\hline
+{\em as} & The accounting system used to generate the bill. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTable_a920b67cc7772be683a74463f2c0815b4}\label{classTable_a920b67cc7772be683a74463f2c0815b4}} 
+\index{Table@{Table}!removeCustomer@{removeCustomer}}
+\index{removeCustomer@{removeCustomer}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{removeCustomer()}{removeCustomer()}}
+{\footnotesize\ttfamily void Table\+::remove\+Customer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCustomer}{Customer}} $\ast$}]{c }\end{DoxyParamCaption})}
+
+Removes a customer from the table. 
+\begin{DoxyParams}{Parameters}
+{\em c} & The customer to remove. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTable_a39eb55aba6bb5bb9887db615b1281b4e}\label{classTable_a39eb55aba6bb5bb9887db615b1281b4e}} 
+\index{Table@{Table}!setBill@{setBill}}
+\index{setBill@{setBill}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{setBill()}{setBill()}}
+{\footnotesize\ttfamily void Table\+::set\+Bill (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBill}{Bill}} $\ast$}]{b }\end{DoxyParamCaption})}
+
+Sets the bill associated with the table. 
+\begin{DoxyParams}{Parameters}
+{\em b} & The bill to set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTable_ab0f7af21d609ad9bf4a9ca84c95050af}\label{classTable_ab0f7af21d609ad9bf4a9ca84c95050af}} 
+\index{Table@{Table}!setCaretaker@{setCaretaker}}
+\index{setCaretaker@{setCaretaker}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{setCaretaker()}{setCaretaker()}}
+{\footnotesize\ttfamily void Table\+::set\+Caretaker (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTabCaretaker}{Tab\+Caretaker}} $\ast$}]{t }\end{DoxyParamCaption})}
+
+Sets the caretaker for the table\textquotesingle{}s state. 
+\begin{DoxyParams}{Parameters}
+{\em t} & The caretaker to set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTable_a5ca41176464ee465c2fb5f967c35368f}\label{classTable_a5ca41176464ee465c2fb5f967c35368f}} 
+\index{Table@{Table}!setState@{setState}}
+\index{setState@{setState}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{setState()}{setState()}}
+{\footnotesize\ttfamily void Table\+::set\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTableState}{Table\+State}} $\ast$}]{new\+State }\end{DoxyParamCaption})}
+
+Sets the state of the table. 
+\begin{DoxyParams}{Parameters}
+{\em new\+State} & The new state to set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTable_aa58f45d4b7d44fd477b4fc71eb4247f6}\label{classTable_aa58f45d4b7d44fd477b4fc71eb4247f6}} 
+\index{Table@{Table}!setWaiter@{setWaiter}}
+\index{setWaiter@{setWaiter}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{setWaiter()}{setWaiter()}}
+{\footnotesize\ttfamily void Table\+::set\+Waiter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWaiter}{Waiter}} $\ast$}]{waiter }\end{DoxyParamCaption})}
+
+Sets the waiter serving the table. 
+\begin{DoxyParams}{Parameters}
+{\em waiter} & The waiter serving the table. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTable_afc6c89a8559e1a1dec350efb0e3da041}\label{classTable_afc6c89a8559e1a1dec350efb0e3da041}} 
+\index{Table@{Table}!splitTable@{splitTable}}
+\index{splitTable@{splitTable}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{splitTable()}{splitTable()}}
+{\footnotesize\ttfamily void Table\+::split\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Splits the table into two tables. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Table.\+h\item 
+Table.\+cpp\end{DoxyCompactItemize}

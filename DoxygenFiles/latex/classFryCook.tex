@@ -1,0 +1,109 @@
+\hypertarget{classFryCook}{}\doxysection{Fry\+Cook Class Reference}
+\label{classFryCook}\index{FryCook@{FryCook}}
+
+
+Inheritance diagram for Fry\+Cook\+:
+% FIG 0
+
+
+Collaboration diagram for Fry\+Cook\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMeal}{Meal}} $\ast$ \mbox{\hyperlink{classFryCook_ad9daa77b50f6b64a69db47098ab58f76}{create\+Starter}} ()
+\begin{DoxyCompactList}\small\item\em Creates a starter meal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMeal}{Meal}} $\ast$ \mbox{\hyperlink{classFryCook_a8ba22efda7ab849a8a08bbca67ec70c8}{create\+Main}} ()
+\begin{DoxyCompactList}\small\item\em Creates a main meal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFryCook_aa849915f6b6cd76fb68e5081168eba25}{add\+Meal}} (\mbox{\hyperlink{classMeal}{Meal}} $\ast$meal)
+\begin{DoxyCompactList}\small\item\em Adds a meal to the plate. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classFryCook_afdd063340eb4ab28b03bc8925f9864c5}{receive\+Order}} (\mbox{\hyperlink{classFoodItem}{Food\+Item}} $\ast$food\+Item, int table\+Number, int cust\+ID, int num\+Of\+Items)
+\begin{DoxyCompactList}\small\item\em Receives an order for a food item. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classFryCook_aa849915f6b6cd76fb68e5081168eba25}\label{classFryCook_aa849915f6b6cd76fb68e5081168eba25}} 
+\index{FryCook@{FryCook}!addMeal@{addMeal}}
+\index{addMeal@{addMeal}!FryCook@{FryCook}}
+\doxysubsubsection{\texorpdfstring{addMeal()}{addMeal()}}
+{\footnotesize\ttfamily void Fry\+Cook\+::add\+Meal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMeal}{Meal}} $\ast$}]{meal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Adds a meal to the plate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em meal} & A pointer to the meal to be added. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classChef_af8fe2b871d9665c1b75cae87f9bbb0da}{Chef}}.
+
+\mbox{\Hypertarget{classFryCook_a8ba22efda7ab849a8a08bbca67ec70c8}\label{classFryCook_a8ba22efda7ab849a8a08bbca67ec70c8}} 
+\index{FryCook@{FryCook}!createMain@{createMain}}
+\index{createMain@{createMain}!FryCook@{FryCook}}
+\doxysubsubsection{\texorpdfstring{createMain()}{createMain()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMeal}{Meal}} $\ast$ Fry\+Cook\+::create\+Main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Creates a main meal. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the created main meal. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classChef_a2da753c1b710c7fb1c9e0b92a671e268}{Chef}}.
+
+\mbox{\Hypertarget{classFryCook_ad9daa77b50f6b64a69db47098ab58f76}\label{classFryCook_ad9daa77b50f6b64a69db47098ab58f76}} 
+\index{FryCook@{FryCook}!createStarter@{createStarter}}
+\index{createStarter@{createStarter}!FryCook@{FryCook}}
+\doxysubsubsection{\texorpdfstring{createStarter()}{createStarter()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMeal}{Meal}} $\ast$ Fry\+Cook\+::create\+Starter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Creates a starter meal. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the created starter meal. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classChef_a14c3a0db90b1ce2a7eca636693b8c027}{Chef}}.
+
+\mbox{\Hypertarget{classFryCook_afdd063340eb4ab28b03bc8925f9864c5}\label{classFryCook_afdd063340eb4ab28b03bc8925f9864c5}} 
+\index{FryCook@{FryCook}!receiveOrder@{receiveOrder}}
+\index{receiveOrder@{receiveOrder}!FryCook@{FryCook}}
+\doxysubsubsection{\texorpdfstring{receiveOrder()}{receiveOrder()}}
+{\footnotesize\ttfamily void Fry\+Cook\+::receive\+Order (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFoodItem}{Food\+Item}} $\ast$}]{food\+Item,  }\item[{int}]{table\+Number,  }\item[{int}]{cust\+ID,  }\item[{int}]{num\+Of\+Items }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Receives an order for a food item. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em food\+Item} & A pointer to the food item being ordered. \\
+\hline
+{\em table\+Number} & The number of the table the order is for. \\
+\hline
+{\em cust\+ID} & The ID of the customer placing the order. \\
+\hline
+{\em num\+Of\+Items} & The number of items being ordered. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classChef_a34839d079bbb4619e1e55079a3574439}{Chef}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{FryCook_8h}{Fry\+Cook.\+h}}\item 
+Fry\+Cook.\+cpp\end{DoxyCompactItemize}

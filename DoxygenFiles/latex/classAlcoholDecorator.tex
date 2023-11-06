@@ -1,0 +1,86 @@
+\hypertarget{classAlcoholDecorator}{}\doxysection{Alcohol\+Decorator Class Reference}
+\label{classAlcoholDecorator}\index{AlcoholDecorator@{AlcoholDecorator}}
+
+
+The \mbox{\hyperlink{classAlcoholDecorator}{Alcohol\+Decorator}} class is a concrete decorator that adds an alcohol to a cocktail.  
+
+
+
+
+{\ttfamily \#include $<$Alcohol\+Decorator.\+h$>$}
+
+
+
+Inheritance diagram for Alcohol\+Decorator\+:
+% FIG 0
+
+
+Collaboration diagram for Alcohol\+Decorator\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAlcoholDecorator_a13e3c0933f2a9e577dee60ee651411ef}{Alcohol\+Decorator}} (\mbox{\hyperlink{classCocktail}{Cocktail}} $\ast$base\+Cocktail, const std\+::string \&alcohol)
+\begin{DoxyCompactList}\small\item\em Construct a new Alcohol Decorator object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classAlcoholDecorator_a9503a2290eb26207dc429bfb55df510b}{get\+Description}} () const override
+\begin{DoxyCompactList}\small\item\em Get the description of the decorated cocktail. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAlcoholDecorator_adbdd02624e56c3be7a9fcbb0af7a33b0}\label{classAlcoholDecorator_adbdd02624e56c3be7a9fcbb0af7a33b0}} 
+virtual \mbox{\hyperlink{classAlcoholDecorator_adbdd02624e56c3be7a9fcbb0af7a33b0}{$\sim$\+Alcohol\+Decorator}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the Alcohol Decorator object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAlcoholDecorator_a17a5c880974dbf297efe351323a035e8}\label{classAlcoholDecorator_a17a5c880974dbf297efe351323a035e8}} 
+std\+::string {\bfseries alcohol\+Description}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classAlcoholDecorator}{Alcohol\+Decorator}} class is a concrete decorator that adds an alcohol to a cocktail. 
+
+It inherits from the \mbox{\hyperlink{classCocktailDecorator}{Cocktail\+Decorator}} class and overrides its \mbox{\hyperlink{classAlcoholDecorator_a9503a2290eb26207dc429bfb55df510b}{get\+Description()}} method. It also has a protected member variable that holds the description of the added alcohol. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classAlcoholDecorator_a13e3c0933f2a9e577dee60ee651411ef}\label{classAlcoholDecorator_a13e3c0933f2a9e577dee60ee651411ef}} 
+\index{AlcoholDecorator@{AlcoholDecorator}!AlcoholDecorator@{AlcoholDecorator}}
+\index{AlcoholDecorator@{AlcoholDecorator}!AlcoholDecorator@{AlcoholDecorator}}
+\doxysubsubsection{\texorpdfstring{AlcoholDecorator()}{AlcoholDecorator()}}
+{\footnotesize\ttfamily Alcohol\+Decorator\+::\+Alcohol\+Decorator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCocktail}{Cocktail}} $\ast$}]{base\+Cocktail,  }\item[{const std\+::string \&}]{alcohol }\end{DoxyParamCaption})}
+
+
+
+Construct a new Alcohol Decorator object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Cocktail} & The cocktail to decorate. \\
+\hline
+{\em alcohol} & The description of the alcohol to add. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classAlcoholDecorator_a9503a2290eb26207dc429bfb55df510b}\label{classAlcoholDecorator_a9503a2290eb26207dc429bfb55df510b}} 
+\index{AlcoholDecorator@{AlcoholDecorator}!getDescription@{getDescription}}
+\index{getDescription@{getDescription}!AlcoholDecorator@{AlcoholDecorator}}
+\doxysubsubsection{\texorpdfstring{getDescription()}{getDescription()}}
+{\footnotesize\ttfamily std\+::string Alcohol\+Decorator\+::get\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the description of the decorated cocktail. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string The description of the decorated cocktail. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classCocktailDecorator_a214445dcb0d7e66ae0f35333ac6810d4}{Cocktail\+Decorator}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Alcohol\+Decorator.\+h\item 
+Alcohol\+Decorator.\+cpp\end{DoxyCompactItemize}

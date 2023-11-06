@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['readyforbill_454',['readyForBill',['../classTable.html#a98c7ee51200a14e8d4dc543b3d61552e',1,'Table']]],
+  ['receiveorder_455',['receiveOrder',['../classWaiter.html#a4279885ed961191a9716948dcbd51dc1',1,'Waiter::receiveOrder()'],['../classVegetableChef.html#a70af941bb1b8a017f505e2bbf5369a34',1,'VegetableChef::receiveOrder()'],['../classRotisseurChef.html#a66c4c8243bd2496f9e33019e337ac46a',1,'RotisseurChef::receiveOrder()'],['../classPastaChef.html#ad07b1f1d2eb3a73efd39fbac093cc3dc',1,'PastaChef::receiveOrder()'],['../classGrillChef.html#a9be7b9eaf67d68cad3aaed28667ca272',1,'GrillChef::receiveOrder()'],['../classFryCook.html#afdd063340eb4ab28b03bc8925f9864c5',1,'FryCook::receiveOrder()'],['../classChef.html#a34839d079bbb4619e1e55079a3574439',1,'Chef::receiveOrder()'],['../classBartender.html#a146813b5aea80a00614f591d96962764',1,'Bartender::receiveOrder()']]],
+  ['recordsale_456',['recordSale',['../classAccountingSystem.html#a0e4f24fa16f161d79b4965f3ffe2152a',1,'AccountingSystem']]],
+  ['recordtransaction_457',['recordTransaction',['../classAccountingSystem.html#aacc989b6a4198ebb8bc6992822b026db',1,'AccountingSystem']]],
+  ['registerobserver_458',['registerObserver',['../classInventory.html#a4ba2fe57966bab84db54829152d33c98',1,'Inventory']]],
+  ['removecustomer_459',['removeCustomer',['../classTable.html#a920b67cc7772be683a74463f2c0815b4',1,'Table']]],
+  ['removemeal_460',['removeMeal',['../classPlate.html#abb5248f62f97544a66ddb0379c1d4255',1,'Plate']]],
+  ['removememento_461',['removeMemento',['../classTabCaretaker.html#a6c89038dc4719f352121937cdd69e223',1,'TabCaretaker']]],
+  ['removeobserver_462',['removeObserver',['../classInventory.html#a03a5067bf2838db2ca5cfc558996d503',1,'Inventory']]],
+  ['removeperson_463',['removePerson',['../classCompositeBill.html#aaaebd122fc376f73a1c66c3ed6a67e6c',1,'CompositeBill']]],
+  ['removestock_464',['removeStock',['../classInventory.html#a91f6880cf11f68b28666e12c74e09dfe',1,'Inventory']]],
+  ['removetable_465',['removeTable',['../classWaiter.html#a90b7ce814876537297daaa9336d260cc',1,'Waiter']]],
+  ['requestbill_466',['requestBill',['../classRestaurant.html#a64a3037c074d93dd8b4ee14499b592d6',1,'Restaurant']]],
+  ['requestwaiter_467',['requestWaiter',['../classCustomer.html#a2639f65e889a3c061685e309f89c9dba',1,'Customer']]],
+  ['resetstockchange_468',['resetStockChange',['../classItem.html#a61c4b2b1285bcf61960fb04c76f5fe1b',1,'Item']]],
+  ['resolvecomplaint_469',['resolveComplaint',['../classCustomer.html#a6b1073957524e0621f5ef35f325e83f4',1,'Customer']]],
+  ['resolveservice_470',['resolveService',['../classCustomer.html#a35b1b6a4436141b058697f0aca922632',1,'Customer']]],
+  ['respondwithdissatifaction_471',['respondWithDissatifaction',['../classCustomer.html#ae5c22de2432c41094e198eecc066a4a1',1,'Customer']]],
+  ['respondwithsatifaction_472',['respondWithSatifaction',['../classCustomer.html#a7ef994cb1d9c34de28cbdb4c502a4ff2',1,'Customer']]],
+  ['restaurant_473',['Restaurant',['../classRestaurant.html#af72b2ed0971d325dc5d5dbf91e8462b5',1,'Restaurant']]],
+  ['restaurantobserver_474',['RestaurantObserver',['../classRestaurantObserver.html#a729743208a36662a82c2b619c2b9f9fb',1,'RestaurantObserver']]],
+  ['restaurantordermediator_475',['RestaurantOrderMediator',['../classRestaurantOrderMediator.html#a069efa6107ef52112358d90b1ff449b6',1,'RestaurantOrderMediator']]],
+  ['restorememento_476',['restoreMemento',['../classTab.html#a5b6ca8d697860fd6ec47cb17081bba2d',1,'Tab']]],
+  ['returnvehicle_477',['returnVehicle',['../classValet.html#a2fb4a01d8ffe31859b58393031710292',1,'Valet::returnVehicle()'],['../classValetService.html#a377d1c26aa062b99998bdd32817310e5',1,'ValetService::returnVehicle()']]]
+];

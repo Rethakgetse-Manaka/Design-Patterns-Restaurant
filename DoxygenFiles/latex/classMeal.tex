@@ -1,0 +1,75 @@
+\hypertarget{classMeal}{}\doxysection{Meal Class Reference}
+\label{classMeal}\index{Meal@{Meal}}
+
+
+The \mbox{\hyperlink{classMeal}{Meal}} class is an abstract base class that defines the interface for creating meals.  
+
+
+
+
+{\ttfamily \#include $<$Meal.\+h$>$}
+
+
+
+Inheritance diagram for Meal\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classMeal_a4aec7d32c8daea283635722a2e48c5aa}{$\sim$\+Meal}} ()
+\begin{DoxyCompactList}\small\item\em Equality comparison operator for \mbox{\hyperlink{classMeal}{Meal}} objects. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMeal_a6e77d04c37ff191301f2a97055ed7ce5}\label{classMeal_a6e77d04c37ff191301f2a97055ed7ce5}} 
+virtual std\+::string {\bfseries get\+Name} ()=0
+\item 
+\mbox{\Hypertarget{classMeal_a15c5fc7797c828920a8afba87cc66928}\label{classMeal_a15c5fc7797c828920a8afba87cc66928}} 
+virtual void {\bfseries create} ()=0
+\item 
+\mbox{\Hypertarget{classMeal_ab86baaa990880d87d5b5d1d077224c32}\label{classMeal_ab86baaa990880d87d5b5d1d077224c32}} 
+bool {\bfseries operator==} (\mbox{\hyperlink{classMeal}{Meal}} \&other)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMeal_ae5c151d3399f6717215b55e788be9c0f}\label{classMeal_ae5c151d3399f6717215b55e788be9c0f}} 
+string {\bfseries name}
+\item 
+\mbox{\Hypertarget{classMeal_a5306e3bab6d11dc4a4f74271a8b18969}\label{classMeal_a5306e3bab6d11dc4a4f74271a8b18969}} 
+bool {\bfseries garnish}
+\item 
+\mbox{\Hypertarget{classMeal_a960a3997c116d75d002a4c9d38e9cfd0}\label{classMeal_a960a3997c116d75d002a4c9d38e9cfd0}} 
+bool {\bfseries sauce}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classMeal}{Meal}} class is an abstract base class that defines the interface for creating meals. 
+
+This class contains pure virtual functions for creating meals and getting the name of the meal. It also contains a protected member variables for the name of the meal, whether it has a garnish, and whether it has a sauce. The class also defines an equality operator for comparing meals. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMeal_a4aec7d32c8daea283635722a2e48c5aa}\label{classMeal_a4aec7d32c8daea283635722a2e48c5aa}} 
+\index{Meal@{Meal}!````~Meal@{$\sim$Meal}}
+\index{````~Meal@{$\sim$Meal}!Meal@{Meal}}
+\doxysubsubsection{\texorpdfstring{$\sim$Meal()}{~Meal()}}
+{\footnotesize\ttfamily Meal\+::$\sim$\+Meal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Equality comparison operator for \mbox{\hyperlink{classMeal}{Meal}} objects. 
+
+This operator compares two \mbox{\hyperlink{classMeal}{Meal}} objects for equality based on their \textquotesingle{}name\textquotesingle{} member.
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The \mbox{\hyperlink{classMeal}{Meal}} object to compare with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the \textquotesingle{}name\textquotesingle{} of both \mbox{\hyperlink{classMeal}{Meal}} objects is equal, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Meal.\+h\item 
+Meal.\+cpp\end{DoxyCompactItemize}
