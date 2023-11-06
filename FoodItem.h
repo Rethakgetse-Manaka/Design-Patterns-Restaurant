@@ -79,6 +79,10 @@ public:
      * @brief Destroy the Food Item object.
      * 
      */
+
+    bool getGarnish();
+    bool getWellDone();
+    bool getSauce();
     ~FoodItem();
 };
 

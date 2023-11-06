@@ -31,12 +31,21 @@ void AccountingSystem::generateReport()
     for (Transaction* transaction : transactions)
     {
         std::cout << left << setfill(' ') << setw(3) << "|" << right << "Date: " << transaction->getDate() << setfill(' ') << setw(13) << "|" << endl;
-        std::cout << left << setfill(' ') << setw(3) << "|" << right << "Type: " << (transaction->getType() == TransactionType::PURCHASE ? "Purchase" : "Sale") << setfill(' ') << setw(24) << "|" << "\n";
+        if (transaction->getType() == TransactionType::PURCHASE) {
+            std::cout << left << setfill(' ') << setw(3) << "|" << right << "Type: " << "Purchase" << setfill(' ') << setw(24) << "|" << "\n";
+            int namelength = transaction->getItem()->getName().size();
+            std::cout << "|    - " << right << transaction->getItem()->getName() << ": " << transaction->getItem()->getQuantity() << " units @ R" << transaction->getItem()->getCost() << setfill(' ') << setw(18-namelength) << "|" << "\n";
+            std::cout << left << setfill(' ') << setw(3) << "|" << right << "Total Cost: R" << transaction->getAmount() << setfill(' ') << setw(21) << "|" << "\n";
+        }
+        else {
+            std::cout << left << setfill(' ') << setw(3) << "|" << right << "Type: " << "Sale" << setfill(' ') << setw(28) << "|" << "\n";
+            int namelength = transaction->getItem()->getName().size();
+            std::cout << "|    - " << right << transaction->getItem()->getName() << ": " << transaction->getItem()->getQuantity() << " units @ R" << transaction->getItem()->getCost() << setfill(' ') << setw(19-namelength) << "|" << "\n";
+            std::cout << left << setfill(' ') << setw(3) << "|" << right << "Total Cost: R" << transaction->getAmount() << setfill(' ') << setw(23) << "|" << "\n";
+        }
         std::cout << left << setfill(' ') << setw(3) << "|" << right << "Items:" << setfill(' ') << setw(32) << "|" << endl;
 
-        int namelength = transaction->getItem()->getName().size();
-        std::cout << "|    - " << right << transaction->getItem()->getName() << ": " << transaction->getItem()->getQuantity() << " units @ R" << transaction->getItem()->getCost() << setfill(' ') << setw(18-namelength) << "|" << "\n";
-         std::cout << left << setfill(' ') << setw(3) << "|" << right << "Total Cost: R" << transaction->getAmount() << setfill(' ') << setw(21) << "|" << "\n";
+        
         
 
         std::cout << "|           -----------------           |\n";

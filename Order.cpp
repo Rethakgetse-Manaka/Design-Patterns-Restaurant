@@ -101,7 +101,7 @@ std::string Order::printOrder()
     string order = "-------YOUR-ORDER-------\n";
     stringstream ss;
     ss << customerID;
-    order += "(" + ss.str() + ") " + "Customer Name: " + customerName + "\n";
+    order += "(ID: " + ss.str() + ") " + "Customer Name: " + customerName + "\n";
 
     if (items.size() > 0)
     {
@@ -114,6 +114,8 @@ std::string Order::printOrder()
         order += "No food items ordered\n";
     }
 
+    order += "\n";
+
     if(drinks.size() > 0){
         order += "Drinks:\n";
         for(int i = 0; i < (int)drinks.size(); i++)
@@ -123,6 +125,7 @@ std::string Order::printOrder()
     }else{
         order += "No drinks ordered\n";
     }
+    order += "\n";
     return order;
 }
 

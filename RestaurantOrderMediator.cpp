@@ -34,13 +34,14 @@ void RestaurantOrderMediator::notifyOrderPlaced(Order* o)
         t->setTableNumber(o->getTableNumber());
         Chef::setPlate(t);
         bartender->setTray(d);
-        std::cout << "Order handler received the order from the waiter and is passing it to an available chef.."<<std::endl;
+        std::cout << "Order handler received the order from the waiter and is passing it to an available chef.."<<std::endl << std::endl;
 
         for (size_t i = 0; i < o->getDrinks().size(); i++) {
             std::string drink = o->getDrinks()[i]->getDescription();
             std::cout << drink << std::endl;
             bartender->receiveOrder(o->getDrinks()[i], o->getTableNumber(),o->getCustomerID(),o->getDrinks().size());
         }
+        
         
 
 

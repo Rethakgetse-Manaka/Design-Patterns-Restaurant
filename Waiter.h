@@ -1,6 +1,7 @@
 #ifndef Waiter_H
 #define Waiter_H
 #include <iomanip>
+#include <unistd.h>
 #include "Colleague.h"
 #include "OrderMediator.h"
 #include "Table.h"

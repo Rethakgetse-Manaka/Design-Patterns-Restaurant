@@ -14,7 +14,4 @@ public:
     void handleRequest(Customer* customer);
     virtual ~ValletHandler();
 };
-
-
-
 #endif

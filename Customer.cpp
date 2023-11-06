@@ -282,18 +282,8 @@ Order *Customer::menu()
         case 3:
             customerOrder->addItem("Alfredo", false, false, 90.0, false);
             break;
-        case 4:
-            cout << "Would you like your patty well-done or medium-rare" << endl;
-            cout << "1. Well-done" << endl;
-            cout << "2. Medium-rare" << endl;
+        case 4: 
             cin >> welldone;
-            while (welldone != 1 && welldone != 2)
-            {
-                cout << "(Please try again) Would you like your patty well-done or medium-rare" << endl;
-                cout << "1. Well-done" << endl;
-                cout << "2. Medium-rare" << endl;
-                cin >> welldone;
-            }
             cout << "Would you like to remove garnish?" << endl;
             cout << "1. Yes" << endl;
             cout << "2. No" << endl;
@@ -571,6 +561,7 @@ void Customer::drink()
         for (int i = 0; i < (int)order->getDrinks().size(); i++)
         {
             cout << this->customerName << " is drinking their " << order->getDrinks()[i]->getDescription() << endl;
+            sleep(2);
         }
     }else{
         cout << this->customerName << " is drinking their drink." << endl;
