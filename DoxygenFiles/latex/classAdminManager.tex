@@ -1,0 +1,63 @@
+\hypertarget{classAdminManager}{}\doxysection{Admin\+Manager Class Reference}
+\label{classAdminManager}\index{AdminManager@{AdminManager}}
+
+
+The \mbox{\hyperlink{classAdminManager}{Admin\+Manager}} class is responsible for managing the system as an administrator.  
+
+
+
+
+{\ttfamily \#include $<$Admin\+Manager.\+h$>$}
+
+
+
+Inheritance diagram for Admin\+Manager\+:
+% FIG 0
+
+
+Collaboration diagram for Admin\+Manager\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAdminManager_a66cec764f6a5b72960a777804257795d}\label{classAdminManager_a66cec764f6a5b72960a777804257795d}} 
+\mbox{\hyperlink{classAdminManager_a66cec764f6a5b72960a777804257795d}{Admin\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new Admin Manager object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAdminManager_a1f0a468460c81d9829e8e0439071713c}{visit\+Customer}} (\mbox{\hyperlink{classCustomer}{Customer}} $\ast$customer)
+\begin{DoxyCompactList}\small\item\em Visit the given customer object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAdminManager_aeb6041be0a075c2ca58141321283cf57}\label{classAdminManager_aeb6041be0a075c2ca58141321283cf57}} 
+virtual \mbox{\hyperlink{classAdminManager_aeb6041be0a075c2ca58141321283cf57}{$\sim$\+Admin\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the Admin Manager object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classAdminManager}{Admin\+Manager}} class is responsible for managing the system as an administrator. 
+
+This class inherits from the \mbox{\hyperlink{classTableVisitor}{Table\+Visitor}} class and implements its visit\+Customer method. It also has access to the \mbox{\hyperlink{classCustomer}{Customer}}, \mbox{\hyperlink{classAccountingSystem}{Accounting\+System}}, \mbox{\hyperlink{classTransaction}{Transaction}}, and \mbox{\hyperlink{classInventory}{Inventory}} classes. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classAdminManager_a1f0a468460c81d9829e8e0439071713c}\label{classAdminManager_a1f0a468460c81d9829e8e0439071713c}} 
+\index{AdminManager@{AdminManager}!visitCustomer@{visitCustomer}}
+\index{visitCustomer@{visitCustomer}!AdminManager@{AdminManager}}
+\doxysubsubsection{\texorpdfstring{visitCustomer()}{visitCustomer()}}
+{\footnotesize\ttfamily void Admin\+Manager\+::visit\+Customer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCustomer}{Customer}} $\ast$}]{customer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Visit the given customer object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em customer} & The customer object to visit. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classTableVisitor_ad7633f477455ed03ab26580a405c052c}{Table\+Visitor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Admin\+Manager.\+h\item 
+Admin\+Manager.\+cpp\end{DoxyCompactItemize}

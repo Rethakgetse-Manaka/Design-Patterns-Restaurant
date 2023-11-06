@@ -1,0 +1,127 @@
+\hypertarget{classAccountingSystem}{}\doxysection{Accounting\+System Class Reference}
+\label{classAccountingSystem}\index{AccountingSystem@{AccountingSystem}}
+
+
+{\ttfamily \#include $<$Accounting\+System.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAccountingSystem_a4592a47fc5c97b683cc33e08d3325ff0}{Accounting\+System}} (\mbox{\hyperlink{classInventory}{Inventory}} $\ast$observed\+Inventory)
+\item 
+void \mbox{\hyperlink{classAccountingSystem_aacc989b6a4198ebb8bc6992822b026db}{record\+Transaction}} (\mbox{\hyperlink{classTransaction}{Transaction}} $\ast$transaction)
+\item 
+void \mbox{\hyperlink{classAccountingSystem_a0e4f24fa16f161d79b4965f3ffe2152a}{record\+Sale}} (\mbox{\hyperlink{classTransaction}{Transaction}} $\ast$transaction)
+\item 
+void \mbox{\hyperlink{classAccountingSystem_a631f818cbb74c547f3f595da69e8abcc}{generate\+Report}} ()
+\item 
+long long \mbox{\hyperlink{classAccountingSystem_a061eef68f5ba26fb5a788b8843502c2a}{get\+Balance}} ()
+\item 
+void \mbox{\hyperlink{classAccountingSystem_a29f5c97b34c7404606af2de1080cd95b}{add\+Balance}} (double amount)
+\item 
+void \mbox{\hyperlink{classAccountingSystem_aceae98817abd800746cc93e678456bcf}{set\+Balance}} (double balance)
+\item 
+std\+::list$<$ \mbox{\hyperlink{classTransaction}{Transaction}} $\ast$ $>$ \mbox{\hyperlink{classAccountingSystem_aaefa54923ecc0d938058a7e1296c8807}{get\+Transactions}} ()
+\item 
+\mbox{\hyperlink{classAccountingSystem_a5826b8397faf14446269dd6dc05a8579}{$\sim$\+Accounting\+System}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classAccountingSystem}{Accounting\+System}} class is responsible for managing the financial transactions of the store. It records transactions, sales, generates reports, and keeps track of the balance. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classAccountingSystem_a4592a47fc5c97b683cc33e08d3325ff0}\label{classAccountingSystem_a4592a47fc5c97b683cc33e08d3325ff0}} 
+\index{AccountingSystem@{AccountingSystem}!AccountingSystem@{AccountingSystem}}
+\index{AccountingSystem@{AccountingSystem}!AccountingSystem@{AccountingSystem}}
+\doxysubsubsection{\texorpdfstring{AccountingSystem()}{AccountingSystem()}}
+{\footnotesize\ttfamily Accounting\+System\+::\+Accounting\+System (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classInventory}{Inventory}} $\ast$}]{observed\+Inventory }\end{DoxyParamCaption})}
+
+Constructor for \mbox{\hyperlink{classAccountingSystem}{Accounting\+System}} class. 
+\begin{DoxyParams}{Parameters}
+{\em observed\+Inventory} & pointer to the \mbox{\hyperlink{classInventory}{Inventory}} object that this \mbox{\hyperlink{classAccountingSystem}{Accounting\+System}} observes. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classAccountingSystem_a5826b8397faf14446269dd6dc05a8579}\label{classAccountingSystem_a5826b8397faf14446269dd6dc05a8579}} 
+\index{AccountingSystem@{AccountingSystem}!````~AccountingSystem@{$\sim$AccountingSystem}}
+\index{````~AccountingSystem@{$\sim$AccountingSystem}!AccountingSystem@{AccountingSystem}}
+\doxysubsubsection{\texorpdfstring{$\sim$AccountingSystem()}{~AccountingSystem()}}
+{\footnotesize\ttfamily Accounting\+System\+::$\sim$\+Accounting\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor for \mbox{\hyperlink{classAccountingSystem}{Accounting\+System}} class. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classAccountingSystem_a29f5c97b34c7404606af2de1080cd95b}\label{classAccountingSystem_a29f5c97b34c7404606af2de1080cd95b}} 
+\index{AccountingSystem@{AccountingSystem}!addBalance@{addBalance}}
+\index{addBalance@{addBalance}!AccountingSystem@{AccountingSystem}}
+\doxysubsubsection{\texorpdfstring{addBalance()}{addBalance()}}
+{\footnotesize\ttfamily void Accounting\+System\+::add\+Balance (\begin{DoxyParamCaption}\item[{double}]{amount }\end{DoxyParamCaption})}
+
+Adds the given amount to the balance of the system. 
+\begin{DoxyParams}{Parameters}
+{\em amount} & the amount to be added to the balance. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classAccountingSystem_a631f818cbb74c547f3f595da69e8abcc}\label{classAccountingSystem_a631f818cbb74c547f3f595da69e8abcc}} 
+\index{AccountingSystem@{AccountingSystem}!generateReport@{generateReport}}
+\index{generateReport@{generateReport}!AccountingSystem@{AccountingSystem}}
+\doxysubsubsection{\texorpdfstring{generateReport()}{generateReport()}}
+{\footnotesize\ttfamily void Accounting\+System\+::generate\+Report (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Generates a report of all transactions in the system. \mbox{\Hypertarget{classAccountingSystem_a061eef68f5ba26fb5a788b8843502c2a}\label{classAccountingSystem_a061eef68f5ba26fb5a788b8843502c2a}} 
+\index{AccountingSystem@{AccountingSystem}!getBalance@{getBalance}}
+\index{getBalance@{getBalance}!AccountingSystem@{AccountingSystem}}
+\doxysubsubsection{\texorpdfstring{getBalance()}{getBalance()}}
+{\footnotesize\ttfamily long long Accounting\+System\+::get\+Balance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the current balance of the system. \begin{DoxyReturn}{Returns}
+the current balance of the system. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAccountingSystem_aaefa54923ecc0d938058a7e1296c8807}\label{classAccountingSystem_aaefa54923ecc0d938058a7e1296c8807}} 
+\index{AccountingSystem@{AccountingSystem}!getTransactions@{getTransactions}}
+\index{getTransactions@{getTransactions}!AccountingSystem@{AccountingSystem}}
+\doxysubsubsection{\texorpdfstring{getTransactions()}{getTransactions()}}
+{\footnotesize\ttfamily std\+::list$<$ \mbox{\hyperlink{classTransaction}{Transaction}} $\ast$ $>$ Accounting\+System\+::get\+Transactions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns a list of all transactions in the system. \begin{DoxyReturn}{Returns}
+a list of all transactions in the system. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAccountingSystem_a0e4f24fa16f161d79b4965f3ffe2152a}\label{classAccountingSystem_a0e4f24fa16f161d79b4965f3ffe2152a}} 
+\index{AccountingSystem@{AccountingSystem}!recordSale@{recordSale}}
+\index{recordSale@{recordSale}!AccountingSystem@{AccountingSystem}}
+\doxysubsubsection{\texorpdfstring{recordSale()}{recordSale()}}
+{\footnotesize\ttfamily void Accounting\+System\+::record\+Sale (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTransaction}{Transaction}} $\ast$}]{transaction }\end{DoxyParamCaption})}
+
+Records a sale transaction in the system. 
+\begin{DoxyParams}{Parameters}
+{\em transaction} & pointer to the \mbox{\hyperlink{classTransaction}{Transaction}} object to be recorded. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classAccountingSystem_aacc989b6a4198ebb8bc6992822b026db}\label{classAccountingSystem_aacc989b6a4198ebb8bc6992822b026db}} 
+\index{AccountingSystem@{AccountingSystem}!recordTransaction@{recordTransaction}}
+\index{recordTransaction@{recordTransaction}!AccountingSystem@{AccountingSystem}}
+\doxysubsubsection{\texorpdfstring{recordTransaction()}{recordTransaction()}}
+{\footnotesize\ttfamily void Accounting\+System\+::record\+Transaction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTransaction}{Transaction}} $\ast$}]{transaction }\end{DoxyParamCaption})}
+
+Records a transaction in the system. 
+\begin{DoxyParams}{Parameters}
+{\em transaction} & pointer to the \mbox{\hyperlink{classTransaction}{Transaction}} object to be recorded. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classAccountingSystem_aceae98817abd800746cc93e678456bcf}\label{classAccountingSystem_aceae98817abd800746cc93e678456bcf}} 
+\index{AccountingSystem@{AccountingSystem}!setBalance@{setBalance}}
+\index{setBalance@{setBalance}!AccountingSystem@{AccountingSystem}}
+\doxysubsubsection{\texorpdfstring{setBalance()}{setBalance()}}
+{\footnotesize\ttfamily void Accounting\+System\+::set\+Balance (\begin{DoxyParamCaption}\item[{double}]{balance }\end{DoxyParamCaption})}
+
+Sets the balance of the system to the given value. 
+\begin{DoxyParams}{Parameters}
+{\em balance} & the value to set the balance to. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Accounting\+System.\+h\item 
+Accounting\+System.\+cpp\end{DoxyCompactItemize}

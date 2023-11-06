@@ -1,0 +1,110 @@
+\hypertarget{classTabCaretaker}{}\doxysection{Tab\+Caretaker Class Reference}
+\label{classTabCaretaker}\index{TabCaretaker@{TabCaretaker}}
+
+
+The \mbox{\hyperlink{classTabCaretaker}{Tab\+Caretaker}} class is responsible for managing the mementos of the tabs.  
+
+
+
+
+{\ttfamily \#include $<$Tab\+Caretaker.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classTabCaretaker_a96d2ca5fd6295e0e60dbcb1625317967}{add\+Memento}} (\mbox{\hyperlink{classTabMemento}{Tab\+Memento}} $\ast$memento)
+\begin{DoxyCompactList}\small\item\em Adds a new memento to the caretaker. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTabMemento}{Tab\+Memento}} $\ast$ \mbox{\hyperlink{classTabCaretaker_ae3109712ee110d12992978bc51e7199b}{get\+Memento}} (int index)
+\begin{DoxyCompactList}\small\item\em Returns the memento at the specified index. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classTabMemento}{Tab\+Memento}} $\ast$ $>$ \mbox{\hyperlink{classTabCaretaker_a168af276c5ee85e164e1c055b0ddb9ac}{get\+Mementos}} ()
+\begin{DoxyCompactList}\small\item\em Returns a vector of all the mementos. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classTabCaretaker_a83b71069c3b00c9b2d1ef99be4b700ff}{get\+Memento\+Count}} ()
+\begin{DoxyCompactList}\small\item\em Returns the number of mementos in the caretaker. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTabCaretaker_a6c89038dc4719f352121937cdd69e223}{remove\+Memento}} (\mbox{\hyperlink{classTabMemento}{Tab\+Memento}} $\ast$memento)
+\begin{DoxyCompactList}\small\item\em Removes the specified memento from the caretaker. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classTabCaretaker}{Tab\+Caretaker}} class is responsible for managing the mementos of the tabs. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTabCaretaker_a96d2ca5fd6295e0e60dbcb1625317967}\label{classTabCaretaker_a96d2ca5fd6295e0e60dbcb1625317967}} 
+\index{TabCaretaker@{TabCaretaker}!addMemento@{addMemento}}
+\index{addMemento@{addMemento}!TabCaretaker@{TabCaretaker}}
+\doxysubsubsection{\texorpdfstring{addMemento()}{addMemento()}}
+{\footnotesize\ttfamily void Tab\+Caretaker\+::add\+Memento (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTabMemento}{Tab\+Memento}} $\ast$}]{memento }\end{DoxyParamCaption})}
+
+
+
+Adds a new memento to the caretaker. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em memento} & The memento to be added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTabCaretaker_ae3109712ee110d12992978bc51e7199b}\label{classTabCaretaker_ae3109712ee110d12992978bc51e7199b}} 
+\index{TabCaretaker@{TabCaretaker}!getMemento@{getMemento}}
+\index{getMemento@{getMemento}!TabCaretaker@{TabCaretaker}}
+\doxysubsubsection{\texorpdfstring{getMemento()}{getMemento()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTabMemento}{Tab\+Memento}} $\ast$ Tab\+Caretaker\+::get\+Memento (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Returns the memento at the specified index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the memento to be returned. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tab\+Memento$\ast$ The memento at the specified index. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTabCaretaker_a83b71069c3b00c9b2d1ef99be4b700ff}\label{classTabCaretaker_a83b71069c3b00c9b2d1ef99be4b700ff}} 
+\index{TabCaretaker@{TabCaretaker}!getMementoCount@{getMementoCount}}
+\index{getMementoCount@{getMementoCount}!TabCaretaker@{TabCaretaker}}
+\doxysubsubsection{\texorpdfstring{getMementoCount()}{getMementoCount()}}
+{\footnotesize\ttfamily size\+\_\+t Tab\+Caretaker\+::get\+Memento\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the number of mementos in the caretaker. 
+
+\begin{DoxyReturn}{Returns}
+size\+\_\+t The number of mementos in the caretaker. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTabCaretaker_a168af276c5ee85e164e1c055b0ddb9ac}\label{classTabCaretaker_a168af276c5ee85e164e1c055b0ddb9ac}} 
+\index{TabCaretaker@{TabCaretaker}!getMementos@{getMementos}}
+\index{getMementos@{getMementos}!TabCaretaker@{TabCaretaker}}
+\doxysubsubsection{\texorpdfstring{getMementos()}{getMementos()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classTabMemento}{Tab\+Memento}} $\ast$ $>$ Tab\+Caretaker\+::get\+Mementos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns a vector of all the mementos. 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Tab\+Memento$\ast$$>$ A vector of all the mementos. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTabCaretaker_a6c89038dc4719f352121937cdd69e223}\label{classTabCaretaker_a6c89038dc4719f352121937cdd69e223}} 
+\index{TabCaretaker@{TabCaretaker}!removeMemento@{removeMemento}}
+\index{removeMemento@{removeMemento}!TabCaretaker@{TabCaretaker}}
+\doxysubsubsection{\texorpdfstring{removeMemento()}{removeMemento()}}
+{\footnotesize\ttfamily void Tab\+Caretaker\+::remove\+Memento (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTabMemento}{Tab\+Memento}} $\ast$}]{memento }\end{DoxyParamCaption})}
+
+
+
+Removes the specified memento from the caretaker. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em memento} & The memento to be removed. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Tab\+Caretaker.\+h\item 
+Tab\+Caretaker.\+cpp\end{DoxyCompactItemize}

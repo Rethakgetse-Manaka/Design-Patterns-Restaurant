@@ -1,0 +1,11 @@
+digraph "BeefBurger"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="BeefBurger",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="The BeefBurger class is a derived class of MainMeal that represents a beef burger."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="MainMeal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classMainMeal.html",tooltip="The MainMeal class is a concrete class that inherits from the Meal class. It provides an implementati..."];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Meal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classMeal.html",tooltip="The Meal class is an abstract base class that defines the interface for creating meals."];
+}

@@ -1,0 +1,121 @@
+\hypertarget{classGrillChef}{}\doxysection{Grill\+Chef Class Reference}
+\label{classGrillChef}\index{GrillChef@{GrillChef}}
+
+
+The \mbox{\hyperlink{classGrillChef}{Grill\+Chef}} class is a concrete class that inherits from the \mbox{\hyperlink{classChef}{Chef}} abstract class.  
+
+
+
+
+{\ttfamily \#include $<$Grill\+Chef.\+h$>$}
+
+
+
+Inheritance diagram for Grill\+Chef\+:
+% FIG 0
+
+
+Collaboration diagram for Grill\+Chef\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMeal}{Meal}} $\ast$ \mbox{\hyperlink{classGrillChef_ac9f0545d7803bb77e928a86a609f24c0}{create\+Starter}} ()
+\begin{DoxyCompactList}\small\item\em Creates a \mbox{\hyperlink{classStarterMeal}{Starter\+Meal}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMeal}{Meal}} $\ast$ \mbox{\hyperlink{classGrillChef_a3e68b9bd84ff7c38c9d5a7fd3ca24fb8}{create\+Main}} ()
+\begin{DoxyCompactList}\small\item\em Creates a \mbox{\hyperlink{classMainMeal}{Main\+Meal}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGrillChef_aa706d14478dd6a122f737275d993d32b}{add\+Meal}} (\mbox{\hyperlink{classMeal}{Meal}} $\ast$meal)
+\begin{DoxyCompactList}\small\item\em Adds a \mbox{\hyperlink{classMeal}{Meal}} object to the \mbox{\hyperlink{classChef}{Chef}}\textquotesingle{}s list of meals. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classGrillChef_a9be7b9eaf67d68cad3aaed28667ca272}{receive\+Order}} (\mbox{\hyperlink{classFoodItem}{Food\+Item}} $\ast$food\+Item, int table\+Number, int cust\+ID, int num\+Of\+Items)
+\begin{DoxyCompactList}\small\item\em Receives an order from the \mbox{\hyperlink{classWaiter}{Waiter}} and prepares the food item. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classGrillChef}{Grill\+Chef}} class is a concrete class that inherits from the \mbox{\hyperlink{classChef}{Chef}} abstract class. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classGrillChef_aa706d14478dd6a122f737275d993d32b}\label{classGrillChef_aa706d14478dd6a122f737275d993d32b}} 
+\index{GrillChef@{GrillChef}!addMeal@{addMeal}}
+\index{addMeal@{addMeal}!GrillChef@{GrillChef}}
+\doxysubsubsection{\texorpdfstring{addMeal()}{addMeal()}}
+{\footnotesize\ttfamily void Grill\+Chef\+::add\+Meal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMeal}{Meal}} $\ast$}]{meal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Adds a \mbox{\hyperlink{classMeal}{Meal}} object to the \mbox{\hyperlink{classChef}{Chef}}\textquotesingle{}s list of meals. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em meal} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classChef_af8fe2b871d9665c1b75cae87f9bbb0da}{Chef}}.
+
+\mbox{\Hypertarget{classGrillChef_a3e68b9bd84ff7c38c9d5a7fd3ca24fb8}\label{classGrillChef_a3e68b9bd84ff7c38c9d5a7fd3ca24fb8}} 
+\index{GrillChef@{GrillChef}!createMain@{createMain}}
+\index{createMain@{createMain}!GrillChef@{GrillChef}}
+\doxysubsubsection{\texorpdfstring{createMain()}{createMain()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMeal}{Meal}} $\ast$ Grill\+Chef\+::create\+Main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Creates a \mbox{\hyperlink{classMainMeal}{Main\+Meal}} object. 
+
+\begin{DoxyReturn}{Returns}
+Meal$\ast$ 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classChef_a2da753c1b710c7fb1c9e0b92a671e268}{Chef}}.
+
+\mbox{\Hypertarget{classGrillChef_ac9f0545d7803bb77e928a86a609f24c0}\label{classGrillChef_ac9f0545d7803bb77e928a86a609f24c0}} 
+\index{GrillChef@{GrillChef}!createStarter@{createStarter}}
+\index{createStarter@{createStarter}!GrillChef@{GrillChef}}
+\doxysubsubsection{\texorpdfstring{createStarter()}{createStarter()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMeal}{Meal}} $\ast$ Grill\+Chef\+::create\+Starter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Creates a \mbox{\hyperlink{classStarterMeal}{Starter\+Meal}} object. 
+
+\begin{DoxyReturn}{Returns}
+Meal$\ast$ 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classChef_a14c3a0db90b1ce2a7eca636693b8c027}{Chef}}.
+
+\mbox{\Hypertarget{classGrillChef_a9be7b9eaf67d68cad3aaed28667ca272}\label{classGrillChef_a9be7b9eaf67d68cad3aaed28667ca272}} 
+\index{GrillChef@{GrillChef}!receiveOrder@{receiveOrder}}
+\index{receiveOrder@{receiveOrder}!GrillChef@{GrillChef}}
+\doxysubsubsection{\texorpdfstring{receiveOrder()}{receiveOrder()}}
+{\footnotesize\ttfamily void Grill\+Chef\+::receive\+Order (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFoodItem}{Food\+Item}} $\ast$}]{food\+Item,  }\item[{int}]{table\+Number,  }\item[{int}]{cust\+ID,  }\item[{int}]{num\+Of\+Items }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Receives an order from the \mbox{\hyperlink{classWaiter}{Waiter}} and prepares the food item. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em food\+Item} & \\
+\hline
+{\em table\+Number} & \\
+\hline
+{\em cust\+ID} & \\
+\hline
+{\em num\+Of\+Items} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classChef_a34839d079bbb4619e1e55079a3574439}{Chef}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Grill\+Chef.\+h\item 
+Grill\+Chef.\+cpp\end{DoxyCompactItemize}

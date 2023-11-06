@@ -1,0 +1,60 @@
+\hypertarget{classValetFactoryImpl}{}\doxysection{Valet\+Factory\+Impl Class Reference}
+\label{classValetFactoryImpl}\index{ValetFactoryImpl@{ValetFactoryImpl}}
+
+
+Implementation of the \mbox{\hyperlink{classValetFactory}{Valet\+Factory}} interface.  
+
+
+
+
+{\ttfamily \#include $<$Valet\+Factory\+Impl.\+h$>$}
+
+
+
+Inheritance diagram for Valet\+Factory\+Impl\+:
+% FIG 0
+
+
+Collaboration diagram for Valet\+Factory\+Impl\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classValetService}{Valet\+Service}} $\ast$ \mbox{\hyperlink{classValetFactoryImpl_a409c8cba102df19143370a18d7c83ab0}{create\+Valet}} (\mbox{\hyperlink{classCustomer}{Customer}} $\ast$customer, int v\+ID) override
+\begin{DoxyCompactList}\small\item\em Creates a new \mbox{\hyperlink{classValetService}{Valet\+Service}} object for the given customer and valet ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of the \mbox{\hyperlink{classValetFactory}{Valet\+Factory}} interface. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classValetFactoryImpl_a409c8cba102df19143370a18d7c83ab0}\label{classValetFactoryImpl_a409c8cba102df19143370a18d7c83ab0}} 
+\index{ValetFactoryImpl@{ValetFactoryImpl}!createValet@{createValet}}
+\index{createValet@{createValet}!ValetFactoryImpl@{ValetFactoryImpl}}
+\doxysubsubsection{\texorpdfstring{createValet()}{createValet()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classValetService}{Valet\+Service}} $\ast$ Valet\+Factory\+Impl\+::create\+Valet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCustomer}{Customer}} $\ast$}]{customer,  }\item[{int}]{v\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Creates a new \mbox{\hyperlink{classValetService}{Valet\+Service}} object for the given customer and valet ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em customer} & A pointer to the \mbox{\hyperlink{classCustomer}{Customer}} object for which the \mbox{\hyperlink{classValetService}{Valet\+Service}} is being created. \\
+\hline
+{\em v\+ID} & The ID of the valet who will be providing the \mbox{\hyperlink{classValetService}{Valet\+Service}}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the newly created \mbox{\hyperlink{classValetService}{Valet\+Service}} object. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classValetFactory_ad3627c28c540e76526b5dafeaf4ca23c}{Valet\+Factory}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Valet\+Factory\+Impl.\+h\item 
+Valet\+Factory\+Iml.\+cpp\end{DoxyCompactItemize}

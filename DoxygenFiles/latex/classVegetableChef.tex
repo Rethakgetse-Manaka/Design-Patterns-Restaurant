@@ -1,0 +1,121 @@
+\hypertarget{classVegetableChef}{}\doxysection{Vegetable\+Chef Class Reference}
+\label{classVegetableChef}\index{VegetableChef@{VegetableChef}}
+
+
+A class representing a vegetable chef that inherits from \mbox{\hyperlink{classChef}{Chef}}.  
+
+
+
+
+{\ttfamily \#include $<$Vegetable\+Chef.\+h$>$}
+
+
+
+Inheritance diagram for Vegetable\+Chef\+:
+% FIG 0
+
+
+Collaboration diagram for Vegetable\+Chef\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMeal}{Meal}} $\ast$ \mbox{\hyperlink{classVegetableChef_afb00989b8c2b12cbf0ef8dd7acfb4111}{create\+Starter}} ()
+\begin{DoxyCompactList}\small\item\em Creates a starter meal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMeal}{Meal}} $\ast$ \mbox{\hyperlink{classVegetableChef_a5cca12a678cef40c09aeb8189fce9ea9}{create\+Main}} ()
+\begin{DoxyCompactList}\small\item\em Creates a main meal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVegetableChef_ab283fb862cbc40d53a4ba4350c21084a}{add\+Meal}} (\mbox{\hyperlink{classMeal}{Meal}} $\ast$meal)
+\begin{DoxyCompactList}\small\item\em Adds a meal to the chef\textquotesingle{}s list of meals. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classVegetableChef_a70af941bb1b8a017f505e2bbf5369a34}{receive\+Order}} (\mbox{\hyperlink{classFoodItem}{Food\+Item}} $\ast$food\+Item, int table\+Number, int cust\+ID, int num\+Of\+Items)
+\begin{DoxyCompactList}\small\item\em Receives an order for a food item. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A class representing a vegetable chef that inherits from \mbox{\hyperlink{classChef}{Chef}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classVegetableChef_ab283fb862cbc40d53a4ba4350c21084a}\label{classVegetableChef_ab283fb862cbc40d53a4ba4350c21084a}} 
+\index{VegetableChef@{VegetableChef}!addMeal@{addMeal}}
+\index{addMeal@{addMeal}!VegetableChef@{VegetableChef}}
+\doxysubsubsection{\texorpdfstring{addMeal()}{addMeal()}}
+{\footnotesize\ttfamily void Vegetable\+Chef\+::add\+Meal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMeal}{Meal}} $\ast$}]{meal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Adds a meal to the chef\textquotesingle{}s list of meals. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em meal} & A pointer to the meal to be added. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classChef_af8fe2b871d9665c1b75cae87f9bbb0da}{Chef}}.
+
+\mbox{\Hypertarget{classVegetableChef_a5cca12a678cef40c09aeb8189fce9ea9}\label{classVegetableChef_a5cca12a678cef40c09aeb8189fce9ea9}} 
+\index{VegetableChef@{VegetableChef}!createMain@{createMain}}
+\index{createMain@{createMain}!VegetableChef@{VegetableChef}}
+\doxysubsubsection{\texorpdfstring{createMain()}{createMain()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMeal}{Meal}} $\ast$ Vegetable\+Chef\+::create\+Main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Creates a main meal. 
+
+\begin{DoxyReturn}{Returns}
+Meal$\ast$ A pointer to the created main meal. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classChef_a2da753c1b710c7fb1c9e0b92a671e268}{Chef}}.
+
+\mbox{\Hypertarget{classVegetableChef_afb00989b8c2b12cbf0ef8dd7acfb4111}\label{classVegetableChef_afb00989b8c2b12cbf0ef8dd7acfb4111}} 
+\index{VegetableChef@{VegetableChef}!createStarter@{createStarter}}
+\index{createStarter@{createStarter}!VegetableChef@{VegetableChef}}
+\doxysubsubsection{\texorpdfstring{createStarter()}{createStarter()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMeal}{Meal}} $\ast$ Vegetable\+Chef\+::create\+Starter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Creates a starter meal. 
+
+\begin{DoxyReturn}{Returns}
+Meal$\ast$ A pointer to the created starter meal. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classChef_a14c3a0db90b1ce2a7eca636693b8c027}{Chef}}.
+
+\mbox{\Hypertarget{classVegetableChef_a70af941bb1b8a017f505e2bbf5369a34}\label{classVegetableChef_a70af941bb1b8a017f505e2bbf5369a34}} 
+\index{VegetableChef@{VegetableChef}!receiveOrder@{receiveOrder}}
+\index{receiveOrder@{receiveOrder}!VegetableChef@{VegetableChef}}
+\doxysubsubsection{\texorpdfstring{receiveOrder()}{receiveOrder()}}
+{\footnotesize\ttfamily void Vegetable\+Chef\+::receive\+Order (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFoodItem}{Food\+Item}} $\ast$}]{food\+Item,  }\item[{int}]{table\+Number,  }\item[{int}]{cust\+ID,  }\item[{int}]{num\+Of\+Items }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Receives an order for a food item. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em food\+Item} & A pointer to the food item being ordered. \\
+\hline
+{\em table\+Number} & The table number the order is for. \\
+\hline
+{\em cust\+ID} & The ID of the customer placing the order. \\
+\hline
+{\em num\+Of\+Items} & The number of items being ordered. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classChef_a34839d079bbb4619e1e55079a3574439}{Chef}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Vegetable\+Chef.\+h\item 
+Vegetable\+Chef.\+cpp\end{DoxyCompactItemize}

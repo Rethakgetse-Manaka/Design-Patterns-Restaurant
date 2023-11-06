@@ -1,0 +1,88 @@
+\hypertarget{classValet}{}\doxysection{Valet Class Reference}
+\label{classValet}\index{Valet@{Valet}}
+
+
+The \mbox{\hyperlink{classValet}{Valet}} class represents a valet who provides valet parking services to customers.  
+
+
+
+
+{\ttfamily \#include $<$Valet.\+h$>$}
+
+
+
+Inheritance diagram for Valet\+:
+% FIG 0
+
+
+Collaboration diagram for Valet\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classValet_a49576d4be2c7962917170cc28e09993b}\label{classValet_a49576d4be2c7962917170cc28e09993b}} 
+{\bfseries Valet} (int valet\+Id, \mbox{\hyperlink{classCustomer}{Customer}} $\ast$customer)
+\item 
+void \mbox{\hyperlink{classValet_abb0b050810565cbba90fb89bc6388795}{park\+Vehicle}} (\mbox{\hyperlink{classCustomer}{Customer}} $\ast$customer, int id) override
+\begin{DoxyCompactList}\small\item\em Parks the vehicle of the given customer with the given ID. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classValet_a91859dc3aa492d19f8966e77f614be6b}\label{classValet_a91859dc3aa492d19f8966e77f614be6b}} 
+int {\bfseries get\+Valet\+Id} ()
+\item 
+void \mbox{\hyperlink{classValet_a2fb4a01d8ffe31859b58393031710292}{return\+Vehicle}} (\mbox{\hyperlink{classCustomer}{Customer}} $\ast$customer, int id) override
+\begin{DoxyCompactList}\small\item\em Returns the vehicle of the given customer with the given ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classValet}{Valet}} class represents a valet who provides valet parking services to customers. 
+
+This class inherits from the \mbox{\hyperlink{classValetService}{Valet\+Service}} class and overrides its pure virtual functions. It has a constructor that takes a valet ID and a pointer to a \mbox{\hyperlink{classCustomer}{Customer}} object. It also has member functions to park and return a vehicle, as well as a function to get the valet ID. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classValet_abb0b050810565cbba90fb89bc6388795}\label{classValet_abb0b050810565cbba90fb89bc6388795}} 
+\index{Valet@{Valet}!parkVehicle@{parkVehicle}}
+\index{parkVehicle@{parkVehicle}!Valet@{Valet}}
+\doxysubsubsection{\texorpdfstring{parkVehicle()}{parkVehicle()}}
+{\footnotesize\ttfamily void Valet\+::park\+Vehicle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCustomer}{Customer}} $\ast$}]{customer,  }\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Parks the vehicle of the given customer with the given ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em customer} & Pointer to the customer object. \\
+\hline
+{\em id} & The ID of the vehicle to be parked. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classValetService_a0fa4b15f2088442145e9670897442fb8}{Valet\+Service}}.
+
+\mbox{\Hypertarget{classValet_a2fb4a01d8ffe31859b58393031710292}\label{classValet_a2fb4a01d8ffe31859b58393031710292}} 
+\index{Valet@{Valet}!returnVehicle@{returnVehicle}}
+\index{returnVehicle@{returnVehicle}!Valet@{Valet}}
+\doxysubsubsection{\texorpdfstring{returnVehicle()}{returnVehicle()}}
+{\footnotesize\ttfamily void Valet\+::return\+Vehicle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCustomer}{Customer}} $\ast$}]{customer,  }\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the vehicle of the given customer with the given ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em customer} & Pointer to the customer object. \\
+\hline
+{\em id} & The ID of the vehicle to be returned. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classValetService_a377d1c26aa062b99998bdd32817310e5}{Valet\+Service}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Valet.\+h\item 
+Valet.\+cpp\end{DoxyCompactItemize}

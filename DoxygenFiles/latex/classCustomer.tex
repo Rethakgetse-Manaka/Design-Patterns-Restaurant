@@ -1,0 +1,358 @@
+\hypertarget{classCustomer}{}\doxysection{Customer Class Reference}
+\label{classCustomer}\index{Customer@{Customer}}
+
+
+The \mbox{\hyperlink{classCustomer}{Customer}} class represents a customer in a restaurant.  
+
+
+
+
+{\ttfamily \#include $<$Customer.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCustomer_abcc8fae9701e5ba9d7d6fe44498b34e3}\label{classCustomer_abcc8fae9701e5ba9d7d6fe44498b34e3}} 
+\mbox{\hyperlink{classCustomer_abcc8fae9701e5ba9d7d6fe44498b34e3}{Customer}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classCustomer}{Customer}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCustomer_a69f7ffdac67391542e0aa7bcc41580c9}{Customer}} (int id, std\+::string name)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classCustomer}{Customer}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCustomer_a46e08460ccfbaaaf2d51c7f469f81c1d}{set\+Tab}} (\mbox{\hyperlink{classTab}{Tab}} $\ast$t)
+\begin{DoxyCompactList}\small\item\em Set the \mbox{\hyperlink{classTab}{Tab}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTab}{Tab}} $\ast$ \mbox{\hyperlink{classCustomer_a69dfa6341c3027f1bd56ff297c155706}{get\+Tab}} ()
+\begin{DoxyCompactList}\small\item\em Get the \mbox{\hyperlink{classTab}{Tab}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCustomer_ab93fb14683b0393b9c900109f77c2629}\label{classCustomer_ab93fb14683b0393b9c900109f77c2629}} 
+\mbox{\hyperlink{classCustomer_ab93fb14683b0393b9c900109f77c2629}{$\sim$\+Customer}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classCustomer}{Customer}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCustomer_a7cb51b2f30f969f278470aacb3b4744f}{set\+Table}} (\mbox{\hyperlink{classTable}{Table}} $\ast$t)
+\begin{DoxyCompactList}\small\item\em Set the \mbox{\hyperlink{classTable}{Table}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTable}{Table}} $\ast$ \mbox{\hyperlink{classCustomer_a45ec6d7b6f315c53af9f9dbd25525fa5}{get\+Table}} ()
+\begin{DoxyCompactList}\small\item\em Get the \mbox{\hyperlink{classTable}{Table}} object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCustomer_a236d5d040cafabeb6f84296d3e101ff1}{get\+Customer\+ID}} ()
+\begin{DoxyCompactList}\small\item\em Get the \mbox{\hyperlink{classCustomer}{Customer}} ID. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classCustomer_a4b468593a0d46db286348abd09971fbf}{get\+Customer\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Get the \mbox{\hyperlink{classCustomer}{Customer}} Name. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCustomer_a065ebc6f3372ee18f2e750ee34c8da33}{get\+Table\+ID}} ()
+\begin{DoxyCompactList}\small\item\em Get the \mbox{\hyperlink{classTable}{Table}} ID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCustomerState}{Customer\+State}} $\ast$ \mbox{\hyperlink{classCustomer_ab2cabd38f33ae4d2f1bea0a6e1defdc8}{get\+State}} ()
+\begin{DoxyCompactList}\small\item\em Get the \mbox{\hyperlink{classCustomer}{Customer}} State object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classOrder}{Order}} $\ast$ \mbox{\hyperlink{classCustomer_ade45d77e8ddbf1365df31ca536a9a5ce}{get\+Order}} ()
+\begin{DoxyCompactList}\small\item\em Get the \mbox{\hyperlink{classOrder}{Order}} object. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classCustomer_a86d8e5706080affe5492f014d35a5e9a}{get\+Tip}} ()
+\begin{DoxyCompactList}\small\item\em Get the Tip object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCustomer_aa8398b47b3ca9825ba6f7f14026641be}{set\+Table\+ID}} (int id)
+\begin{DoxyCompactList}\small\item\em Set the \mbox{\hyperlink{classTable}{Table}} ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCustomer_a21f29548f326677cca200107b52a1fa4}{set\+Vallet\+ID}} (int id)
+\begin{DoxyCompactList}\small\item\em Set the Vallet ID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classOrderHandler}{Order\+Handler}} $\ast$ \mbox{\hyperlink{classCustomer_a2639f65e889a3c061685e309f89c9dba}{request\+Waiter}} ()
+\begin{DoxyCompactList}\small\item\em Request a waiter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCustomer_acc9e75a665545985ebd6e82c5cc22627}{set\+State}} (\mbox{\hyperlink{classCustomerState}{Customer\+State}} $\ast$s)
+\begin{DoxyCompactList}\small\item\em Set the \mbox{\hyperlink{classCustomer}{Customer}} State object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCustomer_a753eb70336dc11b7b915749ff4118eb4}{pay\+Bill}} (\mbox{\hyperlink{classBill}{Bill}} $\ast$bill, \mbox{\hyperlink{classAccountingSystem}{Accounting\+System}} $\ast$aS)
+\begin{DoxyCompactList}\small\item\em Pay the bill. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCustomer_a46f2ad2194af68ec81c7f52b16a5fddb}\label{classCustomer_a46f2ad2194af68ec81c7f52b16a5fddb}} 
+void \mbox{\hyperlink{classCustomer_a46f2ad2194af68ec81c7f52b16a5fddb}{place\+Order}} ()
+\begin{DoxyCompactList}\small\item\em Place an order. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classOrder}{Order}} $\ast$ \mbox{\hyperlink{classCustomer_ac783af7ecc0ce9734d4e1f41c939e127}{menu}} ()
+\begin{DoxyCompactList}\small\item\em Display the menu. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCustomer_acae994a93783e2bdf50b6f846fec6cc7}\label{classCustomer_acae994a93783e2bdf50b6f846fec6cc7}} 
+void \mbox{\hyperlink{classCustomer_acae994a93783e2bdf50b6f846fec6cc7}{complain}} ()
+\begin{DoxyCompactList}\small\item\em Complain. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCustomer_a6b1073957524e0621f5ef35f325e83f4}\label{classCustomer_a6b1073957524e0621f5ef35f325e83f4}} 
+void \mbox{\hyperlink{classCustomer_a6b1073957524e0621f5ef35f325e83f4}{resolve\+Complaint}} ()
+\begin{DoxyCompactList}\small\item\em Resolve the complaint. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCustomer_a35b1b6a4436141b058697f0aca922632}\label{classCustomer_a35b1b6a4436141b058697f0aca922632}} 
+void \mbox{\hyperlink{classCustomer_a35b1b6a4436141b058697f0aca922632}{resolve\+Service}} ()
+\begin{DoxyCompactList}\small\item\em Resolve the service. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCustomer_a4c9feac804f720edc5a4e7e147bdf4b0}\label{classCustomer_a4c9feac804f720edc5a4e7e147bdf4b0}} 
+void \mbox{\hyperlink{classCustomer_a4c9feac804f720edc5a4e7e147bdf4b0}{increase\+Tip}} ()
+\begin{DoxyCompactList}\small\item\em Increase the tip. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCustomer_ab634841fe6362b4f1a3817c1cff9cccd}\label{classCustomer_ab634841fe6362b4f1a3817c1cff9cccd}} 
+void \mbox{\hyperlink{classCustomer_ab634841fe6362b4f1a3817c1cff9cccd}{decrease\+Tip}} ()
+\begin{DoxyCompactList}\small\item\em Decrease the tip. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCustomer_a7ef994cb1d9c34de28cbdb4c502a4ff2}\label{classCustomer_a7ef994cb1d9c34de28cbdb4c502a4ff2}} 
+void \mbox{\hyperlink{classCustomer_a7ef994cb1d9c34de28cbdb4c502a4ff2}{respond\+With\+Satifaction}} ()
+\begin{DoxyCompactList}\small\item\em Respond with satisfaction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCustomer_ae5c22de2432c41094e198eecc066a4a1}\label{classCustomer_ae5c22de2432c41094e198eecc066a4a1}} 
+void \mbox{\hyperlink{classCustomer_ae5c22de2432c41094e198eecc066a4a1}{respond\+With\+Dissatifaction}} ()
+\begin{DoxyCompactList}\small\item\em Respond with dissatisfaction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCustomer_aa23156b4a9b036a98dc09736f7ba84fb}\label{classCustomer_aa23156b4a9b036a98dc09736f7ba84fb}} 
+void \mbox{\hyperlink{classCustomer_aa23156b4a9b036a98dc09736f7ba84fb}{eat}} ()
+\begin{DoxyCompactList}\small\item\em Eat. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCustomer_a3b0995d217c303c3ba1c694b99db7fe7}\label{classCustomer_a3b0995d217c303c3ba1c694b99db7fe7}} 
+void \mbox{\hyperlink{classCustomer_a3b0995d217c303c3ba1c694b99db7fe7}{drink}} ()
+\begin{DoxyCompactList}\small\item\em Drink. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCustomer_a86ee57e55352536cb8de001078d48641}\label{classCustomer_a86ee57e55352536cb8de001078d48641}} 
+void \mbox{\hyperlink{classCustomer_a86ee57e55352536cb8de001078d48641}{leave}} ()
+\begin{DoxyCompactList}\small\item\em Leave. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCustomer_a3391d21c21413af7b4ef1e47920905a6}{accept}} (\mbox{\hyperlink{classTableVisitor}{Table\+Visitor}} $\ast$v)
+\begin{DoxyCompactList}\small\item\em Accept a table visitor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classCustomer}{Customer}} class represents a customer in a restaurant. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCustomer_a69f7ffdac67391542e0aa7bcc41580c9}\label{classCustomer_a69f7ffdac67391542e0aa7bcc41580c9}} 
+\index{Customer@{Customer}!Customer@{Customer}}
+\index{Customer@{Customer}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{Customer()}{Customer()}}
+{\footnotesize\ttfamily Customer\+::\+Customer (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classCustomer}{Customer}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the customer. \\
+\hline
+{\em name} & The name of the customer. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCustomer_a3391d21c21413af7b4ef1e47920905a6}\label{classCustomer_a3391d21c21413af7b4ef1e47920905a6}} 
+\index{Customer@{Customer}!accept@{accept}}
+\index{accept@{accept}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}}
+{\footnotesize\ttfamily void Customer\+::accept (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTableVisitor}{Table\+Visitor}} $\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Accept a table visitor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & The table visitor to be accepted. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCustomer_a236d5d040cafabeb6f84296d3e101ff1}\label{classCustomer_a236d5d040cafabeb6f84296d3e101ff1}} 
+\index{Customer@{Customer}!getCustomerID@{getCustomerID}}
+\index{getCustomerID@{getCustomerID}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{getCustomerID()}{getCustomerID()}}
+{\footnotesize\ttfamily int Customer\+::get\+Customer\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the \mbox{\hyperlink{classCustomer}{Customer}} ID. 
+
+\begin{DoxyReturn}{Returns}
+int The ID of the customer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCustomer_a4b468593a0d46db286348abd09971fbf}\label{classCustomer_a4b468593a0d46db286348abd09971fbf}} 
+\index{Customer@{Customer}!getCustomerName@{getCustomerName}}
+\index{getCustomerName@{getCustomerName}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{getCustomerName()}{getCustomerName()}}
+{\footnotesize\ttfamily std\+::string Customer\+::get\+Customer\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the \mbox{\hyperlink{classCustomer}{Customer}} Name. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string The name of the customer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCustomer_ade45d77e8ddbf1365df31ca536a9a5ce}\label{classCustomer_ade45d77e8ddbf1365df31ca536a9a5ce}} 
+\index{Customer@{Customer}!getOrder@{getOrder}}
+\index{getOrder@{getOrder}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{getOrder()}{getOrder()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classOrder}{Order}} $\ast$ Customer\+::get\+Order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the \mbox{\hyperlink{classOrder}{Order}} object. 
+
+\begin{DoxyReturn}{Returns}
+Order$\ast$ The order of the customer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCustomer_ab2cabd38f33ae4d2f1bea0a6e1defdc8}\label{classCustomer_ab2cabd38f33ae4d2f1bea0a6e1defdc8}} 
+\index{Customer@{Customer}!getState@{getState}}
+\index{getState@{getState}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{getState()}{getState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCustomerState}{Customer\+State}} $\ast$ Customer\+::get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the \mbox{\hyperlink{classCustomer}{Customer}} State object. 
+
+\begin{DoxyReturn}{Returns}
+Customer\+State$\ast$ The state of the customer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCustomer_a69dfa6341c3027f1bd56ff297c155706}\label{classCustomer_a69dfa6341c3027f1bd56ff297c155706}} 
+\index{Customer@{Customer}!getTab@{getTab}}
+\index{getTab@{getTab}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{getTab()}{getTab()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTab}{Tab}} $\ast$ Customer\+::get\+Tab (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the \mbox{\hyperlink{classTab}{Tab}} object. 
+
+\begin{DoxyReturn}{Returns}
+Tab$\ast$ The tab of the customer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCustomer_a45ec6d7b6f315c53af9f9dbd25525fa5}\label{classCustomer_a45ec6d7b6f315c53af9f9dbd25525fa5}} 
+\index{Customer@{Customer}!getTable@{getTable}}
+\index{getTable@{getTable}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{getTable()}{getTable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTable}{Table}} $\ast$ Customer\+::get\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the \mbox{\hyperlink{classTable}{Table}} object. 
+
+\begin{DoxyReturn}{Returns}
+Table$\ast$ The table assigned to the customer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCustomer_a065ebc6f3372ee18f2e750ee34c8da33}\label{classCustomer_a065ebc6f3372ee18f2e750ee34c8da33}} 
+\index{Customer@{Customer}!getTableID@{getTableID}}
+\index{getTableID@{getTableID}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{getTableID()}{getTableID()}}
+{\footnotesize\ttfamily int Customer\+::get\+Table\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the \mbox{\hyperlink{classTable}{Table}} ID. 
+
+\begin{DoxyReturn}{Returns}
+int The ID of the table assigned to the customer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCustomer_a86d8e5706080affe5492f014d35a5e9a}\label{classCustomer_a86d8e5706080affe5492f014d35a5e9a}} 
+\index{Customer@{Customer}!getTip@{getTip}}
+\index{getTip@{getTip}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{getTip()}{getTip()}}
+{\footnotesize\ttfamily double Customer\+::get\+Tip (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Tip object. 
+
+\begin{DoxyReturn}{Returns}
+double The tip given by the customer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCustomer_ac783af7ecc0ce9734d4e1f41c939e127}\label{classCustomer_ac783af7ecc0ce9734d4e1f41c939e127}} 
+\index{Customer@{Customer}!menu@{menu}}
+\index{menu@{menu}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{menu()}{menu()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classOrder}{Order}} $\ast$ Customer\+::menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Display the menu. 
+
+\begin{DoxyReturn}{Returns}
+Order$\ast$ The order of the customer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCustomer_a753eb70336dc11b7b915749ff4118eb4}\label{classCustomer_a753eb70336dc11b7b915749ff4118eb4}} 
+\index{Customer@{Customer}!payBill@{payBill}}
+\index{payBill@{payBill}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{payBill()}{payBill()}}
+{\footnotesize\ttfamily void Customer\+::pay\+Bill (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBill}{Bill}} $\ast$}]{bill,  }\item[{\mbox{\hyperlink{classAccountingSystem}{Accounting\+System}} $\ast$}]{aS }\end{DoxyParamCaption})}
+
+
+
+Pay the bill. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bill} & The bill to be paid. \\
+\hline
+{\em aS} & The accounting system. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCustomer_a2639f65e889a3c061685e309f89c9dba}\label{classCustomer_a2639f65e889a3c061685e309f89c9dba}} 
+\index{Customer@{Customer}!requestWaiter@{requestWaiter}}
+\index{requestWaiter@{requestWaiter}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{requestWaiter()}{requestWaiter()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classOrderHandler}{Order\+Handler}} $\ast$ Customer\+::request\+Waiter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Request a waiter. 
+
+\begin{DoxyReturn}{Returns}
+Order\+Handler$\ast$ The order handler of the waiter. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCustomer_acc9e75a665545985ebd6e82c5cc22627}\label{classCustomer_acc9e75a665545985ebd6e82c5cc22627}} 
+\index{Customer@{Customer}!setState@{setState}}
+\index{setState@{setState}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{setState()}{setState()}}
+{\footnotesize\ttfamily void Customer\+::set\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCustomerState}{Customer\+State}} $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+Set the \mbox{\hyperlink{classCustomer}{Customer}} State object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The state to be set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCustomer_a46e08460ccfbaaaf2d51c7f469f81c1d}\label{classCustomer_a46e08460ccfbaaaf2d51c7f469f81c1d}} 
+\index{Customer@{Customer}!setTab@{setTab}}
+\index{setTab@{setTab}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{setTab()}{setTab()}}
+{\footnotesize\ttfamily void Customer\+::set\+Tab (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTab}{Tab}} $\ast$}]{t }\end{DoxyParamCaption})}
+
+
+
+Set the \mbox{\hyperlink{classTab}{Tab}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & The tab to be set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCustomer_a7cb51b2f30f969f278470aacb3b4744f}\label{classCustomer_a7cb51b2f30f969f278470aacb3b4744f}} 
+\index{Customer@{Customer}!setTable@{setTable}}
+\index{setTable@{setTable}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{setTable()}{setTable()}}
+{\footnotesize\ttfamily void Customer\+::set\+Table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTable}{Table}} $\ast$}]{t }\end{DoxyParamCaption})}
+
+
+
+Set the \mbox{\hyperlink{classTable}{Table}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & The table to be set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCustomer_aa8398b47b3ca9825ba6f7f14026641be}\label{classCustomer_aa8398b47b3ca9825ba6f7f14026641be}} 
+\index{Customer@{Customer}!setTableID@{setTableID}}
+\index{setTableID@{setTableID}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{setTableID()}{setTableID()}}
+{\footnotesize\ttfamily void Customer\+::set\+Table\+ID (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Set the \mbox{\hyperlink{classTable}{Table}} ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the table to be set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCustomer_a21f29548f326677cca200107b52a1fa4}\label{classCustomer_a21f29548f326677cca200107b52a1fa4}} 
+\index{Customer@{Customer}!setValletID@{setValletID}}
+\index{setValletID@{setValletID}!Customer@{Customer}}
+\doxysubsubsection{\texorpdfstring{setValletID()}{setValletID()}}
+{\footnotesize\ttfamily void Customer\+::set\+Vallet\+ID (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Set the Vallet ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the vallet to be set. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Customer.\+h\item 
+Customer.\+cpp\end{DoxyCompactItemize}

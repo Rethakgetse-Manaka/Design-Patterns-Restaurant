@@ -1,0 +1,109 @@
+\hypertarget{classRotisseurChef}{}\doxysection{Rotisseur\+Chef Class Reference}
+\label{classRotisseurChef}\index{RotisseurChef@{RotisseurChef}}
+
+
+Inheritance diagram for Rotisseur\+Chef\+:
+% FIG 0
+
+
+Collaboration diagram for Rotisseur\+Chef\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMeal}{Meal}} $\ast$ \mbox{\hyperlink{classRotisseurChef_aa372e7cd525721730d2a77a40b72b648}{create\+Starter}} ()
+\begin{DoxyCompactList}\small\item\em Creates a starter meal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMeal}{Meal}} $\ast$ \mbox{\hyperlink{classRotisseurChef_a4ff61ec2871616efbe2214187f180eb9}{create\+Main}} ()
+\begin{DoxyCompactList}\small\item\em Creates a main meal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRotisseurChef_a7eb8ff41ebc76d569a61b492fa9f4671}{add\+Meal}} (\mbox{\hyperlink{classMeal}{Meal}} $\ast$meal)
+\begin{DoxyCompactList}\small\item\em Adds a meal to the plate. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classRotisseurChef_a66c4c8243bd2496f9e33019e337ac46a}{receive\+Order}} (\mbox{\hyperlink{classFoodItem}{Food\+Item}} $\ast$food\+Item, int table\+Number, int cust\+ID, int num\+Of\+Items)
+\begin{DoxyCompactList}\small\item\em Receives an order for a food item. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRotisseurChef_a7eb8ff41ebc76d569a61b492fa9f4671}\label{classRotisseurChef_a7eb8ff41ebc76d569a61b492fa9f4671}} 
+\index{RotisseurChef@{RotisseurChef}!addMeal@{addMeal}}
+\index{addMeal@{addMeal}!RotisseurChef@{RotisseurChef}}
+\doxysubsubsection{\texorpdfstring{addMeal()}{addMeal()}}
+{\footnotesize\ttfamily void Rotisseur\+Chef\+::add\+Meal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMeal}{Meal}} $\ast$}]{meal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Adds a meal to the plate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em meal} & A pointer to the meal to be added. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classChef_af8fe2b871d9665c1b75cae87f9bbb0da}{Chef}}.
+
+\mbox{\Hypertarget{classRotisseurChef_a4ff61ec2871616efbe2214187f180eb9}\label{classRotisseurChef_a4ff61ec2871616efbe2214187f180eb9}} 
+\index{RotisseurChef@{RotisseurChef}!createMain@{createMain}}
+\index{createMain@{createMain}!RotisseurChef@{RotisseurChef}}
+\doxysubsubsection{\texorpdfstring{createMain()}{createMain()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMeal}{Meal}} $\ast$ Rotisseur\+Chef\+::create\+Main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Creates a main meal. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the created main meal. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classChef_a2da753c1b710c7fb1c9e0b92a671e268}{Chef}}.
+
+\mbox{\Hypertarget{classRotisseurChef_aa372e7cd525721730d2a77a40b72b648}\label{classRotisseurChef_aa372e7cd525721730d2a77a40b72b648}} 
+\index{RotisseurChef@{RotisseurChef}!createStarter@{createStarter}}
+\index{createStarter@{createStarter}!RotisseurChef@{RotisseurChef}}
+\doxysubsubsection{\texorpdfstring{createStarter()}{createStarter()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMeal}{Meal}} $\ast$ Rotisseur\+Chef\+::create\+Starter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Creates a starter meal. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the created starter meal. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classChef_a14c3a0db90b1ce2a7eca636693b8c027}{Chef}}.
+
+\mbox{\Hypertarget{classRotisseurChef_a66c4c8243bd2496f9e33019e337ac46a}\label{classRotisseurChef_a66c4c8243bd2496f9e33019e337ac46a}} 
+\index{RotisseurChef@{RotisseurChef}!receiveOrder@{receiveOrder}}
+\index{receiveOrder@{receiveOrder}!RotisseurChef@{RotisseurChef}}
+\doxysubsubsection{\texorpdfstring{receiveOrder()}{receiveOrder()}}
+{\footnotesize\ttfamily void Rotisseur\+Chef\+::receive\+Order (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFoodItem}{Food\+Item}} $\ast$}]{food\+Item,  }\item[{int}]{table\+Number,  }\item[{int}]{cust\+ID,  }\item[{int}]{num\+Of\+Items }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Receives an order for a food item. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em food\+Item} & A pointer to the food item being ordered. \\
+\hline
+{\em table\+Number} & The number of the table the order is for. \\
+\hline
+{\em cust\+ID} & The ID of the customer placing the order. \\
+\hline
+{\em num\+Of\+Items} & The number of items being ordered. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classChef_a34839d079bbb4619e1e55079a3574439}{Chef}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{RotisseurChef_8h}{Rotisseur\+Chef.\+h}}\item 
+Rotisseur\+Chef.\+cpp\end{DoxyCompactItemize}

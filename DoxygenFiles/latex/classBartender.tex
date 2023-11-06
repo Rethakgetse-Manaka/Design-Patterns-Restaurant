@@ -1,0 +1,94 @@
+\hypertarget{classBartender}{}\doxysection{Bartender Class Reference}
+\label{classBartender}\index{Bartender@{Bartender}}
+
+
+The \mbox{\hyperlink{classBartender}{Bartender}} class is a concrete \mbox{\hyperlink{classColleague}{Colleague}} in the Mediator design pattern.  
+
+
+
+
+{\ttfamily \#include $<$Bartender.\+h$>$}
+
+
+
+Inheritance diagram for Bartender\+:
+% FIG 0
+
+
+Collaboration diagram for Bartender\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classBartender_a8c1875480bf6f33d64fed177e354a7d9}{add\+Drink}} (\mbox{\hyperlink{classCocktail}{Cocktail}} $\ast$cocktail)
+\begin{DoxyCompactList}\small\item\em Adds a \mbox{\hyperlink{classCocktail}{Cocktail}} to the \mbox{\hyperlink{classDrinkTray}{Drink\+Tray}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBartender_aa02554f98ae7703948f2cf009efc0b9e}{set\+Tray}} (\mbox{\hyperlink{classDrinkTray}{Drink\+Tray}} $\ast$tray)
+\begin{DoxyCompactList}\small\item\em Sets the \mbox{\hyperlink{classDrinkTray}{Drink\+Tray}} for the \mbox{\hyperlink{classBartender}{Bartender}} to use. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBartender_a146813b5aea80a00614f591d96962764}{receive\+Order}} (\mbox{\hyperlink{classCocktail}{Cocktail}} $\ast$cocktail, int table\+Number, int cust\+ID, int num\+Of\+Items)
+\begin{DoxyCompactList}\small\item\em Receives an order from the \mbox{\hyperlink{classOrderMediator}{Order\+Mediator}} and creates the appropriate \mbox{\hyperlink{classCocktail}{Cocktail}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classBartender}{Bartender}} class is a concrete \mbox{\hyperlink{classColleague}{Colleague}} in the Mediator design pattern. 
+
+It is responsible for creating and adding drinks to a \mbox{\hyperlink{classDrinkTray}{Drink\+Tray}}, which is then passed to the \mbox{\hyperlink{classWaiter}{Waiter}} for delivery to the customer. It receives orders from the \mbox{\hyperlink{classOrderMediator}{Order\+Mediator}} and creates the appropriate \mbox{\hyperlink{classCocktail}{Cocktail}} object. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBartender_a8c1875480bf6f33d64fed177e354a7d9}\label{classBartender_a8c1875480bf6f33d64fed177e354a7d9}} 
+\index{Bartender@{Bartender}!addDrink@{addDrink}}
+\index{addDrink@{addDrink}!Bartender@{Bartender}}
+\doxysubsubsection{\texorpdfstring{addDrink()}{addDrink()}}
+{\footnotesize\ttfamily void Bartender\+::add\+Drink (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCocktail}{Cocktail}} $\ast$}]{cocktail }\end{DoxyParamCaption})}
+
+
+
+Adds a \mbox{\hyperlink{classCocktail}{Cocktail}} to the \mbox{\hyperlink{classDrinkTray}{Drink\+Tray}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cocktail} & The \mbox{\hyperlink{classCocktail}{Cocktail}} to add to the \mbox{\hyperlink{classDrinkTray}{Drink\+Tray}}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classBartender_a146813b5aea80a00614f591d96962764}\label{classBartender_a146813b5aea80a00614f591d96962764}} 
+\index{Bartender@{Bartender}!receiveOrder@{receiveOrder}}
+\index{receiveOrder@{receiveOrder}!Bartender@{Bartender}}
+\doxysubsubsection{\texorpdfstring{receiveOrder()}{receiveOrder()}}
+{\footnotesize\ttfamily void Bartender\+::receive\+Order (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCocktail}{Cocktail}} $\ast$}]{cocktail,  }\item[{int}]{table\+Number,  }\item[{int}]{cust\+ID,  }\item[{int}]{num\+Of\+Items }\end{DoxyParamCaption})}
+
+
+
+Receives an order from the \mbox{\hyperlink{classOrderMediator}{Order\+Mediator}} and creates the appropriate \mbox{\hyperlink{classCocktail}{Cocktail}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cocktail} & The \mbox{\hyperlink{classCocktail}{Cocktail}} ordered. \\
+\hline
+{\em table\+Number} & The table number the order is for. \\
+\hline
+{\em cust\+ID} & The ID of the customer who placed the order. \\
+\hline
+{\em num\+Of\+Items} & The number of items in the order. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classBartender_aa02554f98ae7703948f2cf009efc0b9e}\label{classBartender_aa02554f98ae7703948f2cf009efc0b9e}} 
+\index{Bartender@{Bartender}!setTray@{setTray}}
+\index{setTray@{setTray}!Bartender@{Bartender}}
+\doxysubsubsection{\texorpdfstring{setTray()}{setTray()}}
+{\footnotesize\ttfamily void Bartender\+::set\+Tray (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDrinkTray}{Drink\+Tray}} $\ast$}]{tray }\end{DoxyParamCaption})}
+
+
+
+Sets the \mbox{\hyperlink{classDrinkTray}{Drink\+Tray}} for the \mbox{\hyperlink{classBartender}{Bartender}} to use. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tray} & The \mbox{\hyperlink{classDrinkTray}{Drink\+Tray}} to use. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Bartender.\+h\item 
+Bartender.\+cpp\end{DoxyCompactItemize}

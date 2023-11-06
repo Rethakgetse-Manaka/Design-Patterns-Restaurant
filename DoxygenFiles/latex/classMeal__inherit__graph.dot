@@ -1,0 +1,36 @@
+digraph "Meal"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Meal",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="The Meal class is an abstract base class that defines the interface for creating meals."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="MainMeal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classMainMeal.html",tooltip="The MainMeal class is a concrete class that inherits from the Meal class. It provides an implementati..."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Alfredo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classAlfredo.html",tooltip="The Alfredo class is a derived class of MainMeal that represents an Alfredo main meal."];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="BeefBurger",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classBeefBurger.html",tooltip="The BeefBurger class is a derived class of MainMeal that represents a beef burger."];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="BurgerPatty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classBurgerPatty.html",tooltip=" "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="MediumRare",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classMediumRare.html",tooltip=" "];
+  Node2 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="ChickenBurger",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classChickenBurger.html",tooltip="The ChickenBurger class is a concrete component of the MainMeal hierarchy."];
+  Node2 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="FriedMeal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classFriedMeal.html",tooltip=" "];
+  Node2 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="StirFry",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classStirFry.html",tooltip=" "];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="StarterMeal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classStarterMeal.html",tooltip="The StarterMeal class is a derived class of the Meal class."];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="BeefKebab",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classBeefKebab.html",tooltip="The BeefKebab class is a derived class of StarterMeal."];
+  Node10 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="ChickenSalad",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classChickenSalad.html",tooltip=" "];
+  Node10 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="GreenSalad",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classGreenSalad.html",tooltip=" "];
+  Node10 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="Ramen",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRamen.html",tooltip="The Ramen class is a concrete implementation of the StarterMeal abstract class."];
+  Node10 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="Wings",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWings.html",tooltip=" "];
+}

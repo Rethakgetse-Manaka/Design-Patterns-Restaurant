@@ -1,0 +1,113 @@
+\hypertarget{classRestaurantObserver}{}\doxysection{Restaurant\+Observer Class Reference}
+\label{classRestaurantObserver}\index{RestaurantObserver@{RestaurantObserver}}
+
+
+The \mbox{\hyperlink{classRestaurantObserver}{Restaurant\+Observer}} class is a concrete \mbox{\hyperlink{classObserver}{Observer}} that observes changes in the \mbox{\hyperlink{classInventory}{Inventory}} and updates the \mbox{\hyperlink{classAccountingSystem}{Accounting\+System}} accordingly.  
+
+
+
+
+{\ttfamily \#include $<$Restaurant\+Observer.\+h$>$}
+
+
+
+Inheritance diagram for Restaurant\+Observer\+:
+% FIG 0
+
+
+Collaboration diagram for Restaurant\+Observer\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRestaurantObserver_a729743208a36662a82c2b619c2b9f9fb}{Restaurant\+Observer}} (\mbox{\hyperlink{classInventory}{Inventory}} $\ast$inventory, \mbox{\hyperlink{classAccountingSystem}{Accounting\+System}} $\ast$accounting\+System)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classRestaurant}{Restaurant}} \mbox{\hyperlink{classObserver}{Observer}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRestaurantObserver_a8ac0828ed8c91dac1ca67f8d9a74e59d}\label{classRestaurantObserver_a8ac0828ed8c91dac1ca67f8d9a74e59d}} 
+void \mbox{\hyperlink{classRestaurantObserver_a8ac0828ed8c91dac1ca67f8d9a74e59d}{update}} ()
+\begin{DoxyCompactList}\small\item\em Update the \mbox{\hyperlink{classAccountingSystem}{Accounting\+System}} with the latest changes in the \mbox{\hyperlink{classInventory}{Inventory}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRestaurantObserver_a72d0ca5478506c62260f334ba3bb6f5b}{set\+Accounting\+System}} (\mbox{\hyperlink{classAccountingSystem}{Accounting\+System}} $\ast$accounting\+System)
+\begin{DoxyCompactList}\small\item\em Set the \mbox{\hyperlink{classAccountingSystem}{Accounting\+System}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classInventory}{Inventory}} $\ast$ \mbox{\hyperlink{classRestaurantObserver_a815ee8f8c6aad547627df9b69c5ec013}{get\+Inventory}} ()
+\begin{DoxyCompactList}\small\item\em Get the \mbox{\hyperlink{classInventory}{Inventory}} object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classRestaurantObserver_ac462b5752d78378cdc988faafc366b31}{get\+Current\+Date}} ()
+\begin{DoxyCompactList}\small\item\em Get the current date as a string. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRestaurantObserver_ae5de2211e75a30e948009a3fac1bd0a3}\label{classRestaurantObserver_ae5de2211e75a30e948009a3fac1bd0a3}} 
+virtual \mbox{\hyperlink{classRestaurantObserver_ae5de2211e75a30e948009a3fac1bd0a3}{$\sim$\+Restaurant\+Observer}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classRestaurant}{Restaurant}} \mbox{\hyperlink{classObserver}{Observer}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classRestaurantObserver}{Restaurant\+Observer}} class is a concrete \mbox{\hyperlink{classObserver}{Observer}} that observes changes in the \mbox{\hyperlink{classInventory}{Inventory}} and updates the \mbox{\hyperlink{classAccountingSystem}{Accounting\+System}} accordingly. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classRestaurantObserver_a729743208a36662a82c2b619c2b9f9fb}\label{classRestaurantObserver_a729743208a36662a82c2b619c2b9f9fb}} 
+\index{RestaurantObserver@{RestaurantObserver}!RestaurantObserver@{RestaurantObserver}}
+\index{RestaurantObserver@{RestaurantObserver}!RestaurantObserver@{RestaurantObserver}}
+\doxysubsubsection{\texorpdfstring{RestaurantObserver()}{RestaurantObserver()}}
+{\footnotesize\ttfamily Restaurant\+Observer\+::\+Restaurant\+Observer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classInventory}{Inventory}} $\ast$}]{inventory,  }\item[{\mbox{\hyperlink{classAccountingSystem}{Accounting\+System}} $\ast$}]{accounting\+System }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classRestaurant}{Restaurant}} \mbox{\hyperlink{classObserver}{Observer}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inventory} & The \mbox{\hyperlink{classInventory}{Inventory}} to observe \\
+\hline
+{\em accounting\+System} & The \mbox{\hyperlink{classAccountingSystem}{Accounting\+System}} to update \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRestaurantObserver_ac462b5752d78378cdc988faafc366b31}\label{classRestaurantObserver_ac462b5752d78378cdc988faafc366b31}} 
+\index{RestaurantObserver@{RestaurantObserver}!getCurrentDate@{getCurrentDate}}
+\index{getCurrentDate@{getCurrentDate}!RestaurantObserver@{RestaurantObserver}}
+\doxysubsubsection{\texorpdfstring{getCurrentDate()}{getCurrentDate()}}
+{\footnotesize\ttfamily std\+::string Restaurant\+Observer\+::get\+Current\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the current date as a string. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string The current date 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRestaurantObserver_a815ee8f8c6aad547627df9b69c5ec013}\label{classRestaurantObserver_a815ee8f8c6aad547627df9b69c5ec013}} 
+\index{RestaurantObserver@{RestaurantObserver}!getInventory@{getInventory}}
+\index{getInventory@{getInventory}!RestaurantObserver@{RestaurantObserver}}
+\doxysubsubsection{\texorpdfstring{getInventory()}{getInventory()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classInventory}{Inventory}} $\ast$ Restaurant\+Observer\+::get\+Inventory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the \mbox{\hyperlink{classInventory}{Inventory}} object. 
+
+\begin{DoxyReturn}{Returns}
+Inventory$\ast$ The \mbox{\hyperlink{classInventory}{Inventory}} being observed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRestaurantObserver_a72d0ca5478506c62260f334ba3bb6f5b}\label{classRestaurantObserver_a72d0ca5478506c62260f334ba3bb6f5b}} 
+\index{RestaurantObserver@{RestaurantObserver}!setAccountingSystem@{setAccountingSystem}}
+\index{setAccountingSystem@{setAccountingSystem}!RestaurantObserver@{RestaurantObserver}}
+\doxysubsubsection{\texorpdfstring{setAccountingSystem()}{setAccountingSystem()}}
+{\footnotesize\ttfamily void Restaurant\+Observer\+::set\+Accounting\+System (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classAccountingSystem}{Accounting\+System}} $\ast$}]{accounting\+System }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Set the \mbox{\hyperlink{classAccountingSystem}{Accounting\+System}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em accounting\+System} & The \mbox{\hyperlink{classAccountingSystem}{Accounting\+System}} to set \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classObserver_a79c0202c492eb2c7cb0aa47c04b30762}{Observer}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Restaurant\+Observer.\+h\item 
+Restaurant\+Observer.\+cpp\end{DoxyCompactItemize}

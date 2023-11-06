@@ -1,0 +1,109 @@
+\hypertarget{classCocktail}{}\doxysection{Cocktail Class Reference}
+\label{classCocktail}\index{Cocktail@{Cocktail}}
+
+
+The \mbox{\hyperlink{classCocktail}{Cocktail}} class is an abstract base class that defines the interface for all cocktails.  
+
+
+
+
+{\ttfamily \#include $<$Cocktail.\+h$>$}
+
+
+
+Inheritance diagram for Cocktail\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::string \mbox{\hyperlink{classCocktail_a937bde8f2c7adbf30c712b530dd847a7}{get\+Description}} () const =0
+\begin{DoxyCompactList}\small\item\em Get the description of the cocktail. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classCocktail_a293ecfea681a93c073ca2829be0b506c}{cost}} () const =0
+\begin{DoxyCompactList}\small\item\em Get the cost of the cocktail. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classCocktail_aa13b9a7c4d4f178fbf1bb3c19fc9f252}{get\+Price}} ()=0
+\begin{DoxyCompactList}\small\item\em Get the price of the cocktail. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classCocktail_a16aad18c46fc838e67b3440d1ba560dd}{to\+String}} ()=0
+\begin{DoxyCompactList}\small\item\em Get a string representation of the cocktail. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCocktail_a591dc3224ded8396473abc6ae2125838}\label{classCocktail_a591dc3224ded8396473abc6ae2125838}} 
+virtual \mbox{\hyperlink{classCocktail_a591dc3224ded8396473abc6ae2125838}{$\sim$\+Cocktail}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classCocktail}{Cocktail}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classCocktail}{Cocktail}} class is an abstract base class that defines the interface for all cocktails. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCocktail_a293ecfea681a93c073ca2829be0b506c}\label{classCocktail_a293ecfea681a93c073ca2829be0b506c}} 
+\index{Cocktail@{Cocktail}!cost@{cost}}
+\index{cost@{cost}!Cocktail@{Cocktail}}
+\doxysubsubsection{\texorpdfstring{cost()}{cost()}}
+{\footnotesize\ttfamily virtual double Cocktail\+::cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the cost of the cocktail. 
+
+\begin{DoxyReturn}{Returns}
+double The cost of the cocktail. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classBaseCocktail_a59e13b1eb593f94efc66d38e7b187285}{Base\+Cocktail}}, and \mbox{\hyperlink{classCocktailDecorator_a75665cc6299f982c3b6c876788e9ee71}{Cocktail\+Decorator}}.
+
+\mbox{\Hypertarget{classCocktail_a937bde8f2c7adbf30c712b530dd847a7}\label{classCocktail_a937bde8f2c7adbf30c712b530dd847a7}} 
+\index{Cocktail@{Cocktail}!getDescription@{getDescription}}
+\index{getDescription@{getDescription}!Cocktail@{Cocktail}}
+\doxysubsubsection{\texorpdfstring{getDescription()}{getDescription()}}
+{\footnotesize\ttfamily virtual std\+::string Cocktail\+::get\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the description of the cocktail. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string The description of the cocktail. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classSpecificCocktail_a51072903c14267a9e2cc72d75865fe62}{Specific\+Cocktail}}, \mbox{\hyperlink{classBaseCocktail_a22f6ebf77c3f791f287f2c1786f16adc}{Base\+Cocktail}}, \mbox{\hyperlink{classAlcoholDecorator_a9503a2290eb26207dc429bfb55df510b}{Alcohol\+Decorator}}, and \mbox{\hyperlink{classCocktailDecorator_a214445dcb0d7e66ae0f35333ac6810d4}{Cocktail\+Decorator}}.
+
+\mbox{\Hypertarget{classCocktail_aa13b9a7c4d4f178fbf1bb3c19fc9f252}\label{classCocktail_aa13b9a7c4d4f178fbf1bb3c19fc9f252}} 
+\index{Cocktail@{Cocktail}!getPrice@{getPrice}}
+\index{getPrice@{getPrice}!Cocktail@{Cocktail}}
+\doxysubsubsection{\texorpdfstring{getPrice()}{getPrice()}}
+{\footnotesize\ttfamily virtual double Cocktail\+::get\+Price (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the price of the cocktail. 
+
+\begin{DoxyReturn}{Returns}
+double The price of the cocktail. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classCocktailDecorator_a8f39f7bb8c68a7786572104484002e4e}{Cocktail\+Decorator}}, \mbox{\hyperlink{classSpecificCocktail_a0488718f0f3e1998815ea18ed7b7424e}{Specific\+Cocktail}}, and \mbox{\hyperlink{classBaseCocktail_a6162136e0abf20bbdfeeccda7e122e02}{Base\+Cocktail}}.
+
+\mbox{\Hypertarget{classCocktail_a16aad18c46fc838e67b3440d1ba560dd}\label{classCocktail_a16aad18c46fc838e67b3440d1ba560dd}} 
+\index{Cocktail@{Cocktail}!toString@{toString}}
+\index{toString@{toString}!Cocktail@{Cocktail}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily virtual std\+::string Cocktail\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get a string representation of the cocktail. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string A string representation of the cocktail. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classCocktailDecorator_acb449b9b6c650feb5d7c88284709e32c}{Cocktail\+Decorator}}, \mbox{\hyperlink{classSpecificCocktail_af94aab0aa289f9006bd102f4dd008a26}{Specific\+Cocktail}}, and \mbox{\hyperlink{classBaseCocktail_aef5b06cb872d54dcfd9652ab1a94af3f}{Base\+Cocktail}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Cocktail.\+h\item 
+Cocktail.\+cpp\end{DoxyCompactItemize}

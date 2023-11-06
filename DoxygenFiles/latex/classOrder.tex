@@ -1,0 +1,218 @@
+\hypertarget{classOrder}{}\doxysection{Order Class Reference}
+\label{classOrder}\index{Order@{Order}}
+
+
+{\ttfamily \#include $<$Order.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classOrder_a128305187759f301cb7430609473a1e1}{Order}} (int c\+ID, std\+::string c\+Name)
+\item 
+void \mbox{\hyperlink{classOrder_a4928595ed04b24d40ae234251751c8ac}{set\+Tray}} (\mbox{\hyperlink{classDrinkTray}{Drink\+Tray}} $\ast$tray)
+\item 
+void \mbox{\hyperlink{classOrder_a11d259a533b2684d4e075256bdfe50b1}{set\+Plate}} (\mbox{\hyperlink{classPlate}{Plate}} $\ast$p)
+\item 
+void \mbox{\hyperlink{classOrder_acf526050fb3ffe332b26dba9fbaa7f90}{add\+Starter}} (std\+::string name, double val)
+\item 
+void \mbox{\hyperlink{classOrder_a44165f6c0b9ba2463fb6c968e1ec6de4}{add\+Item}} (std\+::string item, bool g, bool s, double val, bool well)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classFoodItem}{Food\+Item}} $\ast$ $>$ \mbox{\hyperlink{classOrder_ad571ab54099ea7993c2e4fc2e029c8b9}{get\+Food\+Items}} ()
+\item 
+int \mbox{\hyperlink{classOrder_a99ea64b45b38c884325176ab4b56484b}{get\+Table\+Number}} ()
+\item 
+void \mbox{\hyperlink{classOrder_a8722fb063d66f6c85a1bb13c2077c18e}{set\+Table\+ID}} (int id)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classCocktail}{Cocktail}} $\ast$ $>$ \mbox{\hyperlink{classOrder_a1e33c8ceb0e09a428fe2f165fa0d1428}{get\+Drinks}} ()
+\item 
+void \mbox{\hyperlink{classOrder_a864a5b520ac6c684b8d5ce998605f60a}{add\+Drink}} (std\+::string base\+Name, bool alch, double cost, std\+::string mixes)
+\item 
+int \mbox{\hyperlink{classOrder_a6c4560e9f1655a3d70d411ccb4b4a569}{get\+Customer\+ID}} ()
+\item 
+double \mbox{\hyperlink{classOrder_a62ff67f913e6d1e539ce2e3f4e0006ea}{get\+Total}} ()
+\item 
+std\+::string \mbox{\hyperlink{classOrder_a05ca3d730ac79a64709ccede7003159b}{get\+Customer\+Name}} ()
+\item 
+std\+::string \mbox{\hyperlink{classOrder_a0ca81712683adb3f80f4614e6745c6bf}{print\+Order}} ()
+\item 
+\mbox{\hyperlink{classOrder_a8fb25876ccbd534465f5f96ef9bb2212}{$\sim$\+Order}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classOrder}{Order}} class represents a customer\textquotesingle{}s order at a restaurant. It contains information about the customer, the table, the food items, and the drinks ordered. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classOrder_a128305187759f301cb7430609473a1e1}\label{classOrder_a128305187759f301cb7430609473a1e1}} 
+\index{Order@{Order}!Order@{Order}}
+\index{Order@{Order}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{Order()}{Order()}}
+{\footnotesize\ttfamily Order\+::\+Order (\begin{DoxyParamCaption}\item[{int}]{c\+ID,  }\item[{std\+::string}]{c\+Name }\end{DoxyParamCaption})}
+
+Constructs an \mbox{\hyperlink{classOrder}{Order}} object with the given customer ID and name. 
+\begin{DoxyParams}{Parameters}
+{\em c\+ID} & The ID of the customer who placed the order \\
+\hline
+{\em c\+Name} & The name of the customer who placed the order \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classOrder_a8fb25876ccbd534465f5f96ef9bb2212}\label{classOrder_a8fb25876ccbd534465f5f96ef9bb2212}} 
+\index{Order@{Order}!````~Order@{$\sim$Order}}
+\index{````~Order@{$\sim$Order}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{$\sim$Order()}{~Order()}}
+{\footnotesize\ttfamily Order\+::$\sim$\+Order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destroys the \mbox{\hyperlink{classOrder}{Order}} object and frees any memory allocated to it. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classOrder_a864a5b520ac6c684b8d5ce998605f60a}\label{classOrder_a864a5b520ac6c684b8d5ce998605f60a}} 
+\index{Order@{Order}!addDrink@{addDrink}}
+\index{addDrink@{addDrink}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{addDrink()}{addDrink()}}
+{\footnotesize\ttfamily void Order\+::add\+Drink (\begin{DoxyParamCaption}\item[{std\+::string}]{base\+Name,  }\item[{bool}]{alch,  }\item[{double}]{cost,  }\item[{std\+::string}]{mixes }\end{DoxyParamCaption})}
+
+Adds a cocktail to the order. 
+\begin{DoxyParams}{Parameters}
+{\em base\+Name} & The name of the cocktail\textquotesingle{}s base liquor \\
+\hline
+{\em alch} & Whether the cocktail is alcoholic or not \\
+\hline
+{\em cost} & The price of the cocktail \\
+\hline
+{\em mixes} & The names of the cocktail\textquotesingle{}s mixers \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classOrder_a44165f6c0b9ba2463fb6c968e1ec6de4}\label{classOrder_a44165f6c0b9ba2463fb6c968e1ec6de4}} 
+\index{Order@{Order}!addItem@{addItem}}
+\index{addItem@{addItem}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{addItem()}{addItem()}}
+{\footnotesize\ttfamily void Order\+::add\+Item (\begin{DoxyParamCaption}\item[{std\+::string}]{item,  }\item[{bool}]{g,  }\item[{bool}]{s,  }\item[{double}]{val,  }\item[{bool}]{well }\end{DoxyParamCaption})}
+
+Adds a food item to the order. 
+\begin{DoxyParams}{Parameters}
+{\em item} & The name of the food item \\
+\hline
+{\em g} & Whether the food item is gluten-\/free or not \\
+\hline
+{\em s} & Whether the food item is spicy or not \\
+\hline
+{\em val} & The price of the food item \\
+\hline
+{\em well} & Whether the food item is well-\/done or not \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classOrder_acf526050fb3ffe332b26dba9fbaa7f90}\label{classOrder_acf526050fb3ffe332b26dba9fbaa7f90}} 
+\index{Order@{Order}!addStarter@{addStarter}}
+\index{addStarter@{addStarter}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{addStarter()}{addStarter()}}
+{\footnotesize\ttfamily void Order\+::add\+Starter (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{double}]{val }\end{DoxyParamCaption})}
+
+Adds a starter to the order. 
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the starter \\
+\hline
+{\em val} & The price of the starter \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classOrder_a6c4560e9f1655a3d70d411ccb4b4a569}\label{classOrder_a6c4560e9f1655a3d70d411ccb4b4a569}} 
+\index{Order@{Order}!getCustomerID@{getCustomerID}}
+\index{getCustomerID@{getCustomerID}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{getCustomerID()}{getCustomerID()}}
+{\footnotesize\ttfamily int Order\+::get\+Customer\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the ID of the customer who placed the order. \begin{DoxyReturn}{Returns}
+The ID of the customer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classOrder_a05ca3d730ac79a64709ccede7003159b}\label{classOrder_a05ca3d730ac79a64709ccede7003159b}} 
+\index{Order@{Order}!getCustomerName@{getCustomerName}}
+\index{getCustomerName@{getCustomerName}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{getCustomerName()}{getCustomerName()}}
+{\footnotesize\ttfamily std\+::string Order\+::get\+Customer\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the name of the customer who placed the order. \begin{DoxyReturn}{Returns}
+The name of the customer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classOrder_a1e33c8ceb0e09a428fe2f165fa0d1428}\label{classOrder_a1e33c8ceb0e09a428fe2f165fa0d1428}} 
+\index{Order@{Order}!getDrinks@{getDrinks}}
+\index{getDrinks@{getDrinks}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{getDrinks()}{getDrinks()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classCocktail}{Cocktail}} $\ast$ $>$ Order\+::get\+Drinks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns a vector of pointers to the cocktails ordered. \begin{DoxyReturn}{Returns}
+A vector of pointers to the \mbox{\hyperlink{classCocktail}{Cocktail}} objects 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classOrder_ad571ab54099ea7993c2e4fc2e029c8b9}\label{classOrder_ad571ab54099ea7993c2e4fc2e029c8b9}} 
+\index{Order@{Order}!getFoodItems@{getFoodItems}}
+\index{getFoodItems@{getFoodItems}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{getFoodItems()}{getFoodItems()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classFoodItem}{Food\+Item}} $\ast$ $>$ Order\+::get\+Food\+Items (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns a vector of pointers to the food items ordered. \begin{DoxyReturn}{Returns}
+A vector of pointers to the \mbox{\hyperlink{classFoodItem}{Food\+Item}} objects 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classOrder_a99ea64b45b38c884325176ab4b56484b}\label{classOrder_a99ea64b45b38c884325176ab4b56484b}} 
+\index{Order@{Order}!getTableNumber@{getTableNumber}}
+\index{getTableNumber@{getTableNumber}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{getTableNumber()}{getTableNumber()}}
+{\footnotesize\ttfamily int Order\+::get\+Table\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the ID of the table where the order was placed. \begin{DoxyReturn}{Returns}
+The ID of the table 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classOrder_a62ff67f913e6d1e539ce2e3f4e0006ea}\label{classOrder_a62ff67f913e6d1e539ce2e3f4e0006ea}} 
+\index{Order@{Order}!getTotal@{getTotal}}
+\index{getTotal@{getTotal}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{getTotal()}{getTotal()}}
+{\footnotesize\ttfamily double Order\+::get\+Total (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the total cost of the order. \begin{DoxyReturn}{Returns}
+The total cost of the order 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classOrder_a0ca81712683adb3f80f4614e6745c6bf}\label{classOrder_a0ca81712683adb3f80f4614e6745c6bf}} 
+\index{Order@{Order}!printOrder@{printOrder}}
+\index{printOrder@{printOrder}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{printOrder()}{printOrder()}}
+{\footnotesize\ttfamily std\+::string Order\+::print\+Order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns a string representation of the order. \begin{DoxyReturn}{Returns}
+A string representation of the order 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classOrder_a11d259a533b2684d4e075256bdfe50b1}\label{classOrder_a11d259a533b2684d4e075256bdfe50b1}} 
+\index{Order@{Order}!setPlate@{setPlate}}
+\index{setPlate@{setPlate}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{setPlate()}{setPlate()}}
+{\footnotesize\ttfamily void Order\+::set\+Plate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlate}{Plate}} $\ast$}]{p }\end{DoxyParamCaption})}
+
+Sets the plate used to serve the food. 
+\begin{DoxyParams}{Parameters}
+{\em p} & A pointer to the \mbox{\hyperlink{classPlate}{Plate}} object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classOrder_a8722fb063d66f6c85a1bb13c2077c18e}\label{classOrder_a8722fb063d66f6c85a1bb13c2077c18e}} 
+\index{Order@{Order}!setTableID@{setTableID}}
+\index{setTableID@{setTableID}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{setTableID()}{setTableID()}}
+{\footnotesize\ttfamily void Order\+::set\+Table\+ID (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+Sets the ID of the table where the order was placed. 
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the table \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classOrder_a4928595ed04b24d40ae234251751c8ac}\label{classOrder_a4928595ed04b24d40ae234251751c8ac}} 
+\index{Order@{Order}!setTray@{setTray}}
+\index{setTray@{setTray}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{setTray()}{setTray()}}
+{\footnotesize\ttfamily void Order\+::set\+Tray (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDrinkTray}{Drink\+Tray}} $\ast$}]{tray }\end{DoxyParamCaption})}
+
+Sets the drink tray used to serve the drinks. 
+\begin{DoxyParams}{Parameters}
+{\em tray} & A pointer to the \mbox{\hyperlink{classDrinkTray}{Drink\+Tray}} object \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Order.\+h\item 
+Order.\+cpp\end{DoxyCompactItemize}
