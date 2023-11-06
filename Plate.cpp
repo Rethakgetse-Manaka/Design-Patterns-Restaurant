@@ -6,7 +6,7 @@
  * @param NoOfFoods The initial capacity for food items in the plate.
  */
 Plate::Plate(int c, int p) {
-    m_Meals = std::vector<std::string*>();
+    m_Meals = std::vector<std::string>();
     customerID = c;
     plateID = p;
 }
@@ -17,7 +17,7 @@ Plate::Plate(int c, int p) {
  *
  * @param item The name of the food item to add.
  */
-void Plate::addMeal(std::string* item) {
+void Plate::addMeal(std::string item) {
     m_Meals.push_back(item);
 }
 
@@ -26,7 +26,7 @@ void Plate::addMeal(std::string* item) {
  *
  * @param item The name of the food item to remove.
  */
-void Plate::removeMeal(std::string* item) {
+void Plate::removeMeal(std::string item) {
     for (int i = 0; i < m_Meals.size(); i++) {
         if (m_Meals[i] == item) {
             m_Meals.erase(m_Meals.begin() + i);
@@ -39,12 +39,12 @@ void Plate::removeMeal(std::string* item) {
  *
  * @return A reference to the vector of food items.
  */
-std::vector<std::string*>& Plate::getMeals() {
+std::vector<std::string>& Plate::getMeals() {
     return m_Meals;
 }
 void Plate::showMeals(){
     for (int i = 0; i < m_Meals.size(); i++) {
-        std::cout << m_Meals[i]->getName() << " "; 
+        std::cout << m_Meals[i] << " "; 
     }
     std::cout << std::endl;
 }
@@ -63,9 +63,5 @@ int Plate::getCustomerID()
  *
  */
 Plate::~Plate() {
-    if(!m_Meals.empty()){
-        for (int i = 0; i < m_Meals.size(); i++) {
-            delete m_Meals[i];
-        }
-    }
+    
 }
