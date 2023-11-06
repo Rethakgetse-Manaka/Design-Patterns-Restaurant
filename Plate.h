@@ -2,6 +2,7 @@
 #define Plate_h
 
 #include <vector>
+#include <string>
 /**
  * @class Plate
  * @brief Represents a plate with a list of food items.
