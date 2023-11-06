@@ -2,33 +2,40 @@
 #define ITEM_H
 #include <string>
 
-class FoodItem
-{
+/**
+ * @brief The FoodItem class represents a food item with a name and price.
+ * 
+ * This class is used to represent a food item with a name and price. It also includes
+ * a meal name, which is not currently used. The class includes methods to get the item name
+ * and price, which are used in the Memento pattern.
+ */
+class FoodItem {
     private:
         double price;
-         std::string name;
-         std::string mealName;
-//     std::string type;
-//     bool garnish;
-//     bool sauce;
-//     bool welldone;
+        std::string name;
+        std::string mealName;
     public:
+        /**
+         * @brief Constructs a new FoodItem object with the given price and name.
+         * 
+         * @param p The price of the food item.
+         * @param n The name of the food item.
+         */
         FoodItem(double p,std::string n);
        
-        //std::string getItemName();
-        //double getPrice();
-        
-        //added consts for Memento Pattern: Main
+        /**
+         * @brief Gets the name of the food item.
+         * 
+         * @return The name of the food item.
+         */
         std::string getItemName() const;  
-        double getPrice() const;       
-//     FoodItem();
-//     FoodItem(std::string n, double val);
-//     FoodItem(std::string n, bool gar, bool sauce, double val, bool well);
-//     double getPrice();
-//     std::string getName();
-//     std::string getType();
-//     std::string toString();
-//     ~FoodItem();
 
+        /**
+         * @brief Gets the price of the food item.
+         * 
+         * @return The price of the food item.
+         */
+        double getPrice() const;       
 };
+
 #endif
