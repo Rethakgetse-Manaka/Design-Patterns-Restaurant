@@ -1,24 +1,27 @@
 CC = g++
-
 CFLAGS = -Wall -g
 
+# Define the build directory
+BUILD_DIR = build
 
 SRCS := $(wildcard *.cpp)
-
 OBJS = $(SRCS:.cpp=.o)
+MAIN = $(BUILD_DIR)/program  # Change the path of the executable in the build directory
 
-MAIN = program
+# Make sure the build directory exists
+$(shell mkdir -p $(BUILD_DIR))
 
 all: $(MAIN)
-	
-$(MAIN): $(OBJS) 
-	$(CC) $(CFLAGS) -o $(MAIN) $(OBJS)
 
-.cpp.o:
-	$(CC) $(CFLAGS) -c $<  -o $@
-	
+$(MAIN): $(OBJS)
+	$(CC) $(CFLAGS) -o $(MAIN) $(OBJS)
+	cp $(MAIN) .  # Copy the executable to the main directory
+
+%.o: %.cpp
+	$(CC) $(CFLAGS) -c $< -o $@
+
 run: $(MAIN)
 	./$(MAIN)
 
 clean:
-	$(RM) *.o *~ $(MAIN)
+	$(RM) *.o *~ program
