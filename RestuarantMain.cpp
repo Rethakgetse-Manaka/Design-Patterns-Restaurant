@@ -137,20 +137,46 @@ int main() {
     restuarant->initialCustomerHandling(customer1);
     restuarant->initialCustomerHandling(customer2);
     // restuarant->initialCustomerHandling(customer3);
-
-    customer1->placeOrder();
-    customer2->placeOrder();
-    // customer3->placeOrder();
-
+    int visitTimes = 0;
+    char i;
     TableVisitor *cManager = new ComplaintsManager();
     TableVisitor *aManager = new AdminManager();
     restuarant->addManager(cManager);
     restuarant->addManager(aManager);
-    restuarant->visitTable();
+    
 
-    table1->readyForBill(waiter1,accountingSystem);
-    restuarant->payTab(customer1,careTaker);
-    restuarant->payTab(customer2,careTaker);
+    while(visitTimes < 3)
+    {
+        cout << "Are you ready to order?(y/n) ";
+        cin >> i;
+        if(i == 'y')
+        {
+            customer1->placeOrder();
+            customer2->placeOrder();
+            restuarant->visitTable();
+            table1->readyForBill(waiter1,accountingSystem);
+            restuarant->payTab(customer1,careTaker);
+            restuarant->payTab(customer2,careTaker);
+            break;
+
+        }
+        if(visitTimes == 2)
+        {
+            cout << "Sorry you are taking up space"<<endl;
+            customer1->leave();
+            customer2->leave();
+        }
+        
+        sleep(3);
+        visitTimes++;
+    }
+    
+    
+    // customer3->placeOrder();
+
+    
+
+    
     // restuarant->payTab(customer3,careTaker);
     accountingSystem->generateReport();
     
