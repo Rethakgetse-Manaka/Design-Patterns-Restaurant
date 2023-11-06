@@ -24,4 +24,4 @@ run: $(MAIN)
 	./$(MAIN)
 
 clean:
-	$(RM) $(BUILD_DIR)/*.o $(BUILD_DIR)/*~ $(BUILD_DIR)/$(MAIN)
+	$(RM) *.o *~ program
