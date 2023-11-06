@@ -16,6 +16,7 @@ int main() {
 
     // Remove a food item
     plate.removeMeal("Burger");
+    plate.removeMeal("Salad");
 
     // Display the updated food items
     std::cout << "Food items on the plate after removing 'Burger': ";
