@@ -38,8 +38,6 @@ jobs:
         name: cppcheck-results
         path: cppcheck-results.txt
 
-    - name: Upload executable to Google Drive
-      run: |
-        gdrive upload --file program
-      env:
-        GDRIVE_KEY: ${{ secrets.TESTGOOGLEDRIVE }}
+    
+   
+
