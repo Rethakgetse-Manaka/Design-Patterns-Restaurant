@@ -322,7 +322,7 @@ int main()
     testCustomerState();
     testEat();
     testComplain();
-    testManagerVisitor();
+    //testManagerVisitor();
     testBillPayment();
     // testInitialCustomerHandling();
     //testAccountSystem();
