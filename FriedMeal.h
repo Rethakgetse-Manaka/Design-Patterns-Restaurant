@@ -1,3 +1,7 @@
+/**
+ * @brief Header file for the FriedMeal class, which is a subclass of MainMeal.
+ * 
+ */
 #ifndef FRIEDMEAL_H
 #define FRIEDMEAL_H
 

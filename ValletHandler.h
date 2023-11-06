@@ -4,6 +4,10 @@
 #include "CustomerHandler.h"
 #include "ValetFactoryImpl.h"
 #include <iostream>
+/**
+ * @brief A class that handles vallet requests from customers.
+ * 
+ */
 class ValletHandler: public CustomerHandler
 {
 private:
