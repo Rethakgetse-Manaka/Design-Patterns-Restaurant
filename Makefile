@@ -1,36 +1,34 @@
-CC = g++
-CFLAGS = -Wall -g
+name: Kamo-BranchTesting
 
-SRCS := $(wildcard *.cpp)
-OBJS = $(SRCS:.cpp=.o)
-MAIN = program
+on:
+  push:
+    branches:
+      - Kamo_Kitchen
 
-# Specify the name of the output directory
-BUILD_DIR = build
+jobs:
+  build:
+    runs-on: ubuntu-latest
 
-# The final target executable name
-TARGET = $(BUILD_DIR)/$(MAIN)
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-# Build the project and create an executable
-all: $(BUILD_DIR) $(TARGET)
+    - name: Install build dependencies
+      run: sudo apt-get install -y g++ make
 
-$(TARGET): $(OBJS) 
-	$(CC) $(CFLAGS) -o $(TARGET) $(OBJS)
+    - name: Clean project
+      run: make clean
+      
+    - name: Build project
+      run: make
 
-# Create the build directory if it doesn't exist
-$(BUILD_DIR):
-	mkdir -p $(BUILD_DIR)
+    - name: Run tests
+      run: make run
 
-# The existing compile rule
-.cpp.o:
-	$(CC) $(CFLAGS) -c $< -o $@
-
-run: $(TARGET)
-	./$(TARGET)
-
-clean:
-	$(RM) *.o *~ $(BUILD_DIR)/$(MAIN)
-
-# Add a target for cleaning only the build artifacts
-clean-build:
-	$(RM) -r $(BUILD_DIR)
+    - name: create executable
+      if: ${{ success() }}
+      run: make all
+      
+    - name: Clean up if tests passed
+      if: ${{ success() }}
+      run: make clean
