@@ -58,7 +58,7 @@ void Waiter::presentFoodToTable(Plate* p)
     {
         std::cout << std::endl;
         std::cout << "Here is your meal, we hope you have a wonderful dining experience with us." <<std::endl;
-        for (int i = 0; i < tables.size(); i++) {
+        for (int i = 0; i < (int)tables.size(); i++) {
             if (tables[i]->getCustomer(p->getCustomerID()) != nullptr) {
                 tables[i]->getCustomer(p->getCustomerID())->eat();
             }
@@ -78,7 +78,7 @@ void Waiter::presentDrinksToTable(DrinkTray* d)
         std::cout << std::endl;
         std::cout << "Here are your drinks, we hope you have a wonderful dining experience with us." <<std::endl << std::endl;
         sleep(1);
-        for (int i = 0; i < tables.size(); i++) {
+        for (int i = 0; i < (int)tables.size(); i++) {
             if (tables[i]->getCustomer(d->getCustomerID()) != nullptr) {
                 tables[i]->getCustomer(d->getCustomerID())->drink();
             }

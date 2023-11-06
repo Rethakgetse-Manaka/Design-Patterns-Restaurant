@@ -46,7 +46,7 @@ void PastaChef::receiveOrder(FoodItem* foodItem, int tableNumber, int custID, in
         cout << "Alfredo is Reado!" << endl;
         this->addMeal(createMain());
     }
-    if(plate->getMeals().size() == numOfItems)
+    if((int)plate->getMeals().size() == numOfItems)
     {
         mediator->notifyPlateReady(plate);
     }

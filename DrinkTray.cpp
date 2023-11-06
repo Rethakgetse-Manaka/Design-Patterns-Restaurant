@@ -49,7 +49,7 @@ DrinkTray::~DrinkTray()
 {
     if (!m_Drinks.empty())
     {
-        for (int i = 0; i < m_Drinks.size(); i++)
+        for (int i = 0; i < (int) m_Drinks.size(); i++)
         {
             delete m_Drinks[i];
         }

@@ -54,7 +54,7 @@ void RotisseurChef::receiveOrder(FoodItem* foodItem, int tableNumber, int custID
         sleep(1);
         this->addMeal(createMain());
     }
-    if(plate->getMeals().size() == numOfItems)
+    if((int)plate->getMeals().size() == numOfItems)
     {
         mediator->notifyPlateReady(plate);
     }

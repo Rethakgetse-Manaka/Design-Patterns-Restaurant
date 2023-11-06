@@ -123,7 +123,7 @@ void Table::setWaiter(Waiter *waiter)
     this->waiter = waiter;
 }
 
-Table::Table(int tableNumber) : tableNumber(tableNumber), state(new Free()), count(0) {}
+Table::Table(int tableNumber) : tableNumber(tableNumber), count(0), state(new Free()) {}
 
 void Table::setCaretaker(TabCaretaker *t)
 {

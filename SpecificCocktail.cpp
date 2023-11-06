@@ -21,10 +21,10 @@ std::string SpecificCocktail::toString()
     s << cocktail->cost();
     std::string ret;
     if (alcoholDescription == "") {
-        ret = cocktail->getDescription() + " : R" + s.str();
+        ret = "| " + cocktail->getDescription() + " : R" + s.str();
     }
     else {
-        ret = cocktail->getDescription() + " with " + alcoholDescription + " : R" + s.str();
+        ret = "| " + cocktail->getDescription() + " with " + alcoholDescription + " : R" + s.str();
     }
     
     return ret;

@@ -34,15 +34,18 @@ void RestaurantOrderMediator::notifyOrderPlaced(Order* o)
         t->setTableNumber(o->getTableNumber());
         Chef::setPlate(t);
         bartender->setTray(d);
-        std::cout << "Order handler received the order from the waiter and is passing it to an available chef.."<<std::endl << std::endl;
+
+        std::cout << "Order handler received the order from the waiter and is passing it to a Bartender"<<std::endl << std::endl;
+
 
         for (size_t i = 0; i < o->getDrinks().size(); i++) {
             std::string drink = o->getDrinks()[i]->getDescription();
-            std::cout << drink << std::endl;
+            std::cout << std::endl << drink << std::endl;
             bartender->receiveOrder(o->getDrinks()[i], o->getTableNumber(),o->getCustomerID(),o->getDrinks().size());
         }
+
         
-        
+        std::cout << "Order handler received the order from the waiter and is passing it to an available chef.."<<std::endl << std::endl;
 
 
         //Need to handle passing the order  to chefs
@@ -54,7 +57,7 @@ void RestaurantOrderMediator::notifyOrderPlaced(Order* o)
             {
                 std::cout << meal << "has just finished please order more" << std::endl;
             }
-            std::cout << meal << std::endl;
+            std::cout << std::endl << meal << std::endl;
             if(meal == "Beef Kebab" || meal == "Beef Burger")
             {
                 chefs[4]->receiveOrder(o->getFoodItems()[i],o->getTableNumber(),o->getCustomerID(),o->getFoodItems().size());
@@ -95,26 +98,16 @@ void RestaurantOrderMediator::setInventory(Inventory *inventory)
 
 void RestaurantOrderMediator::notifyPlateReady(Plate* p)
 {
-    // std::cout << "notified" << std::endl;
     if(p != nullptr)
     {
-        // std::cout << "notified 2" << std::endl;
         for(Waiter* w : waiters)
         {
-            // std::cout << "notified 3" << std::endl;
-            // if (w == nullptr) {
-            //     std::cout << "w is null" << std::endl;
-            // }
             if(w != nullptr && w->managesTable(p->getTableNumber()))
             {  
-                std::cout << "notified 4" << std::endl;
                 w->presentFoodToTable(p);
                 break;
-
             }
-            
         }
-
     }
 }
 
@@ -131,9 +124,7 @@ void RestaurantOrderMediator::notifyDrinksReady(DrinkTray* d)
                 break;
 
             }
-            
         }
-
     }
 }
 

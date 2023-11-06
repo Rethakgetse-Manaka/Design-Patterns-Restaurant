@@ -44,23 +44,23 @@ void GrillChef::receiveOrder(FoodItem* foodItem, int tableNumber, int custID, in
         cout << "Sizzle Sizzle!" << endl;
         sleep(1);
         if (foodItem->getWellDone()) {
-            cout << "Patty Well Done";
+            cout << "Patty Well Done" << endl;
             sleep(1);
         }
 
         if (!foodItem->getWellDone()) {
-            cout << "Patty Medium Rare";
+            cout << "Patty Medium Rare" << endl;
             sleep(1);
         }
         cout <<"Assembling Burger..."<< endl;
         sleep(1);
         if (foodItem->getGarnish()) {
-            cout << "Adding Lettuce, Tomato, And Gherkins";
+            cout << "Adding Lettuce, Tomato, And Gherkins" << endl;
             sleep(1);
         }
         
         if (foodItem->getSauce()) {
-            cout << "Adding Special Sauce";
+            cout << "Adding Special Sauce" << endl;
             sleep(1);
         }
 
