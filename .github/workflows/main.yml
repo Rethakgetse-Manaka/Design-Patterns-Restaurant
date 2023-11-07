@@ -25,8 +25,11 @@ jobs:
     - name: Run tests
       run: make run
 
-    - name: Memory Leak Check
-      run: make leak
+    - name: Install Valgrind
+      run: sudo apt-get install -y valgrind
+
+    - name: Run Valgrind
+      run: valgrind --leak-check=full ./program
 
     - name: Install cppcheck
       run: sudo apt-get install -y cppcheck
