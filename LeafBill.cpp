@@ -57,7 +57,7 @@ void LeafBill::printBill()
     cout<<"|Tip: " << setw(35) << right << "|" << endl;
     cout<<"| R" << setw(37) << left <<tip << right << "|" << endl;
     cout<<"|---------------------------------------|"<<endl;
-    cout<<"|TOTAL: R" << setw(31) << left << total << right << "|" <<endl;
+    cout<<"|TOTAL: R" << setw(31) << left << total+tip << right << "|" <<endl;
     cout<<"|---------------------------------------|"<<endl;
 
 }
